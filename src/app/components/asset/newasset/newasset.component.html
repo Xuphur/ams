@@ -1,0 +1,451 @@
+     <!-- <div class="container">
+     <div class="row float-right">
+        <button type="submit" (click)="addAsset(asset)" class="btn btn-lg btn-outline-primary">Save</button>
+     </div>
+     </div> -->
+<form>
+  <div class="container">
+    <ngb-tabset #t="ngbTabset">
+  <ngb-tab title="Asset" id="main">
+    <ng-template ngbTabContent>
+
+  <div class="row">
+      <div class="col-6 col-md-4">
+      <label for="ref">Referance</label>
+      <input [(ngModel)]="asset.ref" type="text" id="ref" name="ref" required>
+      </div>
+
+      <div class="col-6 col-md-4">
+          <label for="title">Title</label>
+          <input [(ngModel)]="asset.title" type="text" name="title" id="title">
+          </div>
+
+          <div class="col-6 col-md-4">
+              <label for="assetType">Asset Type</label>
+              <select [(ngModel)]="asset.assetType" type="text" name="assetType" id="assetType">
+              <option value="vehicle">Vehicle</option>
+              <option value="house">House</option>
+              <option value="item">Item</option>
+              </select>
+              </div>
+        </div>
+        <div class="row float-right">
+            <button class="btn btn-success" (click)="t.select(this.asset.assetType)">Next</button>
+            <button class="btn btn-primary" (click)="t.select('main')">Back</button>
+          </div>
+</ng-template>
+</ngb-tab>
+
+<ngb-tab id="vehicle">
+  <ng-template ngbTabContent>
+
+        <div class="row">
+            <div class="col-6 col-md-4">
+              <label for="reg">Registration</label>
+              <input [(ngModel)]="asset.assetDetail.vehicle.reg" type="text" name="reg" id="reg">
+            </div>
+
+<div class="col-6 col-md-4">
+  <label for="make">Make</label>
+  <input [(ngModel)]="asset.assetDetail.vehicle.make" type="text" name="make" id="make">
+  </div>
+
+<div class="col-6 col-md-4">
+<label for="model">Model</label>
+<input [(ngModel)]="asset.assetDetail.vehicle.model" type="text" name="model" id="model">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="year">Year</label>
+<input [(ngModel)]="asset.assetDetail.vehicle.year" type="text" name="year" id="year">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="colour">Colour</label>
+<input [(ngModel)]="asset.assetDetail.vehicle.colour" type="text" name="colour" id="colour">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="status">Status</label>
+<select [(ngModel)]="asset.assetDetail.vehicle.status" type="text" name="status" id="status">
+<option value="available">Available</option>
+<option value="on-trip">On-Trip</option>
+<option value="workshop">Workshop</option>
+</select>
+</div>
+</div>
+<div class="row float-right">
+    <button class="btn btn-outline-primary" (click)="t.select('Owner')">Next</button>
+    <button class="btn btn-primary" (click)="t.select('main')">Back</button>
+  </div>
+</ng-template>
+</ngb-tab>
+
+<ngb-tab id="house">
+  <ng-template ngbTabContent>
+
+<div class="row">
+  <div class="col-6 col-md-4">
+  <label for="floor">Floor</label>
+  <input [(ngModel)]="asset.assetDetail.house.address.floor" type="text" name="floor" id="floor">
+  </div>
+
+  <div class="col-6 col-md-4">
+  <label for="number">House Number</label>
+  <input [(ngModel)]="asset.assetDetail.house.address.number" type="text" name="number" id="number">
+  </div>
+
+  <div class="col-6 col-md-4">
+  <label for="street">Street</label>
+  <input [(ngModel)]="asset.assetDetail.house.address.street" type="text" name="street" id="street">
+  </div>
+
+  <div class="col-6 col-md-4">
+  <label for="sector">Sector</label>
+  <input [(ngModel)]="asset.assetDetail.house.address.sector" type="text" name="sector" id="sector">
+  </div>
+
+  <div class="col-6 col-md-4">
+  <label for="city">City</label>
+  <input [(ngModel)]="asset.assetDetail.house.address.city" type="text" name="city" id="city">
+  </div>
+
+  <div class="col-6 col-md-4">
+  <label for="province">Province</label>
+  <input [(ngModel)]="asset.assetDetail.house.address.province" type="text" name="province" id="province">
+  </div>
+
+  <div class="col-6 col-md-4">
+  <label for="zipcode">Zip Code</label>
+  <input [(ngModel)]="asset.assetDetail.house.address.zipcode" type="text" name="zipcode" id="zipcode">
+  </div>
+
+  <div class="col-6 col-md-4">
+  <label for="area">Size</label>
+  <input [(ngModel)]="asset.assetDetail.house.area" type="text" name="area" id="area">
+  </div>
+
+  <div class="col-6 col-md-4">
+  <label for="status">Status</label>
+  <select [(ngModel)]="asset.assetDetail.house.status" type="text" name="status" id="status">
+  <option value="available">Available</option>
+  <option value="rented">Rented</option>
+  <option value="sold">Sold</option>
+  </select>
+  </div>
+</div>
+<div class="row float-right">
+        <button class="btn btn-outline-primary" (click)="t.select('Owner')">Next</button>
+    <button class="btn btn-primary" (click)="t.select('main')">Back</button>
+      </div>
+</ng-template>
+</ngb-tab>
+
+<ngb-tab id="item">
+  <ng-template ngbTabContent>
+
+<div class="row">
+
+<div class="col-6 col-md-4">
+<label for="make">Make</label>
+<input [(ngModel)]="asset.assetDetail.item.make" type="text" name="make" id="make">
+</div>
+<div class="col-6 col-md-4">
+<label for="model">Model</label>
+<input [(ngModel)]="asset.assetDetail.item.model" type="text" name="model" id="model">
+</div>
+<div class="col-6 col-md-4">
+<label for="year">Year</label>
+<input [(ngModel)]="asset.assetDetail.item.year" type="text" name="year" id="year">
+</div>
+<div class="col-6 col-md-4">
+<label for="discription">Discription</label>
+<input [(ngModel)]="asset.assetDetail.item.discription" type="text" name="discription" id="discription">
+</div>
+<div class="col-6 col-md-4">
+<label for="actualPrice">Actual Price</label>
+<input [(ngModel)]="asset.assetDetail.item.actualPrice" type="text" name="actualPrice" id="actualPrice">
+</div>
+</div>
+<div class="row float-right">
+        <button class="btn btn-outline-primary" (click)="t.select('Owner')">Next</button>
+        <button class="btn btn-primary" (click)="t.select('main')">Back</button>
+      </div>
+</ng-template>
+</ngb-tab>
+
+<ngb-tab id="Owner">
+  <ng-template ngbTabContent>
+
+            <h3>Owner</h3>
+<div class="row">
+<div class="col-6 col-md-4">
+<label for="name">Name</label>
+<input [(ngModel)]="asset.owner.name" type="text" name="name" id="name">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="fatherName">Father Name</label>
+<input [(ngModel)]="asset.owner.fatherName" type="text" name="fatherName" id="fatherName">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="cnic">CNIC</label>
+<input [(ngModel)]="asset.owner.cnic" type="text" name="cnic" id="cnic">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="mobile1">Mobile 1</label>
+<input [(ngModel)]="asset.owner.mobile1" type="text" name="mobile1" id="mobile1">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="mobile2">Mobile2</label>
+<input [(ngModel)]="asset.owner.mobile2" type="text" name="mobile2" id="mobile2">
+</div>
+</div>
+<h6>Address</h6>
+<div class="row">
+<div class="col-6 col-md-4">
+<label for="floor">Floor</label>
+<input [(ngModel)]="asset.owner.address.floor" type="text" name="floor" id="floor">
+</div>  <div class="col-6 col-md-4">
+<label for="number">House Number</label>
+<input [(ngModel)]="asset.owner.address.number" type="text" name="number" id="number">
+</div>  <div class="col-6 col-md-4">
+<label for="street">Street</label>
+<input [(ngModel)]="asset.owner.address.street" type="text" name="street" id="street">
+</div>  <div class="col-6 col-md-4">
+<label for="sector">Sector</label>
+<input [(ngModel)]="asset.owner.address.sector" type="text" name="sector" id="sector">
+</div>  <div class="col-6 col-md-4">
+<label for="city">City</label>
+<input [(ngModel)]="asset.owner.address.city" type="text" name="city" id="city">
+</div>  <div class="col-6 col-md-4">
+<label for="province">Province</label>
+<input [(ngModel)]="asset.owner.address.province" type="text" name="province" id="province">
+</div>  <div class="col-6 col-md-4">
+<label for="zipcode">Zip Code</label>
+<input [(ngModel)]="asset.owner.address.zipcode" type="text" name="zipcode" id="zipcode">
+</div>
+</div>
+<div class="row float-right">
+        <button class="btn btn-outline-primary" (click)="t.select('Customer')">Next</button>
+        <button class="btn btn-primary" (click)="t.select('main')">Back</button>
+      </div>
+</ng-template>
+</ngb-tab>
+
+<ngb-tab id="Customer">
+    <ng-template ngbTabContent>
+
+        <h3>Customer</h3>
+<div class="row">
+<div class="col-6 col-md-4">
+<label for="name">Customer Name</label>
+<input [(ngModel)]="asset.customer.name" type="text" name="name" id="name">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="fatherName">Father Name</label>
+<input [(ngModel)]="asset.customer.fatherName" type="text" name="fatherName" id="fatherName">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="cnic">CNIC</label>
+<input [(ngModel)]="asset.customer.cnic" type="text" name="cnic" id="cnic">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="mobile1">Mobile 1</label>
+<input [(ngModel)]="asset.customer.mobile1" type="text" name="mobile1" id="mobile1">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="mobile2">Mobile2</label>
+<input [(ngModel)]="asset.customer.mobile2" type="text" name="mobile2" id="mobile2">
+</div>
+</div>
+
+<div class="row">
+<div class="col-6 col-md-4">
+<label>Address</label></div>  <div class="col-6 col-md-4">
+<label for="floor">Floor</label>
+<input [(ngModel)]="asset.customer.address.floor" type="text" name="floor" id="floor">
+</div>  <div class="col-6 col-md-4">
+<label for="number">House Number</label>
+<input [(ngModel)]="asset.customer.address.number" type="text" name="number" id="number">
+</div>  <div class="col-6 col-md-4">
+<label for="street">Street</label>
+<input [(ngModel)]="asset.customer.address.street" type="text" name="street" id="street">
+</div>  <div class="col-6 col-md-4">
+<label for="sector">Sector</label>
+<input [(ngModel)]="asset.customer.address.sector" type="text" name="sector" id="sector">
+</div>  <div class="col-6 col-md-4">
+<label for="city">City</label>
+<input [(ngModel)]="asset.customer.address.city" type="text" name="city" id="city">
+</div>  <div class="col-6 col-md-4">
+<label for="province">Province</label>
+<input [(ngModel)]="asset.customer.address.province" type="text" name="province" id="province">
+</div>  <div class="col-6 col-md-4">
+<label for="zipcode">Zip Code</label>
+<input [(ngModel)]="asset.customer.address.zipcode" type="text" name="zipcode" id="zipcode">
+</div>
+</div>
+<div class="row float-right">
+        <button class="btn btn-outline-primary" (click)="t.select('Guarantor')">Next</button>
+        <button class="btn btn-primary" (click)="t.select('Owner')">Back</button>
+      </div>
+</ng-template>
+</ngb-tab>
+
+<ngb-tab id="Guarantor">
+    <ng-template ngbTabContent>
+
+<h3>Guarantor</h3>
+<div class="row">
+<div class="col-6 col-md-4">
+<label for="name">Guarantor Name</label>
+<input [(ngModel)]="asset.customer.guarantor.name" type="text" name="name" id="name">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="fatherName">Father Name</label>
+<input [(ngModel)]="asset.customer.guarantor.father" type="text" name="fatherName" id="fatherName">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="cnic">CNIC</label>
+<input [(ngModel)]="asset.customer.guarantor.cnic" type="text" name="cnic" id="cnic">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="mobile1">Mobile 1</label>
+<input [(ngModel)]="asset.customer.guarantor.mobile" type="text" name="mobile1" id="mobile1">
+</div>
+
+<div class="col-6 col-md-4">
+<label>Address</label></div>  <div class="col-6 col-md-4">
+<label for="floor">Floor</label>
+<input [(ngModel)]="asset.customer.guarantor.address.floor" type="text" name="floor" id="floor">
+</div>  <div class="col-6 col-md-4">
+<label for="number">House Number</label>
+<input [(ngModel)]="asset.customer.guarantor.address.number" type="text" name="number" id="number">
+</div>  <div class="col-6 col-md-4">
+<label for="street">Street</label>
+<input [(ngModel)]="asset.customer.guarantor.address.street" type="text" name="street" id="street">
+</div>  <div class="col-6 col-md-4">
+<label for="sector">Sector</label>
+<input [(ngModel)]="asset.customer.guarantor.address.sector" type="text" name="sector" id="sector">
+</div>  <div class="col-6 col-md-4">
+<label for="city">City</label>
+<input [(ngModel)]="asset.customer.guarantor.address.city" type="text" name="city" id="city">
+</div>  <div class="col-6 col-md-4">
+<label for="province">Province</label>
+<input [(ngModel)]="asset.customer.guarantor.address.province" type="text" name="province" id="province">
+</div>  <div class="col-6 col-md-4">
+<label for="zipcode">Zip Code</label>
+<input [(ngModel)]="asset.customer.guarantor.address.zipcode" type="text" name="zipcode" id="zipcode">
+</div>
+</div>
+<div class="row float-right">
+        <button class="btn btn-outline-primary" (click)="t.select('Contract')">Next</button>
+        <button class="btn btn-primary" (click)="t.select('Customer')">Back</button>
+      </div>
+</ng-template>
+</ngb-tab>
+
+<ngb-tab id="Contract">
+    <ng-template ngbTabContent>
+
+<h3>Contract</h3>
+<div class="row">
+<div class="col-6 col-md-4">
+<label for="contractDate">Contract Date</label>
+<input [(ngModel)]="asset.contract.contractDate" type="datetime-local" name="contractDate" id="contractDate">
+</div>
+
+<div class="col-6 col-md-4">
+  <label for="startDate">Contract Start Date</label>
+  <input [(ngModel)]="asset.contract.startDate" type="datetime-local" name="startDate" id="startDate">
+  </div>
+
+<div class="col-6 col-md-4">
+<label for="duration">Contract Duration</label>
+<input [(ngModel)]="asset.contract.duration" type="text" name="duration" id="duration">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="increment">Increment</label>
+<input [(ngModel)]="asset.contract.increment" type="text" name="increment" id="increment">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="incrementSchedule">Increment Schedule</label>
+<select [(ngModel)]="asset.contract.incrementSchedule" type="text" name="incrementSchedule" id="incrementSchedule">
+<option value="daily">Daily</option>
+<option value="monthly">Monthly</option>
+<option value="annual">Annual</option>
+</select>
+</div>
+
+<div class="col-6 col-md-4">
+<label for="expiry">Expiry Date</label>
+<input [(ngModel)]="asset.contract.expiryDate" type="date" name="expiry" id="expiry">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="cancelation">Cancelation Date</label>
+<input [(ngModel)]="asset.contract.cancelation" type="date" name="cancelation" id="cancelation">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="mathod">Payment Mathod</label>
+<select [(ngModel)]="asset.contract.paymentMathod" type="text" name="mathod" id="mathod">
+<option value="daily">Daily</option>
+<option value="monthly">Monthly</option>
+<option value="annual">Annual</option>
+</select>
+</div>
+
+<div class="col-6 col-md-4">
+<label for="quoted">Price Quoted</label>
+<input [(ngModel)]="asset.contract.priceQuoted" type="text" name="qouted" id="qouted">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="quoted">Total Payable</label>
+<input [(ngModel)]="asset.contract.totalPayable" type="text" name="qouted" id="qouted">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="downPayment">Down Payment</label>
+<input [(ngModel)]="asset.contract.downPayment" type="text" name="downPayment" id="downPayment">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="avdancePayment">Advance Payment</label>
+<input [(ngModel)]="asset.contract.avdancePayment" type="text" name="advancePayment" id="advancePayment">
+</div>
+
+<div class="col-6 col-md-4">
+  <label for="status">Contract Status</label>
+  <select [(ngModel)]="asset.contract.status" type="text" name="status" id="status">
+  <option value="Open">Open</option>
+  <option value="Canceled">Canceled</option>
+  <option value="Expired">Expired</option>
+  </select>
+</div>
+
+</div>
+<div class="row float-right">
+        <button class="btn btn-primary" (click)="t.select('Guarantor')">Back</button>
+        <button type="submit" (click)="addAsset(asset)" class="btn btn-outline-success">Save</button>
+      </div>
+</ng-template>
+</ngb-tab>
+
+</ngb-tabset>
+</div>
+</form>
+

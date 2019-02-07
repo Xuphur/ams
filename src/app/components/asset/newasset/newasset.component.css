@@ -1,0 +1,16 @@
+input[type=text]:hover {
+  background-color: #00f3fc;
+}
+
+input[type=text] {
+  width: 100%;
+}
+
+select[type=text] {
+  width: 100%;
+}
+
+.container {
+  padding: 10px;
+  background-color: beige;
+}
