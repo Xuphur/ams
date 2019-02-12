@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+// import { NewcontractComponent } from './components/contract/newcontract/newcontract.component';
 
 
 @Injectable({
@@ -10,7 +12,11 @@ export class AmsService {
   assetId: String;
 
   url = 'http://localhost:4000';
-  constructor(private http: HttpClient) { }
+
+  constructor(
+    private http: HttpClient,
+    private modalService: NgbModal
+    ) { }
 
   // Asset CRUDs
   getAssets() {
@@ -87,4 +93,35 @@ export class AmsService {
     console.log('Asset Delete');
     return this.http.get(this.url + '/customer/delete/' + id);
   }
+
+  // Contract CRUDs
+  getContracts() {
+    return this.http.get(this.url + '/contract/list');
+  }
+
+  getContractById(id) {
+    return this.http.get(this.url + '/contract/' + id);
+  }
+
+  addContract(contract) {
+    console.log(contract, 'this is asset at service');
+    return this.http.post(this.url + '/contract/new', contract);
+  }
+
+  updateContract(contract) {
+    console.log(contract._id, 'update at asset service');
+    return this.http.put(this.url + '/contract/update/' + contract._id, contract);
+  }
+
+  deleteContract(id) {
+    console.log('Contract Delete');
+    return this.http.get(this.url + '/contract/delete/' + id);
+  }
+
+  // Open Modals
+
+  // openContract() {
+  //   const modalRef = this.modalService.open(NewcontractComponent, { size: 'lg' });
+  //   modalRef.componentInstance.name = 'New Contract';
+  // }
 }

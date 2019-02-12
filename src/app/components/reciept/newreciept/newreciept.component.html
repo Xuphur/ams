@@ -1,10 +1,7 @@
 <h2>New Reciept</h2>
 
-
 <div class="container">
-    <div class="row float-right">
-        <button type="submit" (click)="addReciept(reciept)" class="btn btn-lg btn-outline-primary">Save Reciept</button>
-      </div>
+
   <form>
     <div class="row align-items-center">
                 <div class="col-6 col-md-4">
@@ -12,8 +9,6 @@
                   <input [(ngModel)]="reciept.recieptDate" type="date" name="date" id="date">
                 </div>
 
-              </div>
-<div class="row align-items-center">
   <div class="col-6 col-md-4">
     <label for="amount">Recived Amount</label>
     <input [(ngModel)]="reciept.recivedAmount" type="text" name="amount" id="amount">
@@ -27,6 +22,9 @@
       <option value="onLine">On-Line</option>
       </select>
       </div>
+    </div>
+<div class="row float-right">
+  <button type="submit" (click)="addReciept(reciept)" class="btn btn-sm btn-outline-primary">Save Reciept</button>
 </div>
   </form>
 </div>

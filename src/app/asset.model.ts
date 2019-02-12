@@ -1,8 +1,7 @@
 export class Asset {
 
- ref: '';
- title: '';
  assetType: '';
+ title: '';
 assetDetail = {
      vehicle : {
        contractId: '',
@@ -60,55 +59,5 @@ owner = {
       zipcode: '',
      },
     };
-contract = {
-      issuetime: '',
-      duration: '',
-      increment: '',
-      incrementSchedule: '',
-      status: '',
-      assetValue: '',
-        contractDate: '',
-        startDate: '',
-        expiryDate: '',
-        cancelation: '',
-        reaccurance: '',
-        paymentMathod: '',
-        priceQuoted: '',
-        totalPayable: '',
-        downPayment: '',
-        avdancePayment: '',
-        };
-customer = {
-        ref: '',
-        name: '',
-        fatherName: '',
-        address: {
-          floor: '',
-          number: '',
-          street: '',
-          sector: '',
-          city: '',
-          province: '',
-          zipcode: '',
-         },
-          cnic: '',
-          license: '',
-          mobile1: '',
-          mobile2: '',
-          guarantor: {
-            name: '',
-            mobile: '',
-            father: '',
-            cnic: '',
-            address: {
-              floor: '',
-              number: '',
-              street: '',
-              sector: '',
-              city: '',
-              province: '',
-              zipcode: '',
-             },
-          },
-       };
+
    }

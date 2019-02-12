@@ -9,9 +9,6 @@ import { AmsService } from './ams.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { TooltipModule } from 'ngx-bootstrap/tooltip';
-import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
@@ -19,7 +16,12 @@ import { NewassetComponent } from './components/asset/newasset/newasset.componen
 import { NewrecieptComponent } from './components/reciept/newreciept/newreciept.component';
 import { ListrecieptComponent } from './components/reciept/listreciept/listreciept.component';
 import { ViewassetComponent } from './components/asset/viewasset/viewasset.component';
-
+import { NewcustomerComponent } from './components/customer/newcustomer/newcustomer.component';
+import { ListcustomerComponent } from './components/customer/listcustomer/listcustomer.component';
+import { ViewcustomerComponent } from './components/customer/viewcustomer/viewcustomer.component';
+import { NewcontractComponent } from './components/contract/newcontract/newcontract.component';
+import { ListcontractComponent } from './components/contract/listcontract/listcontract.component';
+import { ViewcontractComponent } from './components/contract/viewcontract/viewcontract.component';
 
 
 @NgModule({
@@ -29,7 +31,13 @@ import { ViewassetComponent } from './components/asset/viewasset/viewasset.compo
     NewassetComponent,
     NewrecieptComponent,
     ListrecieptComponent,
-    ViewassetComponent
+    ViewassetComponent,
+    NewcustomerComponent,
+    ListcustomerComponent,
+    ViewcustomerComponent,
+    NewcontractComponent,
+    ListcontractComponent,
+    ViewcontractComponent
   ],
   imports: [
     BrowserModule,
@@ -39,14 +47,18 @@ import { ViewassetComponent } from './components/asset/viewasset/viewasset.compo
     AppRoutingModule,
     NgbModule.forRoot(),
   FormsModule,
-  BsDropdownModule.forRoot(),
-  TooltipModule.forRoot(),
-  ModalModule.forRoot()
   ],
   entryComponents: [
    NewassetComponent,
    NewrecieptComponent,
-   ListrecieptComponent
+   ListrecieptComponent,
+   ViewassetComponent,
+   NewcustomerComponent,
+   ListcustomerComponent,
+   ViewcustomerComponent,
+   NewcontractComponent,
+   ListcontractComponent,
+   ViewcontractComponent
   ],
   providers: [AmsService],
   bootstrap: [AppComponent]

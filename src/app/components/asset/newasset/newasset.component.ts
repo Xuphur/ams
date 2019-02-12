@@ -36,10 +36,4 @@ export class NewassetComponent implements OnInit {
     });
   }
 
-  addReciept(asset) {
-    console.log(asset, 'this is new reciept'),
-    this.amsService.addAsset(asset).subscribe(() => {
-      this.router.navigate(['/']);
-    });
-  }
 }

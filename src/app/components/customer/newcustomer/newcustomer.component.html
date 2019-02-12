@@ -1,0 +1,112 @@
+<form>
+  <div class="container">
+      <h3>Customer</h3>
+<div class="row">
+<div class="col-6 col-md-4">
+<label for="name">Customer Name</label>
+<input [(ngModel)]="customer.customer.name" type="text" name="name" id="name">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="fatherName">Father Name</label>
+<input [(ngModel)]="customer.customer.fatherName" type="text" name="fatherName" id="fatherName">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="cnic">CNIC</label>
+<input [(ngModel)]="customer.customer.cnic" type="text" name="cnic" id="cnic">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="mobile1">Mobile 1</label>
+<input [(ngModel)]="customer.customer.mobile1" type="text" name="mobile1" id="mobile1">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="mobile2">Mobile2</label>
+<input [(ngModel)]="customer.customer.mobile2" type="text" name="mobile2" id="mobile2">
+</div>
+</div>
+
+<div class="row">
+<div class="col-6 col-md-4">
+<label>Address</label></div>  <div class="col-6 col-md-4">
+<label for="floor">Floor</label>
+<input [(ngModel)]="customer.customer.address.floor" type="text" name="floor" id="floor">
+</div>  <div class="col-6 col-md-4">
+<label for="number">House Number</label>
+<input [(ngModel)]="customer.customer.address.number" type="text" name="number" id="number">
+</div>  <div class="col-6 col-md-4">
+<label for="street">Street</label>
+<input [(ngModel)]="customer.customer.address.street" type="text" name="street" id="street">
+</div>  <div class="col-6 col-md-4">
+<label for="sector">Sector</label>
+<input [(ngModel)]="customer.customer.address.sector" type="text" name="sector" id="sector">
+</div>  <div class="col-6 col-md-4">
+<label for="city">City</label>
+<input [(ngModel)]="customer.customer.address.city" type="text" name="city" id="city">
+</div>  <div class="col-6 col-md-4">
+<label for="province">Province</label>
+<input [(ngModel)]="customer.customer.address.province" type="text" name="province" id="province">
+</div>  <div class="col-6 col-md-4">
+<label for="zipcode">Zip Code</label>
+<input [(ngModel)]="customer.customer.address.zipcode" type="text" name="zipcode" id="zipcode">
+</div>
+</div>
+
+<h3>Guarantor</h3>
+<div class="row">
+<div class="col-6 col-md-4">
+<label for="gname">Guarantor Name</label>
+<input [(ngModel)]="customer.guarantor.gname" type="text" name="gname" id="gname">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="fatherName">Father Name</label>
+<input [(ngModel)]="customer.guarantor.gfather" type="text" name="fatherName" id="fatherName">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="cnic">CNIC</label>
+<input [(ngModel)]="customer.guarantor.gcnic" type="text" name="cnic" id="cnic">
+</div>
+
+<div class="col-6 col-md-4">
+<label for="mobile1">Mobile 1</label>
+<input [(ngModel)]="customer.guarantor.gmobile1" type="text" name="mobile1" id="mobile1">
+</div>
+<div class="col-6 col-md-4">
+<label for="mobile2">Mobile 2</label>
+<input [(ngModel)]="customer.guarantor.gmobile2" type="text" name="mobile2" id="mobile2">
+</div>
+
+<div class="col-6 col-md-4">
+<label>Address</label></div>  <div class="col-6 col-md-4">
+<label for="floor">Floor</label>
+<input [(ngModel)]="customer.guarantor.gaddress.floor" type="text" name="floor" id="floor">
+</div>  <div class="col-6 col-md-4">
+<label for="number">House Number</label>
+<input [(ngModel)]="customer.guarantor.gaddress.number" type="text" name="number" id="number">
+</div>  <div class="col-6 col-md-4">
+<label for="street">Street</label>
+<input [(ngModel)]="customer.guarantor.gaddress.street" type="text" name="street" id="street">
+</div>  <div class="col-6 col-md-4">
+<label for="sector">Sector</label>
+<input [(ngModel)]="customer.guarantor.gaddress.sector" type="text" name="sector" id="sector">
+</div>  <div class="col-6 col-md-4">
+<label for="city">City</label>
+<input [(ngModel)]="customer.guarantor.gaddress.city" type="text" name="city" id="city">
+</div>  <div class="col-6 col-md-4">
+<label for="province">Province</label>
+<input [(ngModel)]="customer.guarantor.gaddress.province" type="text" name="province" id="province">
+</div>  <div class="col-6 col-md-4">
+<label for="zipcode">Zip Code</label>
+<input [(ngModel)]="customer.guarantor.gaddress.zipcode" type="text" name="zipcode" id="zipcode">
+</div>
+</div>
+<div class="row float-right">
+      <button type="submit" (click)="addCustomer(customer)" class="btn btn-outline-success">Save</button>
+    </div>
+
+</div>
+</form>

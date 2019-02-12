@@ -1,0 +1,40 @@
+<div class="container">
+  <h1>Contract List</h1>
+  <table>
+    <thead>
+  <th>Title</th>
+  <th>Status</th>
+  <th>Customer</th>
+  <th>Asset</th>
+  <th>Duration</th>
+  <th>Increament</th>
+  <th>Contract Date</th>
+  <th>Expiry Date</th>
+  <th>Price Qouted</th>
+  <th class="bla">
+      <button class="btn btn-md btn-primary" (click)="open()"><i class="fas fa-plus"></i>&nbsp; New</button>
+  </th>
+</thead>
+<tbody>
+  <tr *ngFor="let contract of contractlist">
+    <td>{{contract?.title}}</td>
+    <td>{{contract?.status}}</td>
+    <td>{{contract?.customer}}</td>
+    <td>{{contract?.asset}}</td>
+    <td>{{contract?.duration}}</td>
+    <td>{{contract?.increment}}</td>
+    <td>{{contract?.contractDate}}</td>
+    <td>{{contract?.expiryDate}}</td>
+    <td>{{contract?.priceQuoted}}</td>
+<td>
+    <button class="btn btn-sm btn-outline-success" (click)="fetchContractById(contract._id)"><i class="far fa-edit"></i></button>&nbsp;
+    <button class="btn btn-sm btn-outline-danger" (click)="deleteContract(contract._id)"><i class="far fa-trash-alt"></i></button>&nbsp;
+    <button class="btn btn-sm btn-outline-primary" (click)="addReciept(contract._id)"><i class="fas fa-dollar-sign"></i></button>&nbsp;
+    <button class="btn btn-sm btn-outline-success" (click)="listReciept(contract._id)"><i class="far fa-list-alt"></i></button>&nbsp;
+    <button class="btn btn-sm btn-outline-primary" (click)="viewContract(contract._id)"><i class="fas fa-eye">  </i></button>&nbsp;
+
+  </td>
+  </tr>
+</tbody>
+</table>
+</div>

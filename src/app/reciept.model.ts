@@ -1,6 +1,6 @@
 export class Reciept {
 
-    assetId: '';
+    contractId: '';
     recieptDate: '';
     paymentMathod: '';
     recivedAmount: '';

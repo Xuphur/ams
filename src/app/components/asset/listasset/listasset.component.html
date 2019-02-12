@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Contract List</h1>
+  <h1>Asset List</h1>
   <table>
     <thead>
   <th>Ref</th>
@@ -33,8 +33,7 @@
 <td>
     <button class="btn btn-md btn-outline-success" (click)="fetchAssetById(asset._id)"><i class="far fa-edit">&nbsp; Edit</i></button>
     <button class="btn btn-md btn-outline-danger" (click)="deleteAsset(asset._id)"><i class="far fa-trash-alt">&nbsp; Delete</i></button>
-    <button class="btn btn-md btn-outline-primary" (click)="addReciept(asset._id)"><i class="fas fa-dollar-sign">&nbsp; Reciept</i></button>
-    <button class="btn btn-md btn-outline-success" (click)="listReciept(asset._id)"><i class="far fa-edit">&nbsp; Ledger</i></button>
+    <button class="btn btn-md btn-success" (click)="viewAsset(asset._id)"><i class="far fa-edit">&nbsp; Open</i></button>
 
   </td>
   </tr>

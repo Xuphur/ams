@@ -23,7 +23,8 @@ export class ListrecieptComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.fetchAssetById();
+    console.log('i m called in listrec');
+    // this.fetchAssetById();
     this.fetchReciept();
   }
 
@@ -39,11 +40,11 @@ export class ListrecieptComponent implements OnInit {
   fetchReciept() {
     this.amsService
     .getRecieptById(this.amsService.assetId)
-    .subscribe(data => {
-      this.recieptlist = data;
+    .subscribe((data: any) => {
+      this.recieptlist = data.data;
       const total = this.getTotal(this.recieptlist);
       this.grandTotal = total;
-      console.log(this.recieptlist, this.grandTotal, 'this is reciept data');
+      console.log(this.recieptlist, 'this is reciept data');
     });
   }
 

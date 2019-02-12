@@ -1,24 +1,21 @@
 <div class="container">
     <h1>Customer Ledger</h1>
-    <!-- <label>Customer Name = &nbsp;</label><strong>{{asset.customer.name}}</strong>
+    <!-- <label>Customer Name = &nbsp;</label><strong>{{asset.data.customer.name}}</strong> -->
     <br>
-    <label>Total Recieved = &nbsp;</label><strong>{{grandTotal}}</strong> -->
-    <!-- <label>Balance = &nbsp;</label><strong>{{{asset.}} + {{grandTotal}}}</strong> -->
+    <label>Total Recieved = &nbsp;</label><strong>{{grandTotal}}</strong>
     <table>
       <thead>
         <th>Sr.</th>
     <th>Date</th>
     <th>Mathod</th>
     <th>Amount</th>
-    <!-- <th class="bla">
-    </th> -->
   </thead>
   <tbody>
     <tr *ngFor="let reciept of recieptlist, index as i">
       <td>{{i+1}}</td>
-      <td>{{reciept.recieptDate}}</td>
-      <td>{{reciept.paymentMathod}}</td>
-      <td>{{reciept.recivedAmount}}</td>
+      <td>{{reciept?.recieptDate}}</td>
+      <td>{{reciept?.paymentMathod}}</td>
+      <td>{{reciept?.recivedAmount}}</td>
     </tr>
   </tbody>
   </table>

@@ -8,6 +8,7 @@ import { AmsService } from 'src/app/ams.service';
   styleUrls: ['./viewasset.component.css']
 })
 export class ViewassetComponent implements OnInit {
+
   asset: any ;
 
   constructor(
@@ -23,7 +24,7 @@ export class ViewassetComponent implements OnInit {
     .getAssetById(this.amsService.assetId)
     .subscribe(data => {
       this.asset = data;
-      console.log(this.amsService.assetId, this.asset, 'got this asset');
+      console.log(this.amsService.assetId, this.asset, 'asset at view');
     });
   }
 }

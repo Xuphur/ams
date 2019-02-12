@@ -5,12 +5,9 @@ import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { NewassetComponent } from './../newasset/newasset.component';
 import { NewrecieptComponent } from '../../reciept/newreciept/newreciept.component';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import { far } from '@fortawesome/free-regular-svg-icons';
-import { ListrecieptComponent } from '../../reciept/listreciept/listreciept.component';
 
-library.add(fas, far);
+import { ListrecieptComponent } from '../../reciept/listreciept/listreciept.component';
+import { ViewassetComponent } from '../viewasset/viewasset.component';
 
 @Component({
   selector: 'app-listasset',
@@ -78,10 +75,13 @@ export class ListassetComponent implements OnInit {
     modalRef.componentInstance.name = 'New Asset';
   }
 
-  viewAsset(asset._id) {
-    const modalRef = this.modalService.open(NewassetComponent, { size: 'lg' });
-    modalRef.componentInstance.name = 'New Asset';
-  }
+  viewAsset(_id) {
+    console.log(_id, 'this is asset id');
+    this.amsService.assetId = _id;
+      const modalRef = this.modalService.open(ViewassetComponent, { size: 'lg' });
+      modalRef.componentInstance.name = 'View Asset';
+    console.log('view asset open');
+}
 
   addReciept(_id) {
     console.log(_id, 'this is asset id');
@@ -91,12 +91,9 @@ export class ListassetComponent implements OnInit {
   }
 
   listReciept(_id) {
-    console.log(_id, 'this is asset id');
     this.amsService.assetId = _id;
-    this.amsService.getRecieptById(_id).subscribe(() => {
-      console.log(this.amsService.assetId, 'service Called');
+      console.log(this.amsService.assetId, 'this asset Called');
     const modalRef = this.modalService.open(ListrecieptComponent, { size: 'lg' });
     modalRef.componentInstance.name = 'List Reciept';
-  });
 }
 }

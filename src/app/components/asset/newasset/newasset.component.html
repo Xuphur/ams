@@ -1,19 +1,15 @@
-     <!-- <div class="container">
-     <div class="row float-right">
-        <button type="submit" (click)="addAsset(asset)" class="btn btn-lg btn-outline-primary">Save</button>
-     </div>
-     </div> -->
+
 <form>
   <div class="container">
     <ngb-tabset #t="ngbTabset">
   <ngb-tab title="Asset" id="main">
     <ng-template ngbTabContent>
 
-  <div class="row">
+  <!-- <div class="row">
       <div class="col-6 col-md-4">
       <label for="ref">Referance</label>
       <input [(ngModel)]="asset.ref" type="text" id="ref" name="ref" required>
-      </div>
+      </div> -->
 
       <div class="col-6 col-md-4">
           <label for="title">Title</label>
@@ -28,7 +24,7 @@
               <option value="item">Item</option>
               </select>
               </div>
-        </div>
+
         <div class="row float-right">
             <button class="btn btn-success" (click)="t.select(this.asset.assetType)">Next</button>
             <button class="btn btn-primary" (click)="t.select('main')">Back</button>
@@ -230,217 +226,8 @@
 </div>
 </div>
 <div class="row float-right">
-        <button class="btn btn-outline-primary" (click)="t.select('Customer')">Next</button>
+    <button type="submit" (click)="addAsset(asset)" class="btn btn-outline-success">Save</button>
         <button class="btn btn-primary" (click)="t.select('main')">Back</button>
-      </div>
-</ng-template>
-</ngb-tab>
-
-<ngb-tab id="Customer">
-    <ng-template ngbTabContent>
-
-        <h3>Customer</h3>
-<div class="row">
-<div class="col-6 col-md-4">
-<label for="name">Customer Name</label>
-<input [(ngModel)]="asset.customer.name" type="text" name="name" id="name">
-</div>
-
-<div class="col-6 col-md-4">
-<label for="fatherName">Father Name</label>
-<input [(ngModel)]="asset.customer.fatherName" type="text" name="fatherName" id="fatherName">
-</div>
-
-<div class="col-6 col-md-4">
-<label for="cnic">CNIC</label>
-<input [(ngModel)]="asset.customer.cnic" type="text" name="cnic" id="cnic">
-</div>
-
-<div class="col-6 col-md-4">
-<label for="mobile1">Mobile 1</label>
-<input [(ngModel)]="asset.customer.mobile1" type="text" name="mobile1" id="mobile1">
-</div>
-
-<div class="col-6 col-md-4">
-<label for="mobile2">Mobile2</label>
-<input [(ngModel)]="asset.customer.mobile2" type="text" name="mobile2" id="mobile2">
-</div>
-</div>
-
-<div class="row">
-<div class="col-6 col-md-4">
-<label>Address</label></div>  <div class="col-6 col-md-4">
-<label for="floor">Floor</label>
-<input [(ngModel)]="asset.customer.address.floor" type="text" name="floor" id="floor">
-</div>  <div class="col-6 col-md-4">
-<label for="number">House Number</label>
-<input [(ngModel)]="asset.customer.address.number" type="text" name="number" id="number">
-</div>  <div class="col-6 col-md-4">
-<label for="street">Street</label>
-<input [(ngModel)]="asset.customer.address.street" type="text" name="street" id="street">
-</div>  <div class="col-6 col-md-4">
-<label for="sector">Sector</label>
-<input [(ngModel)]="asset.customer.address.sector" type="text" name="sector" id="sector">
-</div>  <div class="col-6 col-md-4">
-<label for="city">City</label>
-<input [(ngModel)]="asset.customer.address.city" type="text" name="city" id="city">
-</div>  <div class="col-6 col-md-4">
-<label for="province">Province</label>
-<input [(ngModel)]="asset.customer.address.province" type="text" name="province" id="province">
-</div>  <div class="col-6 col-md-4">
-<label for="zipcode">Zip Code</label>
-<input [(ngModel)]="asset.customer.address.zipcode" type="text" name="zipcode" id="zipcode">
-</div>
-</div>
-<div class="row float-right">
-        <button class="btn btn-outline-primary" (click)="t.select('Guarantor')">Next</button>
-        <button class="btn btn-primary" (click)="t.select('Owner')">Back</button>
-      </div>
-</ng-template>
-</ngb-tab>
-
-<ngb-tab id="Guarantor">
-    <ng-template ngbTabContent>
-
-<h3>Guarantor</h3>
-<div class="row">
-<div class="col-6 col-md-4">
-<label for="name">Guarantor Name</label>
-<input [(ngModel)]="asset.customer.guarantor.name" type="text" name="name" id="name">
-</div>
-
-<div class="col-6 col-md-4">
-<label for="fatherName">Father Name</label>
-<input [(ngModel)]="asset.customer.guarantor.father" type="text" name="fatherName" id="fatherName">
-</div>
-
-<div class="col-6 col-md-4">
-<label for="cnic">CNIC</label>
-<input [(ngModel)]="asset.customer.guarantor.cnic" type="text" name="cnic" id="cnic">
-</div>
-
-<div class="col-6 col-md-4">
-<label for="mobile1">Mobile 1</label>
-<input [(ngModel)]="asset.customer.guarantor.mobile" type="text" name="mobile1" id="mobile1">
-</div>
-
-<div class="col-6 col-md-4">
-<label>Address</label></div>  <div class="col-6 col-md-4">
-<label for="floor">Floor</label>
-<input [(ngModel)]="asset.customer.guarantor.address.floor" type="text" name="floor" id="floor">
-</div>  <div class="col-6 col-md-4">
-<label for="number">House Number</label>
-<input [(ngModel)]="asset.customer.guarantor.address.number" type="text" name="number" id="number">
-</div>  <div class="col-6 col-md-4">
-<label for="street">Street</label>
-<input [(ngModel)]="asset.customer.guarantor.address.street" type="text" name="street" id="street">
-</div>  <div class="col-6 col-md-4">
-<label for="sector">Sector</label>
-<input [(ngModel)]="asset.customer.guarantor.address.sector" type="text" name="sector" id="sector">
-</div>  <div class="col-6 col-md-4">
-<label for="city">City</label>
-<input [(ngModel)]="asset.customer.guarantor.address.city" type="text" name="city" id="city">
-</div>  <div class="col-6 col-md-4">
-<label for="province">Province</label>
-<input [(ngModel)]="asset.customer.guarantor.address.province" type="text" name="province" id="province">
-</div>  <div class="col-6 col-md-4">
-<label for="zipcode">Zip Code</label>
-<input [(ngModel)]="asset.customer.guarantor.address.zipcode" type="text" name="zipcode" id="zipcode">
-</div>
-</div>
-<div class="row float-right">
-        <button class="btn btn-outline-primary" (click)="t.select('Contract')">Next</button>
-        <button class="btn btn-primary" (click)="t.select('Customer')">Back</button>
-      </div>
-</ng-template>
-</ngb-tab>
-
-<ngb-tab id="Contract">
-    <ng-template ngbTabContent>
-
-<h3>Contract</h3>
-<div class="row">
-<div class="col-6 col-md-4">
-<label for="contractDate">Contract Date</label>
-<input [(ngModel)]="asset.contract.contractDate" type="datetime-local" name="contractDate" id="contractDate">
-</div>
-
-<div class="col-6 col-md-4">
-  <label for="startDate">Contract Start Date</label>
-  <input [(ngModel)]="asset.contract.startDate" type="datetime-local" name="startDate" id="startDate">
-  </div>
-
-<div class="col-6 col-md-4">
-<label for="duration">Contract Duration</label>
-<input [(ngModel)]="asset.contract.duration" type="text" name="duration" id="duration">
-</div>
-
-<div class="col-6 col-md-4">
-<label for="increment">Increment</label>
-<input [(ngModel)]="asset.contract.increment" type="text" name="increment" id="increment">
-</div>
-
-<div class="col-6 col-md-4">
-<label for="incrementSchedule">Increment Schedule</label>
-<select [(ngModel)]="asset.contract.incrementSchedule" type="text" name="incrementSchedule" id="incrementSchedule">
-<option value="daily">Daily</option>
-<option value="monthly">Monthly</option>
-<option value="annual">Annual</option>
-</select>
-</div>
-
-<div class="col-6 col-md-4">
-<label for="expiry">Expiry Date</label>
-<input [(ngModel)]="asset.contract.expiryDate" type="date" name="expiry" id="expiry">
-</div>
-
-<div class="col-6 col-md-4">
-<label for="cancelation">Cancelation Date</label>
-<input [(ngModel)]="asset.contract.cancelation" type="date" name="cancelation" id="cancelation">
-</div>
-
-<div class="col-6 col-md-4">
-<label for="mathod">Payment Mathod</label>
-<select [(ngModel)]="asset.contract.paymentMathod" type="text" name="mathod" id="mathod">
-<option value="daily">Daily</option>
-<option value="monthly">Monthly</option>
-<option value="annual">Annual</option>
-</select>
-</div>
-
-<div class="col-6 col-md-4">
-<label for="quoted">Price Quoted</label>
-<input [(ngModel)]="asset.contract.priceQuoted" type="text" name="qouted" id="qouted">
-</div>
-
-<div class="col-6 col-md-4">
-<label for="quoted">Total Payable</label>
-<input [(ngModel)]="asset.contract.totalPayable" type="text" name="qouted" id="qouted">
-</div>
-
-<div class="col-6 col-md-4">
-<label for="downPayment">Down Payment</label>
-<input [(ngModel)]="asset.contract.downPayment" type="text" name="downPayment" id="downPayment">
-</div>
-
-<div class="col-6 col-md-4">
-<label for="avdancePayment">Advance Payment</label>
-<input [(ngModel)]="asset.contract.avdancePayment" type="text" name="advancePayment" id="advancePayment">
-</div>
-
-<div class="col-6 col-md-4">
-  <label for="status">Contract Status</label>
-  <select [(ngModel)]="asset.contract.status" type="text" name="status" id="status">
-  <option value="Open">Open</option>
-  <option value="Canceled">Canceled</option>
-  <option value="Expired">Expired</option>
-  </select>
-</div>
-
-</div>
-<div class="row float-right">
-        <button class="btn btn-primary" (click)="t.select('Guarantor')">Back</button>
-        <button type="submit" (click)="addAsset(asset)" class="btn btn-outline-success">Save</button>
       </div>
 </ng-template>
 </ngb-tab>
