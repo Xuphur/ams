@@ -3,15 +3,35 @@
   border: 1px solid black;
 }
 
-/* .container {
-  background-color: aqua;
-} */
+.container {
+  background-color: rgb(240, 240, 240);
+}
 
 /* .bla {
   background-color: red;
 } */
 
+.newbox {
+  padding: 20px 20px;
+}
+.btn-circle {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  border-radius: 35px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.42857;
+}
 
+.card {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  margin: 10px 10px;
+}
+.card-header{
+  background-color: rgb(255, 255, 255);
+}
 th {
   padding: 15px;
   text-align: left;

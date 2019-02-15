@@ -19,6 +19,7 @@ export class ListassetComponent implements OnInit {
   assetlist: any;
   foundAsset: any;
   closeResult: string;
+  public isCollapsed = true;
 
   constructor(
     private amsService: AmsService,

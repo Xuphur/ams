@@ -22,6 +22,8 @@ import { ViewcustomerComponent } from './components/customer/viewcustomer/viewcu
 import { NewcontractComponent } from './components/contract/newcontract/newcontract.component';
 import { ListcontractComponent } from './components/contract/listcontract/listcontract.component';
 import { ViewcontractComponent } from './components/contract/viewcontract/viewcontract.component';
+import { NavbarComponent } from './components/dashboard/navbar/navbar.component';
+import { SearchComponent } from './components/search/search.component';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { ViewcontractComponent } from './components/contract/viewcontract/viewco
     ViewcustomerComponent,
     NewcontractComponent,
     ListcontractComponent,
-    ViewcontractComponent
+    ViewcontractComponent,
+    NavbarComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

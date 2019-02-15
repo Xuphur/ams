@@ -13,6 +13,7 @@ import { ViewcustomerComponent } from '../viewcustomer/viewcustomer.component';
 export class ListcustomerComponent implements OnInit {
 
   customerlist: any;
+  public isCollapsed = true;
 
   constructor(
     private amsService: AmsService,

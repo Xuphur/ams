@@ -15,6 +15,7 @@ import { ListrecieptComponent } from '../../reciept/listreciept/listreciept.comp
 export class ListcontractComponent implements OnInit {
 
   contractlist: any;
+  public isCollapsed = true;
 
   constructor(
     private amsService: AmsService,

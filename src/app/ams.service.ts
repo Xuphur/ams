@@ -10,6 +10,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 export class AmsService {
   assetId: String;
+  search: String;
 
   url = 'http://localhost:4000';
 
@@ -17,6 +18,12 @@ export class AmsService {
     private http: HttpClient,
     private modalService: NgbModal
     ) { }
+
+
+    find(customer) {
+      console.log(customer, 'this is search value at service');
+      return this.http.get(this.url + '/customer/find/' + customer);
+      }
 
   // Asset CRUDs
   getAssets() {
