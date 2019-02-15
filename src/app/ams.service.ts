@@ -80,8 +80,8 @@ export class AmsService {
     return this.http.get(this.url + '/customer/' + id);
   }
 
-  addCustomer(asset) {
-    return this.http.post(this.url + '/customer/new', asset);
+  addCustomer(customer) {
+    return this.http.post(this.url + '/customer/new', customer);
   }
 
   updateCustomer(asset) {
