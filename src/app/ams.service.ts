@@ -10,6 +10,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 export class AmsService {
   assetId: String;
+  editMode: Boolean = false;
 
   url = 'http://localhost:4000';
 
@@ -24,6 +25,7 @@ export class AmsService {
   }
 
   getAssetById(id) {
+    console.log(id, 'id at service to edit');
     return this.http.get(this.url + '/asset/' + id);
   }
 

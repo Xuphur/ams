@@ -13,8 +13,10 @@ import { ListrecieptComponent } from '../../reciept/listreciept/listreciept.comp
   styleUrls: ['./listcontract.component.css']
 })
 export class ListcontractComponent implements OnInit {
-
-  contractlist: any;
+  page = 1;
+  pageSize = 4;
+  contractlist: any = [];
+  public isCollapsed = true;
 
   constructor(
     private amsService: AmsService,
@@ -52,7 +54,7 @@ fetchContractById(_id) {
   this.amsService.assetId = _id;
     console.log(this.amsService.assetId, 'got this contract');
     const modalRef = this.modalService.open(NewcontractComponent, { size: 'lg' });
-    modalRef.componentInstance.name = 'Update Asset';
+    modalRef.componentInstance.user = 'Update Asset';
 }
 
   deleteContract(_id) {

@@ -6,6 +6,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { NewassetComponent } from './../newasset/newasset.component';
 import { NewrecieptComponent } from '../../reciept/newreciept/newreciept.component';
 
+
 import { ListrecieptComponent } from '../../reciept/listreciept/listreciept.component';
 import { ViewassetComponent } from '../viewasset/viewasset.component';
 
@@ -15,10 +16,12 @@ import { ViewassetComponent } from '../viewasset/viewasset.component';
   styleUrls: ['./listasset.component.css']
 })
 export class ListassetComponent implements OnInit {
-
-  assetlist: any;
+  page = 1;
+  pageSize = 4;
+  assetlist: any = [];
   foundAsset: any;
   closeResult: string;
+  public isCollapsed = true;
 
   constructor(
     private amsService: AmsService,
@@ -41,17 +44,13 @@ export class ListassetComponent implements OnInit {
     });
   }
 
-  fetchAssetById(_id) {
+  edit(_id) {
     this.amsService.assetId = _id;
-    this.amsService
-    .getAssetById(this.amsService.assetId)
-    .subscribe(data => {
-      this.foundAsset = data;
-      console.log(this.foundAsset._id, 'got this asset');
+    this.amsService.editMode = true;
+    console.log(_id, 'this is asset id');
       const modalRef = this.modalService.open(NewassetComponent, { size: 'lg' });
       modalRef.componentInstance.name = 'Update Asset';
-    });
-  }
+    }
 
   deleteAsset(_id) {
     this.amsService.deleteAsset(_id).subscribe(() => {
@@ -60,17 +59,9 @@ export class ListassetComponent implements OnInit {
     });
   }
 
-  updateAsset(asset) {
-   console.log(asset._id, 'this is for update');
-    this.amsService.updateAsset(asset).subscribe(() => {
-      const modalRef = this.modalService.open(NewassetComponent, { size: 'lg' });
-    modalRef.componentInstance.name = 'Update Asset';
-      // this.fetchAssets();
-    console.log('Update click');
-    });
-  }
-
   open() {
+    this.amsService.editMode = false;
+    this.amsService.assetId = null;
     const modalRef = this.modalService.open(NewassetComponent, { size: 'lg' });
     modalRef.componentInstance.name = 'New Asset';
   }
@@ -79,21 +70,8 @@ export class ListassetComponent implements OnInit {
     console.log(_id, 'this is asset id');
     this.amsService.assetId = _id;
       const modalRef = this.modalService.open(ViewassetComponent, { size: 'lg' });
-      modalRef.componentInstance.name = 'View Asset';
+      modalRef.componentInstance.asset = _id;
     console.log('view asset open');
 }
 
-  addReciept(_id) {
-    console.log(_id, 'this is asset id');
-    this.amsService.assetId = _id;
-    const modalRef = this.modalService.open(NewrecieptComponent, { size: 'lg' });
-    modalRef.componentInstance.name = 'New Reciept';
-  }
-
-  listReciept(_id) {
-    this.amsService.assetId = _id;
-      console.log(this.amsService.assetId, 'this asset Called');
-    const modalRef = this.modalService.open(ListrecieptComponent, { size: 'lg' });
-    modalRef.componentInstance.name = 'List Reciept';
-}
 }

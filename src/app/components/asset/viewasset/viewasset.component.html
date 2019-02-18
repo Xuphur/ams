@@ -1,28 +1,9 @@
-
     <div class="container">
-      <ngb-tabset #t="ngbTabset">
-    <ngb-tab title="Asset" id="main">
-      <ng-template ngbTabContent>
+      <h2>{{asset?.title}}</h2>
+<div *ngIf= "this.asset.assetType =='vehicle'">
+  <h5>Vehicle Details</h5>
 
-    <div class="row">
-        <div class="col-6 col-md-4">
-        <label for="ref">Referance</label> &nbsp;
-        {{asset?.data?.ref}}
-        </div>
-
-        <div class="col-6 col-md-4">
-            <label for="title">Title</label> &nbsp;
-            {{asset?.data?.title}}
-            </div>
-
-            <div class="col-6 col-md-4">
-                <label for="assetType">Asset Type</label> &nbsp;
-                {{asset?.data?.assetType}}
-                </div>
-          </div>
-
-  <h5>Vehicle</h5>
-          <div class="row">
+          <div class="row" >
               <div class="col-6 col-md-4">
                 <label for="reg">Registration</label> &nbsp;
                 {{asset?.data?.assetDetail?.vehicle?.reg}}
@@ -53,7 +34,10 @@
   {{asset?.data?.assetDetail?.vehicle?.status}}
   </div>
   </div>
-  <h5>House</h5>
+</div>
+<div *ngIf= "this.asset.assetType =='house'">
+  <h5>House Details</h5>
+
   <div class="row">
     <div class="col-6 col-md-4">
     <label for="floor">Floor</label> &nbsp;
@@ -105,10 +89,11 @@
     </div>
 
   </div>
+</div>
+<div *ngIf= "this.asset.assetType =='item'">
+  <h5>Item Details</h5>
 
-  <h5>item</h5>
-
-  <div class="col-6 col-md-4">
+  <div class="col-6 col-md-4" >
     <label for="title">Title</label> &nbsp;
     {{asset?.data?.assetDetail?.item?.title}}
     </div>
@@ -142,76 +127,11 @@
     <label for="actualPrice">Actual Price</label> &nbsp;
     {{asset?.data?.assetDetail?.item?.actualPrice}}
     </div>
+  </div>
+    <h5>Owner Details</h5>
 
-    <h5>Owner</h5>
-
-
-      <!--
-  owner : {
-  name: {type: String},
-  fatherName: {type: String},
-  address: {
-  number: {type: String},
-  street: {type: String},
-  sector: {type: String},
-  city: {type: String},
-  province : {type: String},
-  zipcode : {type: String},
-  },
-  cnic: {type: String},
-  mobile1: {type: String},
-  mobile2: {type: String},
-  },
-  contract : {
-  title: {type: String},
-  contractDate: {type:  Date, default: Date.now},
-  startDate: {type:  Date, default: Date.now},
-  duration: {type: String},
-  expiryDate: {type: String},
-  reaccurance: {type: String},
-  issuetime: {type: String},
-  incrementPercentage: {type: String},
-  incrementSchedule: {type: String},
-  status: {type: String},
-  assetValue: {type: String},
-  paymentMathod: {type: String},
-  priceQuoted: {type: String},
-  downPayment: {type: String},
-  avdancePayment: {type: String},
-  totalPayable: {type: String},
-  cancelation: {type: Date},
-  },
-  customer : {
-  name: {type: String},
-  fatherName: {type: String},
-  address: {
-  number: {type: String},
-  street: {type: String},
-  sector: {type: String},
-  city: {type: String},
-  province : {type: String},
-  zipcode : {type: String},
-  },
-  cnic: {type:  String},
-  license: {type:  String},
-  mobile1: {type:  String},
-  mobile2: {type:  String},
-  vehicleid: {type:  String},
-  contractId: {type:  String},
-  guarantor: {
-  name: {type:  String},
-  mobile: {type:  String},
-  father: {type:  String},
-  cnic: {type:  String},
-  address: {
-      number: {type: String},
-      street: {type: String},
-      sector: {type: String},
-      city: {type: String},
-      province : {type: String},
-      zipcode : {type: String}, -->
-  </ng-template>
-  </ngb-tab>
-
-  </ngb-tabset>
+    <div class="col-6 col-md-4">
+      <label for="Name">Name</label> &nbsp;
+      {{asset?.owner?.name}}
+      </div>
   </div>
