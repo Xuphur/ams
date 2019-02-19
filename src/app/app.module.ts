@@ -22,7 +22,9 @@ import { ViewcustomerComponent } from './components/customer/viewcustomer/viewcu
 import { NewcontractComponent } from './components/contract/newcontract/newcontract.component';
 import { ListcontractComponent } from './components/contract/listcontract/listcontract.component';
 import { ViewcontractComponent } from './components/contract/viewcontract/viewcontract.component';
-import { NavbarComponent } from './components/dashboard/navbar/navbar.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { SidebarComponent } from './Dashboard/sidebar/sidebar.component';
+import { HeaderComponent } from './Dashboard/header/header.component';
 import { SearchComponent } from './components/search/search.component';
 
 
@@ -40,7 +42,9 @@ import { SearchComponent } from './components/search/search.component';
     NewcontractComponent,
     ListcontractComponent,
     ViewcontractComponent,
-    NavbarComponent,
+    DashboardComponent,
+    SidebarComponent,
+    HeaderComponent,
     SearchComponent
   ],
   imports: [

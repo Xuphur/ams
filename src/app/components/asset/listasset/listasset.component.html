@@ -5,48 +5,33 @@
         <i class="fa fa-plus-circle fa-3x"></i></button>
   </div>
   <h1>Asset List</h1>
+
+
   <div class="row">
-  <div class="card shadow p-3 mb-5 bg-white rounded" *ngFor="let asset of assetlist">
+  <div class="card shadow p-3 mb-5 bg-white rounded" *ngFor="let asset of assetlist | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
       <div class="card-header">
         <strong>{{asset?.title}}</strong>
       <div class="row float-right">{{asset?.customer?.mobile1}}</div>
       </div>
 
     <div class="card-body">
-  <!-- <label>Ref</label>
-  <span>{{asset?.ref}}</span> -->
 
-  <!-- <label>Title</label> -->
-
-  <!-- <label>Type</label> -->
   <span>{{asset?.assetType}}</span>
 <br>
-  <!-- <label>Customer</label> -->
+
   <span>{{asset?.customer?.name}}</span>
   <br>
-  <!-- <label>Mobile</label> -->
+
   <span>{{asset?.customer?.mobile1}} / {{asset?.customer?.mobile2}}</span>
   <br>
-  <!-- <label>Guarantor</label> -->
-  <span>{{asset?.customer?.guarantor?.name}}</span>
+   <span>{{asset?.customer?.guarantor?.name}}</span>
   <br>
-  <!-- <label>Mobile</label> -->
+
   <span>{{asset?.customer?.guarantor?.mobile}}</span>
   <br>
-  <!-- <label>Owner</label> -->
-  <!-- <span>{{asset?.owner?.name}}</span> -->
-
-  <!-- <label>Mobile</label> -->
-  <!-- <span>{{asset?.owner?.mobile1}} / {{asset?.owner?.mobile2}}</span> -->
-
-  <!-- <label>Status</label> -->
-  <!-- <span>{{asset?.contract?.status}}</span> -->
-
-  <!-- <label>Due Date</label> -->
-  <!--  <span>{{asset?.contract?.reaccurance}}</span> -->
-
 
   </div>
+
 <hr>
 
 <div class="float-right">
@@ -57,11 +42,18 @@
 </div>
 <div id="collapseExample" [ngbCollapse]="isCollapsed">
   <div class="float-right">
-    <button class="btn btn-sm btn-outline-success" (click)="fetchAssetById(asset._id)"><i class="far fa-edit"></i></button>
+    <button class="btn btn-sm btn-outline-success" (click)="edit(asset._id)"><i class="far fa-edit"></i></button>
     <button class="btn btn-sm btn-outline-danger" (click)="deleteAsset(asset._id)"><i class="far fa-trash-alt"></i></button>
     <button class="btn btn-sm btn-success" (click)="viewAsset(asset._id)"><i class="far fa-edit"></i></button>
 </div>
 </div>
 </div>
   </div>
+  <ngb-pagination
+  [(page)]="page"
+  [pageSize]="pageSize"
+  [collectionSize]="assetlist.length"
+  [maxSize]="5"></ngb-pagination>
 </div>
+
+

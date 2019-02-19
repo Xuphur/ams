@@ -5,7 +5,7 @@
     </div>
     <h1>Contract List</h1>
     <div class="row">
-    <div class="card shadow p-3 mb-5 bg-white rounded" *ngFor="let contract of contractlist">
+    <div class="card shadow p-3 mb-5 bg-white rounded" *ngFor="let contract of contractlist| slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
         <div class="card-header">
           <strong>{{contract?.title}}</strong>
         <div class="row float-right">{{contract?.contractDate}}</div>
@@ -37,5 +37,9 @@
   </div>
   </div>
   </div>
-  </div>
+  <ngb-pagination
+  [(page)]="page"
+  [pageSize]="pageSize"
+  [collectionSize]="contractlist.length"
+  [maxSize]="5"></ngb-pagination>
   </div>

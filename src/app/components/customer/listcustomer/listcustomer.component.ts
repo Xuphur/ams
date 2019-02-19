@@ -11,8 +11,9 @@ import { ViewcustomerComponent } from '../viewcustomer/viewcustomer.component';
   styleUrls: ['./listcustomer.component.css']
 })
 export class ListcustomerComponent implements OnInit {
-
-  customerlist: any;
+  page = 1;
+  pageSize = 4;
+  customerlist: any = [];
   public isCollapsed = true;
 
   constructor(

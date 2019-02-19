@@ -10,7 +10,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 export class AmsService {
   assetId: String;
-  search: String;
+  editMode: Boolean = false;
 
   url = 'http://localhost:4000';
 
@@ -31,6 +31,7 @@ export class AmsService {
   }
 
   getAssetById(id) {
+    console.log(id, 'id at service to edit');
     return this.http.get(this.url + '/asset/' + id);
   }
 
@@ -87,8 +88,8 @@ export class AmsService {
     return this.http.get(this.url + '/customer/' + id);
   }
 
-  addCustomer(asset) {
-    return this.http.post(this.url + '/customer/new', asset);
+  addCustomer(customer) {
+    return this.http.post(this.url + '/customer/new', customer);
   }
 
   updateCustomer(asset) {

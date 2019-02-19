@@ -5,7 +5,7 @@
     </div>
     <h1>Customer List</h1>
     <div class="row">
-    <div class="card shadow p-3 mb-5 bg-white rounded" *ngFor="let customer of customerlist">
+    <div class="card shadow p-3 mb-5 bg-white rounded" *ngFor="let customer of customerlist | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
         <div class="card-header">
           <strong>{{customer?.customer?.name}}</strong>
         <div class="row float-right">{{customer?.customer?.mobile1}}</div>
@@ -35,4 +35,9 @@
   </div>
   </div>
   </div>
+  <ngb-pagination
+  [(page)]="page"
+  [pageSize]="pageSize"
+   [collectionSize]="customerlist.length"
+  [maxSize]="5"></ngb-pagination>
   </div>
