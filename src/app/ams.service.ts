@@ -19,6 +19,12 @@ export class AmsService {
     private modalService: NgbModal
     ) { }
 
+
+    find(customer) {
+      console.log(customer, 'this is search value at service');
+      return this.http.get(this.url + '/customer/find/' + customer);
+      }
+
   // Asset CRUDs
   getAssets() {
     return this.http.get(this.url + '/asset/list');

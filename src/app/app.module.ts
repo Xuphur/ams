@@ -25,6 +25,7 @@ import { ViewcontractComponent } from './components/contract/viewcontract/viewco
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidebarComponent } from './Dashboard/sidebar/sidebar.component';
 import { HeaderComponent } from './Dashboard/header/header.component';
+import { SearchComponent } from './components/search/search.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { HeaderComponent } from './Dashboard/header/header.component';
     ViewcontractComponent,
     DashboardComponent,
     SidebarComponent,
-    HeaderComponent
+    HeaderComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

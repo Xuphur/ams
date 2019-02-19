@@ -6,7 +6,6 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { NewassetComponent } from './../newasset/newasset.component';
 import { NewrecieptComponent } from '../../reciept/newreciept/newreciept.component';
 
-
 import { ListrecieptComponent } from '../../reciept/listreciept/listreciept.component';
 import { ViewassetComponent } from '../viewasset/viewasset.component';
 

@@ -1,0 +1,34 @@
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Asset Management System</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <button class="btn btn-md btn-primary" [routerLink]="['/asset/list']" routerLinkActive="router-link-active" ><i class="fas fa-list-ol"></i>&nbsp; Asset List</button>
+    <button class="btn btn-md btn-success" [routerLink]="['/customer/list']" routerLinkActive="router-link-active" ><i class="fas fa-list-ol"></i>&nbsp; Customer List</button>
+    <button class="btn btn-md btn-danger" [routerLink]="['/contract/list']" routerLinkActive="router-link-active" ><i class="fas fa-list-ol"></i>&nbsp; Constract List</button>
+    <label for="title">Search</label>
+    <input [(ngModel)]="search" type="text" name="search" id="search">
+    <button type="submit" (click)="find(search)" class="btn btn-outline-success">Search</button>
+  </nav>
+
+<!-- Side navigation -->
+<div class="sidenav">
+  <div class="user">
+      <i class="fas fa-user"></i>
+  </div>
+  <div class="content">
+      <a href="#"><i class="fas fa-user"></i>&nbsp; About</a>
+
+      <a [routerLink]="['/asset/list']" routerLinkActive="router-link-active" ><i class="fas fa-list-ol"></i>&nbsp; Asset List</a>
+      <a [routerLink]="['/customer/list']" routerLinkActive="router-link-active" ><i class="fas fa-list-ol"></i>&nbsp; Customer List</a>
+      <a [routerLink]="['/contract/list']" routerLinkActive="router-link-active" ><i class="fas fa-list-ol"></i>&nbsp; Constract List</a>
+
+  </div>
+
+  </div>
+
+  <!-- Page content -->
+  <div class="main">
+<router-outlet></router-outlet>
+  </div>
