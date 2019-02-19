@@ -1,0 +1,137 @@
+    <div class="container">
+      <h2>{{asset?.title}}</h2>
+<div *ngIf= "this.asset.assetType =='vehicle'">
+  <h5>Vehicle Details</h5>
+
+          <div class="row" >
+              <div class="col-6 col-md-4">
+                <label for="reg">Registration</label> &nbsp;
+                {{asset?.data?.assetDetail?.vehicle?.reg}}
+              </div>
+
+  <div class="col-6 col-md-4">
+    <label for="make">Make</label> &nbsp;
+    {{asset?.data?.assetDetail?.vehicle?.make}}
+    </div>
+
+  <div class="col-6 col-md-4">
+  <label for="model">Model</label> &nbsp;
+  {{asset?.data?.assetDetail?.vehicle.model}}
+  </div>
+
+  <div class="col-6 col-md-4">
+  <label for="year">Year</label> &nbsp;
+  {{asset?.data?.assetDetail?.vehicle?.year}}
+  </div>
+
+  <div class="col-6 col-md-4">
+  <label for="colour">Colour</label> &nbsp;
+  {{asset?.data?.assetDetail?.vehicle?.colour}}
+  </div>
+
+  <div class="col-6 col-md-4">
+  <label for="status">Status</label> &nbsp;
+  {{asset?.data?.assetDetail?.vehicle?.status}}
+  </div>
+  </div>
+</div>
+<div *ngIf= "this.asset.assetType =='house'">
+  <h5>House Details</h5>
+
+  <div class="row">
+    <div class="col-6 col-md-4">
+    <label for="floor">Floor</label> &nbsp;
+    {{asset?.data?.assetDetail?.house?.address?.floor}}
+    </div>
+    <div class="col-6 col-md-4">
+    <label for="floor">House Number</label> &nbsp;
+    {{asset?.data?.assetDetail?.house?.address?.number}}
+    </div>
+
+    <div class="col-6 col-md-4">
+    <label for="street">Street Number</label> &nbsp;
+    {{asset?.data?.assetDetail?.house?.address?.street}}
+    </div>
+
+    <div class="col-6 col-md-4">
+    <label for="sector">Sector</label> &nbsp;
+    {{asset?.data?.assetDetail?.house?.address?.sector}}
+    </div>
+
+    <div class="col-6 col-md-4">
+    <label for="city">City</label> &nbsp;
+    {{asset?.data?.assetDetail?.house?.address?.city}}
+    </div>
+
+    <div class="col-6 col-md-4">
+    <label for="province">Province</label> &nbsp;
+    {{asset?.data?.assetDetail?.house?.address?.province}}
+    </div>
+
+    <div class="col-6 col-md-4">
+    <label for="zipcode">Zip Code</label> &nbsp;
+    {{asset?.data?.assetDetail?.house?.address?.zipcode}}
+    </div>
+
+    <div class="col-6 col-md-4">
+    <label for="area">Area / Size</label> &nbsp;
+    {{asset?.data?.assetDetail?.house?.address?.area}}
+    </div>
+
+    <div class="col-6 col-md-4">
+    <label for="area">Area / Size</label> &nbsp;
+    {{asset?.data?.assetDetail?.house?.address?.area}}
+    </div>
+
+    <div class="col-6 col-md-4">
+    <label for="actualPrice">Actual Price</label> &nbsp;
+    {{asset?.data?.assetDetail?.house?.address?.actualPrice}}
+    </div>
+
+  </div>
+</div>
+<div *ngIf= "this.asset.assetType =='item'">
+  <h5>Item Details</h5>
+
+  <div class="col-6 col-md-4" >
+    <label for="title">Title</label> &nbsp;
+    {{asset?.data?.assetDetail?.item?.title}}
+    </div>
+
+  <div class="col-6 col-md-4">
+    <label for="make">Make</label> &nbsp;
+    {{asset?.data?.assetDetail?.item?.make}}
+    </div>
+
+  <div class="col-6 col-md-4">
+    <label for="model">Model</label> &nbsp;
+    {{asset?.data?.assetDetail?.item?.model}}
+    </div>
+
+  <div class="col-6 col-md-4">
+    <label for="year">Year</label> &nbsp;
+    {{asset?.data?.assetDetail?.item?.year}}
+    </div>
+
+  <div class="col-6 col-md-4">
+    <label for="discription">Discription</label> &nbsp;
+    {{asset?.data?.assetDetail?.item?.discription}}
+    </div>
+
+  <div class="col-6 col-md-4">
+    <label for="discription">Discription</label> &nbsp;
+    {{asset?.data?.assetDetail?.item?.discription}}
+    </div>
+
+  <div class="col-6 col-md-4">
+    <label for="actualPrice">Actual Price</label> &nbsp;
+    {{asset?.data?.assetDetail?.item?.actualPrice}}
+    </div>
+  </div>
+    <h5>Owner Details</h5>
+
+    <div class="col-6 col-md-4">
+      <label for="Name">Name</label> &nbsp;
+      {{asset?.owner?.name}}
+      </div>
+  </div>
