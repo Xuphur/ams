@@ -53,6 +53,7 @@ import { SearchComponent } from './components/search/search.component';
     HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,
+// tslint:disable-next-line: deprecation
     NgbModule.forRoot(),
   FormsModule,
   ],
