@@ -15,7 +15,6 @@ import { ViewassetComponent } from '../viewasset/viewasset.component';
   styleUrls: ['./listasset.component.css']
 })
 export class ListassetComponent implements OnInit {
-
   assetlist: any;
   foundAsset: any;
   closeResult: string;
