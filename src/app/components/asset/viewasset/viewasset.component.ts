@@ -11,6 +11,9 @@ export class ViewassetComponent implements OnInit {
 
   asset: any ;
 
+//  vehicle: Boolean = true;
+//  house: Boolean = true;
+//  item: Boolean = true;
   constructor(
     private amsService: AmsService,
   ) { }
@@ -22,9 +25,10 @@ export class ViewassetComponent implements OnInit {
   fetchAssetById() {
     this.amsService
     .getAssetById(this.amsService.assetId)
-    .subscribe(data => {
-      this.asset = data;
+    .subscribe((res: any) => {
+      this.asset = res.data;
       console.log(this.amsService.assetId, this.asset, 'asset at view');
     });
   }
+
 }

@@ -1,4 +1,5 @@
 <div class="container">
+<<<<<<< HEAD
   <h1>Costomer List</h1>
   <table class="table table-hover">
     <thead> 
@@ -51,4 +52,47 @@
     </tr>
   </tbody>
   </table>
+=======
+    <div class="row float-right newbox">
+        <button class="btn btn-primary btn-circle" (click)="open()">
+          <i class="fa fa-plus-circle fa-3x"></i></button>
+    </div>
+    <h1>Customer List</h1>
+    <div class="row">
+    <div class="card shadow p-3 mb-5 bg-white rounded" *ngFor="let customer of customerlist | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+        <div class="card-header">
+          <strong>{{customer?.customer?.name}}</strong>
+        <div class="row float-right">{{customer?.customer?.mobile1}}</div>
+        </div>
+      <div class="card-body">
+          <span>{{customer?.customer?.fathername}}</span><br>
+          <span>{{customer?.customer?.cnic}}</span><br>
+          <span>{{customer?.guarantor?.gname}}</span><br>
+          <span>{{customer?.guarantor?.gmobile}}</span><br>
+          <span>{{customer?.customer?.status}}</span><br>
+    </div>
+  <hr>
+  <div class="float-right">
+    <button type="button" class="btn btn-sm btn-outline-primary" (click)="isCollapsed = !isCollapsed"
+            [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+      Actions
+    </button>
+  </div>
+  <div id="collapseExample" [ngbCollapse]="isCollapsed">
+    <div class="float-right">
+        <button class="btn btn-md btn-outline-success" (click)="fetchCustomerById(customer._id)"><i class="far fa-edit">&nbsp; Edit</i></button>
+        <button class="btn btn-md btn-outline-danger" (click)="deleteCustomer(customer._id)"><i class="far fa-trash-alt">&nbsp; Delete</i></button>
+        <!-- <button class="btn btn-md btn-outline-primary" (click)="addReciept(contract._id)"><i class="fas fa-dollar-sign">&nbsp; Reciept</i></button> -->
+        <!-- <button class="btn btn-md btn-outline-success" (click)="listReciept(customer._id)"><i class="far fa-edit">&nbsp; Ledger</i></button> -->
+        <button class="btn btn-md btn-success" (click)="viewCustomer(customer._id)"><i class="far fa-edit">&nbsp; Open</i></button>
+      </div>
+  </div>
+  </div>
+  </div>
+  <ngb-pagination
+  [(page)]="page"
+  [pageSize]="pageSize"
+   [collectionSize]="customerlist.length"
+  [maxSize]="5"></ngb-pagination>
+>>>>>>> 828498b2373cbf50341e9a096125ca054ffc621f
   </div>

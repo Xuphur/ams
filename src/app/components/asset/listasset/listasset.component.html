@@ -1,5 +1,11 @@
 <div class="container">
+
+  <div class="row float-right newbox">
+      <button class="btn btn-primary btn-circle" (click)="open()">
+        <i class="fa fa-plus-circle fa-3x"></i></button>
+  </div>
   <h1>Asset List</h1>
+<<<<<<< HEAD
   <table class="table table-hover" borders ="ronded">
     <thead> 
       <div> 
@@ -49,3 +55,57 @@
       </tr>
     </tbody>
   </div>
+=======
+
+
+  <div class="row">
+  <div class="card shadow p-3 mb-5 bg-white rounded" *ngFor="let asset of assetlist | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+      <div class="card-header">
+        <strong>{{asset?.title}}</strong>
+      <div class="row float-right">{{asset?.customer?.mobile1}}</div>
+      </div>
+
+    <div class="card-body">
+
+  <span>{{asset?.assetType}}</span>
+<br>
+
+  <span>{{asset?.customer?.name}}</span>
+  <br>
+
+  <span>{{asset?.customer?.mobile1}} / {{asset?.customer?.mobile2}}</span>
+  <br>
+   <span>{{asset?.customer?.guarantor?.name}}</span>
+  <br>
+
+  <span>{{asset?.customer?.guarantor?.mobile}}</span>
+  <br>
+
+  </div>
+
+<hr>
+
+<div class="float-right">
+  <button type="button" class="btn btn-sm btn-outline-primary" (click)="isCollapsed = !isCollapsed"
+          [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+    Actions
+  </button>
+</div>
+<div id="collapseExample" [ngbCollapse]="isCollapsed">
+  <div class="float-right">
+    <button class="btn btn-sm btn-outline-success" (click)="edit(asset._id)"><i class="far fa-edit"></i></button>
+    <button class="btn btn-sm btn-outline-danger" (click)="deleteAsset(asset._id)"><i class="far fa-trash-alt"></i></button>
+    <button class="btn btn-sm btn-success" (click)="viewAsset(asset._id)"><i class="far fa-edit"></i></button>
+</div>
+</div>
+</div>
+  </div>
+  <ngb-pagination
+  [(page)]="page"
+  [pageSize]="pageSize"
+  [collectionSize]="assetlist.length"
+  [maxSize]="5"></ngb-pagination>
+</div>
+
+
+>>>>>>> 828498b2373cbf50341e9a096125ca054ffc621f

@@ -1,16 +1,13 @@
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-<nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">Asset Management System</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <button class="btn btn-md btn-primary" [routerLink]="['/asset/list']" routerLinkActive="router-link-active" ><i class="fas fa-list-ol"></i>&nbsp; Asset List</button>
-    <button class="btn btn-md btn-success" [routerLink]="['/customer/list']" routerLinkActive="router-link-active" ><i class="fas fa-list-ol"></i>&nbsp; Customer List</button>
-    <button class="btn btn-md btn-danger" [routerLink]="['/contract/list']" routerLinkActive="router-link-active" ><i class="fas fa-list-ol"></i>&nbsp; Constract List</button>
+<div>
+  <app-header></app-header>
+</div>
+<div class="row">
+  <div class="sidebar">
+    <app-sidebar></app-sidebar>
+  </div>
 
-  </nav>
-<div class="container">
+<div class="outlet">
   <router-outlet></router-outlet>
 </div>
-
+</div>
