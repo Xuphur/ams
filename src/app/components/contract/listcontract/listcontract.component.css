@@ -3,10 +3,9 @@
   flex-direction: column;
 }
 
-<<<<<<< HEAD
 .example-container > * {
   width: 100%;
-=======
+}
 .container {
   background-color: rgb(240, 240, 240);
 }
@@ -45,5 +44,4 @@ td {
   padding: 15px;
   text-align: left;
   border: 1px solid black;
->>>>>>> 828498b2373cbf50341e9a096125ca054ffc621f
 }

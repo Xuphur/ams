@@ -1,59 +1,5 @@
 <div class="container">
-<<<<<<< HEAD
-  <h1>Costomer List</h1>
-  <table class="table table-hover">
-    <thead> 
-      <div> 
-        <button class="btn btn-md btn-primary" (click)="open()"><i class="fas fa-plus"></i>&nbsp; New</button>
-      </div>
-        <tr>
-          <th>Ref</th>
-          <th>Title</th>
-          <th>Type</th>
-          <th>Customer</th>
-          <th>Mobile</th>
-          <th>Guarantor</th>
-          <th>Mobile</th>
-          <th>Owner</th>
-          <th>Mobile</th>
-          <th>Status</th>
-          <th>Due Date</th>
-          </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    </tbody>
-  <tbody>
-    <tr *ngFor="let customer of customerlist">
-      <td>{{customer?.customer?.name}}</td>
-      <td>{{customer?.customer?.fathername}}</td>
-      <td>{{customer?.customer?.cnic}}</td>
-      <td>{{customer?.customer?.name}}</td>
-      <td>{{customer?.customer?.mobile1}} / {{customer?.customer?.mobile2}}</td>
-      <td>{{customer?.guarantor?.gname}}</td>
-      <td>{{customer?.guarantor?.gmobile}}</td>
-      <td>{{customer?.owner?.name}}</td>
-      <td>{{customer?.owner?.mobile1}} / {{customer?.owner?.mobile2}}</td>
-      <td>{{customer?.customer?.status}}</td>
-      <td>{{customer?.customer?.reaccurance}}</td>
-  <td>
-      <button class="btn btn-md btn-outline-success" (click)="fetchCustomerById(customer._id)"><i class="far fa-edit">&nbsp; Edit</i></button>
-      <button class="btn btn-md btn-outline-danger" (click)="deleteCustomer(customer._id)"><i class="far fa-trash-alt">&nbsp; Delete</i></button>
-      <!-- <button class="btn btn-md btn-outline-primary" (click)="addReciept(contract._id)"><i class="fas fa-dollar-sign">&nbsp; Reciept</i></button> -->
-      <!-- <button class="btn btn-md btn-outline-success" (click)="listReciept(customer._id)"><i class="far fa-edit">&nbsp; Ledger</i></button> -->
-      <button class="btn btn-md btn-success" (click)="viewCustomer(customer._id)"><i class="far fa-edit">&nbsp; Open</i></button>
-  
-    </td>
-    </tr>
-  </tbody>
-  </table>
-=======
-    <div class="row float-right newbox">
+  <div class="row float-right newbox">
         <button class="btn btn-primary btn-circle" (click)="open()">
           <i class="fa fa-plus-circle fa-3x"></i></button>
     </div>
@@ -94,5 +40,4 @@
   [pageSize]="pageSize"
    [collectionSize]="customerlist.length"
   [maxSize]="5"></ngb-pagination>
->>>>>>> 828498b2373cbf50341e9a096125ca054ffc621f
   </div>

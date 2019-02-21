@@ -15,13 +15,9 @@ import { ViewassetComponent } from '../viewasset/viewasset.component';
   styleUrls: ['./listasset.component.css']
 })
 export class ListassetComponent implements OnInit {
-<<<<<<< HEAD
-  assetlist: any;
-=======
   page = 1;
   pageSize = 4;
   assetlist: any = [];
->>>>>>> 828498b2373cbf50341e9a096125ca054ffc621f
   foundAsset: any;
   closeResult: string;
   public isCollapsed = true;
