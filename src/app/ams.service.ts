@@ -12,7 +12,8 @@ export class AmsService {
   assetId: String;
   editMode: Boolean = false;
 
-  url = 'http://localhost:4000';
+  url = 'https://ams-backend.herokuapp.com';
+  // url = 'http://localhost:8080';
 
   constructor(
     private http: HttpClient,
