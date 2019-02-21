@@ -44,15 +44,15 @@ export class ListcontractComponent implements OnInit {
 
   viewContract(_id) {
     console.log(_id, 'this is contract id');
-    this.amsService.assetId = _id;
+    this.amsService.Id = _id;
       const modalRef = this.modalService.open(ViewcontractComponent, { size: 'lg' });
       modalRef.componentInstance.name = 'View Contract';
     console.log('view contract open');
 }
 
 fetchContractById(_id) {
-  this.amsService.assetId = _id;
-    console.log(this.amsService.assetId, 'got this contract');
+  this.amsService.Id = _id;
+    console.log(this.amsService.Id, 'got this contract');
     const modalRef = this.modalService.open(NewcontractComponent, { size: 'lg' });
     modalRef.componentInstance.user = 'Update Asset';
 }
@@ -66,14 +66,14 @@ fetchContractById(_id) {
 
   addReciept(_id) {
     console.log(_id, 'this is asset id');
-    this.amsService.assetId = _id;
+    this.amsService.Id = _id;
     const modalRef = this.modalService.open(NewrecieptComponent, { size: 'lg' });
     modalRef.componentInstance.name = 'New Reciept';
   }
 
   listReciept(_id) {
-    this.amsService.assetId = _id;
-      console.log(this.amsService.assetId, 'this asset Called');
+    this.amsService.Id = _id;
+      console.log(this.amsService.Id, 'this asset Called');
     const modalRef = this.modalService.open(ListrecieptComponent, { size: 'lg' });
     modalRef.componentInstance.name = 'List Reciept';
 }

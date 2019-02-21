@@ -9,7 +9,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 
 export class AmsService {
-  assetId: String;
+  Id: String;
   editMode: Boolean = false;
 
   url = 'http://localhost:4000';

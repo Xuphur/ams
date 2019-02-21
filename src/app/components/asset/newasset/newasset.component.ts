@@ -27,17 +27,17 @@ export class NewassetComponent implements OnInit {
    }
 
    ngOnInit() {
-     if(this.amsService.editMode){
+     if (this.amsService.editMode) {
       this.fetchAssetById();
      }
   }
 
   fetchAssetById() {
     this.amsService
-    .getAssetById(this.amsService.assetId)
+    .getAssetById(this.amsService.Id)
     .subscribe((res: any) => {
       this.asset = res.data;
-      console.log(this.amsService.assetId, 'asset at view');
+      console.log(this.amsService.Id, 'asset at view');
     });
   }
 

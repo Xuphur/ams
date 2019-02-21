@@ -24,10 +24,10 @@ export class ViewassetComponent implements OnInit {
 
   fetchAssetById() {
     this.amsService
-    .getAssetById(this.amsService.assetId)
+    .getAssetById(this.amsService.Id)
     .subscribe((res: any) => {
       this.asset = res.data;
-      console.log(this.amsService.assetId, this.asset, 'asset at view');
+      console.log(this.amsService.Id, this.asset, 'asset at view');
     });
   }
 
