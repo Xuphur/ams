@@ -50,8 +50,9 @@ export class ListcontractComponent implements OnInit {
     console.log('view contract open');
 }
 
-fetchContractById(_id) {
+edit(_id) {
   this.amsService.Id = _id;
+  this.amsService.editMode = true;
     console.log(this.amsService.Id, 'got this contract');
     const modalRef = this.modalService.open(NewcontractComponent, { size: 'lg' });
     modalRef.componentInstance.user = 'Update Asset';

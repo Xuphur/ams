@@ -27,6 +27,18 @@ export class NewcustomerComponent implements OnInit {
    }
 
   ngOnInit() {
+    if (this.amsService.editMode) {
+      this.fetchCustomerById();
+     }
+  }
+
+  fetchCustomerById() {
+    this.amsService
+    .getCustomerById(this.amsService.Id)
+    .subscribe((res: any) => {
+      this.customer = res.data;
+      console.log(this.amsService.Id, 'customer at edit');
+    });
   }
 
   addCustomer(customer) {

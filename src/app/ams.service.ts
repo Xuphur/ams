@@ -12,9 +12,10 @@ export class AmsService {
   Id: String;
   editMode: Boolean = false;
 
-  url = 'http://localhost:4000';
+  // url = 'http://localhost:4000';
+  url = 'https://ams-backend.herokuapp.com';
 
-  constructor(
+constructor(
     private http: HttpClient,
     private modalService: NgbModal
     ) { }

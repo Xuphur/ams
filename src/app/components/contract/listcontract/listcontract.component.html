@@ -29,7 +29,7 @@
   </div>
   <div id="collapseExample" [ngbCollapse]="isCollapsed">
     <div class="float-right">
-        <button class="btn btn-sm btn-outline-success" (click)="fetchContractById(contract._id)"><i class="far fa-edit"></i></button>&nbsp;
+        <button class="btn btn-sm btn-outline-success" (click)="edit(contract._id)"><i class="far fa-edit"></i></button>&nbsp;
         <button class="btn btn-sm btn-outline-danger" (click)="deleteContract(contract._id)"><i class="far fa-trash-alt"></i></button>&nbsp;
         <button class="btn btn-sm btn-outline-primary" (click)="addReciept(contract._id)"><i class="fas fa-dollar-sign"></i></button>&nbsp;
         <button class="btn btn-sm btn-outline-success" (click)="listReciept(contract._id)"><i class="far fa-list-alt"></i></button>&nbsp;

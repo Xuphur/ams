@@ -33,6 +33,18 @@ export class NewcontractComponent implements OnInit {
   }
 
   ngOnInit() {
+    if (this.amsService.editMode) {
+      this.fetchContractById();
+     }
+  }
+
+  fetchContractById() {
+    this.amsService
+    .getContractById(this.amsService.Id)
+    .subscribe((res: any) => {
+      this.contract = res.data;
+      console.log(this.amsService.Id, 'contract at view');
+    });
   }
 
   fetchCustomers() {
