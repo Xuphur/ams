@@ -16,7 +16,7 @@ export class ViewcontractComponent implements OnInit {
 
   ngOnInit() {
     this.fetchContractById();
-  }
+}
   fetchContractById() {
     this.amsService
     .getContractById(this.amsService.Id)
