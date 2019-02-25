@@ -4,27 +4,27 @@
 <div class="row">
 <div class="col-6 col-md-4">
 <label for="contractDate">Contract Date</label>
-<input [(ngModel)]="contract.contractDate" type="datetime-local" name="contractDate" id="contractDate"  class="form-control" placeholder="">
+<input [(ngModel)]="contract.contractDate" type="date" name="contractDate" id="contractDate"  class="form-control" placeholder="Contract Date">
 </div>
 
 <div class="col-6 col-md-4">
 <label for="startDate">Contract Start Date</label>
-<input [(ngModel)]="contract.startDate" type="datetime-local" name="startDate" id="startDate"  class="form-control" placeholder="">
+<input [(ngModel)]="contract.startDate" type="date" name="startDate" id="startDate"  class="form-control" placeholder="Contract Start Date">
 </div>
 
 <div class="col-6 col-md-4">
 <label for="duration">Contract Duration</label>
-<input [(ngModel)]="contract.duration" type="text" name="duration" id="duration"  class="form-control" placeholder="">
+<input [(ngModel)]="contract.duration" type="text" name="duration" id="duration"  class="form-control" placeholder="Contract Duration">
 </div>
 
 <div class="col-6 col-md-4">
 <label for="increment">Increment</label>
-<input [(ngModel)]="contract.increment" type="text" name="increment" id="increment"  class="form-control" placeholder="">
+<input [(ngModel)]="contract.increment" type="text" name="increment" id="increment"  class="form-control" placeholder="Increment">
 </div>
 
 <div class="col-6 col-md-4">
 <label for="incrementSchedule">Increment Schedule</label>
-<select [(ngModel)]="contract.incrementSchedule" type="text" name="incrementSchedule" id="incrementSchedule"  class="form-control" placeholder="">
+<select [(ngModel)]="contract.incrementSchedule" type="text" name="incrementSchedule" id="incrementSchedule"  class="form-control" placeholder="Increment Schedule">
 <option value="daily">Daily</option>
 <option value="monthly">Monthly</option>
 <option value="annual">Annual</option>
@@ -33,17 +33,17 @@
 
 <div class="col-6 col-md-4">
 <label for="expiry">Expiry Date</label>
-<input [(ngModel)]="contract.expiryDate" type="date" name="expiry" id="expiry"  class="form-control" placeholder="">
+<input [(ngModel)]="contract.expiryDate" type="date" name="expiry" id="expiry"  class="form-control" placeholder="Expiry Date">
 </div>
 
 <div class="col-6 col-md-4">
 <label for="cancelation">Cancelation Date</label>
-<input [(ngModel)]="contract.cancelation" type="date" name="cancelation" id="cancelation"  class="form-control" placeholder="">
+<input [(ngModel)]="contract.cancelation" type="date" name="cancelation" id="cancelation"  class="form-control" placeholder="Cancelation Date">
 </div>
 
 <div class="col-6 col-md-4">
 <label for="mathod">Payment Mathod</label>
-<select [(ngModel)]="contract.paymentMathod" type="text" name="mathod" id="mathod"  class="form-control" placeholder="">
+<select [(ngModel)]="contract.paymentMathod" type="text" name="mathod" id="mathod"  class="form-control" placeholder="Payment Mathod">
 <option value="daily">Daily</option>
 <option value="monthly">Monthly</option>
 <option value="annual">Annual</option>
@@ -52,7 +52,7 @@
 
 <div class="col-6 col-md-4">
 <label for="quoted">Price Quoted</label>
-<input [(ngModel)]="contract.priceQuoted" type="text" name="qouted" id="qouted"  class="form-control" placeholder="">
+<input [(ngModel)]="contract.priceQuoted" type="text" name="qouted" id="qouted"  class="form-control" placeholder="Price Quoted">
 </div>
 
 <div class="col-6 col-md-4">
@@ -82,14 +82,14 @@
 <div class="col-6 col-md-4">
   <label for="Select Customer">Select Customer</label>
   <select [(ngModel)]="contract.customer" type="text" name="customer" id="customer" (click)="fetchCustomers()"  class="form-control" placeholder="">
-  <option value="{{customer?.customer?.name}}" *ngFor="let customer of customerlist">{{customer?.customer?.name}}</option>
+  <option value="{{customer?.customer?._id}}" *ngFor="let customer of customerlist">{{customer?.customer?.name}}</option>
   </select>
   </div>
 </div>
 <div class="col-6 col-md-4">
   <label for="Select Asset">Select Asset</label>
   <select [(ngModel)]="contract.asset" type="text" name="asset" id="asset" (click)="fetchAssets()" class="form-control" placeholder="">
-  <option value="{{asset?.title}}" *ngFor="let asset of assetlist">{{asset?.title}}</option>
+  <option value="{{asset?._id}}" *ngFor="let asset of assetlist">{{asset?.title}}</option>
   </select>
   </div>
 
