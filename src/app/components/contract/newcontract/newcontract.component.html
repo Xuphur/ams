@@ -1,34 +1,30 @@
 <form>
   <div class="container">
-    <ngb-tabset #t="ngbTabset">
-<ngb-tab id="Contract">
-  <ng-template ngbTabContent>
-
-<h3>Contract</h3>
+<h3 class="aligncontract">Contract</h3>
 <div class="row">
 <div class="col-6 col-md-4">
 <label for="contractDate">Contract Date</label>
-<input [(ngModel)]="contract.contractDate" type="datetime-local" name="contractDate" id="contractDate">
+<input [(ngModel)]="contract.contractDate" type="datetime-local" name="contractDate" id="contractDate"  class="form-control" placeholder="">
 </div>
 
 <div class="col-6 col-md-4">
 <label for="startDate">Contract Start Date</label>
-<input [(ngModel)]="contract.startDate" type="datetime-local" name="startDate" id="startDate">
+<input [(ngModel)]="contract.startDate" type="datetime-local" name="startDate" id="startDate"  class="form-control" placeholder="">
 </div>
 
 <div class="col-6 col-md-4">
 <label for="duration">Contract Duration</label>
-<input [(ngModel)]="contract.duration" type="text" name="duration" id="duration">
+<input [(ngModel)]="contract.duration" type="text" name="duration" id="duration"  class="form-control" placeholder="">
 </div>
 
 <div class="col-6 col-md-4">
 <label for="increment">Increment</label>
-<input [(ngModel)]="contract.increment" type="text" name="increment" id="increment">
+<input [(ngModel)]="contract.increment" type="text" name="increment" id="increment"  class="form-control" placeholder="">
 </div>
 
 <div class="col-6 col-md-4">
 <label for="incrementSchedule">Increment Schedule</label>
-<select [(ngModel)]="contract.incrementSchedule" type="text" name="incrementSchedule" id="incrementSchedule">
+<select [(ngModel)]="contract.incrementSchedule" type="text" name="incrementSchedule" id="incrementSchedule"  class="form-control" placeholder="">
 <option value="daily">Daily</option>
 <option value="monthly">Monthly</option>
 <option value="annual">Annual</option>
@@ -37,17 +33,17 @@
 
 <div class="col-6 col-md-4">
 <label for="expiry">Expiry Date</label>
-<input [(ngModel)]="contract.expiryDate" type="date" name="expiry" id="expiry">
+<input [(ngModel)]="contract.expiryDate" type="date" name="expiry" id="expiry"  class="form-control" placeholder="">
 </div>
 
 <div class="col-6 col-md-4">
 <label for="cancelation">Cancelation Date</label>
-<input [(ngModel)]="contract.cancelation" type="date" name="cancelation" id="cancelation">
+<input [(ngModel)]="contract.cancelation" type="date" name="cancelation" id="cancelation"  class="form-control" placeholder="">
 </div>
 
 <div class="col-6 col-md-4">
 <label for="mathod">Payment Mathod</label>
-<select [(ngModel)]="contract.paymentMathod" type="text" name="mathod" id="mathod">
+<select [(ngModel)]="contract.paymentMathod" type="text" name="mathod" id="mathod"  class="form-control" placeholder="">
 <option value="daily">Daily</option>
 <option value="monthly">Monthly</option>
 <option value="annual">Annual</option>
@@ -56,27 +52,27 @@
 
 <div class="col-6 col-md-4">
 <label for="quoted">Price Quoted</label>
-<input [(ngModel)]="contract.priceQuoted" type="text" name="qouted" id="qouted">
+<input [(ngModel)]="contract.priceQuoted" type="text" name="qouted" id="qouted"  class="form-control" placeholder="">
 </div>
 
 <div class="col-6 col-md-4">
 <label for="quoted">Total Payable</label>
-<input [(ngModel)]="contract.totalPayable" type="text" name="qouted" id="qouted">
+<input [(ngModel)]="contract.totalPayable" type="text" name="qouted" id="qouted"  class="form-control" placeholder="">
 </div>
 
 <div class="col-6 col-md-4">
 <label for="downPayment">Down Payment</label>
-<input [(ngModel)]="contract.downPayment" type="text" name="downPayment" id="downPayment">
+<input [(ngModel)]="contract.downPayment" type="text" name="downPayment" id="downPayment"  class="form-control" placeholder="">
 </div>
 
 <div class="col-6 col-md-4">
 <label for="avdancePayment">Advance Payment</label>
-<input [(ngModel)]="contract.avdancePayment" type="text" name="advancePayment" id="advancePayment">
+<input [(ngModel)]="contract.avdancePayment" type="text" name="advancePayment" id="advancePayment"  class="form-control" placeholder="">
 </div>
 
 <div class="col-6 col-md-4">
 <label for="status">Contract Status</label>
-<select [(ngModel)]="contract.status" type="text" name="status" id="status">
+<select [(ngModel)]="contract.status" type="text" name="status" id="status"  class="form-control" placeholder="">
 <option value="Open">Open</option>
 <option value="Canceled">Canceled</option>
 <option value="Expired">Expired</option>
@@ -85,27 +81,32 @@
 
 <div class="col-6 col-md-4">
   <label for="Select Customer">Select Customer</label>
-  <select [(ngModel)]="contract.customer" type="text" name="customer" id="customer" (click)="fetchCustomers()">
+  <select [(ngModel)]="contract.customer" type="text" name="customer" id="customer" (click)="fetchCustomers()"  class="form-control" placeholder="">
   <option value="{{customer?.customer?.name}}" *ngFor="let customer of customerlist">{{customer?.customer?.name}}</option>
   </select>
   </div>
 </div>
 <div class="col-6 col-md-4">
   <label for="Select Asset">Select Asset</label>
-  <select [(ngModel)]="contract.asset" type="text" name="asset" id="asset" (click)="fetchAssets()">
+  <select [(ngModel)]="contract.asset" type="text" name="asset" id="asset" (click)="fetchAssets()" class="form-control" placeholder="">
   <option value="{{asset?.title}}" *ngFor="let asset of assetlist">{{asset?.title}}</option>
   </select>
   </div>
 
 <div class="row float-right">
-      <button class="btn btn-primary" (click)="t.select('Guarantor')">Back</button>
-      <button type="submit" (click)="addContract(contract)" class="btn btn-outline-success">Save</button>
-      <button type="submit" (click)="openCustomer()" class="btn btn-outline-success">Create Customer</button>
-      <button type="submit" (click)="openAsset()" class="btn btn-outline-success">Create Asset</button>
-    </div>
-</ng-template>
-</ngb-tab>
 
-</ngb-tabset>
+      <button class="btn btn-primary btn" (click)="t.select('Guarantor')">Back</button>
+      <button type="submit" (click)="addContract(contract)" class="btn btn-primary">Save</button>
+      <button type="submit" (click)="openCustomer()" class="btn btn-primary">Create Customer</button>
+      <button type="submit" (click)="openAsset()" class="btn btn-primary">Create Asset</button>
+    </div>
+    
 </div>
-</form>
+</form> 
+
+
+
+
+
+
+ 

@@ -15,7 +15,7 @@ import { ViewassetComponent } from '../viewasset/viewasset.component';
   styleUrls: ['./listasset.component.css']
 })
 export class ListassetComponent implements OnInit {
-  page = 1;
+   page = 1 ;
   pageSize = 4;
   assetlist: any = [];
   foundAsset: any;
@@ -49,7 +49,7 @@ export class ListassetComponent implements OnInit {
     console.log(_id, 'this is asset id');
       const modalRef = this.modalService.open(NewassetComponent, { size: 'lg' });
       modalRef.componentInstance.name = 'Update Asset';
-    }
+  }
 
   deleteAsset(_id) {
     this.amsService.deleteAsset(_id).subscribe(() => {
@@ -71,6 +71,6 @@ export class ListassetComponent implements OnInit {
       const modalRef = this.modalService.open(ViewassetComponent, { size: 'lg' });
       modalRef.componentInstance.asset = _id;
     console.log('view asset open');
-}
+  }
 
 }
