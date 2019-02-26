@@ -18,6 +18,7 @@ export class ListassetComponent implements OnInit {
   page = 1;
   pageSize = 4;
   assetlist: any = [];
+  item: any;
   foundAsset: any;
   closeResult: string;
   public isCollapsed = true;
@@ -49,6 +50,15 @@ export class ListassetComponent implements OnInit {
     console.log(_id, 'this is asset id');
       const modalRef = this.modalService.open(NewassetComponent, { size: 'lg' });
       modalRef.componentInstance.name = 'Update Asset';
+    }
+  search(item) {
+    console.log(item, 'this is item at search');
+    this.amsService
+    .getAsset(item)
+    .subscribe((res: any) => {
+      this.assetlist = res.data;
+      console.log('all asset found', this.assetlist);
+    });
     }
 
   deleteAsset(_id) {

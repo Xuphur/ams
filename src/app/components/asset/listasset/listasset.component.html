@@ -1,12 +1,22 @@
 <div class="container">
 
+<div class="row">
+  <div class="col-6 col-md-4">
+  <h1>Asset List</h1>
+  </div>
+  <div class="col-6 col-md-4">
+      <div class="searchbar">
+        <input [(ngModel)]="item" class="search_input" type="text" name="" placeholder="Search...">
+        <button (click)="search(item)" class="search_icon"><i class="fas fa-search"></i></button>
+    </div>
+  </div>
+  <div class="col-6 col-md-4">
   <div class="row float-right newbox">
       <button class="btn btn-primary btn-circle" (click)="open()">
-        <i class="fa fa-plus-circle fa-3x"></i></button>
+        <i class="fa fa-plus"></i></button>
   </div>
-  <h1>Asset List</h1>
-
-
+  </div>
+</div>
   <div class="row">
   <div class="card shadow p-3 mb-5 bg-white rounded" *ngFor="let asset of assetlist | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
       <div class="card-header">

@@ -82,7 +82,7 @@
 <div class="col-6 col-md-4">
   <label for="Select Customer">Select Customer</label>
   <select [(ngModel)]="contract.customer" type="text" name="customer" id="customer" (click)="fetchCustomers()"  class="form-control" placeholder="">
-  <option value="{{customer?.customer?._id}}" *ngFor="let customer of customerlist">{{customer?.customer?.name}}</option>
+  <option value="{{customer?._id}}" *ngFor="let customer of customerlist">{{customer?.customer?.name}}</option>
   </select>
   </div>
 </div>

@@ -12,8 +12,8 @@ export class AmsService {
   Id: String;
   editMode: Boolean = false;
 
-  // url = 'http://localhost:4000';
-  url = 'https://ams-backend.herokuapp.com';
+  url = 'http://localhost:4000';
+  // url = 'https://ams-backend.herokuapp.com';
 
 constructor(
     private http: HttpClient,
@@ -29,6 +29,10 @@ constructor(
   // Asset CRUDs
   getAssets() {
     return this.http.get(this.url + '/asset/list');
+  }
+
+  getAsset(item) {
+    return this.http.get(this.url + '/asset/one/' + item);
   }
 
   getAssetById(id) {
@@ -84,7 +88,9 @@ constructor(
   getCustomers() {
     return this.http.get(this.url + '/customer/list');
   }
-
+  getCustomer(item) {
+    return this.http.get(this.url + '/customer/one/' + item);
+  }
   getCustomerById(id) {
     return this.http.get(this.url + '/customer/' + id);
   }
@@ -108,6 +114,9 @@ constructor(
     return this.http.get(this.url + '/contract/list');
   }
 
+  getContract(item) {
+    return this.http.get(this.url + '/contract/one/' + item);
+  }
   getContractById(id) {
     return this.http.get(this.url + '/contract/' + id);
   }

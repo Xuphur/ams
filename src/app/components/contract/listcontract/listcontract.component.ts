@@ -16,6 +16,7 @@ export class ListcontractComponent implements OnInit {
   page = 1;
   pageSize = 4;
   contractlist: any = [];
+  item: any;
   public isCollapsed = true;
 
   constructor(
@@ -58,6 +59,15 @@ edit(_id) {
     modalRef.componentInstance.user = 'Update Asset';
 }
 
+search(item) {
+  console.log(item, 'this is item at search');
+  this.amsService
+  .getContract(item)
+  .subscribe((res: any) => {
+    this.contractlist = res.data;
+    console.log('Contract found', this.contractlist);
+  });
+  }
   deleteContract(_id) {
     this.amsService.deleteContract(_id).subscribe(() => {
       this.fetchContracts();
