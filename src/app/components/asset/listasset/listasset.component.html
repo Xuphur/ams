@@ -1,56 +1,54 @@
 <div class="container">
 
   <div class="row float-right newbox">
-      <button class="btn btn-primary btn-circle" (click)="open()">
-        <i class="fa fa-plus-circle fa-3x"></i></button>
+    <button class="btn btn-primary btn-circle" (click)="open()">
+      <i class="fa fa-plus-circle fa-3x"></i></button>
   </div>
   <h1>Asset List</h1>
-  <table class="table table-hover" borders ="ronded">
-    <thead> 
-      <div> 
-        <button class="btn btn-md btn-primary" (click)="open()"><i class="fas fa-plus"></i>&nbsp; New</button>
+  <div class="row">
+    <div class="card shadow p-3 mb-5 bg-white rounded"
+      *ngFor="let asset of assetlist | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+      <div class="card-header">
+        <strong>{{asset?.title}}</strong>
+        <div class="row float-right">{{asset?.customer?.mobile1}}</div>
       </div>
-        <tr>
-    <th>Ref</th>
-    <th>Title</th>
-    <th>Type</th>
-    <th>Customer</th>
-    <th>Mobile</th>
-    <th>Guarantor</th>
-    <th>Mobile</th>
-    <th>Owner</th>
-    <th>Mobile</th>
-    <th>Status</th>
-    <th>Due Date</th>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    </tbody>
-  </table>
-  <tbody>
-      <tr *ngFor="let asset of assetlist">
-        <td>{{asset?.ref}}</td>
-        <td>{{asset?.title}}</td>
-        <td>{{asset?.assetType}}</td>
-        <td>{{asset?.customer?.name}}</td>
-        <td>{{asset?.customer?.mobile1}} / {{asset?.customer?.mobile2}}</td>
-        <td>{{asset?.customer?.guarantor?.name}}</td>
-        <td>{{asset?.customer?.guarantor?.mobile}}</td>
-        <td>{{asset?.owner?.name}}</td>
-        <td>{{asset?.owner?.mobile1}} / {{asset?.owner?.mobile2}}</td>
-        <td>{{asset?.contract?.status}}</td>
-        <td>{{asset?.contract?.reaccurance}}</td>
-    <td>
-        <button class="btn btn-md btn-outline-success" (click)="fetchAssetById(asset._id)"><i class="far fa-edit">&nbsp; Edit</i></button>
-        <button class="btn btn-md btn-outline-danger" (click)="deleteAsset(asset._id)"><i class="far fa-trash-alt">&nbsp; Delete</i></button>
-        <button class="btn btn-md btn-outline-primary" (click)="addReciept(asset._id)"><i class="fas fa-dollar-sign">&nbsp; Reciept</i></button>
-        <button class="btn btn-md btn-outline-success" (click)="listReciept(asset._id)"><i class="far fa-edit">&nbsp; Ledger</i></button>
-      </td>
-      </tr>
-    </tbody>
+
+      <div class="card-body">
+
+        <span>{{asset?.assetType}}</span>
+        <br>
+
+        <span>{{asset?.customer?.name}}</span>
+        <br>
+
+        <span>{{asset?.customer?.mobile1}} / {{asset?.customer?.mobile2}}</span>
+        <br>
+        <span>{{asset?.customer?.guarantor?.name}}</span>
+        <br>
+
+        <span>{{asset?.customer?.guarantor?.mobile}}</span>
+        <br>
+
+      </div>
+
+      <hr>
+
+      <div class="float-right">
+        <button type="button" class="btn btn-sm btn-outline-primary" (click)="isCollapsed = !isCollapsed"
+          [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+          Actions
+        </button>
+      </div>
+      <div id="collapseExample" [ngbCollapse]="isCollapsed">
+        <div class="float-right">
+          <button class="btn btn-sm btn-outline-success" (click)="edit(asset._id)"><i class="far fa-edit"></i></button>
+          <button class="btn btn-sm btn-outline-danger" (click)="deleteAsset(asset._id)"><i
+              class="far fa-trash-alt"></i></button>
+          <button class="btn btn-sm btn-success" (click)="viewAsset(asset._id)"><i class="far fa-edit"></i></button>
+        </div>
+      </div>
+    </div>
   </div>
+  <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="assetlist.length" [maxSize]="5">
+  </ngb-pagination>
+</div>
