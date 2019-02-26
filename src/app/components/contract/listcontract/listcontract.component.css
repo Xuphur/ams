@@ -1,8 +1,11 @@
-.create-form {
-  width: 100%;
-  border: 1px solid black;
+.example-container {
+  display: flex;
+  flex-direction: column;
 }
 
+.example-container > * {
+  width: 100%;
+}
 .container {
   background-color: rgb(240, 240, 240);
 }
