@@ -64,12 +64,14 @@ export class NewassetComponent implements OnInit {
       console.log(this.asset.assetType);
     }
   }
+
   Backbtn() {
     this.ownerTab = false;
     this.asset.assetType = 'main';
     this.activeIdString = ' ';
     this.activeIdString = this.asset.assetType;
   }
+  
   addAsset(asset) {
     console.log(asset, 'this is new asset'),
       this.amsService.addAsset(asset).subscribe(() => {
