@@ -50,7 +50,6 @@ export class ListassetComponent implements OnInit {
     console.log(_id, 'this is asset id');
       const modalRef = this.modalService.open(NewassetComponent, { size: 'lg' });
       modalRef.componentInstance.name = 'Update Asset';
-<<<<<<< HEAD
     }
   search(item) {
     console.log(item, 'this is item at search');
@@ -61,9 +60,6 @@ export class ListassetComponent implements OnInit {
       console.log('all asset found', this.assetlist);
     });
     }
-=======
-  }
->>>>>>> 63fe4499cd2af0b6fb5b7ac83e2d6f7235ab37b8
 
   deleteAsset(_id) {
     this.amsService.deleteAsset(_id).subscribe(() => {

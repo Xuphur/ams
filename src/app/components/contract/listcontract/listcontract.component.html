@@ -30,36 +30,12 @@
       </div>
       <div id="collapseExample" [ngbCollapse]="isCollapsed">
         <div class="float-right">
-          <button class="btn btn-sm btn-outline-success" (click)="fetchContractById(contract._id)"><i
-              class="far fa-edit"></i></button>&nbsp;
-          <button class="btn btn-sm btn-outline-danger" (click)="deleteContract(contract._id)"><i
-              class="far fa-trash-alt"></i></button>&nbsp;
-          <button class="btn btn-sm btn-outline-primary" (click)="addReciept(contract._id)"><i
-              class="fas fa-dollar-sign"></i></button>&nbsp;
-          <button class="btn btn-sm btn-outline-success" (click)="listReciept(contract._id)"><i
-              class="far fa-list-alt"></i></button>&nbsp;
-          <button class="btn btn-sm btn-outline-primary" (click)="viewContract(contract._id)"><i class="fas fa-eye">
-            </i></button>&nbsp;
+          <button class="btn btn-sm btn-outline-success" (click)="edit(contract._id)"><i class="far fa-edit"></i></button>
+          <button class="btn btn-sm btn-outline-danger" (click)="deleteContract(contract._id)"><i class="far fa-trash-alt"></i></button>
+          <button class="btn btn-sm btn-success" (click)="viewContract(contract._id)"><i class="fa fa-list"></i></button>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  <hr>
-  <div class="float-right">
-    <button type="button" class="btn btn-sm btn-outline-primary" (click)="isCollapsed = !isCollapsed"
-            [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
-      Actions
-    </button>
-  </div>
-  <div id="collapseExample" [ngbCollapse]="isCollapsed">
-    <div class="float-right">
-        <button class="btn btn-sm btn-outline-success" (click)="edit(contract._id)"><i class="far fa-edit"></i></button>&nbsp;
-        <button class="btn btn-sm btn-outline-danger" (click)="deleteContract(contract._id)"><i class="far fa-trash-alt"></i></button>&nbsp;
-        <button class="btn btn-sm btn-outline-primary" (click)="addReciept(contract._id)"><i class="fas fa-dollar-sign"></i></button>&nbsp;
-        <button class="btn btn-sm btn-outline-success" (click)="listReciept(contract._id)"><i class="far fa-list-alt"></i></button>&nbsp;
-        <button class="btn btn-sm btn-outline-primary" (click)="viewContract(contract._id)"><i class="fas fa-eye">  </i></button>&nbsp;
-  </div>
-  </div>
   </div>
   <ngb-pagination
   [(page)]="page"
@@ -67,8 +43,3 @@
   [collectionSize]="contractlist.length"
   [maxSize]="5"></ngb-pagination>
   </div>
-=======
-    <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="contractlist.length" [maxSize]="5">
-    </ngb-pagination>
-  </div>
->>>>>>> 63fe4499cd2af0b6fb5b7ac83e2d6f7235ab37b8

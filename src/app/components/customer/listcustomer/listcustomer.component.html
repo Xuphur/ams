@@ -12,34 +12,11 @@
         <div class="row float-right">{{customer?.customer?.mobile1}}</div>
       </div>
       <div class="card-body">
-<<<<<<< HEAD
-          <span>{{customer?.customer?.fathername}}</span><br>
-          <span>{{customer?.customer?.cnic}}</span><br>
-          <span>{{customer?.guarantor?.gname}}</span><br>
-          <span>{{customer?.guarantor?.gmobile}}</span><br>
-          <span>{{customer?.customer?.status}}</span><br>
-    </div>
-  <hr>
-  <div class="float-right">
-    <button type="button" class="btn btn-sm btn-outline-primary" (click)="isCollapsed = !isCollapsed"
-            [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
-      Actions
-    </button>
-  </div>
-  <div id="collapseExample" [ngbCollapse]="isCollapsed">
-    <div class="float-right">
-        <button class="btn btn-md btn-outline-success" (click)="edit(customer._id)"><i class="far fa-edit">&nbsp; Edit</i></button>
-        <button class="btn btn-md btn-outline-danger" (click)="deleteCustomer(customer._id)"><i class="far fa-trash-alt">&nbsp; Delete</i></button>
-        <!-- <button class="btn btn-md btn-outline-primary" (click)="addReciept(contract._id)"><i class="fas fa-dollar-sign">&nbsp; Reciept</i></button> -->
-        <!-- <button class="btn btn-md btn-outline-success" (click)="listReciept(customer._id)"><i class="far fa-edit">&nbsp; Ledger</i></button> -->
-        <button class="btn btn-md btn-success" (click)="viewCustomer(customer._id)"><i class="far fa-edit">&nbsp; Open</i></button>
-=======
         <span>{{customer?.customer?.fathername}}</span><br>
         <span>{{customer?.customer?.cnic}}</span><br>
         <span>{{customer?.guarantor?.gname}}</span><br>
         <span>{{customer?.guarantor?.gmobile}}</span><br>
         <span>{{customer?.customer?.status}}</span><br>
->>>>>>> 63fe4499cd2af0b6fb5b7ac83e2d6f7235ab37b8
       </div>
       <hr>
       <div class="float-right">
@@ -50,7 +27,7 @@
       </div>
       <div id="collapseExample" [ngbCollapse]="isCollapsed">
         <div class="float-right">
-          <button class="btn btn-md btn-outline-success" (click)="fetchCustomerById(customer._id)"><i
+          <button class="btn btn-md btn-outline-success" (click)="edit(customer._id)"><i
               class="far fa-edit">&nbsp; Edit</i></button>
           <button class="btn btn-md btn-outline-danger" (click)="deleteCustomer(customer._id)"><i
               class="far fa-trash-alt">&nbsp; Delete</i></button>
