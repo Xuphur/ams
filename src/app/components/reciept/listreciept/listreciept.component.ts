@@ -30,16 +30,16 @@ export class ListrecieptComponent implements OnInit {
 
   fetchAssetById() {
     this.amsService
-    .getAssetById(this.amsService.assetId)
+    .getAssetById(this.amsService.Id)
     .subscribe(data => {
       this.asset = data;
-      console.log(this.amsService.assetId, this.asset, 'got this asset');
+      console.log(this.amsService.Id, this.asset, 'got this asset');
     });
   }
 
   fetchReciept() {
     this.amsService
-    .getRecieptById(this.amsService.assetId)
+    .getRecieptById(this.amsService.Id)
     .subscribe((data: any) => {
       this.recieptlist = data.data;
       const total = this.getTotal(this.recieptlist);

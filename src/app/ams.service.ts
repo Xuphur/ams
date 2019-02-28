@@ -9,13 +9,18 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 
 export class AmsService {
-  assetId: String;
+  Id: String;
   editMode: Boolean = false;
 
+<<<<<<< HEAD
   // url = 'http://localhost:4000';
   url = 'https://ams-backend.herokuapp.com';
+=======
+  url = 'http://localhost:4000';
+  // url = 'https://ams-backend.herokuapp.com';
+>>>>>>> b69f6eaf23a8dcbdf5ded6ec77e32751761ae355
 
-  constructor(
+constructor(
     private http: HttpClient,
     private modalService: NgbModal
     ) { }
@@ -29,6 +34,10 @@ export class AmsService {
   // Asset CRUDs
   getAssets() {
     return this.http.get(this.url + '/asset/list');
+  }
+
+  getAsset(item) {
+    return this.http.get(this.url + '/asset/one/' + item);
   }
 
   getAssetById(id) {
@@ -84,7 +93,9 @@ export class AmsService {
   getCustomers() {
     return this.http.get(this.url + '/customer/list');
   }
-
+  getCustomer(item) {
+    return this.http.get(this.url + '/customer/one/' + item);
+  }
   getCustomerById(id) {
     return this.http.get(this.url + '/customer/' + id);
   }
@@ -108,6 +119,9 @@ export class AmsService {
     return this.http.get(this.url + '/contract/list');
   }
 
+  getContract(item) {
+    return this.http.get(this.url + '/contract/one/' + item);
+  }
   getContractById(id) {
     return this.http.get(this.url + '/contract/' + id);
   }

@@ -37,13 +37,12 @@ export class ListcustomerComponent implements OnInit {
     });
   }
 
-  fetchCustomerById(id) {
-    this.amsService
-    .getCustomerById(id)
-    .subscribe(data => {
-      this.customerlist = data;
-      console.log('all customer found', data);
-    });
+  edit(_id) {
+    this.amsService.Id = _id;
+    this.amsService.editMode = true;
+      console.log(this.amsService.Id, 'got this customer');
+      const modalRef = this.modalService.open(NewcustomerComponent, { size: 'lg' });
+      modalRef.componentInstance.user = 'Update Customer';
   }
 
   open() {

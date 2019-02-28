@@ -8,3 +8,8 @@
 h5{
   background-color: #FAFAFA;
 }
+.card {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  margin: 10px 10px;
+}

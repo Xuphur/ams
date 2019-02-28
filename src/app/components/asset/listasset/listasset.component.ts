@@ -18,6 +18,7 @@ export class ListassetComponent implements OnInit {
    page = 1 ;
   pageSize = 4;
   assetlist: any = [];
+  item: any;
   foundAsset: any;
   closeResult: string;
   public isCollapsed = true;
@@ -44,12 +45,21 @@ export class ListassetComponent implements OnInit {
   }
 
   edit(_id) {
-    this.amsService.assetId = _id;
+    this.amsService.Id = _id;
     this.amsService.editMode = true;
     console.log(_id, 'this is asset id');
       const modalRef = this.modalService.open(NewassetComponent, { size: 'lg' });
       modalRef.componentInstance.name = 'Update Asset';
-  }
+    }
+  search(item) {
+    console.log(item, 'this is item at search');
+    this.amsService
+    .getAsset(item)
+    .subscribe((res: any) => {
+      this.assetlist = res.data;
+      console.log('all asset found', this.assetlist);
+    });
+    }
 
   deleteAsset(_id) {
     this.amsService.deleteAsset(_id).subscribe(() => {
@@ -60,14 +70,14 @@ export class ListassetComponent implements OnInit {
 
   open() {
     this.amsService.editMode = false;
-    this.amsService.assetId = null;
+    this.amsService.Id = null;
     const modalRef = this.modalService.open(NewassetComponent, { size: 'lg' });
     modalRef.componentInstance.name = 'New Asset';
   }
 
   viewAsset(_id) {
     console.log(_id, 'this is asset id');
-    this.amsService.assetId = _id;
+    this.amsService.Id = _id;
       const modalRef = this.modalService.open(ViewassetComponent, { size: 'lg' });
       modalRef.componentInstance.asset = _id;
     console.log('view asset open');
