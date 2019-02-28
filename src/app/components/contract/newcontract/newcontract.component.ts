@@ -42,7 +42,9 @@ export class NewcontractComponent implements OnInit {
       this.customerlist = data;
       console.log('all customer found', data);
     });
+    
   }
+
 
   fetchAssets() {
     this.amsService
