@@ -26,6 +26,7 @@ export class ViewcontractComponent implements OnInit {
       console.log(this.amsService.Id, this.contract, 'contract at view');
     });
 }
+
 close() {
   this.activeModal.close();
 }

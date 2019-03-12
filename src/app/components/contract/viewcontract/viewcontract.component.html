@@ -1,7 +1,10 @@
+<div class="header">
+  <button type="button" class="close" aria-label="Close"(click)="close()">
+      <span aria-hidden="true">&times;</span>
+   </button>
+</div>
 <div class="container">
-    <button type="button" class="close" aria-label="Close"(click)="close()">
-        <span aria-hidden="true">&times;</span>
-     </button>
+
     <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
         <div class="card">
             <h5 class="card-header">Contracts</h5>
@@ -17,9 +20,9 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>{{contract?. contractDate}}</td>
+                                <td>{{contract?.contractDate}}</td>
                                 <td>{{contract?.startDate}}</td>
-                                <td>{{contract?. duration}}</td>
+                                <td>{{contract?.duration}}</td>
                             </tr>
                                     <th class="border-0">Increment</th>
                                     <th class="border-0">Increment Schedule</th>
