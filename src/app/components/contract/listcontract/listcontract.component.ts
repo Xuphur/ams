@@ -40,14 +40,14 @@ export class ListcontractComponent implements OnInit {
 
   open() {
     this.amsService.editMode = false;
-    const modalRef = this.modalService.open(NewcontractComponent, { size: 'lg' });
+    const modalRef = this.modalService.open(NewcontractComponent, { size: 'lg', backdrop : 'static'  });
     modalRef.componentInstance.name = 'New Contract';
   }
 
   viewContract(_id) {
     console.log(_id, 'this is contract id');
     this.amsService.Id = _id;
-      const modalRef = this.modalService.open(ViewcontractComponent, { size: 'lg' });
+      const modalRef = this.modalService.open(ViewcontractComponent, { size: 'lg', backdrop : 'static'  });
       modalRef.componentInstance.name = 'View Contract';
     console.log('view contract open');
 }
@@ -56,7 +56,7 @@ edit(_id) {
   this.amsService.Id = _id;
   this.amsService.editMode = true;
     console.log(this.amsService.Id, 'got this contract');
-    const modalRef = this.modalService.open(NewcontractComponent, { size: 'lg' });
+    const modalRef = this.modalService.open(NewcontractComponent, { size: 'lg', backdrop : 'static'  });
     modalRef.componentInstance.user = 'Update Asset';
 }
 
@@ -79,14 +79,14 @@ search(item) {
   addReciept(_id) {
     console.log(_id, 'this is asset id');
     this.amsService.Id = _id;
-    const modalRef = this.modalService.open(NewrecieptComponent, { size: 'lg' });
+    const modalRef = this.modalService.open(NewrecieptComponent, { size: 'lg', backdrop : 'static'  });
     modalRef.componentInstance.name = 'New Reciept';
   }
 
   listReciept(_id) {
     this.amsService.Id = _id;
       console.log(this.amsService.Id, 'this asset Called');
-    const modalRef = this.modalService.open(ListrecieptComponent, { size: 'lg' });
+    const modalRef = this.modalService.open(ListrecieptComponent, { size: 'lg', backdrop : 'static'  });
     modalRef.componentInstance.name = 'List Reciept';
 }
 }

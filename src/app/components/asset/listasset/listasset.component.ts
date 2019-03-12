@@ -2,7 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { Asset } from '../../../asset.model';
 import { AmsService } from '../../../ams.service';
 import { Router } from '@angular/router';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
 import { NewassetComponent } from './../newasset/newasset.component';
 import { NewrecieptComponent } from '../../reciept/newreciept/newreciept.component';
 import { ListrecieptComponent } from '../../reciept/listreciept/listreciept.component';
@@ -47,7 +47,7 @@ export class ListassetComponent implements OnInit {
     this.amsService.Id = _id;
     this.amsService.editMode = true;
     console.log(_id, 'this is asset id');
-      const modalRef = this.modalService.open(NewassetComponent, { size: 'lg' });
+      const modalRef = this.modalService.open(NewassetComponent, { size: 'lg', backdrop : 'static'  });
       modalRef.componentInstance.name = 'Update Asset';
     }
   search(item) {
@@ -70,14 +70,14 @@ export class ListassetComponent implements OnInit {
   open() {
     this.amsService.editMode = false;
     this.amsService.Id = null;
-    const modalRef = this.modalService.open(NewassetComponent, { size: 'lg' });
+    const modalRef = this.modalService.open(NewassetComponent, { size: 'lg', backdrop : 'static'  });
     modalRef.componentInstance.name = 'New Asset';
   }
 
   viewAsset(_id) {
     console.log(_id, 'this is asset id');
     this.amsService.Id = _id;
-      const modalRef = this.modalService.open(ViewassetComponent, { size: 'lg' });
+      const modalRef = this.modalService.open(ViewassetComponent, { size: 'lg', backdrop : 'static'  });
       modalRef.componentInstance.asset = _id;
     console.log('view asset open');
   }

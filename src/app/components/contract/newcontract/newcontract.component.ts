@@ -3,10 +3,10 @@ import { Contract } from 'src/app/contract.model';
 import { AmsService } from 'src/app/ams.service';
 import { FormBuilder } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
 import { NewassetComponent } from '../../asset/newasset/newasset.component';
 import { NewcustomerComponent } from '../../customer/newcustomer/newcustomer.component';
-
+import {NgbModal, NgbActiveModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-newcontract',
   templateUrl: './newcontract.component.html',
@@ -22,7 +22,8 @@ export class NewcontractComponent implements OnInit {
     private fb: FormBuilder,
     private router: Router,
     private route: ActivatedRoute,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    public activeModal: NgbActiveModal
   ) {
     this.contract = new Contract();
     this.route.paramMap.subscribe(parameterMap => {
@@ -76,5 +77,8 @@ export class NewcontractComponent implements OnInit {
  openAsset() {
     const modalRef = this.modalService.open(NewassetComponent, { size: 'lg' });
     modalRef.componentInstance.name = 'New Asset';
+  }
+  close() {
+    this.activeModal.close();
   }
 }

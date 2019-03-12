@@ -3,7 +3,7 @@ import { AmsService } from '../../../ams.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Asset } from 'src/app/asset.model';
-
+import {NgbModal, NgbActiveModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-newasset',
   templateUrl: './newasset.component.html',
@@ -14,11 +14,14 @@ export class NewassetComponent implements OnInit {
   number: any;
   asset: any;
   activeIdString: String = '';
+  closeResult: string;
   constructor(
     private amsService: AmsService,
     private fb: FormBuilder,
     private router: Router,
     private route: ActivatedRoute,
+    private modalService: NgbModal,
+    public activeModal: NgbActiveModal
 
   ) {
     this.asset = new Asset();
@@ -48,4 +51,10 @@ export class NewassetComponent implements OnInit {
         this.router.navigate(['/']);
       });
   }
+
+  close() {
+    this.activeModal.close();
+  }
+
 }
+
