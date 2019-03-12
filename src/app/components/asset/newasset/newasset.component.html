@@ -1,9 +1,6 @@
-<!-- <form>
+ <form>
     <div class="container">
-      <ngb-tabset #t="ngbTabset">
-    <ngb-tab title="Asset" id="main">
-      <ng-template ngbTabContent>
-
+<div class="row">
         <div class="col-6 col-md-4">
             <label for="title">Title</label>
             <input [(ngModel)]="asset.title" type="text" name="title" id="title">
@@ -17,18 +14,8 @@
                 <option value="item">Item</option>
                 </select>
                 </div>
-
-          <div class="row float-right">
-              <button class="btn btn-success" (click)="t.select(this.asset.assetType)">Next</button>
-              <button class="btn btn-primary" (click)="t.select('main')">Back</button>
-            </div>
-  </ng-template>
-  </ngb-tab>
-
-  <ngb-tab id="vehicle">
-    <ng-template ngbTabContent>
-
-          <div class="row">
+</div>
+          <div class="row" *ngIf= "this.asset.assetType =='vehicle'">
               <div class="col-6 col-md-4">
                 <label for="reg">Registration</label>
                 <input [(ngModel)]="asset.assetDetail.vehicle.reg" type="text" name="reg" id="reg">
@@ -63,17 +50,8 @@
   </select>
   </div>
   </div>
-  <div class="row float-right">
-      <button class="btn btn-outline-primary" (click)="t.select('Owner')">Next</button>
-      <button class="btn btn-primary" (click)="t.select('main')">Back</button>
-    </div>
-  </ng-template>
-  </ngb-tab>
 
-  <ngb-tab id="house">
-    <ng-template ngbTabContent>
-
-  <div class="row">
+  <div class="row" *ngIf= "this.asset.assetType =='house'">
     <div class="col-6 col-md-4">
     <label for="floor">Floor</label>
     <input [(ngModel)]="asset.assetDetail.house.address.floor" type="text" name="floor" id="floor">
@@ -123,17 +101,8 @@
     </select>
     </div>
   </div>
-  <div class="row float-right">
-          <button class="btn btn-outline-primary" (click)="t.select('Owner')">Next</button>
-      <button class="btn btn-primary" (click)="t.select('main')">Back</button>
-        </div>
-  </ng-template>
-  </ngb-tab>
 
-  <ngb-tab id="item">
-    <ng-template ngbTabContent>
-
-  <div class="row">
+  <div class="row" *ngIf= "this.asset.assetType =='item'">
 
   <div class="col-6 col-md-4">
   <label for="make">Make</label>
@@ -156,15 +125,7 @@
   <input [(ngModel)]="asset.assetDetail.item.actualPrice" type="text" name="actualPrice" id="actualPrice">
   </div>
   </div>
-  <div class="row float-right">
-          <button class="btn btn-outline-primary" (click)="t.select('Owner')">Next</button>
-          <button class="btn btn-primary" (click)="t.select('main')">Back</button>
-        </div>
-  </ng-template>
-  </ngb-tab>
 
-  <ngb-tab id="Owner">
-    <ng-template ngbTabContent>
 
               <h3>Owner</h3>
   <div class="row">
@@ -218,164 +179,11 @@
   <input [(ngModel)]="asset.owner.address.zipcode" type="text" name="zipcode" id="zipcode">
   </div>
   </div>
-  <div class="row float-right">
-      <button type="submit" (click)="addAsset(asset)" class="btn btn-outline-success">Save</button>
-          <button class="btn btn-primary" (click)="t.select('main')">Back</button>
-        </div>
-  </ng-template>
-  </ngb-tab>
 
-  </ngb-tabset>
   </div>
-  </form> -->
-
-  <!-- <div class="modal-header">
-      <h4 class="modal-title" id="modal-basic-title">New Assest</h4>
-      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <form>
-       <div>
-         <div class="form-group row">
-          <div class="lbl">
-              <label for="title" class="-sm-col2 col-form-label">Title</label>
-            </div>
-              <div class="col-sm-2">
-              <input [(ngModel)]="asset.title" type="text" name="title" id="title">
-              </div>
-               <div class="form-group row">
-                 <div class="txtbox">
-                 <label for="assetType" class="-sm-col4 col-form-label">Asset Type</label>
-                </div>
-                 <div class="col-sm-12">
-                  <select [(ngModel)]="asset.assetType" type="text" name="assetType" id="assetType">
-                  <option value="vehicle">Vehicle</option>
-                  <option value="house">House</option>
-                  <option value="item">Item</option>
-                  </select>
-                  </div>
-              </div>
-            </div>
-          </div>
-            </form> -->
-             <!-- <div class="input-group-append">
-              <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
-            </div>  -->
-          <!-- </div>
-          <div class="form-group row">
-              <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-
-                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-              <div class="col-sm-10">
-                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-              </div>
- </div>
-            </div>
-       </form>
-    <!-- </div> -->
-    <div class="modal-header">
-        <h4 class="modal-title" id="modal-basic-title">New Assest</h4>
-        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-    <div class="form-row" style="margin-left: 3px">
-        <div class="form-group col-md-3">
-          <label for="title">Title</label>
-          <input [(ngModel)]="asset.title" class="form-control" id="title" placeholder="Enter Title">
-        </div>
-        <div class="form-group col-md-3">
-            <label for="assetType">Asset Type</label>
-            <select [(ngModel)]="asset.assetType" class="form-control" id="assetType" placeholder="Choose one">
-                <option value="vehicle">Vehicle</option>
-                <option value="house">House</option>
-                <option value="item">Item</option>
-                </select>
-          </div>
-    </div>
-    <div class="form-row"  style="margin-left: 3px">
-        <div class="form-group col-md-3">
-            <label for="status">Status</label>
-            <select [(ngModel)]="asset.assetDetail.house.status" class="form-control" id="status" placeholder="Confirm Status">
-                <option value="available">Available</option>
-                <option value="rented">Rented</option>
-               <option value="sold">Sold</option>
-              </select>
-        </div>
-        <div class="form-group col-md-3">
-            <label for="number">House Number</label>
-            <input [(ngModel)]="asset.assetDetail.house.address.number" class="form-control" id="number" placeholder="Enter House No">
-        </div>
-      </div>
-      <div class="form-row"  style="margin-left: 3px">
-          <div class="form-group col-md-3">
-              <label for="street">Street</label>
-              <input [(ngModel)]="asset.assetDetail.house.address.street" class="form-control" id="street" placeholder="Enter Street No">
-          </div>
-          <div class="form-group col-md-3">
-              <label for="sector">Sector</label>
-              <input [(ngModel)]="asset.assetDetail.house.address.sector" class="form-control" id="sector" placeholder="Enter Sector No">
-          </div>
-        </div>
-        <div class="form-row" style="margin-left: 3px">
-            <div class="form-group col-md-3">
-                <div class="form-group col-md-4">
-                    <label for="city">City</label>
-                    <input [(ngModel)]="asset.assetDetail.house.address.city" class="form-control" id="city" placeholder="Enter City">
-            </div>
-            <div class="form-group col-md-3">
-                <label for="province">Province</label>
-                <input [(ngModel)]="asset.assetDetail.house.address.province" class="form-control" id="province" placeholder="Enter province">
-            </div>
-          </div>
-          <div class="form-row" style="margin-left: 3px">
-              <div class="form-group col-md-3">
-                  <label for="zipcode">Zipcode</label>
-                  <input [(ngModel)]="asset.assetDetail.house.address.zipcode" class="form-control" id="zipcode" placeholder="Enter Zipcode">
-              </div>
-              <!-- <div class="form-group col-md-3" style="margin-left: 3px">
-                  <label for="area">Size</label>
-                  <input [(ngModel)]="asset.assetDetail.house.area" class="form-control" id="area" placeholder="Enter Area">
-              </div>
-            </div> -->
-            <!-- <div class="form-row">
-                <div class="form-group col-md-3" style="margin-left: 3px">
-                  <label for="studentname">Student Name</label>
-                  <input type="text" class="form-control" id="studentname">
-                </div>
-                <div class="form-group col-md-3">
-                  <label for="fathername">Father Name</label>
-                  <input type="text" class="form-control" id="fathername">
-                </div>
-              </div>
-              <div class="form-row" style="margin-left: 3px">
-                  <div class="form-group col-md-3">
-                    <label for="studentname">Student Name</label>
-                    <input type="text" class="form-control" id="studentname">
-                  </div>
-                  <div class="form-group col-md-3">
-                    <label for="fathername">Father Name</label>
-                    <input type="text" class="form-control" id="fathername">
-                  </div>
-                </div>
-                <div class="form-row" style="margin-left: 3px">
-                    <div class="form-group col-md-3">
-                      <label for="studentname">Student Name</label>
-                      <input type="text" class="form-control" id="studentname">
-                    </div>
-                    <div class="form-group col-md-3">
-                      <label for="fathername">Father Name</label>
-                      <input type="text" class="form-control" id="fathername">
-                    </div>
-                  </div> -->
+  </form>
 
     <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark">Next</button>
-      <button type="button" class="btn btn-outline-dark">Cancel</button>
+      <button type="button" class="btn btn-outline-success" onclick="addAsset(asset)">Save</button>
+      <button type="button" class="btn btn-outline-danger">Exit</button>
     </div>

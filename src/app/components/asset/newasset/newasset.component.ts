@@ -14,9 +14,6 @@ export class NewassetComponent implements OnInit {
   number: any;
   asset: any;
   activeIdString: String = '';
-  ownerTab = false;
-  dummy = 0;
-  currentTab = 'main';
   constructor(
     private amsService: AmsService,
     private fb: FormBuilder,
@@ -43,33 +40,6 @@ export class NewassetComponent implements OnInit {
       this.asset = res.data;
       console.log(this.amsService.Id, 'asset at view');
     });
-  }
-  changeTab(ast) {
-    console.log('Asset = ', ast);
-    this.dummy = this.dummy + 1;
-    if (this.dummy % 2 === 0) {
-      this.asset.assetType = 'owner';
-      this.ownerTab = true;
-      this.activeIdString = this.asset.assetType;
-    }
-
-    if ((ast.assetType === "house" || ast.assetType === 'item' || ast.assetType === 'vehicle' || ast.assetType === 'owner') && this.currentTab !== 'main') {
-      this.activeIdString = '';
-      this.activeIdString = this.asset.assetType;
-    }
-    else {
-      this.activeIdString = '';
-      this.activeIdString = this.asset.assetType;
-      this.currentTab = this.asset.assetType;
-      console.log(this.asset.assetType);
-    }
-  }
-
-  Backbtn() {
-    this.ownerTab = false;
-    this.asset.assetType = 'main';
-    this.activeIdString = ' ';
-    this.activeIdString = this.asset.assetType;
   }
 
   addAsset(asset) {
