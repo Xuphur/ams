@@ -17,7 +17,6 @@ export class NewcontractComponent implements OnInit {
   contract: Contract;
   customerlist: any;
   assetlist: any;
-
   constructor(
     private amsService: AmsService,
     private fb: FormBuilder,
@@ -37,16 +36,14 @@ export class NewcontractComponent implements OnInit {
       this.fetchContractById();
      }
   }
-
   fetchContractById() {
     this.amsService
     .getContractById(this.amsService.Id)
     .subscribe((res: any) => {
       this.contract = res.data;
-      console.log(this.amsService.Id, 'contract at view');
+      console.log(this.amsService.Id, this.contract, 'contract at view');
     });
-  }
-
+}
   fetchCustomers() {
     this.amsService
     .getCustomers()

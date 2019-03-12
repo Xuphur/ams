@@ -39,6 +39,7 @@ export class ListcontractComponent implements OnInit {
   }
 
   open() {
+    this.amsService.editMode = false;
     const modalRef = this.modalService.open(NewcontractComponent, { size: 'lg' });
     modalRef.componentInstance.name = 'New Contract';
   }
