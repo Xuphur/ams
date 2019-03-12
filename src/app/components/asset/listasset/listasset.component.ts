@@ -2,11 +2,11 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { Asset } from '../../../asset.model';
 import { AmsService } from '../../../ams.service';
 import { Router } from '@angular/router';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { NewassetComponent } from './../newasset/newasset.component';
 import { NewrecieptComponent } from '../../reciept/newreciept/newreciept.component';
 import { ListrecieptComponent } from '../../reciept/listreciept/listreciept.component';
 import { ViewassetComponent } from '../viewasset/viewasset.component';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-listasset',
