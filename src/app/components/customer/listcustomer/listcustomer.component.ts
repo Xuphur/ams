@@ -41,12 +41,12 @@ export class ListcustomerComponent implements OnInit {
     this.amsService.Id = _id;
     this.amsService.editMode = true;
       console.log(this.amsService.Id, 'got this customer');
-      const modalRef = this.modalService.open(NewcustomerComponent, { size: 'lg' });
+      const modalRef = this.modalService.open(NewcustomerComponent, { size: 'lg', backdrop : 'static'  });
       modalRef.componentInstance.user = 'Update Customer';
   }
 
   open() {
-    const modalRef = this.modalService.open(NewcustomerComponent, { size: 'lg' });
+    const modalRef = this.modalService.open(NewcustomerComponent, { size: 'lg', backdrop : 'static'  });
     modalRef.componentInstance.name = 'New Customer';
   }
 
@@ -58,7 +58,7 @@ export class ListcustomerComponent implements OnInit {
   }
 
   viewCustomer(id) {
-    const modalRef = this.modalService.open(ViewcustomerComponent, { size: 'lg' });
+    const modalRef = this.modalService.open(ViewcustomerComponent, { size: 'lg', backdrop : 'static'  });
     modalRef.componentInstance.name = 'View Customer';
   }
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Asset } from 'src/app/asset.model';
 import { AmsService } from 'src/app/ams.service';
-
+import {NgbModal, NgbActiveModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-viewasset',
   templateUrl: './viewasset.component.html',
@@ -15,6 +14,7 @@ export class ViewassetComponent implements OnInit {
 //  house: Boolean = true;
 //  item: Boolean = true;
   constructor(
+    public activeModal: NgbActiveModal,
     private amsService: AmsService,
   ) { }
 
@@ -29,6 +29,9 @@ export class ViewassetComponent implements OnInit {
       this.asset = res.data;
       console.log(this.amsService.Id, this.asset, 'asset at view');
     });
+  }
+    close() {
+    this.activeModal.close();
   }
 
 }

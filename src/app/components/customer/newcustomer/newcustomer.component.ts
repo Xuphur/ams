@@ -3,7 +3,7 @@ import { Customer } from 'src/app/customer.model';
 import { AmsService } from 'src/app/ams.service';
 import { FormBuilder } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-
+import {NgbModal, NgbActiveModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-newcustomer',
   templateUrl: './newcustomer.component.html',
@@ -18,6 +18,8 @@ export class NewcustomerComponent implements OnInit {
     private fb: FormBuilder,
     private router: Router,
     private route: ActivatedRoute,
+    private modalService: NgbModal,
+    public activeModal: NgbActiveModal
   ) {
     this.customer = new Customer();
     this.route.paramMap.subscribe(parameterMap => {
@@ -46,5 +48,8 @@ export class NewcustomerComponent implements OnInit {
     this.amsService.addCustomer(customer).subscribe(() => {
       this.router.navigate(['/']);
     });
+  }
+  close() {
+    this.activeModal.close();
   }
 }
