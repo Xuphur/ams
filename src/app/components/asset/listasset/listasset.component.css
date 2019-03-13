@@ -1,19 +1,8 @@
-.create-form {
-  width: 100%;
-  border: 1px solid black;
-}
 
 .container {
   background-color: rgb(240, 240, 240);
 }
 
-/* .bla {
-  background-color: red;
-} */
-
-.newbox {
-  padding: 20px 20px;
-}
 .btn-circle {
   height: 40px;
   width: 40px;
@@ -28,11 +17,27 @@
 
 .card {
   background-color: rgb(255, 255, 255);
-  padding: 20px;
+  padding: 10px;
   margin: 10px 10px;
+  width: 100%;
 }
 .card-header{
+  background-color: rgb(0, 157, 248);
+  color: white;
+  text-align: left;
+  vertical-align: middle;
+  height: 60px;
+}
+.card-footer{
   background-color: rgb(255, 255, 255);
+  height: 60px;
+}
+
+.btn-search {
+  background-color: white;
+  outline: 0;
+  border-width: 0 0 1px;
+  border-color: rgb(176, 176, 179)
 }
 
 .search_input{
@@ -58,6 +63,12 @@
   color: #e74c3c;
   }
 
+  .search {
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: rgb(176, 176, 179);
+  }
+
   .search_icon{
   height: 40px;
   width: 40px;
@@ -77,6 +88,16 @@
     float: right;
     }
 
-    h1{
-      width: 265px;
+    th {
+      text-align: left;
+      width: 200px;
+      vertical-align: middle;
     }
+
+    td {
+      text-align: left;
+      color: rgb(150, 150, 150);
+      width: 200px;
+      border-bottom: 1px solid rgb(168, 168, 168);
+    }
+

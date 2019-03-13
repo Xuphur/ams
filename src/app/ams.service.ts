@@ -40,6 +40,16 @@ constructor(
     return this.http.get(this.url + '/asset/' + id);
   }
 
+  getAssetByOwner(owner) {
+    console.log(owner, 'id at service to edit');
+    return this.http.get(this.url + '/asset/owner/' + owner);
+  }
+
+  getAssetByType(type) {
+    console.log(type, 'id at service to edit');
+    return this.http.get(this.url + '/asset/type/' + type);
+  }
+
   addAsset(asset) {
     console.log(asset, 'this is asset at service');
     return this.http.post(this.url + '/asset/new', asset);
@@ -122,7 +132,7 @@ constructor(
   }
 
   addContract(contract) {
-    console.log(contract, 'this is asset at service');
+    console.log(contract, 'this is contract at service');
     return this.http.post(this.url + '/contract/new', contract);
   }
 

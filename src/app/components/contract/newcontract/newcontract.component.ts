@@ -63,7 +63,7 @@ export class NewcontractComponent implements OnInit {
     });
   }
   addContract(contract) {
-    console.log(contract, 'this is new asset'),
+    console.log(contract, 'this is new contract'),
     this.amsService.addContract(contract).subscribe(() => {
       this.router.navigate(['/']);
     });
