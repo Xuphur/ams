@@ -12,8 +12,8 @@ export class AmsService {
   Id: String;
   editMode: Boolean = false;
 
-  // url = 'http://localhost:4000';
-  url = 'https://ams-backend.herokuapp.com';
+  url = 'http://localhost:4000';
+  // url = 'https://ams-backend.herokuapp.com';
 
 constructor(
     private http: HttpClient,
@@ -38,6 +38,16 @@ constructor(
   getAssetById(id) {
     console.log(id, 'id at service to edit');
     return this.http.get(this.url + '/asset/' + id);
+  }
+
+  getAssetByOwner(owner) {
+    console.log(owner, 'id at service to edit');
+    return this.http.get(this.url + '/asset/owner/' + owner);
+  }
+
+  getAssetByType(type) {
+    console.log(type, 'id at service to edit');
+    return this.http.get(this.url + '/asset/type/' + type);
   }
 
   addAsset(asset) {
@@ -122,7 +132,7 @@ constructor(
   }
 
   addContract(contract) {
-    console.log(contract, 'this is asset at service');
+    console.log(contract, 'this is contract at service');
     return this.http.post(this.url + '/contract/new', contract);
   }
 

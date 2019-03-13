@@ -85,14 +85,14 @@
 <div class="col-6 col-md-4">
   <label for="Select Customer">Select Customer</label>
   <select [(ngModel)]="contract.customer" type="text" name="customer" id="customer" (click)="fetchCustomers()"  class="form-control" placeholder="">
-  <option value="{{customer?.customer?.name}}" *ngFor="let customer of customerlist">{{customer?.customer?.name}}</option>
+  <option value="{{customer?._id}}" *ngFor="let customer of customerlist">{{customer?.customer?.name}}</option>
   </select>
   </div>
 </div>
 <div class="col-6 col-md-4">
   <label for="Select Asset">Select Asset</label>
   <select [(ngModel)]="contract.asset" type="text" name="asset" id="asset" (click)="fetchAssets()" class="form-control" placeholder="">
-  <option value="{{asset?.title}}" *ngFor="let asset of assetlist">{{asset?.title}}</option>
+  <option value="{{asset?._id}}" *ngFor="let asset of assetlist">{{asset?.title}}</option>
   </select>
   </div>
 
