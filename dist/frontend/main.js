@@ -155,12 +155,12 @@ __webpack_require__.r(__webpack_exports__);
 
 // import { NewcontractComponent } from './components/contract/newcontract/newcontract.component';
 var AmsService = /** @class */ (function () {
-    // url = 'https://ams-backend.herokuapp.com';
     function AmsService(http, modalService) {
         this.http = http;
         this.modalService = modalService;
         this.editMode = false;
-        this.url = 'http://localhost:4000';
+        // url = 'http://localhost:4000';
+        this.url = 'https://ams-backend.herokuapp.com';
     }
     AmsService.prototype.find = function (customer) {
         console.log(customer, 'this is search value at service');
