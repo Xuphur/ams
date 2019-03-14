@@ -14,7 +14,10 @@ import { ListrecieptComponent } from '../../reciept/listreciept/listreciept.comp
 })
 export class ListcontractComponent implements OnInit {
   page = 1;
-  pageSize = 4;
+  pageSize = 10;
+  title: any;
+  owner: any;
+  type: any;
   contractlist: any = [];
   item: any;
   public isCollapsed = true;
@@ -60,15 +63,36 @@ edit(_id) {
     modalRef.componentInstance.user = 'Update Asset';
 }
 
-search(item) {
-  console.log(item, 'this is item at search');
+search(title) {
+  console.log(title, 'this is title at search');
   this.amsService
-  .getContract(item)
+  .getAsset(title)
   .subscribe((res: any) => {
     this.contractlist = res.data;
-    console.log('Contract found', this.contractlist);
+    console.log('all asset found bt Title', this.contractlist);
   });
   }
+
+searchByOwner(owner) {
+  console.log(owner, 'this is owner at search');
+  this.amsService
+  .getAssetByOwner(owner)
+  .subscribe((res: any) => {
+    this.contractlist = res.data;
+    console.log('all asset found by Owner', this.contractlist);
+  });
+  }
+
+searchByType(type) {
+  console.log(type, 'this is owner at search');
+  this.amsService
+  .getAssetByType(type)
+  .subscribe((res: any) => {
+    this.contractlist = res.data;
+    console.log('all asset found by Owner', this.contractlist);
+  });
+  }
+
   deleteContract(_id) {
     this.amsService.deleteContract(_id).subscribe(() => {
       this.fetchContracts();

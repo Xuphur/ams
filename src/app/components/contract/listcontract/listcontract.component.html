@@ -1,48 +1,58 @@
-<div class="container">
-  <div class="row float-right newbox">
-    <button class="btn btn-primary btn-circle" (click)="open()">
-      <i class="fa fa-plus-circle fa-3x"></i></button>
-  </div>
-  <h1>Contract List</h1>
-  <div class="row">
-    <div class="card shadow p-3 mb-5 bg-white rounded"
-      *ngFor="let contract of contractlist| slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
-      <div class="card-header">
-        <strong class="row float-left">{{contract?.title}}</strong>
-        <div class="row float-right">{{contract?.contractDate}}</div>
-      </div>
-      <div class="card-body">
-        <span>{{contract?.status}}</span><br>
-        <span>{{contract?.duration}}</span><br>
-        <span>{{contract?.increment}}</span><br>
-        <span>{{contract?.contractDate}}</span><br>
-        <span>{{contract?.priceQuoted}}</span><br>
-      </div>
-      <div class="modal-footer">
-          <button class="btn btn-sm btn-outline-success" (click)="edit(contract._id)"><i class="far fa-edit"></i></button>
-          <button class="btn btn-sm btn-outline-danger" (click)="deleteContract(contract._id)"><i class="far fa-trash-alt"></i></button>
-          <button class="btn btn-sm btn-success" (click)="viewContract(contract._id)"><i class="fa fa-list"></i></button>
-        </div>
-      <!-- <hr>
-      <div class="float-right">
-        <button type="button" class="btn btn-sm btn-outline-primary" (click)="isCollapsed = !isCollapsed"
-          [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
-          Actions
-        </button>
-      </div>
-      <div id="collapseExample" [ngbCollapse]="isCollapsed">
-        <div class="float-right">
-          <button class="btn btn-sm btn-outline-success" (click)="edit(contract._id)"><i class="far fa-edit"></i></button>
-          <button class="btn btn-sm btn-outline-danger" (click)="deleteContract(contract._id)"><i class="far fa-trash-alt"></i></button>
-          <button class="btn btn-sm btn-success" (click)="viewContract(contract._id)"><i class="fa fa-list"></i></button>
-        </div> -->
-      <!-- </div> -->
+<div class="card shadow bg-white rounded">
+    <div class="card-header shadow rounded">
+        <h3>Contract List</h3>
+    </div>
+  <div class="row card-body">
+    <div class="col">
+        <input [(ngModel)]="title" class="search" type="text" name="" placeholder="Search By Title">
+        <button type="button" class="btn-search" (click)="search(title)"><i class="fas fa-angle-down"></i></button>
+    </div>
+    <div class="col">
+        <input [(ngModel)]="owner" class="search" type="text" name="" placeholder="Search By Owner">
+        <button type="button" class="btn-search"  (click)="searchByOwner(owner)"><i class="fas fa-angle-down"></i></button>
+    </div>
+    <div class="col">
+        <input [(ngModel)]="type" class="search" type="text" name="" placeholder="Search By type">
+        <button type="button" class="btn-search" (click)="searchByType(type)"><i class="fas fa-angle-down"></i></button>
     </div>
 
-  </div>
-  <ngb-pagination
-  [(page)]="page"
-  [pageSize]="pageSize"
-  [collectionSize]="contractlist.length"
-  [maxSize]="5"></ngb-pagination>
-  </div>
+        <div class="col float-right newbox">
+            <button class="btn btn-primary btn-circle" (click)="open()">
+              <i class="fa fa-plus"></i></button>
+        </div>
+    </div>
+</div>
+
+<div class="card shadow bg-white rounded">
+    <div class="card-body" >
+      <table class="sortable">
+
+        <div class="row">
+            <th>Status &nbsp; <i class="fas fa-sort"></i></th>
+            <th>Duration&nbsp;<i class="fas fa-sort"></i></th>
+            <th>Increament&nbsp;<i class="fas fa-sort"></i></th>
+            <th>Contract Date&nbsp;<i class="fas fa-sort"></i></th>
+            <th>Price Quoted&nbsp;<i class="fas fa-sort"></i></th>
+            <th>Actions</th>
+            <!-- <th>Owner Address</th> -->
+        </div>
+       <div class="row" *ngFor="let contract of contractlist | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+        <td>{{contract?.status}}</td>
+        <td>{{contract?.duration}}</td>
+        <td>{{contract?.increment}}</td>
+        <td>{{contract?.contractDate}}</td>
+        <td>{{contract?.priceQuoted}}</td>
+      <td>
+          <button class="btn btn-sm btn-outline-success" (click)="edit(contract._id)"><i class="far fa-edit"></i></button>
+          <button class="btn btn-sm btn-outline-danger" (click)="deleteContract(contract._id)"><i class="far fa-trash-alt"></i></button>
+          <button class="btn btn-sm btn-success" (click)="viewContract(contract._id)"><i class="fa fa-list"></i></button>
+      </td>
+        </div>
+
+      </table>
+    </div>
+        </div>
+    <div class="card-footer">
+        <ngb-pagination class="d-flex justify-content-end" [(page)]="page" [pageSize]="pageSize" [collectionSize]="contractlist.length" [maxSize]="5" >
+          </ngb-pagination>
+    </div>

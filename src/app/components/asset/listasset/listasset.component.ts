@@ -16,10 +16,11 @@ import { ViewassetComponent } from '../viewasset/viewasset.component';
 export class ListassetComponent implements OnInit {
   page = 1 ;
   pageSize = 10;
-  assetlist: any = [];
+
   title: any;
   owner: any;
   type: any;
+  assetlist: any = [];
   foundAsset: any;
   closeResult: string;
   public isCollapsed = true;
@@ -52,6 +53,7 @@ export class ListassetComponent implements OnInit {
       const modalRef = this.modalService.open(NewassetComponent, { size: 'lg', backdrop : 'static'  });
       modalRef.componentInstance.name = 'Update Asset';
     }
+
   search(title) {
     console.log(title, 'this is title at search');
     this.amsService

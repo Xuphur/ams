@@ -11,8 +11,11 @@ import { ViewcustomerComponent } from '../viewcustomer/viewcustomer.component';
   styleUrls: ['./listcustomer.component.css']
 })
 export class ListcustomerComponent implements OnInit {
-  page = 1;
-  pageSize = 4;
+  page = 1 ;
+  pageSize = 10;
+  title: any;
+  owner: any;
+  type: any;
   customerlist: any = [];
   public isCollapsed = true;
 
@@ -61,4 +64,34 @@ export class ListcustomerComponent implements OnInit {
     const modalRef = this.modalService.open(ViewcustomerComponent, { size: 'lg', backdrop : 'static'  });
     modalRef.componentInstance.name = 'View Customer';
   }
+
+  search(title) {
+    console.log(title, 'this is title at search');
+    this.amsService
+    .getCustomer(title)
+    .subscribe((res: any) => {
+      this.customerlist = res.data;
+      console.log('all customer found bt Title', this.customerlist);
+    });
+    }
+
+  searchByOwner(owner) {
+    console.log(owner, 'this is owner at search');
+    this.amsService
+    .getCustomerByOwner(owner)
+    .subscribe((res: any) => {
+      this.customerlist = res.data;
+      console.log('all customer found by Owner', this.customerlist);
+    });
+    }
+
+  searchByType(type) {
+    console.log(type, 'this is owner at search');
+    this.amsService
+    .getCustomerByType(type)
+    .subscribe((res: any) => {
+      this.customerlist = res.data;
+      console.log('all customer found by Owner', this.customerlist);
+    });
+    }
 }

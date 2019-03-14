@@ -88,15 +88,16 @@
   <option value="{{customer?._id}}" *ngFor="let customer of customerlist">{{customer?.customer?.name}}</option>
   </select>
   </div>
-</div>
+
 <div class="col-6 col-md-4">
   <label for="Select Asset">Select Asset</label>
   <select [(ngModel)]="contract.asset" type="text" name="asset" id="asset" (click)="fetchAssets()" class="form-control" placeholder="">
   <option value="{{asset?._id}}" *ngFor="let asset of assetlist">{{asset?.title}}</option>
   </select>
   </div>
+</div>
 
-<div class="row float-right">
+<div class="card-footer row float-right">
       <button type="submit" (click)="addContract(contract)" class="btn btn-primary">Save</button>
       <button type="submit" (click)="openCustomer()" class="btn btn-primary">Create Customer</button>
       <button type="submit" (click)="openAsset()" class="btn btn-primary">Create Asset</button>

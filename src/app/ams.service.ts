@@ -98,24 +98,37 @@ constructor(
   getCustomers() {
     return this.http.get(this.url + '/customer/list');
   }
+
   getCustomer(item) {
     return this.http.get(this.url + '/customer/one/' + item);
   }
+
   getCustomerById(id) {
+    console.log(id, 'id at service to edit');
     return this.http.get(this.url + '/customer/' + id);
+  }
+
+  getCustomerByOwner(owner) {
+    console.log(owner, 'id at service to edit');
+    return this.http.get(this.url + '/customer/owner/' + owner);
+  }
+
+  getCustomerByType(type) {
+    console.log(type, 'id at service to edit');
+    return this.http.get(this.url + '/customer/type/' + type);
   }
 
   addCustomer(customer) {
     return this.http.post(this.url + '/customer/new', customer);
   }
 
-  updateCustomer(asset) {
-    console.log(asset._id, 'update at customer service');
-    return this.http.put(this.url + '/customer/update/' + asset._id, asset);
+  updateCustomer(customer) {
+    console.log(customer._id, 'update at customer service');
+    return this.http.put(this.url + '/customer/update/' + customer._id, customer);
   }
 
   deleteCustomer(id) {
-    console.log('Asset Delete');
+    console.log('Customer Delete');
     return this.http.get(this.url + '/customer/delete/' + id);
   }
 
