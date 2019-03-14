@@ -1,26 +1,25 @@
 input[type=text]:hover {
-  background-color: #00f3fc;
+  background-color: #e2e2eb;
+  color: #3d405c;
 }
 
-input[type=text] {
-  width: 100%;
+select[type=text]:hover {
+  background-color: #e2e2eb;
+  color: #3d405c;
 }
 
 select[type=text] {
   width: 100%;
+  outline: 0;
+  color: rgb(150, 150, 150);
+  border-width: 0 0 1px;
+  border-color: rgb(176, 176, 179);
 }
 
-.container {
-  padding: 10px;
-  background-color: beige;
-}
-/* .btnofnewasset{
-margin-right: 10px;
-    margin-bottom: 10px;
-} */
-/* .nextbtnasset{
-  margin-right: 1px;
-} */
-.abc{
-margin-right: 0px;
-}
+input[type=text] {
+    width: 100%;
+    outline: 0;
+    color: rgb(150, 150, 150);
+    border-width: 0 0 1px;
+    border-color: rgb(176, 176, 179);
+  }
