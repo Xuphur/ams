@@ -1,14 +1,14 @@
-<div class="container">
-
-<div class="row">
+<!-- <div class="row">
   <div class="col-6 col-md-4">
-  <h1>Asset List</h1>
+  <h2>Asset List</h2>
   </div>
+</div> -->
 
-
-</div>
-<div class="card shadow p-3 mb-5 bg-white rounded">
-  <div class="row">
+<div class="card shadow bg-white rounded">
+    <div class="card-header shadow rounded">
+        <h3>Asset List</h3>
+    </div>
+  <div class="row card-body">
     <div class="col">
         <input [(ngModel)]="title" class="search" type="text" name="" placeholder="Search By Title">
         <button type="button" class="btn-search" (click)="search(title)"><i class="fas fa-angle-down"></i></button>
@@ -28,45 +28,44 @@
         </div>
     </div>
 </div>
-<div class="card shadow p-3 mb-5 bg-white rounded">
-  <div class="row">
+<div class="card shadow bg-white rounded">
+    <div class="card-body" >
       <table>
-      <div class="card-header shadow p-3">
-        <th>Title &nbsp; <i class="fas fa-sort"></i></th>
-        <th>Type&nbsp;<i class="fas fa-sort"></i></th>
-        <th>Owner Name&nbsp;<i class="fas fa-sort"></i></th>
-        <th>Owner Contact&nbsp;<i class="fas fa-sort"></i></th>
-        <th>Owner CNIC&nbsp;<i class="fas fa-sort"></i></th>
-        <th>Actions</th>
-        <!-- <th>Owner Address</th> -->
-      </div>
 
-      <div class="card-body" *ngFor="let asset of assetlist | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
-        <td>{{asset?.title}}</td>
-        <td>{{asset?.assetType}}</td>
-        <td>{{asset?.owner?.name}}</td>
-        <td>{{asset?.owner?.mobile1}}</td>
-        <td>{{asset?.owner?.cnic}}</td>
-        <!-- <td>
-          H# {{asset?.owner?.address?.number}},
-          St# {{asset?.owner?.address?.street}},
-          Sector {{asset?.owner?.address?.sector}},
-          {{asset?.owner?.address?.city}},
-          {{asset?.owner?.address?.province}},
-          Zip-Code {{asset?.owner?.address?.zipcode}}.
-        </td> -->
-        <td>
-            &nbsp;<button class="btn btn-sm btn-outline-warning" (click)="edit(asset._id)"><i class="far fa-edit"></i></button>&nbsp;
-            &nbsp; <button class="btn btn-sm btn-outline-danger" (click)="deleteAsset(asset._id)"><i class="far fa-trash-alt"></i></button>&nbsp;
-            &nbsp; <button class="btn btn-sm btn-outline-success" (click)="viewAsset(asset._id)"><i class="far fa-eye"></i></button>
-          </td>
-      </div>
+        <div class="row">
+            <th>Title &nbsp; <i class="fas fa-sort"></i></th>
+            <th>Type&nbsp;<i class="fas fa-sort"></i></th>
+            <th>Owner Name&nbsp;<i class="fas fa-sort"></i></th>
+            <th>Owner Contact&nbsp;<i class="fas fa-sort"></i></th>
+            <th>Owner CNIC&nbsp;<i class="fas fa-sort"></i></th>
+            <th>Actions</th>
+            <!-- <th>Owner Address</th> -->
+        </div>
+       <div class="row" *ngFor="let asset of assetlist | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+          <td>{{asset?.title}}</td>
+          <td>{{asset?.assetType}}</td>
+          <td>{{asset?.owner?.name}}</td>
+          <td>{{asset?.owner?.mobile1}}</td>
+          <td>{{asset?.owner?.cnic}}</td>
+          <!-- <td>
+            H# {{asset?.owner?.address?.number}},
+            St# {{asset?.owner?.address?.street}},
+            Sector {{asset?.owner?.address?.sector}},
+            {{asset?.owner?.address?.city}},
+            {{asset?.owner?.address?.province}},
+            Zip-Code {{asset?.owner?.address?.zipcode}}.
+          </td> -->
+          <td>
+              &nbsp;<button class="btn btn-sm btn-outline-warning" (click)="edit(asset._id)"><i class="far fa-edit"></i></button>&nbsp;
+              &nbsp; <button class="btn btn-sm btn-outline-danger" (click)="deleteAsset(asset._id)"><i class="far fa-trash-alt"></i></button>&nbsp;
+              &nbsp; <button class="btn btn-sm btn-outline-success" (click)="viewAsset(asset._id)"><i class="far fa-eye"></i></button>
+            </td>
+       </div>
+
       </table>
-  </div>
+</div>
+    </div>
 <div class="card-footer">
     <ngb-pagination class="d-flex justify-content-end" [(page)]="page" [pageSize]="pageSize" [collectionSize]="assetlist.length" [maxSize]="5" >
       </ngb-pagination>
-</div>
-
-  </div>
 </div>
