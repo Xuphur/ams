@@ -43,7 +43,7 @@
         <td>{{customer?.guarantor?.gname}}</td>
         <td>{{customer?.guarantor?.gmobile}}</td>
 <td>
-        <button class="btn btn-sm btn-outline-warning"><i class="far fa-edit"></i></button>&nbsp;
+        <button class="btn btn-sm btn-outline-warning" (click)="edit(customer._id)"><i class="far fa-edit"></i></button>&nbsp;
         <button class="btn btn-sm btn-outline-danger" (click)="deleteCustomer(customer._id)"><i class="far fa-trash-alt"></i></button>&nbsp;
         <button class="btn btn-sm btn-outline-success" (click)="viewCustomer(customer._id)"><i class="far fa-eye"></i></button>
           </td>
