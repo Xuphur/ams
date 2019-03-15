@@ -99,8 +99,8 @@ constructor(
     return this.http.get(this.url + '/customer/list');
   }
 
-  getCustomer(item) {
-    return this.http.get(this.url + '/customer/one/' + item);
+  getCustomerByName(name) {
+    return this.http.get(this.url + '/customer/name/' + name);
   }
 
   getCustomerById(id) {
@@ -108,14 +108,14 @@ constructor(
     return this.http.get(this.url + '/customer/' + id);
   }
 
-  getCustomerByOwner(owner) {
-    console.log(owner, 'id at service to edit');
-    return this.http.get(this.url + '/customer/owner/' + owner);
+  getCustomerByCnic(cnic) {
+    console.log(cnic, 'id at service to edit');
+    return this.http.get(this.url + '/customer/cnic/' + cnic);
   }
 
-  getCustomerByType(type) {
-    console.log(type, 'id at service to edit');
-    return this.http.get(this.url + '/customer/type/' + type);
+  getCustomerByMobile(mobile) {
+    console.log(mobile, 'id at service to edit');
+    return this.http.get(this.url + '/customer/mobile/' + mobile);
   }
 
   addCustomer(customer) {
@@ -137,13 +137,24 @@ constructor(
     return this.http.get(this.url + '/contract/list');
   }
 
-  getContract(item) {
-    return this.http.get(this.url + '/contract/one/' + item);
+  getContractByStatus(status) {
+    return this.http.get(this.url + '/contract/status/' + status);
   }
+
   getContractById(id) {
+    console.log(id, 'id at service to edit');
     return this.http.get(this.url + '/contract/' + id);
   }
 
+  getContractByOwner(owner) {
+    console.log(owner, 'id at service to edit');
+    return this.http.get(this.url + '/contract/owner/' + owner);
+  }
+
+  getContractByType(type) {
+    console.log(type, 'id at service to edit');
+    return this.http.get(this.url + '/contract/type/' + type);
+  }
   addContract(contract) {
     console.log(contract, 'this is contract at service');
     return this.http.post(this.url + '/contract/new', contract);

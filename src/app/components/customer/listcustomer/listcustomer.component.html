@@ -5,16 +5,16 @@
     </div>
   <div class="row card-body">
     <div class="col">
-        <input [(ngModel)]="title" class="search" type="text" name="" placeholder="Search By Title">
-        <button type="button" class="btn-search" (click)="search(title)"><i class="fas fa-angle-down"></i></button>
+        <input [(ngModel)]="name" class="search" type="text" name="" placeholder="Search By Name">
+        <button type="button" class="btn-search" (click)="searchByName(name)"><i class="fas fa-angle-down"></i></button>
     </div>
     <div class="col">
-        <input [(ngModel)]="owner" class="search" type="text" name="" placeholder="Search By Owner">
-        <button type="button" class="btn-search"  (click)="searchByOwner(owner)"><i class="fas fa-angle-down"></i></button>
+        <input [(ngModel)]="cnic" class="search" type="text" name="" placeholder="Search By CNIC">
+        <button type="button" class="btn-search"  (click)="searchByCnic(cnic)"><i class="fas fa-angle-down"></i></button>
     </div>
     <div class="col">
-        <input [(ngModel)]="type" class="search" type="text" name="" placeholder="Search By type">
-        <button type="button" class="btn-search" (click)="searchByType(type)"><i class="fas fa-angle-down"></i></button>
+        <input [(ngModel)]="mobile" class="search" type="text" name="" placeholder="Search By Mobile">
+        <button type="button" class="btn-search" (click)="searchByMobile(mobile)"><i class="fas fa-angle-down"></i></button>
     </div>
 
         <div class="col float-right newbox">
@@ -43,9 +43,9 @@
         <td>{{customer?.guarantor?.gname}}</td>
         <td>{{customer?.guarantor?.gmobile}}</td>
 <td>
-        <button class="btn btn-sm btn-outline-success"><i class="far fa-edit">&nbsp; Ledger</i></button>
-        <button class="btn btn-sm btn-success" (click)="viewCustomer(customer._id)"><i class="far fa-edit">&nbsp;
-            view</i></button>
+        <button class="btn btn-sm btn-outline-warning"><i class="far fa-edit"></i></button>&nbsp;
+        <button class="btn btn-sm btn-outline-danger" (click)="deleteCustomer(customer._id)"><i class="far fa-trash-alt"></i></button>&nbsp;
+        <button class="btn btn-sm btn-outline-success" (click)="viewCustomer(customer._id)"><i class="far fa-eye"></i></button>
           </td>
        </div>
        </table>

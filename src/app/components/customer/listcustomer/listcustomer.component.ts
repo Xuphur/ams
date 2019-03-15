@@ -13,9 +13,9 @@ import { ViewcustomerComponent } from '../viewcustomer/viewcustomer.component';
 export class ListcustomerComponent implements OnInit {
   page = 1 ;
   pageSize = 10;
-  title: any;
-  owner: any;
-  type: any;
+  name: any;
+  cnic: any;
+  mobile: any;
   customerlist: any = [];
   public isCollapsed = true;
 
@@ -65,33 +65,33 @@ export class ListcustomerComponent implements OnInit {
     modalRef.componentInstance.name = 'View Customer';
   }
 
-  search(title) {
-    console.log(title, 'this is title at search');
+  searchByName(name) {
+    console.log(name, 'this is Name at search');
     this.amsService
-    .getCustomer(title)
+    .getCustomerByName(name)
     .subscribe((res: any) => {
       this.customerlist = res.data;
-      console.log('all customer found bt Title', this.customerlist);
+      console.log('all customer found bt Name', this.customerlist);
     });
     }
 
-  searchByOwner(owner) {
-    console.log(owner, 'this is owner at search');
+  searchByCnic(cnic) {
+    console.log(cnic, 'this is cnic at search');
     this.amsService
-    .getCustomerByOwner(owner)
+    .getCustomerByCnic(cnic)
     .subscribe((res: any) => {
       this.customerlist = res.data;
-      console.log('all customer found by Owner', this.customerlist);
+      console.log('all customer found by Cnic', this.customerlist);
     });
     }
 
-  searchByType(type) {
-    console.log(type, 'this is owner at search');
+  searchByMobile(mobile) {
+    console.log(mobile, 'this is mobile at search');
     this.amsService
-    .getCustomerByType(type)
+    .getCustomerByMobile(mobile)
     .subscribe((res: any) => {
       this.customerlist = res.data;
-      console.log('all customer found by Owner', this.customerlist);
+      console.log('all customer found by Mobile', this.customerlist);
     });
     }
 }

@@ -4,15 +4,15 @@
     </div>
   <div class="row card-body">
     <div class="col">
-        <input [(ngModel)]="title" class="search" type="text" name="" placeholder="Search By Title">
-        <button type="button" class="btn-search" (click)="search(title)"><i class="fas fa-angle-down"></i></button>
+        <input [(ngModel)]="status" class="search" type="text" name="" placeholder="Search By Status">
+        <button type="button" class="btn-search" (click)="searchByStatus(status)"><i class="fas fa-angle-down"></i></button>
     </div>
     <div class="col">
-        <input [(ngModel)]="owner" class="search" type="text" name="" placeholder="Search By Owner">
+        <input [(ngModel)]="owner" class="search" type="text" name="" placeholder="Search By abc">
         <button type="button" class="btn-search"  (click)="searchByOwner(owner)"><i class="fas fa-angle-down"></i></button>
     </div>
     <div class="col">
-        <input [(ngModel)]="type" class="search" type="text" name="" placeholder="Search By type">
+        <input [(ngModel)]="type" class="search" type="text" name="" placeholder="Search By xyz">
         <button type="button" class="btn-search" (click)="searchByType(type)"><i class="fas fa-angle-down"></i></button>
     </div>
 

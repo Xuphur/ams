@@ -15,7 +15,7 @@ import { ListrecieptComponent } from '../../reciept/listreciept/listreciept.comp
 export class ListcontractComponent implements OnInit {
   page = 1;
   pageSize = 10;
-  title: any;
+  status: any;
   owner: any;
   type: any;
   contractlist: any = [];
@@ -63,13 +63,13 @@ edit(_id) {
     modalRef.componentInstance.user = 'Update Asset';
 }
 
-search(title) {
-  console.log(title, 'this is title at search');
+searchByStatus(status) {
+  console.log(status, 'this is title at search');
   this.amsService
-  .getAsset(title)
+  .getContractByStatus(status)
   .subscribe((res: any) => {
     this.contractlist = res.data;
-    console.log('all asset found bt Title', this.contractlist);
+    console.log('all contract found by status', this.contractlist);
   });
   }
 
