@@ -2,10 +2,9 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { Asset } from '../../../asset.model';
 import { AmsService } from '../../../ams.service';
 import { Router } from '@angular/router';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
 import { NewassetComponent } from './../newasset/newasset.component';
 import { NewrecieptComponent } from '../../reciept/newreciept/newreciept.component';
-
 import { ListrecieptComponent } from '../../reciept/listreciept/listreciept.component';
 import { ViewassetComponent } from '../viewasset/viewasset.component';
 
@@ -15,10 +14,12 @@ import { ViewassetComponent } from '../viewasset/viewasset.component';
   styleUrls: ['./listasset.component.css']
 })
 export class ListassetComponent implements OnInit {
-   page = 1 ;
-  pageSize = 4;
+  page = 1 ;
+  pageSize: any;
+  title: any;
+  owner: any;
+  type: any;
   assetlist: any = [];
-  item: any;
   foundAsset: any;
   closeResult: string;
   public isCollapsed = true;
@@ -48,16 +49,37 @@ export class ListassetComponent implements OnInit {
     this.amsService.Id = _id;
     this.amsService.editMode = true;
     console.log(_id, 'this is asset id');
-      const modalRef = this.modalService.open(NewassetComponent, { size: 'lg' });
+      const modalRef = this.modalService.open(NewassetComponent, { size: 'lg', backdrop : 'static'  });
       modalRef.componentInstance.name = 'Update Asset';
     }
-  search(item) {
-    console.log(item, 'this is item at search');
+
+  search(title) {
+    console.log(title, 'this is title at search');
     this.amsService
-    .getAsset(item)
+    .getAsset(title)
     .subscribe((res: any) => {
       this.assetlist = res.data;
-      console.log('all asset found', this.assetlist);
+      console.log('all asset found bt Title', this.assetlist);
+    });
+    }
+
+  searchByOwner(owner) {
+    console.log(owner, 'this is owner at search');
+    this.amsService
+    .getAssetByOwner(owner)
+    .subscribe((res: any) => {
+      this.assetlist = res.data;
+      console.log('all asset found by Owner', this.assetlist);
+    });
+    }
+
+  searchByType(type) {
+    console.log(type, 'this is owner at search');
+    this.amsService
+    .getAssetByType(type)
+    .subscribe((res: any) => {
+      this.assetlist = res.data;
+      console.log('all asset found by Owner', this.assetlist);
     });
     }
 
@@ -71,14 +93,14 @@ export class ListassetComponent implements OnInit {
   open() {
     this.amsService.editMode = false;
     this.amsService.Id = null;
-    const modalRef = this.modalService.open(NewassetComponent, { size: 'lg' });
+    const modalRef = this.modalService.open(NewassetComponent, { size: 'lg', backdrop : 'static'  });
     modalRef.componentInstance.name = 'New Asset';
   }
 
   viewAsset(_id) {
     console.log(_id, 'this is asset id');
     this.amsService.Id = _id;
-      const modalRef = this.modalService.open(ViewassetComponent, { size: 'lg' });
+      const modalRef = this.modalService.open(ViewassetComponent, { size: 'lg', backdrop : 'static'  });
       modalRef.componentInstance.asset = _id;
     console.log('view asset open');
   }

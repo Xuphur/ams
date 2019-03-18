@@ -3,28 +3,26 @@ import { HttpClient } from '@angular/common/http';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 // import { NewcontractComponent } from './components/contract/newcontract/newcontract.component';
 
-
 @Injectable({
   providedIn: 'root'
 })
-
 export class AmsService {
   Id: String;
   editMode: Boolean = false;
 
   // url = 'http://localhost:4000';
+<<<<<<< HEAD
   url = 'https://ams-backend.herokuapp.com';
 
 constructor(
     private http: HttpClient,
     private modalService: NgbModal
     ) { }
+=======
+   url = 'https://ams-backend.herokuapp.com';
+>>>>>>> 6c9eef76c300c4b8ee8c3957984da56cf048ac81
 
-
-    find(customer) {
-      console.log(customer, 'this is search value at service');
-      return this.http.get(this.url + '/customer/find/' + customer);
-      }
+  constructor(private http: HttpClient, private modalService: NgbModal) {}
 
   // Asset CRUDs
   getAssets() {
@@ -38,6 +36,16 @@ constructor(
   getAssetById(id) {
     console.log(id, 'id at service to edit');
     return this.http.get(this.url + '/asset/' + id);
+  }
+
+  getAssetByOwner(owner) {
+    console.log(owner, 'id at service to edit');
+    return this.http.get(this.url + '/asset/owner/' + owner);
+  }
+
+  getAssetByType(type) {
+    console.log(type, 'id at service to edit');
+    return this.http.get(this.url + '/asset/type/' + type);
   }
 
   addAsset(asset) {
@@ -85,27 +93,48 @@ constructor(
   }
 
   // Customer CRUDs
+  find(customer) {
+    console.log(customer, 'this is search value at service');
+    return this.http.get(this.url + '/customer/find/' + customer);
+  }
+
   getCustomers() {
     return this.http.get(this.url + '/customer/list');
   }
-  getCustomer(item) {
-    return this.http.get(this.url + '/customer/one/' + item);
+
+  getCustomerByName(name) {
+    return this.http.get(this.url + '/customer/name/' + name);
   }
+
   getCustomerById(id) {
+    console.log(id, 'id at service to edit');
     return this.http.get(this.url + '/customer/' + id);
+  }
+
+  getCustomerByCnic(cnic) {
+    console.log(cnic, 'id at service to edit');
+    return this.http.get(this.url + '/customer/cnic/' + cnic);
+  }
+
+  getCustomerByMobile(mobile) {
+    console.log(mobile, 'id at service to edit');
+    return this.http.get(this.url + '/customer/mobile/' + mobile);
   }
 
   addCustomer(customer) {
     return this.http.post(this.url + '/customer/new', customer);
   }
 
-  updateCustomer(asset) {
-    console.log(asset._id, 'update at customer service');
-    return this.http.put(this.url + '/customer/update/' + asset._id, asset);
+  updateCustomer(customer) {
+    console.log(customer._id, 'update at customer service');
+    return this.http.put(
+      this.url + '/customer/update/' + customer._id,
+      customer
+    );
   }
 
   deleteCustomer(id) {
-    console.log('Asset Delete');
+    console.log('Customer Delete');
     return this.http.get(this.url + '/customer/delete/' + id);
   }
 
@@ -114,21 +143,35 @@ constructor(
     return this.http.get(this.url + '/contract/list');
   }
 
-  getContract(item) {
-    return this.http.get(this.url + '/contract/one/' + item);
+  getContractByStatus(status) {
+    return this.http.get(this.url + '/contract/status/' + status);
   }
+
   getContractById(id) {
+    console.log(id, 'id at service to edit');
     return this.http.get(this.url + '/contract/' + id);
   }
 
+  getContractByOwner(owner) {
+    console.log(owner, 'id at service to edit');
+    return this.http.get(this.url + '/contract/owner/' + owner);
+  }
+
+  getContractByType(type) {
+    console.log(type, 'id at service to edit');
+    return this.http.get(this.url + '/contract/type/' + type);
+  }
   addContract(contract) {
-    console.log(contract, 'this is asset at service');
+    console.log(contract, 'this is contract at service');
     return this.http.post(this.url + '/contract/new', contract);
   }
 
   updateContract(contract) {
     console.log(contract._id, 'update at asset service');
-    return this.http.put(this.url + '/contract/update/' + contract._id, contract);
+    return this.http.put(
+      this.url + '/contract/update/' + contract._id,
+      contract
+    );
   }
 
   deleteContract(id) {

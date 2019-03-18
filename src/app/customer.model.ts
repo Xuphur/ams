@@ -14,25 +14,24 @@ export class Customer {
       sector: '',
       city: '',
       province: '',
-      zipcode: '',
-     },
-    };
+      zipcode: ''
+    }
+  };
 
-    guarantor = {
-      gname: '',
-      gfather: '',
-      gcnic: '',
-      gmobile1: '',
-      gmobile2: '',
-      gaddress: {
-        floor: '',
-        number: '',
-        street: '',
-        sector: '',
-        city: '',
-        province: '',
-        zipcode: '',
-       },
-    };
-
-  }
+  guarantor = {
+    gname: '',
+    gfather: '',
+    gcnic: '',
+    gmobile1: '',
+    gmobile2: '',
+    gaddress: {
+      floor: '',
+      number: '',
+      street: '',
+      sector: '',
+      city: '',
+      province: '',
+      zipcode: ''
+    }
+  };
+}

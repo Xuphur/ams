@@ -1,5 +1,4 @@
 export class Contract {
-
   ref: '';
   title: '';
   issuetime: '';
@@ -8,16 +7,17 @@ export class Contract {
   incrementSchedule: '';
   status: '';
   assetValue: '';
-    contractDate: '';
-    startDate: '';
-    expiryDate: '';
-    cancelation: '';
-    reaccurance: '';
-    paymentMathod: '';
-    priceQuoted: '';
-    totalPayable: '';
-    downPayment: '';
-    avdancePayment: '';
+  contractDate: '';
+  startDate: '';
+  expiryDate: '';
+  cancelation: '';
+  reaccurance: '';
+  saleType: '';
+  paymentMathod: '';
+  priceQuoted: '';
+  totalPayable: '';
+  downPayment: '';
+  avdancePayment: '';
   customer: '';
   asset: '';
 }

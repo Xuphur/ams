@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'asset/list', component: ListassetComponent },
   { path: 'contract/list', component: ListcontractComponent },
   { path: 'customer/list', component: ListcustomerComponent },
-  { path: 'Dashboard', component: DashboardComponent},
+  { path: 'Dashboard', component: DashboardComponent },
   { path: 'search', component: SearchComponent }
 ];
 
@@ -18,4 +18,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

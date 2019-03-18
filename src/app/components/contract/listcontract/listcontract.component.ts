@@ -14,8 +14,12 @@ import { ListrecieptComponent } from '../../reciept/listreciept/listreciept.comp
 })
 export class ListcontractComponent implements OnInit {
   page = 1;
-  pageSize = 4;
+  pageSize: any;
+  status: any;
+  owner: any;
+  type: any;
   contractlist: any = [];
+  customer: any;
   item: any;
   public isCollapsed = true;
 
@@ -23,69 +27,108 @@ export class ListcontractComponent implements OnInit {
     private amsService: AmsService,
     private router: Router,
     private modalService: NgbModal
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.fetchContracts();
   }
 
   fetchContracts() {
-    this.amsService
-    .getContracts()
-    .subscribe(data => {
+    this.amsService.getContracts().subscribe(data => {
       this.contractlist = data;
+      const total = this.fetchCustomer(this.contractlist);
       console.log('all contract found', data);
     });
   }
 
+  fetchCustomer(data) {
+    data.forEach(element => {
+      this.amsService.find(element._id).subscribe(cus => {
+        this.customer = cus;
+        console.log('all customer found', data);
+      });
+    });
+  }
+
   open() {
-    const modalRef = this.modalService.open(NewcontractComponent, { size: 'lg' });
+    this.amsService.editMode = false;
+    const modalRef = this.modalService.open(NewcontractComponent, {
+      size: 'lg',
+      backdrop: 'static'
+    });
     modalRef.componentInstance.name = 'New Contract';
   }
 
   viewContract(_id) {
     console.log(_id, 'this is contract id');
     this.amsService.Id = _id;
-      const modalRef = this.modalService.open(ViewcontractComponent, { size: 'lg' });
-      modalRef.componentInstance.name = 'View Contract';
+    const modalRef = this.modalService.open(ViewcontractComponent, {
+      size: 'lg',
+      backdrop: 'static'
+    });
+    modalRef.componentInstance.name = 'View Contract';
     console.log('view contract open');
-}
-
-edit(_id) {
-  this.amsService.Id = _id;
-  this.amsService.editMode = true;
-    console.log(this.amsService.Id, 'got this contract');
-    const modalRef = this.modalService.open(NewcontractComponent, { size: 'lg' });
-    modalRef.componentInstance.user = 'Update Asset';
-}
-
-search(item) {
-  console.log(item, 'this is item at search');
-  this.amsService
-  .getContract(item)
-  .subscribe((res: any) => {
-    this.contractlist = res.data;
-    console.log('Contract found', this.contractlist);
-  });
   }
+
+  edit(_id) {
+    this.amsService.Id = _id;
+    this.amsService.editMode = true;
+    console.log(this.amsService.Id, 'got this contract');
+    const modalRef = this.modalService.open(NewcontractComponent, {
+      size: 'lg',
+      backdrop: 'static'
+    });
+    modalRef.componentInstance.user = 'Update Asset';
+  }
+
+  searchByStatus(status) {
+    console.log(status, 'this is title at search');
+    this.amsService.getContractByStatus(status).subscribe((res: any) => {
+      this.contractlist = res.data;
+      console.log('all contract found by status', this.contractlist);
+    });
+  }
+
+  searchByOwner(owner) {
+    console.log(owner, 'this is owner at search');
+    this.amsService.getAssetByOwner(owner).subscribe((res: any) => {
+      this.contractlist = res.data;
+      console.log('all asset found by Owner', this.contractlist);
+    });
+  }
+
+  searchByType(type) {
+    console.log(type, 'this is owner at search');
+    this.amsService.getAssetByType(type).subscribe((res: any) => {
+      this.contractlist = res.data;
+      console.log('all asset found by Owner', this.contractlist);
+    });
+  }
+
   deleteContract(_id) {
     this.amsService.deleteContract(_id).subscribe(() => {
       this.fetchContracts();
-    console.log('delete click');
+      console.log('delete click');
     });
   }
 
   addReciept(_id) {
     console.log(_id, 'this is asset id');
     this.amsService.Id = _id;
-    const modalRef = this.modalService.open(NewrecieptComponent, { size: 'lg' });
+    const modalRef = this.modalService.open(NewrecieptComponent, {
+      size: 'lg',
+      backdrop: 'static'
+    });
     modalRef.componentInstance.name = 'New Reciept';
   }
 
   listReciept(_id) {
     this.amsService.Id = _id;
-      console.log(this.amsService.Id, 'this asset Called');
-    const modalRef = this.modalService.open(ListrecieptComponent, { size: 'lg' });
+    console.log(this.amsService.Id, 'this asset Called');
+    const modalRef = this.modalService.open(ListrecieptComponent, {
+      size: 'lg',
+      backdrop: 'static'
+    });
     modalRef.componentInstance.name = 'List Reciept';
-}
+  }
 }

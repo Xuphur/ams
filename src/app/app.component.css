@@ -1,11 +1,4 @@
 
-
-.sidebar{
-  width: 20%
-}
-
-
-.outlet {
-  width: 70%
-  /* margin-top: -231px; */
+.row {
+  width: 100%;
 }

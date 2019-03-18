@@ -1,0 +1,57 @@
+.btn {
+  float: right;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin: 1px;
+  margin: right;
+  padding-bottom: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-bottom: 10px;
+  margin-right: 7px;
+}
+input[type="text"]:hover {
+  background-color: #e2e2eb;
+  color: #3d405c;
+}
+
+input[type="text"] {
+  width: 100%;
+  outline: 0;
+  color: rgb(150, 150, 150);
+  border-width: 0 0 1px;
+  border-color: rgb(176, 176, 179);
+}
+input[type="date"]:hover {
+  background-color: #e2e2eb;
+  color: #3d405c;
+}
+
+input[type="date"] {
+  width: 100%;
+  outline: 0;
+  color: rgb(150, 150, 150);
+  border-width: 0 0 1px;
+  border-color: rgb(176, 176, 179);
+}
+
+select[type="text"]:hover {
+  background-color: #e2e2eb;
+  color: #3d405c;
+}
+
+select[type="text"] {
+  width: 100%;
+  outline: 0;
+  color: rgb(150, 150, 150);
+  border-width: 0 0 1px;
+  border-color: rgb(176, 176, 179);
+}
+
+.card {
+  padding: 10px;
+}
+.card-footer {
+  background-color: white;
+  padding: 10px;
+}
