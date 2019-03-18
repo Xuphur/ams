@@ -1,7 +1,6 @@
 export class Reciept {
-
-    contractId: '';
-    recieptDate: '';
-    paymentMathod: '';
-    recivedAmount: '';
-   }
+  contractId: '';
+  recieptDate: '';
+  paymentMathod: '';
+  recivedAmount: '';
+}

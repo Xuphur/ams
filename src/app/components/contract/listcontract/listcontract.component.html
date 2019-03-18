@@ -1,58 +1,138 @@
 <div class="card shadow bg-white rounded">
-    <div class="card-header shadow rounded">
-        <h3>Contract List</h3>
-    </div>
+  <div class="card-header shadow rounded">
+    <h3>Contract List</h3>
+  </div>
   <div class="row card-body">
     <div class="col">
-        <input [(ngModel)]="status" class="search" type="text" name="" placeholder="Search By Status">
-        <button type="button" class="btn-search" (click)="searchByStatus(status)"><i class="fas fa-angle-down"></i></button>
+      <input
+        [(ngModel)]="status"
+        class="search"
+        type="text"
+        name=""
+        placeholder="Search By Status"
+      />
+      <button type="button" class="btn-search" (click)="searchByStatus(status)">
+        <i class="fas fa-angle-down"></i>
+      </button>
     </div>
     <div class="col">
-        <input [(ngModel)]="owner" class="search" type="text" name="" placeholder="Search By abc">
-        <button type="button" class="btn-search"  (click)="searchByOwner(owner)"><i class="fas fa-angle-down"></i></button>
+      <input
+        [(ngModel)]="owner"
+        class="search"
+        type="text"
+        name=""
+        placeholder="Search By abc"
+      />
+      <button type="button" class="btn-search" (click)="searchByOwner(owner)">
+        <i class="fas fa-angle-down"></i>
+      </button>
     </div>
     <div class="col">
-        <input [(ngModel)]="type" class="search" type="text" name="" placeholder="Search By xyz">
-        <button type="button" class="btn-search" (click)="searchByType(type)"><i class="fas fa-angle-down"></i></button>
+      <input
+        [(ngModel)]="type"
+        class="search"
+        type="text"
+        name=""
+        placeholder="Search By xyz"
+      />
+      <button type="button" class="btn-search" (click)="searchByType(type)">
+        <i class="fas fa-angle-down"></i>
+      </button>
     </div>
 
-        <div class="col float-right newbox">
-            <button class="btn btn-primary btn-circle" (click)="open()">
-              <i class="fa fa-plus"></i></button>
-        </div>
+    <div class="col float-right newbox">
+      <button class="btn btn-primary btn-circle" (click)="open()">
+        <i class="fa fa-plus"></i>
+      </button>
     </div>
+  </div>
 </div>
 
 <div class="card shadow bg-white rounded">
-    <div class="card-body" >
-      <table class="sortable">
+  <div class="card-body">
+    <table>
+      <thead>
+        <th>Status &nbsp; <i class="fas fa-sort"></i></th>
+        <th>Duration&nbsp;<i class="fas fa-sort"></i></th>
+        <th>Increament&nbsp;<i class="fas fa-sort"></i></th>
+        <th>Contract Date&nbsp;<i class="fas fa-sort"></i></th>
+        <th>Price Quoted&nbsp;<i class="fas fa-sort"></i></th>
+        <th>Customer Id&nbsp;<i class="fas fa-sort"></i></th>
+        <th>Actions</th>
+        <!-- <th>Owner Address</th> -->
+      </thead>
+      <tbody
+        *ngFor="
+          let contract of (contractlist
+            | slice: (page - 1) * pageSize:(page - 1) * pageSize + pageSize)
+        "
+      >
+        <td>{{ contract?.status }}</td>
+        <td>{{ contract?.duration }}</td>
+        <td>{{ contract?.contractDate }}</td>
+        <td>{{ contract?.expiryDate }}</td>
+        <td>{{ contract?.priceQuoted }}</td>
+        <td>{{ contract?.customer }}</td>
+        <td>
+          <button
+            class="btn btn-sm btn-outline-warning"
+            (click)="edit(contract._id)"
+          >
+            <i class="far fa-edit"></i></button
+          >&nbsp;
+          <button
+            class="btn btn-sm btn-outline-danger"
+            (click)="deleteContract(contract._id)"
+          >
+            <i class="far fa-trash-alt"></i></button
+          >&nbsp;
+          <button
+            class="btn btn-sm btn-outline-primary"
+            (click)="viewContract(contract._id)"
+          >
+            <i class="fa fa-eye"></i></button
+          >&nbsp;
+          <button
+            class="btn btn-sm btn-outline-success"
+            (click)="addReciept(contract._id)"
+          >
+            <i class="fas fa-file-invoice-dollar"></i></button
+          >&nbsp;
+          <button
+            class="btn btn-sm btn-outline-success"
+            (click)="listReciept(contract._id)"
+          >
+            <i class="fas fa-list"></i>
+          </button>
+        </td>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="card-footer">
+    <div class="row">
+       <div class="col-2">
+           <label for="pageSize">Show Rows</label>
+           <select
+             [(ngModel)]="pageSize"
+             type="text"
+             name="pageSize"
+             id="pageSize"
+           >
+             <option value="5">5</option>
+             <option value="10">10</option>
+             <option value="20">20</option>
+           </select>
+         </div>
 
-        <div class="row">
-            <th>Status &nbsp; <i class="fas fa-sort"></i></th>
-            <th>Duration&nbsp;<i class="fas fa-sort"></i></th>
-            <th>Increament&nbsp;<i class="fas fa-sort"></i></th>
-            <th>Contract Date&nbsp;<i class="fas fa-sort"></i></th>
-            <th>Price Quoted&nbsp;<i class="fas fa-sort"></i></th>
-            <th>Actions</th>
-            <!-- <th>Owner Address</th> -->
-        </div>
-       <div class="row" *ngFor="let contract of contractlist | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
-        <td>{{contract?.status}}</td>
-        <td>{{contract?.duration}}</td>
-        <td>{{contract?.increment}}</td>
-        <td>{{contract?.contractDate}}</td>
-        <td>{{contract?.priceQuoted}}</td>
-      <td>
-          <button class="btn btn-sm btn-outline-success" (click)="edit(contract._id)"><i class="far fa-edit"></i></button>
-          <button class="btn btn-sm btn-outline-danger" (click)="deleteContract(contract._id)"><i class="far fa-trash-alt"></i></button>
-          <button class="btn btn-sm btn-success" (click)="viewContract(contract._id)"><i class="fa fa-list"></i></button>
-      </td>
-        </div>
-
-      </table>
-    </div>
-        </div>
-    <div class="card-footer">
-        <ngb-pagination class="d-flex justify-content-end" [(page)]="page" [pageSize]="pageSize" [collectionSize]="contractlist.length" [maxSize]="5" >
-          </ngb-pagination>
+      <div class="col-10">
+       <ngb-pagination
+         class="d-flex justify-content-end"
+         [(page)]="page"
+         [pageSize]="pageSize"
+         [collectionSize]="contractlist.length"
+         [maxSize]="5"
+       >
+       </ngb-pagination>
+      </div>
     </div>

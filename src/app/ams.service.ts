@@ -3,28 +3,17 @@ import { HttpClient } from '@angular/common/http';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 // import { NewcontractComponent } from './components/contract/newcontract/newcontract.component';
 
-
 @Injectable({
   providedIn: 'root'
 })
-
 export class AmsService {
   Id: String;
   editMode: Boolean = false;
 
-//  url = 'http://localhost:4000';
- url = 'https://ams-backend.herokuapp.com';
+  url = 'http://localhost:4000';
+  //  url = 'https://ams-backend.herokuapp.com';
 
-constructor(
-    private http: HttpClient,
-    private modalService: NgbModal
-    ) { }
-
-
-    find(customer) {
-      console.log(customer, 'this is search value at service');
-      return this.http.get(this.url + '/customer/find/' + customer);
-      }
+  constructor(private http: HttpClient, private modalService: NgbModal) {}
 
   // Asset CRUDs
   getAssets() {
@@ -95,6 +84,11 @@ constructor(
   }
 
   // Customer CRUDs
+  find(customer) {
+    console.log(customer, 'this is search value at service');
+    return this.http.get(this.url + '/customer/find/' + customer);
+  }
+
   getCustomers() {
     return this.http.get(this.url + '/customer/list');
   }
@@ -124,7 +118,10 @@ constructor(
 
   updateCustomer(customer) {
     console.log(customer._id, 'update at customer service');
-    return this.http.put(this.url + '/customer/update/' + customer._id, customer);
+    return this.http.put(
+      this.url + '/customer/update/' + customer._id,
+      customer
+    );
   }
 
   deleteCustomer(id) {
@@ -162,7 +159,10 @@ constructor(
 
   updateContract(contract) {
     console.log(contract._id, 'update at asset service');
-    return this.http.put(this.url + '/contract/update/' + contract._id, contract);
+    return this.http.put(
+      this.url + '/contract/update/' + contract._id,
+      contract
+    );
   }
 
   deleteContract(id) {

@@ -10,7 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { NewassetComponent } from './components/asset/newasset/newasset.component';
 import { NewrecieptComponent } from './components/reciept/newreciept/newreciept.component';
@@ -26,7 +26,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidebarComponent } from './Dashboard/sidebar/sidebar.component';
 import { HeaderComponent } from './Dashboard/header/header.component';
 import { SearchComponent } from './components/search/search.component';
-
 
 @NgModule({
   declarations: [
@@ -53,23 +52,23 @@ import { SearchComponent } from './components/search/search.component';
     HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,
-// tslint:disable-next-line: deprecation
+    // tslint:disable-next-line: deprecation
     NgbModule.forRoot(),
-  FormsModule,
+    FormsModule
   ],
   entryComponents: [
-   NewassetComponent,
-   NewrecieptComponent,
-   ListrecieptComponent,
-   ViewassetComponent,
-   NewcustomerComponent,
-   ListcustomerComponent,
-   ViewcustomerComponent,
-   NewcontractComponent,
-   ListcontractComponent,
-   ViewcontractComponent
+    NewassetComponent,
+    NewrecieptComponent,
+    ListrecieptComponent,
+    ViewassetComponent,
+    NewcustomerComponent,
+    ListcustomerComponent,
+    ViewcustomerComponent,
+    NewcontractComponent,
+    ListcontractComponent,
+    ViewcontractComponent
   ],
   providers: [AmsService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

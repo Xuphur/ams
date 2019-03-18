@@ -1,30 +1,58 @@
 <h2>New Reciept</h2>
 
-<div class="container">
-
+<div class="card">
   <form>
     <div class="row align-items-center">
-                <div class="col-6 col-md-4">
-                  <label for="date">Date</label>
-                  <input [(ngModel)]="reciept.recieptDate" type="date" name="date" id="date">
-                </div>
+      <div class="col-6 col-md-4">
+        <label for="date">Date</label>
+        <input
+          [(ngModel)]="reciept.recieptDate"
+          type="date"
+          name="date"
+          id="date"
+        />
+      </div>
 
-  <div class="col-6 col-md-4">
-    <label for="amount">Recived Amount</label>
-    <input [(ngModel)]="reciept.recivedAmount" type="text" name="amount" id="amount">
-    </div>
+      <div class="col-6 col-md-4">
+        <label for="amount">Recived Amount</label>
+        <input
+          [(ngModel)]="reciept.recivedAmount"
+          type="text"
+          name="amount"
+          id="amount"
+        />
+      </div>
 
-    <div class="col-6 col-md-4">
-      <label for="paymentMathod">Payment Mathod</label>&nbsp;
-      <select [(ngModel)]="reciept.paymentMathod" type="text" name="paymentMathod" id="paymentMathod">
-      <option value="cash">Cash</option>
-      <option value="cheque">Cheque</option>
-      <option value="onLine">On-Line</option>
-      </select>
+      <div class="col-6 col-md-4">
+        <label for="paymentMathod">Payment Mathod</label>&nbsp;
+        <select
+          [(ngModel)]="reciept.paymentMathod"
+          type="text"
+          name="paymentMathod"
+          id="paymentMathod"
+        >
+          <option value="cash">Cash</option>
+          <option value="cheque">Cheque</option>
+          <option value="onLine">On-Line</option>
+        </select>
       </div>
     </div>
-<div class="row float-right">
-  <button type="submit" (click)="addReciept(reciept)" class="btn btn-sm btn-outline-primary">Save Reciept</button>
-</div>
+    <div class="card-footer float-right">
+      <button
+        type="submit"
+        (click)="close()"
+        class="btn btn-sm btn-outline-danger"
+      >
+        Exit
+      </button>
+      &nbsp;
+      <button
+        type="submit"
+        (click)="addReciept(reciept)"
+        class="btn btn-sm btn-outline-primary"
+      >
+        Save
+      </button>
+    </div>
   </form>
 </div>

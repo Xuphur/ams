@@ -3,14 +3,17 @@ import { Customer } from 'src/app/customer.model';
 import { AmsService } from 'src/app/ams.service';
 import { FormBuilder } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import {NgbModal, NgbActiveModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import {
+  NgbModal,
+  NgbActiveModal,
+  ModalDismissReasons
+} from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-newcustomer',
   templateUrl: './newcustomer.component.html',
   styleUrls: ['./newcustomer.component.css']
 })
 export class NewcustomerComponent implements OnInit {
-
   customer: Customer;
 
   constructor(
@@ -26,28 +29,29 @@ export class NewcustomerComponent implements OnInit {
       const id = parameterMap.get('id');
       this.amsService.getCustomerById(id);
     });
-   }
+  }
 
   ngOnInit() {
     if (this.amsService.editMode) {
       this.fetchCustomerById();
-     }
+    }
   }
 
   fetchCustomerById() {
     this.amsService
-    .getCustomerById(this.amsService.Id)
-    .subscribe((res: any) => {
-      this.customer = res.data;
-      console.log(this.amsService.Id, 'customer at edit');
-    });
+      .getCustomerById(this.amsService.Id)
+      .subscribe((res: any) => {
+        this.customer = res.data;
+        console.log(this.amsService.Id, 'customer at edit');
+      });
   }
 
   addCustomer(customer) {
     console.log(customer, 'this is new asset'),
-    this.amsService.addCustomer(customer).subscribe(() => {
-      this.router.navigate(['/']);
-    });
+      this.amsService.addCustomer(customer).subscribe(() => {
+        this.close();
+        this.router.navigate(['customer/list']);
+      });
   }
   close() {
     this.activeModal.close();

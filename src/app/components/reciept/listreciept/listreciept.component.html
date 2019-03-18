@@ -1,26 +1,41 @@
-<div class="container">
-    <h3>Customer Ledger</h3>
-    <hr>
-    <br>
-    <div class="heading">
-    <label>Total Recieved = &nbsp;</label><strong>{{grandTotal}}</strong>
+<div class="float-right">
+  <button type="submit" (click)="close()" class="btn btn-sm btn-outline-danger">
+    X
+  </button>
+</div>
+<h3>{{ contract?.customer?.customer?.name }} Ledger</h3>
+<hr />
+<div class="row">
+  <div class="col">
+    <label>Total Payable = &nbsp;</label>
+    <strong>{{ contract?.totalPayable }}</strong>
   </div>
-    <table class="table table-striped">
-      <thead>
-          <tr>
-              <th scope="col">Sr</th>
-              <th scope="col">Date</th>
-              <th scope="col">Mathod</th>
-              <th scope="col">Amount</th>
-          </tr>
+  <div class="col">
+    <label>Total Recieved = &nbsp;</label><strong>{{ grandTotal }}</strong>
+  </div>
+  <div class="col">
+    <label>Total blance = &nbsp;</label><strong>{{ balance }}</strong>
+  </div>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Sr</th>
+      <th scope="col">Date</th>
+      <th scope="col">Mathod</th>
+      <th scope="col">Amount</th>
+    </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let reciept of recieptlist, index as i">
-      <td>{{i+1}}</td>
-      <td>{{reciept?.recieptDate}}</td>
-      <td>{{reciept?.paymentMathod}}</td>
-      <td>{{reciept?.recivedAmount}}</td>
+    <tr *ngFor="let reciept of recieptlist; index as i">
+      <td>{{ i + 1 }}</td>
+      <td>{{ reciept?._id }}</td>
+      <td>{{ reciept?.recieptDate }}</td>
+      <td>{{ reciept?.paymentMathod }}</td>
+      <td>{{ reciept?.recivedAmount }}</td>
+      <!-- <td>{{reciept?.contractId}}</td> -->
     </tr>
   </tbody>
-  </table>
-  </div>   <!-- <th scope="row">{{ i + 1 }}</th> -->
+</table>
+<!-- <th scope="row">{{ i + 1 }}</th> -->

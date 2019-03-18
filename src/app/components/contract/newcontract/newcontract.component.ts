@@ -6,14 +6,17 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 import { NewassetComponent } from '../../asset/newasset/newasset.component';
 import { NewcustomerComponent } from '../../customer/newcustomer/newcustomer.component';
-import {NgbModal, NgbActiveModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import {
+  NgbModal,
+  NgbActiveModal,
+  ModalDismissReasons
+} from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-newcontract',
   templateUrl: './newcontract.component.html',
   styleUrls: ['./newcontract.component.css']
 })
 export class NewcontractComponent implements OnInit {
-
   contract: Contract;
   customerlist: any;
   assetlist: any;
@@ -35,46 +38,45 @@ export class NewcontractComponent implements OnInit {
   ngOnInit() {
     if (this.amsService.editMode) {
       this.fetchContractById();
-     }
+    }
   }
   fetchContractById() {
     this.amsService
-    .getContractById(this.amsService.Id)
-    .subscribe((res: any) => {
-      this.contract = res.data;
-      console.log(this.amsService.Id, this.contract, 'contract at view');
-    });
-}
+      .getContractById(this.amsService.Id)
+      .subscribe((res: any) => {
+        this.contract = res.data;
+        console.log(this.amsService.Id, this.contract, 'contract at view');
+      });
+  }
   fetchCustomers() {
-    this.amsService
-    .getCustomers()
-    .subscribe(data => {
+    this.amsService.getCustomers().subscribe(data => {
       this.customerlist = data;
       console.log('all customer found', data);
     });
   }
 
   fetchAssets() {
-    this.amsService
-    .getAssets()
-    .subscribe(data => {
+    this.amsService.getAssets().subscribe(data => {
       this.assetlist = data;
       console.log('all customer found', data);
     });
   }
   addContract(contract) {
     console.log(contract, 'this is new contract'),
-    this.amsService.addContract(contract).subscribe(() => {
-      this.router.navigate(['/']);
-    });
+      this.amsService.addContract(contract).subscribe(() => {
+        this.close();
+        this.router.navigate(['contract/list']);
+      });
   }
 
- openCustomer() {
-    const modalRef = this.modalService.open(NewcustomerComponent, { size: 'lg' });
+  openCustomer() {
+    const modalRef = this.modalService.open(NewcustomerComponent, {
+      size: 'lg'
+    });
     modalRef.componentInstance.name = 'New Customer';
   }
 
- openAsset() {
+  openAsset() {
     const modalRef = this.modalService.open(NewassetComponent, { size: 'lg' });
     modalRef.componentInstance.name = 'New Asset';
   }
