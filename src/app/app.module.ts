@@ -73,10 +73,7 @@ import { AuthguardService } from './authguard.service';
     ListcontractComponent,
     ViewcontractComponent
   ],
-  providers: [
-    AmsService,
-    AuthguardService
-  ],
+  providers: [AmsService, AuthguardService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

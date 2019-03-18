@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AmsService } from 'src/app/ams.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { User } from 'src/app/user.model';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-login-in',
   templateUrl: './login-in.component.html',
@@ -8,18 +10,30 @@ import { Router } from '@angular/router';
   providers: [AmsService]
 })
 export class LoginInComponent implements OnInit {
-  password: string;
-  user: String;
 
-  constructor(  private service: AmsService , private route: Router) { }
+  user: any;
+
+  constructor(
+    private amsService: AmsService,
+    private route: ActivatedRoute
+    ) {
+      this.user = new User();
+      this.route.paramMap.subscribe(parameterMap => {
+        const id = parameterMap.get('id');
+        this.amsService.getUserById(id);
+      });
+    }
 
   ngOnInit() {
   }
-  getuser() {
-    this.service.RegisterData(this.user, this.password).subscribe(loginData => {
-      console.log('login data is ', loginData);
-     }, errors => {
-      console.log(errors);
-  });
+
+  getuser(user) {
+    console.log(user, 'this user login'),
+    this.amsService.getUser(user).subscribe(() => {
+      Swal.fire(
+        'User Log In Successfully'
+      );
+      // this.close();
+    });
   }
 }

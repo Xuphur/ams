@@ -9,23 +9,13 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class AmsService {
   Id: String;
   editMode: Boolean = false;
-  savedata;
+
 
   url = 'http://localhost:4000';
   //  url = 'https://ams-backend.herokuapp.com';
 
-  constructor(private http: HttpClient, private modalService: NgbModal) {
-}
-RegisterData(email, password) {
-  this.savedata = {
-    email: email,
-    password: password
- };
-  return this. http.post(this.url + '/', this.savedata);
-}
- getdata() {
- return this.http.get(this.url + '/');
- }
+  constructor(private http: HttpClient, private modalService: NgbModal) {}
+
   // Asset CRUDs
   getAssets() {
     return this.http.get(this.url + '/asset/list');
@@ -64,11 +54,36 @@ RegisterData(email, password) {
     console.log('Asset Delete');
     return this.http.get(this.url + '/asset/delete/' + id);
   }
+  // User CRUDs
+  getUsers() {
+    return this.http.get(this.url + '/user/list');
+  }
+
+  getUser(user) {
+    return this.http.post(this.url + '/user/signin', user);
+  }
+
+  getUserById(id) {
+    console.log(id, 'id at service to edit');
+    return this.http.get(this.url + '/user/' + id);
+  }
+
+  addUser(user) {
+    console.log(user, 'this is user at service');
+    return this.http.post(this.url + '/user/new', user);
+  }
+
+  updateUser(user) {
+    console.log(user._id, 'update at user service');
+    return this.http.put(this.url + '/user/update/' + user._id, user);
+  }
+
+  deleteUser(id) {
+    console.log('user Delete');
+    return this.http.get(this.url + '/user/delete/' + id);
+  }
 
   // Reciept CRUDs
-  // postReciept(_id) {
-  //   return this.http.post(this.url + '/reciept/list', + _id);
-  // }
 
   getReciept(_id) {
     return this.http.get(this.url + '/reciept/all');

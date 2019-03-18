@@ -12,7 +12,7 @@ export class AuthguardService {
       if (localStorage.getItem('user') !== null) {
         return true;
  } else {
-      this.route.navigate(['./Dashboard']);
+      this.route.navigate(['/Dashboard']);
       return false;
     }
   }
