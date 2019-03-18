@@ -3,7 +3,7 @@ import { Contract } from 'src/app/contract.model';
 import { AmsService } from 'src/app/ams.service';
 import { FormBuilder } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-
+import Swal from 'sweetalert2';
 import { NewassetComponent } from '../../asset/newasset/newasset.component';
 import { NewcustomerComponent } from '../../customer/newcustomer/newcustomer.component';
 import {
@@ -63,10 +63,21 @@ export class NewcontractComponent implements OnInit {
   }
   addContract(contract) {
     console.log(contract, 'this is new contract'),
+<<<<<<< HEAD
       this.amsService.addContract(contract).subscribe(() => {
         this.close();
         this.router.navigate(['contract/list']);
       });
+=======
+    this.amsService.addContract(contract).subscribe(() => {
+      Swal.fire(
+        'Contract Inserted Successfully'
+      );
+      this.close();
+    });
+    //   this.router.navigate(['/']);
+    // });
+>>>>>>> 552d507ccd9b40c3dc4dea4a9ab4b55bd93049d0
   }
 
   openCustomer() {

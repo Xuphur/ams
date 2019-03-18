@@ -65,10 +65,15 @@ export class ListcustomerComponent implements OnInit {
   }
 
   viewCustomer(id) {
+<<<<<<< HEAD
     const modalRef = this.modalService.open(ViewcustomerComponent, {
       size: 'lg',
       backdrop: 'static'
     });
+=======
+    this.amsService.Id = id;
+    const modalRef = this.modalService.open(ViewcustomerComponent, { size: 'lg', backdrop : 'static'  });
+>>>>>>> 552d507ccd9b40c3dc4dea4a9ab4b55bd93049d0
     modalRef.componentInstance.name = 'View Customer';
   }
 
