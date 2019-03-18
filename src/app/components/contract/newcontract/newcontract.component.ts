@@ -63,12 +63,6 @@ export class NewcontractComponent implements OnInit {
   }
   addContract(contract) {
     console.log(contract, 'this is new contract'),
-<<<<<<< HEAD
-      this.amsService.addContract(contract).subscribe(() => {
-        this.close();
-        this.router.navigate(['contract/list']);
-      });
-=======
     this.amsService.addContract(contract).subscribe(() => {
       Swal.fire(
         'Contract Inserted Successfully'
@@ -77,7 +71,6 @@ export class NewcontractComponent implements OnInit {
     });
     //   this.router.navigate(['/']);
     // });
->>>>>>> 552d507ccd9b40c3dc4dea4a9ab4b55bd93049d0
   }
 
   openCustomer() {

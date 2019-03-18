@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .align {
   margin-top: 20px;
   padding-left: 15px;
@@ -115,22 +114,6 @@ td {
 
 .search {
   outline: 0;
-=======
-input[type=text]:hover {
-  background-color: #e2e2eb;
-  color: #3d405c;
-}
-
-select[type=text]:hover {
-  background-color: #e2e2eb;
-  color: #3d405c;
-}
-
-select[type=text] {
-  width: 100%;
-  outline: 0;
-  color: rgb(150, 150, 150);
->>>>>>> 552d507ccd9b40c3dc4dea4a9ab4b55bd93049d0
   border-width: 0 0 1px;
   border-color: rgb(176, 176, 179);
 }
