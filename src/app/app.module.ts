@@ -26,6 +26,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidebarComponent } from './Dashboard/sidebar/sidebar.component';
 import { HeaderComponent } from './Dashboard/header/header.component';
 import { SearchComponent } from './components/search/search.component';
+import { LoginInComponent } from './components/users/login-in/login-in.component';
+import { SignupComponent } from './components/users/signup/signup.component';
+import { AuthguardService } from './authguard.service';
 
 @NgModule({
   declarations: [
@@ -44,7 +47,9 @@ import { SearchComponent } from './components/search/search.component';
     DashboardComponent,
     SidebarComponent,
     HeaderComponent,
-    SearchComponent
+    SearchComponent,
+    LoginInComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -68,7 +73,10 @@ import { SearchComponent } from './components/search/search.component';
     ListcontractComponent,
     ViewcontractComponent
   ],
-  providers: [AmsService],
+  providers: [
+    AmsService,
+    AuthguardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

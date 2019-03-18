@@ -5,13 +5,16 @@ import { ListcontractComponent } from './components/contract/listcontract/listco
 import { ListcustomerComponent } from './components/customer/listcustomer/listcustomer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SearchComponent } from './components/search/search.component';
+import { LoginInComponent } from './components/users/login-in/login-in.component';
+import { AuthguardService } from './authguard.service';
 
 const routes: Routes = [
   { path: 'asset/list', component: ListassetComponent },
   { path: 'contract/list', component: ListcontractComponent },
   { path: 'customer/list', component: ListcustomerComponent },
-  { path: 'Dashboard', component: DashboardComponent },
-  { path: 'search', component: SearchComponent }
+  { path: 'Dashboard', canActivate : [ AuthguardService] , component: DashboardComponent },
+  { path: 'search', component: SearchComponent },
+  {path : 'login', component : LoginInComponent}
 ];
 
 @NgModule({

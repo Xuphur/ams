@@ -9,12 +9,23 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class AmsService {
   Id: String;
   editMode: Boolean = false;
+  savedata;
 
   url = 'http://localhost:4000';
   //  url = 'https://ams-backend.herokuapp.com';
 
-  constructor(private http: HttpClient, private modalService: NgbModal) {}
-
+  constructor(private http: HttpClient, private modalService: NgbModal) {
+}
+RegisterData(email, password) {
+  this.savedata = {
+    email: email,
+    password: password
+ };
+  return this. http.post(this.url + '/', this.savedata);
+}
+ getdata() {
+ return this.http.get(this.url + '/');
+ }
   // Asset CRUDs
   getAssets() {
     return this.http.get(this.url + '/asset/list');
