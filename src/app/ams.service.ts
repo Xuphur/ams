@@ -11,18 +11,10 @@ export class AmsService {
   editMode: Boolean = false;
 
   // url = 'http://localhost:4000';
-<<<<<<< HEAD
   url = 'https://ams-backend.herokuapp.com';
 
-constructor(
-    private http: HttpClient,
-    private modalService: NgbModal
-    ) { }
-=======
-   url = 'https://ams-backend.herokuapp.com';
->>>>>>> 6c9eef76c300c4b8ee8c3957984da56cf048ac81
-
-  constructor(private http: HttpClient, private modalService: NgbModal) {}
+constructor
+ (private http: HttpClient, private modalService: NgbModal) {}
 
   // Asset CRUDs
   getAssets() {
