@@ -6,6 +6,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { NewassetComponent } from '../../asset/newasset/newasset.component';
 import { NewcustomerComponent } from '../../customer/newcustomer/newcustomer.component';
+import { log } from 'util';
 
 @Component({
   selector: 'app-newcontract',
@@ -35,9 +36,9 @@ export class NewcontractComponent implements OnInit {
   ngOnInit() {
     if (this.amsService.editMode) {
       this.fetchContractById();
+      console.log(this.contract.startDate, 'text');
      }
   }
-
   fetchContractById() {
     this.amsService
     .getContractById(this.amsService.Id)
@@ -54,7 +55,6 @@ export class NewcontractComponent implements OnInit {
       this.customerlist = data;
       console.log('all customer found', data);
     });
-    
   }
 
 

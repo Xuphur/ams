@@ -12,13 +12,8 @@ export class AmsService {
   Id: String;
   editMode: Boolean = false;
 
-<<<<<<< HEAD
   // url = 'http://localhost:4000';
   url = 'https://ams-backend.herokuapp.com';
-=======
-  url = 'http://localhost:4000';
-  // url = 'https://ams-backend.herokuapp.com';
->>>>>>> b69f6eaf23a8dcbdf5ded6ec77e32751761ae355
 
 constructor(
     private http: HttpClient,

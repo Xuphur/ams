@@ -1,6 +1,5 @@
 <form>
   <div class="container">
-<<<<<<< HEAD
     <h3 class="aligncontract">Contract</h3>
     <div class="row">
       <div class="col-6 col-md-4">
@@ -14,19 +13,16 @@
         <input [(ngModel)]="contract.startDate" type="datetime-local" name="startDate" id="startDate"
           class="form-control" placeholder="">
       </div>
-
       <div class="col-6 col-md-4">
         <label for="duration">Contract Duration</label>
         <input [(ngModel)]="contract.duration" type="text" name="duration" id="duration" class="form-control"
           placeholder="">
       </div>
-
       <div class="col-6 col-md-4">
         <label for="increment">Increment</label>
         <input [(ngModel)]="contract.increment" type="text" name="increment" id="increment" class="form-control"
           placeholder="">
       </div>
-
       <div class="col-6 col-md-4">
         <label for="incrementSchedule">Increment Schedule</label>
         <select [(ngModel)]="contract.incrementSchedule" type="text" name="incrementSchedule" id="incrementSchedule"
@@ -36,13 +32,11 @@
           <option value="annual">Annual</option>
         </select>
       </div>
-
       <div class="col-6 col-md-4">
         <label for="expiry">Expiry Date</label>
         <input [(ngModel)]="contract.expiryDate" type="date" name="expiry" id="expiry" class="form-control"
           placeholder="">
       </div>
-
       <div class="col-6 col-md-4">
         <label for="cancelation">Cancelation Date</label>
         <input [(ngModel)]="contract.cancelation" type="date" name="cancelation" id="cancelation" class="form-control"
@@ -91,7 +85,6 @@
           <option value="Expired">Expired</option>
         </select>
       </div>
-
       <div class="col-6 col-md-4">
         <label for="Select Customer">Select Customer</label>
         <select [(ngModel)]="contract.customer" type="text" name="customer" id="customer" (click)="fetchCustomers()"
@@ -109,6 +102,10 @@
       </select>
     </div>
     <div class="row float-right">
-      <button class="btn btn-primary btn" (click)="t.select('Guarantor')">Back</button>
-  </div>
+      <button class="btn btn-primary" (click)="t.select('Guarantor')">Back</button>
+      <button type="submit" (click)="addContract(contract)" class="btn btn-outline-success">Save</button>
+      <button type="submit" (click)="openCustomer()" class="btn btn-outline-success">Create Customer</button>
+      <button type="submit" (click)="openAsset()" class="btn btn-outline-success">Create Asset</button>
+    </div>
+</div>
 </form>
