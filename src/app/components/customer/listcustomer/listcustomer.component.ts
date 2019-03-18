@@ -63,6 +63,7 @@ export class ListcustomerComponent implements OnInit {
   }
 
   viewCustomer(id) {
+    this.amsService.Id = id;
     const modalRef = this.modalService.open(ViewcustomerComponent, { size: 'lg', backdrop : 'static'  });
     modalRef.componentInstance.name = 'View Customer';
   }

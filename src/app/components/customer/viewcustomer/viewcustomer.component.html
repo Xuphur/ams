@@ -1,179 +1,77 @@
- <!-- <div class="container">
-     <h2>{{customer?.title}}</h2>
- <div>
-<h5>Customer Details</h5>
+  <button type="button" class="close" aria-label="Close"(click)="close()">
+      <span aria-hidden="true">&times;</span>
+   </button>
 
-        <div class="row" >
-            <div class="col-6 col-md-4">
-              <label for="name">Name</label> &nbsp;
-               {{customer?.data?.assetDetail?.vehicle?.reg}}
-             </div>
-
-<div class="col-6 col-md-4">
-  <label for="make">Father Name</label> &nbsp;
-   {{customer?.data?.assetDetail?.vehicle?.make}}
-   </div>
-
-<div class="col-6 col-md-4">
-<label for="model">Cnic</label> &nbsp;
-< {{customer?.data?.assetDetail?.vehicle.model}}
-</div>
-
- <div class="col-6 col-md-4">
-<label for="year">Licence</label> &nbsp;
- {{customer?.data?.assetDetail?.vehicle?.year}}
- </div>
-
- <div class="col-6 col-md-4">
-<label for="colour">Mobile</label> &nbsp;
-</div>
-
- <div class="col-6 col-md-4">
-<label for="status">Phone</label> &nbsp;
- {{customer?.data?.assetDetail?.vehicle?.status}}
- </div>
-<div class="col-6 col-md-4">
-    <label for="status">Floor</label> &nbsp;
-     {{customer?.data?.assetDetail?.vehicle?.status}}
-     </div>
-     <div class="col-6 col-md-4">
-        <label for="status">Sector</label> &nbsp;
-        {{customer?.data?.assetDetail?.vehicle?.status}}
-        </div>
-        <div class="col-6 col-md-4">
-            <label for="status">City</label> &nbsp;
-            {{customer?.data?.assetDetail?.vehicle?.status}}
-            </div>
-            <div class="col-6 col-md-4">
-                <label for="status">Zipcode</label> &nbsp;
-                {{customer?.data?.assetDetail?.vehicle?.status}}
-                </div>
-                <div class="col-6 col-md-4">
-                    <label for="status">Province</label> &nbsp;
-                    {{customer?.data?.assetDetail?.vehicle?.status}}
-                    </div>
-                     <div class="col-6 col-md-4">
-                        <label for="status">Street</label> &nbsp;
-                         {{customer?.data?.assetDetail?.vehicle?.status}}
-                         </div>
-                         <div class="col-6 col-md-4">
-                            <label for="status">Address</label> &nbsp;
-                            {{customer?.data?.assetDetail?.vehicle?.status}}
-                            </div>
-</div>
-</div>
- <div>
-
-<h5>Gurrantor Details</h5>
-
- <div class="row">
-  <div class="col-6 col-md-4">
-  <label for="floor">Gurrantor Name</label> &nbsp;
-   {{customer?.data?.assetDetail?.house?.address?.floor}}
-   </div>
-   <div class="col-6 col-md-4">
-  <label for="floor">Father Name</label> &nbsp;
-  {{customer?.data?.assetDetail?.house?.address?.number}}
-  </div>
-
-   <div class="col-6 col-md-4">
-  <label for="street">Gurrantor Cnic</label> &nbsp;
-  {{customer?.data?.assetDetail?.house?.address?.street}}
-  </div>
-
-   <div class="col-6 col-md-4">
-  <label for="sector">Gurrantor Mobile</label> &nbsp;
-   {{customer?.data?.assetDetail?.house?.address?.sector}}
-   </div>
-
-   <div class="col-6 col-md-4">
-  <label for="city"> Gurrantor Mobile 2</label> &nbsp;
-  {{customer?.data?.assetDetail?.house?.address?.city}}
-  </div>
-
-   <div class="col-6 col-md-4">
-  <label for="province"> Gurrantor Province</label> &nbsp;
-   {{customer?.data?.assetDetail?.house?.address?.province}}
-   </div>
-
-   <div class="col-6 col-md-4">
-  <label for="zipcode">Zip Code</label> &nbsp;
-  {{customer?.data?.assetDetail?.house?.address?.zipcode}}
-  </div>
-
-   <div class="col-6 col-md-4">
-  <label for="area">Gurrantor city</label> &nbsp;
-   {{customer?.data?.assetDetail?.house?.address?.area}}
-   </div>
-
-   <div class="col-6 col-md-4">
-  <label for="area">Gurrantor Floor</label> &nbsp;
-   {{customer?.data?.assetDetail?.house?.address?.area}}
-   </div>
-
-   <div class="col-6 col-md-4">
-  <label for="actualPrice">Gurrantor</label> &nbsp;
-  {{customer?.data?.assetDetail?.house?.address?.actualPrice}}
-  </div>
-
-</div>
-</div>
-<div >
-
- </div>
-</div>
- <div class="container">
+<div class="container">
     <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
         <div class="card">
-            <h5 class="card-header">Contracts</h5>
-            <div class="card-body p-0">
+            <h1>{{customer?.customer?.name}}</h1>
+            <div>
                 <div class="table-responsive">
                     <table class="table">
-                        <thead class="bg-light">
+                        <thead>
                             <tr class="border-0">
-                                <th class="border-0">Name</th>
-                                <th class="border-0">Start Date</th>
-                                <th class="border-0">Duration</th>
+                                <th class="border-0">Reference</th>
+                                <th class="border-0">Father Name</th>
+                                <th class="border-0">Cnic No</th>
+                                <th class="border-0">License No</th>
+                                <th class="border-0">Phone No</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>{{contract?. contractDate}}</td>
-                                <td>{{contract?.startDate}}</td>
-                                <td>{{contract?. duration}}</td>
+                                <td>{{customer?.customer?.ref}}</td>
+                                <td>{{customer?.customer?.number}}</td>
+                                <td>{{customer?.customer?.fatherName}}</td>
+                                <td>{{customer?.customer?.cnic}}</td>
+                                <td>{{customer?.customer?.license}}</td>
                             </tr>
-                                    <th class="border-0">Increment</th>
-                                    <th class="border-0">Increment Schedule</th>
-                                    <th class="border-0">Expiry Date</th>
+                                    <th class="border-0">Mobile 1</th>
+                                    <th class="border-0">Mobile 2</th>
+                                    <th class="border-0">Zipcode</th>
+                                    <th class="border-0">City</th>
+                                    <th class="border-0">Province</th>
+                            <tr>
+                                <td>{{customer?.customer?.mobile1}}</td>
+                                <td>{{customer?.customer?.mobile2}}</td>
+                                <td>{{customer?.customer?.province}}</td>
+                                <td>{{customer?.customer?.zipcode}}</td>
+                                <td>{{customer?.customer?.city}}</td>
+                            </tr>
+                                    <th class="border-0">Sector</th>
+                                    <th class="border-0">Street</th>
+                                    <th class="border-0">Floor</th>
+                                    <th class="border-0">Address</th>
+                            <tr>
+                                <td>{{customer?.customer?.sector}}</td>
+                                <td>{{customer?.customer?.street}}</td>
+                                <td>{{customer?.customer?.floor}}</td>
+                                <td>{{customer?.customer?.address}}</td>
 
-                            <tr>
-                                <td>{{contract?.increment}}</td>
-                                <td>{{contract?.incrementSchedule}}</td>
-                                <td>{{contract?.expiryDate}}</td>
                             </tr>
-                                    <th class="border-0">Cancelation</th>
-                                    <th class="border-0">PaymentMathod</th>
-                                    <th class="border-0">Price Quoted</th>
+                                <th class="border-0">Guarantor Name</th>
+                                    <th class="border-0">Father Name</th>
+                                    <th class="border-0">Cnic No</th>
+                                    <th class="border-0"> Mobile 1</th>
+                                    <th class="border-0">Mobile 2</th>
                             <tr>
-                                <td>{{contract?.cancelation}}</td>
-                                <td>{{contract?. paymentMathod}} </td>
-                                <td> {{contract?. priceQuoted}} </td>
-                            </tr>
-                                    <th class="border-0">Total Payable</th>
-                                    <th class="border-0">Down Payment</th>
-                                    <th class="border-0">Advance Payment</th>
-                            <tr>
-                                <td>{{contract?.totalPayable}}</td>
-                                <td> {{contract?.downPayment}} </td>
-                                <td> {{contract?. avdancePayment}}</td>
+                                <td>{{customer?.guarantor.gname}}</td>
+                                <td>{{customer?.guarantor?.gfather}}</td>
+                                <td>{{customer?.guarantor?.gcnic}}</td>
+                                <td>{{customer?.guarantor?.gmobile1}}</td>
+                                <td>{{customer?.guarantor?.gmobile2}}</td>
                                 </tr>
-                                <th class="border-0">Status</th>
-                                    <th class="border-0">Customer</th>
-                                    <th class="border-0">Asset</th>
+                                <th class="border-0">Province</th>
+                                <th class="border-0">City </th>
+                                <th class="border-0">Floor </th>
+                                <th class="border-0">Street </th>
+                                <th class="border-0">Address </th>
                             <tr>
-                                <td>  {{contract?. status}}</td>
-                                    <td> {{contract?.customer}}</td>
-                                        <td> {{contract?. asset}}</td>
+                                <td>{{customer?.guarantor?.province}}</td>
+                                <td>{{customer?.guarantor?.city}}</td>
+                                <td>{{customer?.guarantor?.floor}}</td>
+                                <td>{{customer?.guarantor?.street}}</td>
+                                <td>{{customer?.guarantor?.gaddress}}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -181,6 +79,4 @@
             </div>
         </div>
     </div>
-
 </div>
- -->

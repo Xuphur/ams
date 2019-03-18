@@ -4,6 +4,8 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Asset } from 'src/app/asset.model';
 import {NgbModal, NgbActiveModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-newasset',
   templateUrl: './newasset.component.html',
@@ -48,7 +50,10 @@ export class NewassetComponent implements OnInit {
   addAsset(asset) {
     console.log(asset, 'this is new asset'),
       this.amsService.addAsset(asset).subscribe(() => {
-        this.router.navigate(['/']);
+        Swal.fire(
+          'Assest Inserted Successfully'
+        );
+        this.close();
       });
   }
 

@@ -3,6 +3,7 @@ import { Customer } from 'src/app/customer.model';
 import { AmsService } from 'src/app/ams.service';
 import { FormBuilder } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
+import Swal from 'sweetalert2';
 import {NgbModal, NgbActiveModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-newcustomer',
@@ -46,8 +47,13 @@ export class NewcustomerComponent implements OnInit {
   addCustomer(customer) {
     console.log(customer, 'this is new asset'),
     this.amsService.addCustomer(customer).subscribe(() => {
-      this.router.navigate(['/']);
+      Swal.fire(
+        'Customer Inserted Successfully'
+      );
+      this.close();
     });
+    //   this.router.navigate(['/']);
+    // });
   }
   close() {
     this.activeModal.close();

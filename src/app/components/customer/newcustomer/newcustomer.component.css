@@ -1,10 +1,25 @@
+input[type=text]:hover {
+  background-color: #e2e2eb;
+  color: #3d405c;
+}
 
-.save{
-    padding-right: 10px;
-    margin-right: 7px;
-    margin-bottom: 10px;
-    margin-bottom: 10px;
+select[type=text]:hover {
+  background-color: #e2e2eb;
+  color: #3d405c;
 }
-.aligncostmr{
-margin-top: 10px;
+
+select[type=text] {
+  width: 100%;
+  outline: 0;
+  color: rgb(150, 150, 150);
+  border-width: 0 0 1px;
+  border-color: rgb(176, 176, 179);
 }
+
+input[type=text] {
+    width: 100%;
+    outline: 0;
+    color: rgb(150, 150, 150);
+    border-width: 0 0 1px;
+    border-color: rgb(176, 176, 179);
+  }
