@@ -1,82 +1,52 @@
-  <button type="button" class="close" aria-label="Close"(click)="close()">
+<div class="card">
+  <div class="card-header">
+    <button type="button" class="close" aria-label="Close" (click)="close()">
       <span aria-hidden="true">&times;</span>
-   </button>
-
-<div class="container">
-    <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
-        <div class="card">
-            <h1>{{customer?.customer?.name}}</h1>
-            <div>
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                            <tr class="border-0">
-                                <th class="border-0">Reference</th>
-                                <th class="border-0">Father Name</th>
-                                <th class="border-0">Cnic No</th>
-                                <th class="border-0">License No</th>
-                                <th class="border-0">Phone No</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>{{customer?.customer?.ref}}</td>
-                                <td>{{customer?.customer?.number}}</td>
-                                <td>{{customer?.customer?.fatherName}}</td>
-                                <td>{{customer?.customer?.cnic}}</td>
-                                <td>{{customer?.customer?.license}}</td>
-                            </tr>
-                                    <th class="border-0">Mobile 1</th>
-                                    <th class="border-0">Mobile 2</th>
-                                    <th class="border-0">Zipcode</th>
-                                    <th class="border-0">City</th>
-                                    <th class="border-0">Province</th>
-                            <tr>
-                                <td>{{customer?.customer?.mobile1}}</td>
-                                <td>{{customer?.customer?.mobile2}}</td>
-                                <td>{{customer?.customer?.province}}</td>
-                                <td>{{customer?.customer?.zipcode}}</td>
-                                <td>{{customer?.customer?.city}}</td>
-                            </tr>
-                                    <th class="border-0">Sector</th>
-                                    <th class="border-0">Street</th>
-                                    <th class="border-0">Floor</th>
-                                    <th class="border-0">Address</th>
-                            <tr>
-                                <td>{{customer?.customer?.sector}}</td>
-                                <td>{{customer?.customer?.street}}</td>
-                                <td>{{customer?.customer?.floor}}</td>
-                                <td>{{customer?.customer?.address}}</td>
-
-                            </tr>
-                                <th class="border-0">Guarantor Name</th>
-                                    <th class="border-0">Father Name</th>
-                                    <th class="border-0">Cnic No</th>
-                                    <th class="border-0"> Mobile 1</th>
-                                    <th class="border-0">Mobile 2</th>
-                            <tr>
-                                <td>{{customer?.guarantor.gname}}</td>
-                                <td>{{customer?.guarantor?.gfather}}</td>
-                                <td>{{customer?.guarantor?.gcnic}}</td>
-                                <td>{{customer?.guarantor?.gmobile1}}</td>
-                                <td>{{customer?.guarantor?.gmobile2}}</td>
-                                </tr>
-                                <th class="border-0">Province</th>
-                                <th class="border-0">City </th>
-                                <th class="border-0">Floor </th>
-                                <th class="border-0">Street </th>
-                                <th class="border-0">Address </th>
-                            <tr>
-                                <td>{{customer?.guarantor?.province}}</td>
-                                <td>{{customer?.guarantor?.city}}</td>
-                                <td>{{customer?.guarantor?.floor}}</td>
-                                <td>{{customer?.guarantor?.street}}</td>
-                                <td>{{customer?.guarantor?.gaddress}}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
+    </button>
+    <h5>{{ customer?.customer?.name }}</h5>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      {{ customer?.customer?.fatherName }}
+      <br />{{ customer?.customer?.cnic }}
+      <br />{{ customer?.customer?.mobile1 }}
+      <br />{{ customer?.customer?.mobile2 }}
     </div>
+    <div class="row">
+      <label> <strong>Address</strong></label>
+      {{ customer?.customer?.address.floor }}
+      {{ customer?.customer?.address.number }}
+      {{ customer?.customer?.address.street }}
+      {{ customer?.customer?.address.sector }}
+      {{ customer?.customer?.address.city }}
+      {{ customer?.customer?.address.province }}
+      {{ customer?.customer?.address.zipcode }}
+    </div>
+
+    <div class="row">
+      <button
+        type="button"
+        class="btn btn-outline-primary"
+        (click)="isCollapsed = !isCollapsed"
+        [attr.aria-expanded]="!isCollapsed"
+        aria-controls="collapseExample"
+      >
+        Guarantor
+      </button>
+    </div>
+
+    <div id="collapseExample" [ngbCollapse]="isCollapsed">
+      {{ customer?.guarantor.gname }}
+      {{ customer?.guarantor?.gfather }}
+      {{ customer?.guarantor?.gcnic }}
+      {{ customer?.guarantor?.gmobile1 }}
+      {{ customer?.guarantor?.gmobile2 }}
+
+      {{ customer?.guarantor?.province }}
+      {{ customer?.guarantor?.city }}
+      {{ customer?.guarantor?.floor }}
+      {{ customer?.guarantor?.street }}
+      {{ customer?.guarantor?.gaddress }}
+    </div>
+  </div>
 </div>

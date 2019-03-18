@@ -15,7 +15,7 @@ import { ViewassetComponent } from '../viewasset/viewasset.component';
 })
 export class ListassetComponent implements OnInit {
   page = 1 ;
-  pageSize: any;
+  pageSize: any = '5';
   title: any;
   owner: any;
   type: any;

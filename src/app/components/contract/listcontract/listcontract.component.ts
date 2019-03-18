@@ -14,7 +14,7 @@ import { ListrecieptComponent } from '../../reciept/listreciept/listreciept.comp
 })
 export class ListcontractComponent implements OnInit {
   page = 1;
-  pageSize: any;
+  pageSize: any = '5';
   status: any;
   owner: any;
   type: any;

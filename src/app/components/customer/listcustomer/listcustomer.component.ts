@@ -12,7 +12,7 @@ import { ViewcustomerComponent } from '../viewcustomer/viewcustomer.component';
 })
 export class ListcustomerComponent implements OnInit {
   page = 1;
-  pageSize: any;
+  pageSize: any = '5';
   name: any;
   cnic: any;
   mobile: any;

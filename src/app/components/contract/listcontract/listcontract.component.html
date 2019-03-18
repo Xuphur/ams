@@ -53,11 +53,12 @@
     <table>
       <thead>
         <th>Status &nbsp; <i class="fas fa-sort"></i></th>
-        <th>Duration&nbsp;<i class="fas fa-sort"></i></th>
-        <th>Increament&nbsp;<i class="fas fa-sort"></i></th>
+        <th>Customer&nbsp;<i class="fas fa-sort"></i></th>
+        <th>Asset&nbsp;<i class="fas fa-sort"></i></th>
+        <th>Asset Owner&nbsp;<i class="fas fa-sort"></i></th>
         <th>Contract Date&nbsp;<i class="fas fa-sort"></i></th>
-        <th>Price Quoted&nbsp;<i class="fas fa-sort"></i></th>
-        <th>Customer Id&nbsp;<i class="fas fa-sort"></i></th>
+        <th>Balance&nbsp;<i class="fas fa-sort"></i></th>
+        <th>Next Due&nbsp;<i class="fas fa-sort"></i></th>
         <th>Actions</th>
         <!-- <th>Owner Address</th> -->
       </thead>
@@ -68,11 +69,12 @@
         "
       >
         <td>{{ contract?.status }}</td>
+        <td>{{ contract?.customer?.customer.name }}</td>
+        <td>{{ contract?.asset?.assetType }}</td>
+        <td>{{ contract?.asset?.owner.name }}</td>
         <td>{{ contract?.duration }}</td>
         <td>{{ contract?.contractDate }}</td>
-        <td>{{ contract?.expiryDate }}</td>
         <td>{{ contract?.priceQuoted }}</td>
-        <td>{{ contract?.customer }}</td>
         <td>
           <button
             class="btn btn-sm btn-outline-warning"

@@ -9,10 +9,11 @@ import { AmsService } from 'src/app/ams.service';
 export class ViewcustomerComponent implements OnInit {
 
   customer: any;
+  isCollapsed = true;
 
   constructor(
     public activeModal: NgbActiveModal,
-    private amsService: AmsService
+    private amsService: AmsService,
   ) { }
 
   ngOnInit() {
