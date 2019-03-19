@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'asset/list', component: ListassetComponent },
   { path: 'contract/list', component: ListcontractComponent },
   { path: 'customer/list', component: ListcustomerComponent },
-  { path: 'Dashboard', component: DashboardComponent },
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'search', component: SearchComponent }
 ];
 

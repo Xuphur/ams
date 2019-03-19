@@ -15,7 +15,8 @@ export class LoginInComponent implements OnInit {
 
   constructor(
     private amsService: AmsService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
     ) {
       this.user = new User();
       this.route.paramMap.subscribe(parameterMap => {
@@ -33,7 +34,7 @@ export class LoginInComponent implements OnInit {
       Swal.fire(
         'User Log In Successfully'
       );
-      // this.close();
+      this.router.navigate(['/dashboard'])
     });
   }
 }
