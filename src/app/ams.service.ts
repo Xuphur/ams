@@ -174,10 +174,11 @@ export class AmsService {
     return this.http.get(this.url + '/contract/owner/' + owner);
   }
 
-  getContractByType(type) {
-    console.log(type, 'id at service to edit');
-    return this.http.get(this.url + '/contract/type/' + type);
+  getContractByCustomer(customer) {
+    console.log(customer, 'contract by customer');
+    return this.http.get(this.url + '/contract/customer/' + customer);
   }
+
   addContract(contract) {
     console.log(contract, 'this is contract at service');
     return this.http.post(this.url + '/contract/new', contract);

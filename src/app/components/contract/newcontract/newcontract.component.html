@@ -14,9 +14,8 @@
           name="saleType"
           id="saleType"
           class="form-control"
-          placeholder="1"
         >
-          <option value="1">Counter</option>
+          <option value="1" selected="1">Counter</option>
           <option value="2">Rented</option>
           <option value="3">Installment</option>
         </select>
@@ -29,7 +28,6 @@
           type="text"
           name="customer"
           id="customer"
-          (click)="fetchCustomers()"
           class="form-control"
           placeholder=""
         >
@@ -48,7 +46,6 @@
           type="text"
           name="asset"
           id="asset"
-          (click)="fetchAssets()"
           class="form-control"
           placeholder=""
         >
@@ -85,14 +82,20 @@
 
       <div class="col-6 col-md-4">
         <label for="duration">Contract Duration</label>
-        <input
-          [(ngModel)]="contract.duration"
-          type="text"
-          name="duration"
-          id="duration"
-          class="form-control"
-          placeholder=""
-        />
+            <select
+              [(ngModel)]="contract.duration"
+              type="text"
+              name="asset"
+              id="asset"
+              class="form-control"
+              placeholder=""
+            >
+              <option value="1">1 Year</option>
+              <option value="2">6 Months</option>
+              <option value="3">1 Month</option>
+              <option value="4">1 Week</option>
+              <option value="5">1 Day</option>
+            </select>
       </div>
 
       <div class="col-6 col-md-4">
@@ -117,9 +120,9 @@
           class="form-control"
           placeholder=""
         >
-          <option value="daily">Daily</option>
-          <option value="monthly">Monthly</option>
-          <option value="annual">Annual</option>
+          <option value="1">Annual</option>
+          <option value="2">6 Months</option>
+          <option value="3">Monthly</option>
         </select>
       </div>
 
@@ -148,7 +151,7 @@
       </div>
 
       <div class="col-6 col-md-4">
-        <label for="mathod">Payment Mathod</label>
+        <label for="mathod">Payment Schedule</label>
         <select
           [(ngModel)]="contract.paymentMathod"
           type="text"
@@ -157,9 +160,11 @@
           class="form-control"
           placeholder=""
         >
-          <option value="daily">Daily</option>
-          <option value="monthly">Monthly</option>
-          <option value="annual">Annual</option>
+        <option value="1">Annual</option>
+        <option value="2">6 Months</option>
+        <option value="3">Monthly</option>
+        <option value="4">Weekly</option>
+        <option value="5">Daily</option>
         </select>
       </div>
       <div class="col-6 col-md-4">
@@ -224,6 +229,17 @@
           id="qouted"
           class="form-control"
           placeholder=""
+        />
+      </div>
+      <div class="col-6 col-md-4">
+        <label for="quoted">Installment / Rent</label>
+        <input
+          [(ngModel)]="contract.installment"
+          type="text"
+          name="qouted"
+          id="qouted"
+          class="form-control"
+          placeholder="Installment / Rent"
         />
       </div>
     </div>

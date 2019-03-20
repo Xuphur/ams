@@ -11,15 +11,17 @@ import {
   NgbActiveModal,
   ModalDismissReasons
 } from '@ng-bootstrap/ng-bootstrap';
+
 @Component({
   selector: 'app-newcontract',
   templateUrl: './newcontract.component.html',
   styleUrls: ['./newcontract.component.css']
 })
 export class NewcontractComponent implements OnInit {
-  contract: Contract;
+  contract: any;
   customerlist: any;
   assetlist: any;
+
   constructor(
     private amsService: AmsService,
     private fb: FormBuilder,
@@ -36,10 +38,14 @@ export class NewcontractComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.contract.saleType, 'saleType');
     if (this.amsService.editMode) {
       this.fetchContractById();
+    } else {
+      this.fetchAssets();
+      this.fetchCustomers();
     }
-  }
+    }
   fetchContractById() {
     this.amsService
       .getContractById(this.amsService.Id)
@@ -67,6 +73,7 @@ export class NewcontractComponent implements OnInit {
       Swal.fire(
         'Contract Inserted Successfully'
       );
+      this.router.navigate(['/contract/list']);
       this.close();
     });
     //   this.router.navigate(['/']);

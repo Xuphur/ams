@@ -16,11 +16,9 @@ export class ListcontractComponent implements OnInit {
   page = 1;
   pageSize: any = '5';
   status: any;
-  owner: any;
+  customer: any;
   type: any;
   contractlist: any = [];
-  customer: any;
-  item: any;
   public isCollapsed = true;
 
   constructor(
@@ -36,17 +34,7 @@ export class ListcontractComponent implements OnInit {
   fetchContracts() {
     this.amsService.getContracts().subscribe(data => {
       this.contractlist = data;
-      const total = this.fetchCustomer(this.contractlist);
       console.log('all contract found', data);
-    });
-  }
-
-  fetchCustomer(data) {
-    data.forEach(element => {
-      this.amsService.find(element._id).subscribe(cus => {
-        this.customer = cus;
-        console.log('all customer found', data);
-      });
     });
   }
 

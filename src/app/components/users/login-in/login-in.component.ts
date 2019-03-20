@@ -31,10 +31,17 @@ export class LoginInComponent implements OnInit {
   getuser(user) {
     console.log(user, 'this user login'),
     this.amsService.getUser(user).subscribe(() => {
-      Swal.fire(
-        'User Log In Successfully'
-      );
-      this.router.navigate(['/dashboard'])
-    });
+        if (!user) {
+          console.log('err');
+          Swal.fire(
+            'Invalid User or Password'
+          );
+        } else {
+          Swal.fire(
+            'User Log In Successfully'
+          );
+          this.router.navigate(['/dashboard']);
+          }
+        });
   }
 }

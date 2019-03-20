@@ -16,6 +16,7 @@ export class Contract {
   paymentMathod: '';
   priceQuoted: '';
   totalPayable: '';
+  installment: '';
   downPayment: '';
   avdancePayment: '';
   customer: '';

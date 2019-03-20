@@ -29,6 +29,7 @@ import { SearchComponent } from './components/search/search.component';
 import { LoginInComponent } from './components/users/login-in/login-in.component';
 import { SignupComponent } from './components/users/signup/signup.component';
 import { AuthguardService } from './authguard.service';
+import { MainComponent } from './components/reports/main/main.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { AuthguardService } from './authguard.service';
     HeaderComponent,
     SearchComponent,
     LoginInComponent,
-    SignupComponent
+    SignupComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

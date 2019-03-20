@@ -9,6 +9,7 @@ import { AmsService } from 'src/app/ams.service';
 export class ViewcustomerComponent implements OnInit {
 
   customer: any;
+  contractlist: any;
   isCollapsed = true;
 
   constructor(
@@ -25,6 +26,10 @@ export class ViewcustomerComponent implements OnInit {
     .subscribe((res: any) => {
       this.customer = res.data;
       console.log(this.amsService.Id, this.customer, 'customer at view');
+      this.amsService.getContractByCustomer(this.amsService.Id).subscribe(( responce: any) => {
+        this.contractlist = responce.data;
+        console.log(this.contractlist, 'this is contract list');
+      });
     });
 }
 

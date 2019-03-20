@@ -48,5 +48,14 @@
       {{ customer?.guarantor?.street }}
       {{ customer?.guarantor?.gaddress }}
     </div>
+
+    <div class="row" *ngFor="let contract of contractlist">
+      <div class="col">
+        {{contract?.totalPayable}}
+        {{contract?.contractDate}}
+        {{contract?.asset}}
+      </div>
+    </div>
+
   </div>
 </div>
