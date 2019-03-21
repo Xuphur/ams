@@ -6,16 +6,11 @@ import { Router, ActivatedRoute } from '@angular/router';
 import Swal from 'sweetalert2';
 import { NewassetComponent } from '../../asset/newasset/newasset.component';
 import { NewcustomerComponent } from '../../customer/newcustomer/newcustomer.component';
-<<<<<<< HEAD
-import { log } from 'util';
-
-=======
 import {
   NgbModal,
   NgbActiveModal,
   ModalDismissReasons
 } from '@ng-bootstrap/ng-bootstrap';
->>>>>>> 6c9eef76c300c4b8ee8c3957984da56cf048ac81
 @Component({
   selector: 'app-newcontract',
   templateUrl: './newcontract.component.html',
@@ -43,12 +38,7 @@ export class NewcontractComponent implements OnInit {
   ngOnInit() {
     if (this.amsService.editMode) {
       this.fetchContractById();
-<<<<<<< HEAD
-      console.log(this.contract.startDate, 'text');
-     }
-=======
     }
->>>>>>> 6c9eef76c300c4b8ee8c3957984da56cf048ac81
   }
   fetchContractById() {
     this.amsService

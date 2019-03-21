@@ -43,7 +43,7 @@ export class ListrecieptComponent implements OnInit {
             this.contract = con.data;
             const blnc = this.contract.totalPayable - this.grandTotal;
             this.balance = blnc;
-            console.log(blnc, 'got this blnc');
+            console.log(this.contract , 'got this blnc');
           });
       });
   }
@@ -57,6 +57,10 @@ export class ListrecieptComponent implements OnInit {
       total += amount;
     });
     return total;
+  }
+
+  ngOnChange() {
+    console.log(this.contract);
   }
 
   // getBalance(data) {
