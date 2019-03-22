@@ -3,6 +3,7 @@ import { AmsService } from 'src/app/ams.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { User } from 'src/app/user.model';
 import Swal from 'sweetalert2';
+import { NgxSpinnerService } from 'ngx-spinner';
 @Component({
   selector: 'app-login-in',
   templateUrl: './login-in.component.html',
@@ -12,11 +13,13 @@ import Swal from 'sweetalert2';
 export class LoginInComponent implements OnInit {
 
   user: any;
+  loginvalue: any;
 
   constructor(
     private amsService: AmsService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private spinner: NgxSpinnerService
     ) {
       this.user = new User();
       this.route.paramMap.subscribe(parameterMap => {
@@ -30,11 +33,15 @@ export class LoginInComponent implements OnInit {
 
   getuser(user) {
     console.log(user, 'this user login'),
-    this.amsService.getUser(user).subscribe(() => {
-      Swal.fire(
-        'User Log In Successfully'
-      );
-      this.router.navigate(['/dashboard'])
+    this.spinner.show();
+    this.amsService.getUser(user).subscribe((loginData) => {
+      localStorage.setItem('loginvalue', JSON.stringify(loginData));
+      this.router.navigate(['/dashboard']);
+      console.log( this.loginvalue, 'user at service'),
+      this.spinner.hide();
+      // Swal.fire(
+      //   'User Log In Successfully'
+      // )
     });
   }
 }

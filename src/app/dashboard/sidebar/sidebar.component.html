@@ -1,4 +1,4 @@
-<div class="nav-left-sidebar sidebar-dark">
+<div class="nav-left-sidebar sidebar-dark"*ngIf="hide">
   <div class="menu-list">
     <nav class="navbar navbar-expand-sm navbar-light">
       <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
@@ -22,7 +22,7 @@
             <span
               ><a
                 class="nav-link"
-                [routerLink]="['/Dashboard']"
+                [routerLink]="['/dashboard']"
                 routerLinkActive="router-link-active"
                 ><i class="fa fa-fw fa-user-circle"></i>Dashboard
                 <span class="badge badge-success"></span></a
