@@ -1,24 +1,24 @@
 export class Contract {
   ref: '';
   title: '';
-  issuetime: '';
+  customer: '';
+  asset: '';
+  saleType: '';
+  contractDate: '';
   duration: '';
+  status: '';
+  startDate: '';
   increment: '';
   incrementSchedule: '';
-  status: '';
-  assetValue: '';
-  contractDate: '';
-  startDate: '';
-  expiryDate: '';
-  cancelation: '';
-  reaccurance: '';
-  saleType: '';
-  paymentMathod: '';
+  paymentSchedule: '';
   priceQuoted: '';
   totalPayable: '';
   installment: '';
   downPayment: '';
   avdancePayment: '';
-  customer: '';
-  asset: '';
+  balance: '';
+  reaccurance: '';
+  totalRecieved: '';
+  expiryDate: '';
+  cancelation: '';
 }

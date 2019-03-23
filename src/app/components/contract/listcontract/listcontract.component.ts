@@ -18,6 +18,7 @@ export class ListcontractComponent implements OnInit {
   status: any;
   customer: any;
   type: any;
+  owner: any;
   contractlist: any = [];
   public isCollapsed = true;
 

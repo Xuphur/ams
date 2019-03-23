@@ -1,66 +1,47 @@
-<div class="nav-left-sidebar sidebar-dark">
-  <div class="menu-list">
-    <nav class="navbar navbar-expand-sm navbar-light">
-      <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+<div class="nav-left-sidebar">
+  <nav class="navbar navbar-expand-sm navbar-light">
+    <div class="menu-list">
       <button
-        class="navbar-toggler"
+        class="nav-link"
         type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
+        [routerLink]="['/dashboard']"
+        routerLinkActive="router-link-active"
       >
-        <span class="navbar-toggler-icon"></span>
+        <i class="fa fa-fw fa-user-circle"></i>Dashboard
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav flex-column">
-          <!-- <li class="nav-divider">
-                      Menu
-                  </li> -->
-          <li class="nav-item ">
-            <span
-              ><a
-                class="nav-link"
-                [routerLink]="['/Dashboard']"
-                routerLinkActive="router-link-active"
-                ><i class="fa fa-fw fa-user-circle"></i>Dashboard
-                <span class="badge badge-success"></span></a
-            ></span>
-          </li>
-          <li class="nav-item">
-            <span
-              ><a
-                class="nav-link"
-                [routerLink]="['/asset/list']"
-                routerLinkActive="router-link-active"
-                ><i class="fa fa-fw fa-rocket"></i>Assest</a
-              ></span
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              [routerLink]="['/customer/list']"
-              routerLinkActive="router-link-active"
-              ><i class="fas fa-fw fa-chart-pie"></i>Customer</a
-            >
-          </li>
-          <li class="nav-item ">
-            <a
-              class="nav-link"
-              [routerLink]="['//contract/list']"
-              routerLinkActive="router-link-active"
-              ><i class="fab fa-fw fa-wpforms"></i>Contract</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"
-              ><i class="fas fa-fw fa-table"></i>Reports</a
-            >
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
+      <button
+        class="nav-link"
+        type="button"
+        [routerLink]="['/asset/list']"
+        routerLinkActive="router-link-active"
+      >
+        <i class="fa fa-fw fa-rocket"></i>Asset List
+      </button>
+      <button
+        class="nav-link"
+        type="button"
+        [routerLink]="['/customer/list']"
+        routerLinkActive="router-link-active"
+      >
+        <i class="fas fa-fw fa-chart-pie"></i>Customer List
+      </button>
+      <button
+        class="nav-link"
+        type="button"
+        [routerLink]="['/contract/list']"
+        routerLinkActive="router-link-active"
+      >
+        <i class="fab fa-fw fa-wpforms"></i>Contract List
+      </button>
+      <button
+        class="nav-link"
+        type="button"
+        [routerLink]="['/']"
+        routerLinkActive="router-link-active"
+      >
+        <i class="fas fa-fw fa-table"></i>Reports
+      </button>
+
+    </div>
+  </nav>
 </div>

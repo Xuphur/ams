@@ -1,24 +1,62 @@
-.col-xl-9 {
-  -ms-flex: 0 0 75%;
-  flex: 0 0 75%;
-  max-width: 100%;
-}
-    .table-responsive{
-      display: block;
-    width: 100%;
-    overflow-x: auto;
-    }
-.card{
-  margin-bottom: 30px;
-    border: none;
+.btn-circle {
+  height: 40px;
+  width: 40px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 157, 248);
 }
 
-.table{
+.card {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  margin: 8px;
   width: 100%;
-    max-width: 100%;
-    margin-bottom: 1rem;
-    background-color: transparent;
 }
-th{
-  background-color: transparent;
+.card-header {
+  background-color: rgb(0, 157, 248);
+  color: white;
+  text-align: left;
+  vertical-align: middle;
+  height: 60px;
+  width: 100%;
+}
+.card-footer {
+  background-color: rgb(255, 255, 255);
+  height: 60px;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+}
+th {
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  background-color: rgb(0, 157, 248);
+  border-bottom: 1px solid rgb(168, 168, 168);
+  padding: 10px;
+}
+
+td {
+  text-align: center;
+  color: rgb(150, 150, 150);
+  /* border-bottom: 1px solid rgb(168, 168, 168); */
+}
+
+.btn-search {
+  background-color: white;
+  outline: 0;
+  border-width: 0 0 1px;
+  border-color: rgb(176, 176, 179);
+}
+
+.search {
+  outline: 0;
+  border-width: 0 0 1px;
+  border-color: rgb(176, 176, 179);
 }

@@ -1,5 +1,292 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
 
+/***/ "./node_modules/moment/locale sync recursive ^\\.\\/.*$":
+/*!**************************************************!*\
+  !*** ./node_modules/moment/locale sync ^\.\/.*$ ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": "./node_modules/moment/locale/af.js",
+	"./af.js": "./node_modules/moment/locale/af.js",
+	"./ar": "./node_modules/moment/locale/ar.js",
+	"./ar-dz": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-dz.js": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-kw": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-kw.js": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-ly": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ly.js": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ma": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-ma.js": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-sa": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-sa.js": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-tn": "./node_modules/moment/locale/ar-tn.js",
+	"./ar-tn.js": "./node_modules/moment/locale/ar-tn.js",
+	"./ar.js": "./node_modules/moment/locale/ar.js",
+	"./az": "./node_modules/moment/locale/az.js",
+	"./az.js": "./node_modules/moment/locale/az.js",
+	"./be": "./node_modules/moment/locale/be.js",
+	"./be.js": "./node_modules/moment/locale/be.js",
+	"./bg": "./node_modules/moment/locale/bg.js",
+	"./bg.js": "./node_modules/moment/locale/bg.js",
+	"./bm": "./node_modules/moment/locale/bm.js",
+	"./bm.js": "./node_modules/moment/locale/bm.js",
+	"./bn": "./node_modules/moment/locale/bn.js",
+	"./bn.js": "./node_modules/moment/locale/bn.js",
+	"./bo": "./node_modules/moment/locale/bo.js",
+	"./bo.js": "./node_modules/moment/locale/bo.js",
+	"./br": "./node_modules/moment/locale/br.js",
+	"./br.js": "./node_modules/moment/locale/br.js",
+	"./bs": "./node_modules/moment/locale/bs.js",
+	"./bs.js": "./node_modules/moment/locale/bs.js",
+	"./ca": "./node_modules/moment/locale/ca.js",
+	"./ca.js": "./node_modules/moment/locale/ca.js",
+	"./cs": "./node_modules/moment/locale/cs.js",
+	"./cs.js": "./node_modules/moment/locale/cs.js",
+	"./cv": "./node_modules/moment/locale/cv.js",
+	"./cv.js": "./node_modules/moment/locale/cv.js",
+	"./cy": "./node_modules/moment/locale/cy.js",
+	"./cy.js": "./node_modules/moment/locale/cy.js",
+	"./da": "./node_modules/moment/locale/da.js",
+	"./da.js": "./node_modules/moment/locale/da.js",
+	"./de": "./node_modules/moment/locale/de.js",
+	"./de-at": "./node_modules/moment/locale/de-at.js",
+	"./de-at.js": "./node_modules/moment/locale/de-at.js",
+	"./de-ch": "./node_modules/moment/locale/de-ch.js",
+	"./de-ch.js": "./node_modules/moment/locale/de-ch.js",
+	"./de.js": "./node_modules/moment/locale/de.js",
+	"./dv": "./node_modules/moment/locale/dv.js",
+	"./dv.js": "./node_modules/moment/locale/dv.js",
+	"./el": "./node_modules/moment/locale/el.js",
+	"./el.js": "./node_modules/moment/locale/el.js",
+	"./en-SG": "./node_modules/moment/locale/en-SG.js",
+	"./en-SG.js": "./node_modules/moment/locale/en-SG.js",
+	"./en-au": "./node_modules/moment/locale/en-au.js",
+	"./en-au.js": "./node_modules/moment/locale/en-au.js",
+	"./en-ca": "./node_modules/moment/locale/en-ca.js",
+	"./en-ca.js": "./node_modules/moment/locale/en-ca.js",
+	"./en-gb": "./node_modules/moment/locale/en-gb.js",
+	"./en-gb.js": "./node_modules/moment/locale/en-gb.js",
+	"./en-ie": "./node_modules/moment/locale/en-ie.js",
+	"./en-ie.js": "./node_modules/moment/locale/en-ie.js",
+	"./en-il": "./node_modules/moment/locale/en-il.js",
+	"./en-il.js": "./node_modules/moment/locale/en-il.js",
+	"./en-nz": "./node_modules/moment/locale/en-nz.js",
+	"./en-nz.js": "./node_modules/moment/locale/en-nz.js",
+	"./eo": "./node_modules/moment/locale/eo.js",
+	"./eo.js": "./node_modules/moment/locale/eo.js",
+	"./es": "./node_modules/moment/locale/es.js",
+	"./es-do": "./node_modules/moment/locale/es-do.js",
+	"./es-do.js": "./node_modules/moment/locale/es-do.js",
+	"./es-us": "./node_modules/moment/locale/es-us.js",
+	"./es-us.js": "./node_modules/moment/locale/es-us.js",
+	"./es.js": "./node_modules/moment/locale/es.js",
+	"./et": "./node_modules/moment/locale/et.js",
+	"./et.js": "./node_modules/moment/locale/et.js",
+	"./eu": "./node_modules/moment/locale/eu.js",
+	"./eu.js": "./node_modules/moment/locale/eu.js",
+	"./fa": "./node_modules/moment/locale/fa.js",
+	"./fa.js": "./node_modules/moment/locale/fa.js",
+	"./fi": "./node_modules/moment/locale/fi.js",
+	"./fi.js": "./node_modules/moment/locale/fi.js",
+	"./fo": "./node_modules/moment/locale/fo.js",
+	"./fo.js": "./node_modules/moment/locale/fo.js",
+	"./fr": "./node_modules/moment/locale/fr.js",
+	"./fr-ca": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ca.js": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ch": "./node_modules/moment/locale/fr-ch.js",
+	"./fr-ch.js": "./node_modules/moment/locale/fr-ch.js",
+	"./fr.js": "./node_modules/moment/locale/fr.js",
+	"./fy": "./node_modules/moment/locale/fy.js",
+	"./fy.js": "./node_modules/moment/locale/fy.js",
+	"./ga": "./node_modules/moment/locale/ga.js",
+	"./ga.js": "./node_modules/moment/locale/ga.js",
+	"./gd": "./node_modules/moment/locale/gd.js",
+	"./gd.js": "./node_modules/moment/locale/gd.js",
+	"./gl": "./node_modules/moment/locale/gl.js",
+	"./gl.js": "./node_modules/moment/locale/gl.js",
+	"./gom-latn": "./node_modules/moment/locale/gom-latn.js",
+	"./gom-latn.js": "./node_modules/moment/locale/gom-latn.js",
+	"./gu": "./node_modules/moment/locale/gu.js",
+	"./gu.js": "./node_modules/moment/locale/gu.js",
+	"./he": "./node_modules/moment/locale/he.js",
+	"./he.js": "./node_modules/moment/locale/he.js",
+	"./hi": "./node_modules/moment/locale/hi.js",
+	"./hi.js": "./node_modules/moment/locale/hi.js",
+	"./hr": "./node_modules/moment/locale/hr.js",
+	"./hr.js": "./node_modules/moment/locale/hr.js",
+	"./hu": "./node_modules/moment/locale/hu.js",
+	"./hu.js": "./node_modules/moment/locale/hu.js",
+	"./hy-am": "./node_modules/moment/locale/hy-am.js",
+	"./hy-am.js": "./node_modules/moment/locale/hy-am.js",
+	"./id": "./node_modules/moment/locale/id.js",
+	"./id.js": "./node_modules/moment/locale/id.js",
+	"./is": "./node_modules/moment/locale/is.js",
+	"./is.js": "./node_modules/moment/locale/is.js",
+	"./it": "./node_modules/moment/locale/it.js",
+	"./it-ch": "./node_modules/moment/locale/it-ch.js",
+	"./it-ch.js": "./node_modules/moment/locale/it-ch.js",
+	"./it.js": "./node_modules/moment/locale/it.js",
+	"./ja": "./node_modules/moment/locale/ja.js",
+	"./ja.js": "./node_modules/moment/locale/ja.js",
+	"./jv": "./node_modules/moment/locale/jv.js",
+	"./jv.js": "./node_modules/moment/locale/jv.js",
+	"./ka": "./node_modules/moment/locale/ka.js",
+	"./ka.js": "./node_modules/moment/locale/ka.js",
+	"./kk": "./node_modules/moment/locale/kk.js",
+	"./kk.js": "./node_modules/moment/locale/kk.js",
+	"./km": "./node_modules/moment/locale/km.js",
+	"./km.js": "./node_modules/moment/locale/km.js",
+	"./kn": "./node_modules/moment/locale/kn.js",
+	"./kn.js": "./node_modules/moment/locale/kn.js",
+	"./ko": "./node_modules/moment/locale/ko.js",
+	"./ko.js": "./node_modules/moment/locale/ko.js",
+	"./ku": "./node_modules/moment/locale/ku.js",
+	"./ku.js": "./node_modules/moment/locale/ku.js",
+	"./ky": "./node_modules/moment/locale/ky.js",
+	"./ky.js": "./node_modules/moment/locale/ky.js",
+	"./lb": "./node_modules/moment/locale/lb.js",
+	"./lb.js": "./node_modules/moment/locale/lb.js",
+	"./lo": "./node_modules/moment/locale/lo.js",
+	"./lo.js": "./node_modules/moment/locale/lo.js",
+	"./lt": "./node_modules/moment/locale/lt.js",
+	"./lt.js": "./node_modules/moment/locale/lt.js",
+	"./lv": "./node_modules/moment/locale/lv.js",
+	"./lv.js": "./node_modules/moment/locale/lv.js",
+	"./me": "./node_modules/moment/locale/me.js",
+	"./me.js": "./node_modules/moment/locale/me.js",
+	"./mi": "./node_modules/moment/locale/mi.js",
+	"./mi.js": "./node_modules/moment/locale/mi.js",
+	"./mk": "./node_modules/moment/locale/mk.js",
+	"./mk.js": "./node_modules/moment/locale/mk.js",
+	"./ml": "./node_modules/moment/locale/ml.js",
+	"./ml.js": "./node_modules/moment/locale/ml.js",
+	"./mn": "./node_modules/moment/locale/mn.js",
+	"./mn.js": "./node_modules/moment/locale/mn.js",
+	"./mr": "./node_modules/moment/locale/mr.js",
+	"./mr.js": "./node_modules/moment/locale/mr.js",
+	"./ms": "./node_modules/moment/locale/ms.js",
+	"./ms-my": "./node_modules/moment/locale/ms-my.js",
+	"./ms-my.js": "./node_modules/moment/locale/ms-my.js",
+	"./ms.js": "./node_modules/moment/locale/ms.js",
+	"./mt": "./node_modules/moment/locale/mt.js",
+	"./mt.js": "./node_modules/moment/locale/mt.js",
+	"./my": "./node_modules/moment/locale/my.js",
+	"./my.js": "./node_modules/moment/locale/my.js",
+	"./nb": "./node_modules/moment/locale/nb.js",
+	"./nb.js": "./node_modules/moment/locale/nb.js",
+	"./ne": "./node_modules/moment/locale/ne.js",
+	"./ne.js": "./node_modules/moment/locale/ne.js",
+	"./nl": "./node_modules/moment/locale/nl.js",
+	"./nl-be": "./node_modules/moment/locale/nl-be.js",
+	"./nl-be.js": "./node_modules/moment/locale/nl-be.js",
+	"./nl.js": "./node_modules/moment/locale/nl.js",
+	"./nn": "./node_modules/moment/locale/nn.js",
+	"./nn.js": "./node_modules/moment/locale/nn.js",
+	"./pa-in": "./node_modules/moment/locale/pa-in.js",
+	"./pa-in.js": "./node_modules/moment/locale/pa-in.js",
+	"./pl": "./node_modules/moment/locale/pl.js",
+	"./pl.js": "./node_modules/moment/locale/pl.js",
+	"./pt": "./node_modules/moment/locale/pt.js",
+	"./pt-br": "./node_modules/moment/locale/pt-br.js",
+	"./pt-br.js": "./node_modules/moment/locale/pt-br.js",
+	"./pt.js": "./node_modules/moment/locale/pt.js",
+	"./ro": "./node_modules/moment/locale/ro.js",
+	"./ro.js": "./node_modules/moment/locale/ro.js",
+	"./ru": "./node_modules/moment/locale/ru.js",
+	"./ru.js": "./node_modules/moment/locale/ru.js",
+	"./sd": "./node_modules/moment/locale/sd.js",
+	"./sd.js": "./node_modules/moment/locale/sd.js",
+	"./se": "./node_modules/moment/locale/se.js",
+	"./se.js": "./node_modules/moment/locale/se.js",
+	"./si": "./node_modules/moment/locale/si.js",
+	"./si.js": "./node_modules/moment/locale/si.js",
+	"./sk": "./node_modules/moment/locale/sk.js",
+	"./sk.js": "./node_modules/moment/locale/sk.js",
+	"./sl": "./node_modules/moment/locale/sl.js",
+	"./sl.js": "./node_modules/moment/locale/sl.js",
+	"./sq": "./node_modules/moment/locale/sq.js",
+	"./sq.js": "./node_modules/moment/locale/sq.js",
+	"./sr": "./node_modules/moment/locale/sr.js",
+	"./sr-cyrl": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr-cyrl.js": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr.js": "./node_modules/moment/locale/sr.js",
+	"./ss": "./node_modules/moment/locale/ss.js",
+	"./ss.js": "./node_modules/moment/locale/ss.js",
+	"./sv": "./node_modules/moment/locale/sv.js",
+	"./sv.js": "./node_modules/moment/locale/sv.js",
+	"./sw": "./node_modules/moment/locale/sw.js",
+	"./sw.js": "./node_modules/moment/locale/sw.js",
+	"./ta": "./node_modules/moment/locale/ta.js",
+	"./ta.js": "./node_modules/moment/locale/ta.js",
+	"./te": "./node_modules/moment/locale/te.js",
+	"./te.js": "./node_modules/moment/locale/te.js",
+	"./tet": "./node_modules/moment/locale/tet.js",
+	"./tet.js": "./node_modules/moment/locale/tet.js",
+	"./tg": "./node_modules/moment/locale/tg.js",
+	"./tg.js": "./node_modules/moment/locale/tg.js",
+	"./th": "./node_modules/moment/locale/th.js",
+	"./th.js": "./node_modules/moment/locale/th.js",
+	"./tl-ph": "./node_modules/moment/locale/tl-ph.js",
+	"./tl-ph.js": "./node_modules/moment/locale/tl-ph.js",
+	"./tlh": "./node_modules/moment/locale/tlh.js",
+	"./tlh.js": "./node_modules/moment/locale/tlh.js",
+	"./tr": "./node_modules/moment/locale/tr.js",
+	"./tr.js": "./node_modules/moment/locale/tr.js",
+	"./tzl": "./node_modules/moment/locale/tzl.js",
+	"./tzl.js": "./node_modules/moment/locale/tzl.js",
+	"./tzm": "./node_modules/moment/locale/tzm.js",
+	"./tzm-latn": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm-latn.js": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm.js": "./node_modules/moment/locale/tzm.js",
+	"./ug-cn": "./node_modules/moment/locale/ug-cn.js",
+	"./ug-cn.js": "./node_modules/moment/locale/ug-cn.js",
+	"./uk": "./node_modules/moment/locale/uk.js",
+	"./uk.js": "./node_modules/moment/locale/uk.js",
+	"./ur": "./node_modules/moment/locale/ur.js",
+	"./ur.js": "./node_modules/moment/locale/ur.js",
+	"./uz": "./node_modules/moment/locale/uz.js",
+	"./uz-latn": "./node_modules/moment/locale/uz-latn.js",
+	"./uz-latn.js": "./node_modules/moment/locale/uz-latn.js",
+	"./uz.js": "./node_modules/moment/locale/uz.js",
+	"./vi": "./node_modules/moment/locale/vi.js",
+	"./vi.js": "./node_modules/moment/locale/vi.js",
+	"./x-pseudo": "./node_modules/moment/locale/x-pseudo.js",
+	"./x-pseudo.js": "./node_modules/moment/locale/x-pseudo.js",
+	"./yo": "./node_modules/moment/locale/yo.js",
+	"./yo.js": "./node_modules/moment/locale/yo.js",
+	"./zh-cn": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-cn.js": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-hk": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-hk.js": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-tw": "./node_modules/moment/locale/zh-tw.js",
+	"./zh-tw.js": "./node_modules/moment/locale/zh-tw.js"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) { // check for number or string
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return id;
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
+
+/***/ }),
+
 /***/ "./src/$$_lazy_route_resource lazy recursive":
 /*!**********************************************************!*\
   !*** ./src/$$_lazy_route_resource lazy namespace object ***!
@@ -41,7 +328,7 @@ module.exports = "\n.navbar {\n  background-color: rgb(0, 157, 248);\n  color: w
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<link\n  rel=\"stylesheet\"\n  href=\"https://use.fontawesome.com/releases/v5.6.3/css/all.css\"\n  integrity=\"sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/\"\n  crossorigin=\"anonymous\"\n/>\n\n<nav class=\"navbar navbar-expand-lg navbar-dark\">\n  <a class=\"navbar-brand\" href=\"#\">AMS</a>\n  <button\n    class=\"navbar-toggler\"\n    type=\"button\"\n    data-toggle=\"collapse\"\n    data-target=\"#navbarText\"\n    aria-controls=\"navbarText\"\n    aria-expanded=\"false\"\n    aria-label=\"Toggle navigation\"\n  >\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n  <div class=\"collapse navbar-collapse\" id=\"navbarText\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" href=\"#\"\n          >Home <span class=\"sr-only\">(current)</span></a\n        >\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" href=\"#\">Features</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" href=\"#\">Pricing</a>\n      </li>\n    </ul>\n    <!-- <div class=\"searchbar\">\n              <input class=\"search_input\" type=\"text\" name=\"\" placeholder=\"Search...\">\n              <a href=\"#\" class=\"search_icon\"><i class=\"fas fa-search\"></i></a>\n          </div> -->\n  </div>\n</nav>\n"
+module.exports = "<link\n  rel=\"stylesheet\"\n  href=\"https://use.fontawesome.com/releases/v5.6.3/css/all.css\"\n  integrity=\"sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/\"\n  crossorigin=\"anonymous\"\n/>\n\n<nav class=\"navbar navbar-expand-lg navbar-dark\">\n  <a class=\"navbar-brand\" href=\"#\">AMS</a>\n  <button\n    class=\"navbar-toggler\"\n    type=\"button\"\n    data-toggle=\"collapse\"\n    data-target=\"#navbarText\"\n    aria-controls=\"navbarText\"\n    aria-expanded=\"false\"\n    aria-label=\"Toggle navigation\"\n  >\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n  <div class=\"collapse navbar-collapse\" id=\"navbarText\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" [routerLink]=\"['/user/new']\" routerLinkActive=\"router-link-active\"\n          >Home</a\n        >\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" [routerLink]=\"['/login']\" routerLinkActive=\"router-link-active\" >Features</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" href=\"#\">Pricing</a>\n      </li>\n    </ul>\n    <!-- <div class=\"searchbar\">\n              <input class=\"search_input\" type=\"text\" name=\"\" placeholder=\"Search...\">\n              <a href=\"#\" class=\"search_icon\"><i class=\"fas fa-search\"></i></a>\n          </div> -->\n  </div>\n</nav>\n"
 
 /***/ }),
 
@@ -86,7 +373,7 @@ var HeaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".nav-left-sidebar\n  .nav-link[data-toggle=\"collapse\"][aria-expanded=\"false\"]:after {\n  -webkit-transform: rotate(-90deg);\n          transform: rotate(-90deg);\n}\n\n.nav-left-sidebar .navbar {\n  padding: 14px;\n}\n\n.nav-left-sidebar .navbar-nav .nav-link:focus,\n.nav-left-sidebar .navbar-nav .nav-link.active {\n  background-color: #e2e2eb;\n  color: #3d405c;\n  border-radius: 2px;\n}\n\n.nav-left-sidebar .navbar-nav .nav-link:focus,\n.nav-left-sidebar .navbar-nav .nav-link:hover {\n  background-color: #e2e2eb;\n  color: #3d405c;\n  border-radius: 2px;\n}\n\n.sidebar-primary.nav-left-sidebar .nav-link i {\n  color: #8991d4;\n}\n\n.sidebar-primary.nav-left-sidebar .navbar-nav .nav-link {\n  color: #8991d4;\n}\n\nspan + span {\n  margin-left: 10px;\n}\n\ni {\n  margin-right: 10px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvRGFzaGJvYXJkL3NpZGViYXIvc2lkZWJhci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztFQUVFLGtDQUEwQjtVQUExQiwwQkFBMEI7Q0FDM0I7O0FBRUQ7RUFDRSxjQUFjO0NBQ2Y7O0FBQ0Q7O0VBRUUsMEJBQTBCO0VBQzFCLGVBQWU7RUFDZixtQkFBbUI7Q0FDcEI7O0FBQ0Q7O0VBRUUsMEJBQTBCO0VBQzFCLGVBQWU7RUFDZixtQkFBbUI7Q0FDcEI7O0FBQ0Q7RUFDRSxlQUFlO0NBQ2hCOztBQUNEO0VBQ0UsZUFBZTtDQUNoQjs7QUFDRDtFQUNFLGtCQUFrQjtDQUNuQjs7QUFFRDtFQUNFLG1CQUFtQjtDQUNwQiIsImZpbGUiOiJzcmMvYXBwL0Rhc2hib2FyZC9zaWRlYmFyL3NpZGViYXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5uYXYtbGVmdC1zaWRlYmFyXG4gIC5uYXYtbGlua1tkYXRhLXRvZ2dsZT1cImNvbGxhcHNlXCJdW2FyaWEtZXhwYW5kZWQ9XCJmYWxzZVwiXTphZnRlciB7XG4gIHRyYW5zZm9ybTogcm90YXRlKC05MGRlZyk7XG59XG5cbi5uYXYtbGVmdC1zaWRlYmFyIC5uYXZiYXIge1xuICBwYWRkaW5nOiAxNHB4O1xufVxuLm5hdi1sZWZ0LXNpZGViYXIgLm5hdmJhci1uYXYgLm5hdi1saW5rOmZvY3VzLFxuLm5hdi1sZWZ0LXNpZGViYXIgLm5hdmJhci1uYXYgLm5hdi1saW5rLmFjdGl2ZSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNlMmUyZWI7XG4gIGNvbG9yOiAjM2Q0MDVjO1xuICBib3JkZXItcmFkaXVzOiAycHg7XG59XG4ubmF2LWxlZnQtc2lkZWJhciAubmF2YmFyLW5hdiAubmF2LWxpbms6Zm9jdXMsXG4ubmF2LWxlZnQtc2lkZWJhciAubmF2YmFyLW5hdiAubmF2LWxpbms6aG92ZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZTJlMmViO1xuICBjb2xvcjogIzNkNDA1YztcbiAgYm9yZGVyLXJhZGl1czogMnB4O1xufVxuLnNpZGViYXItcHJpbWFyeS5uYXYtbGVmdC1zaWRlYmFyIC5uYXYtbGluayBpIHtcbiAgY29sb3I6ICM4OTkxZDQ7XG59XG4uc2lkZWJhci1wcmltYXJ5Lm5hdi1sZWZ0LXNpZGViYXIgLm5hdmJhci1uYXYgLm5hdi1saW5rIHtcbiAgY29sb3I6ICM4OTkxZDQ7XG59XG5zcGFuICsgc3BhbiB7XG4gIG1hcmdpbi1sZWZ0OiAxMHB4O1xufVxuXG5pIHtcbiAgbWFyZ2luLXJpZ2h0OiAxMHB4O1xufVxuIl19 */"
+module.exports = ".nav-left-sidebar {\n  background-color: #ffffff;\n  color: #3d405c;\n  padding: 10px;\n}\n\n.nav-link [data-toggle=\"collapse\"][aria-expanded=\"false\"]:after {\n  -webkit-transform: rotate(-90deg);\n          transform: rotate(-90deg);\n}\n\n.nav-link {\n  background-color: inherit;\n  outline: 0;\n  border-width: 0 0 0px;\n  color: rgb(150, 150, 150);\n  cursor: pointer;\n}\n\n.nav-link:focus .nav-link:hover .nav-link:hover {\n  background-color: #e2e2eb;\n  color: #3d405c;\n  outline: 0;\n  border-width: 0 0 0px;\n}\n\n.sidebar-primary .nav-left-sidebar .nav-link i {\n  color: #8991d4;\n}\n\n.sidebar-primary .nav-left-sidebar .navbar-nav .nav-link {\n  color: #8991d4;\n}\n\nspan {\n  margin-left: 10px;\n}\n\ni {\n  margin-right: 10px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvRGFzaGJvYXJkL3NpZGViYXIvc2lkZWJhci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsMEJBQTBCO0VBQzFCLGVBQWU7RUFDZixjQUFjO0NBQ2Y7O0FBRUQ7RUFDRSxrQ0FBMEI7VUFBMUIsMEJBQTBCO0NBQzNCOztBQUVEO0VBQ0UsMEJBQTBCO0VBQzFCLFdBQVc7RUFDWCxzQkFBc0I7RUFDdEIsMEJBQTBCO0VBQzFCLGdCQUFnQjtDQUNqQjs7QUFFRDtFQUNFLDBCQUEwQjtFQUMxQixlQUFlO0VBQ2YsV0FBVztFQUNYLHNCQUFzQjtDQUN2Qjs7QUFFRDtFQUNFLGVBQWU7Q0FDaEI7O0FBRUQ7RUFDRSxlQUFlO0NBQ2hCOztBQUVEO0VBQ0Usa0JBQWtCO0NBQ25COztBQUVEO0VBQ0UsbUJBQW1CO0NBQ3BCIiwiZmlsZSI6InNyYy9hcHAvRGFzaGJvYXJkL3NpZGViYXIvc2lkZWJhci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm5hdi1sZWZ0LXNpZGViYXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmZmO1xuICBjb2xvcjogIzNkNDA1YztcbiAgcGFkZGluZzogMTBweDtcbn1cblxuLm5hdi1saW5rIFtkYXRhLXRvZ2dsZT1cImNvbGxhcHNlXCJdW2FyaWEtZXhwYW5kZWQ9XCJmYWxzZVwiXTphZnRlciB7XG4gIHRyYW5zZm9ybTogcm90YXRlKC05MGRlZyk7XG59XG5cbi5uYXYtbGluayB7XG4gIGJhY2tncm91bmQtY29sb3I6IGluaGVyaXQ7XG4gIG91dGxpbmU6IDA7XG4gIGJvcmRlci13aWR0aDogMCAwIDBweDtcbiAgY29sb3I6IHJnYigxNTAsIDE1MCwgMTUwKTtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG4ubmF2LWxpbms6Zm9jdXMgLm5hdi1saW5rOmhvdmVyIC5uYXYtbGluazpob3ZlciB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNlMmUyZWI7XG4gIGNvbG9yOiAjM2Q0MDVjO1xuICBvdXRsaW5lOiAwO1xuICBib3JkZXItd2lkdGg6IDAgMCAwcHg7XG59XG5cbi5zaWRlYmFyLXByaW1hcnkgLm5hdi1sZWZ0LXNpZGViYXIgLm5hdi1saW5rIGkge1xuICBjb2xvcjogIzg5OTFkNDtcbn1cblxuLnNpZGViYXItcHJpbWFyeSAubmF2LWxlZnQtc2lkZWJhciAubmF2YmFyLW5hdiAubmF2LWxpbmsge1xuICBjb2xvcjogIzg5OTFkNDtcbn1cblxuc3BhbiB7XG4gIG1hcmdpbi1sZWZ0OiAxMHB4O1xufVxuXG5pIHtcbiAgbWFyZ2luLXJpZ2h0OiAxMHB4O1xufVxuIl19 */"
 
 /***/ }),
 
@@ -97,7 +384,7 @@ module.exports = ".nav-left-sidebar\n  .nav-link[data-toggle=\"collapse\"][aria-
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"nav-left-sidebar sidebar-dark\">\n  <div class=\"menu-list\">\n    <nav class=\"navbar navbar-expand-sm navbar-light\">\n      <a class=\"d-xl-none d-lg-none\" href=\"#\">Dashboard</a>\n      <button\n        class=\"navbar-toggler\"\n        type=\"button\"\n        data-toggle=\"collapse\"\n        data-target=\"#navbarNav\"\n        aria-controls=\"navbarNav\"\n        aria-expanded=\"false\"\n        aria-label=\"Toggle navigation\"\n      >\n        <span class=\"navbar-toggler-icon\"></span>\n      </button>\n      <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n        <ul class=\"navbar-nav flex-column\">\n          <!-- <li class=\"nav-divider\">\n                      Menu\n                  </li> -->\n          <li class=\"nav-item \">\n            <span\n              ><a\n                class=\"nav-link\"\n                [routerLink]=\"['/Dashboard']\"\n                routerLinkActive=\"router-link-active\"\n                ><i class=\"fa fa-fw fa-user-circle\"></i>Dashboard\n                <span class=\"badge badge-success\"></span></a\n            ></span>\n          </li>\n          <li class=\"nav-item\">\n            <span\n              ><a\n                class=\"nav-link\"\n                [routerLink]=\"['/asset/list']\"\n                routerLinkActive=\"router-link-active\"\n                ><i class=\"fa fa-fw fa-rocket\"></i>Assest</a\n              ></span\n            >\n          </li>\n          <li class=\"nav-item\">\n            <a\n              class=\"nav-link\"\n              [routerLink]=\"['/customer/list']\"\n              routerLinkActive=\"router-link-active\"\n              ><i class=\"fas fa-fw fa-chart-pie\"></i>Customer</a\n            >\n          </li>\n          <li class=\"nav-item \">\n            <a\n              class=\"nav-link\"\n              [routerLink]=\"['//contract/list']\"\n              routerLinkActive=\"router-link-active\"\n              ><i class=\"fab fa-fw fa-wpforms\"></i>Contract</a\n            >\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"#\"\n              ><i class=\"fas fa-fw fa-table\"></i>Reports</a\n            >\n          </li>\n        </ul>\n      </div>\n    </nav>\n  </div>\n</div>\n"
+module.exports = "<div class=\"nav-left-sidebar\">\n  <nav class=\"navbar navbar-expand-sm navbar-light\">\n    <div class=\"menu-list\">\n      <button\n        class=\"nav-link\"\n        type=\"button\"\n        [routerLink]=\"['/dashboard']\"\n        routerLinkActive=\"router-link-active\"\n      >\n        <i class=\"fa fa-fw fa-user-circle\"></i>Dashboard\n      </button>\n      <button\n        class=\"nav-link\"\n        type=\"button\"\n        [routerLink]=\"['/asset/list']\"\n        routerLinkActive=\"router-link-active\"\n      >\n        <i class=\"fa fa-fw fa-rocket\"></i>Asset List\n      </button>\n      <button\n        class=\"nav-link\"\n        type=\"button\"\n        [routerLink]=\"['/customer/list']\"\n        routerLinkActive=\"router-link-active\"\n      >\n        <i class=\"fas fa-fw fa-chart-pie\"></i>Customer List\n      </button>\n      <button\n        class=\"nav-link\"\n        type=\"button\"\n        [routerLink]=\"['/contract/list']\"\n        routerLinkActive=\"router-link-active\"\n      >\n        <i class=\"fab fa-fw fa-wpforms\"></i>Contract List\n      </button>\n      <button\n        class=\"nav-link\"\n        type=\"button\"\n        [routerLink]=\"['/']\"\n        routerLinkActive=\"router-link-active\"\n      >\n        <i class=\"fas fa-fw fa-table\"></i>Reports\n      </button>\n\n    </div>\n  </nav>\n</div>\n"
 
 /***/ }),
 
@@ -193,10 +480,30 @@ var AmsService = /** @class */ (function () {
         console.log('Asset Delete');
         return this.http.get(this.url + '/asset/delete/' + id);
     };
+    // User CRUDs
+    AmsService.prototype.getUsers = function () {
+        return this.http.get(this.url + '/user/list');
+    };
+    AmsService.prototype.getUser = function (user) {
+        return this.http.post(this.url + '/user/signin', user);
+    };
+    AmsService.prototype.getUserById = function (id) {
+        console.log(id, 'id at service to edit');
+        return this.http.get(this.url + '/user/' + id);
+    };
+    AmsService.prototype.addUser = function (user) {
+        console.log(user, 'this is user at service');
+        return this.http.post(this.url + '/user/new', user);
+    };
+    AmsService.prototype.updateUser = function (user) {
+        console.log(user._id, 'update at user service');
+        return this.http.put(this.url + '/user/update/' + user._id, user);
+    };
+    AmsService.prototype.deleteUser = function (id) {
+        console.log('user Delete');
+        return this.http.get(this.url + '/user/delete/' + id);
+    };
     // Reciept CRUDs
-    // postReciept(_id) {
-    //   return this.http.post(this.url + '/reciept/list', + _id);
-    // }
     AmsService.prototype.getReciept = function (_id) {
         return this.http.get(this.url + '/reciept/all');
     };
@@ -265,9 +572,9 @@ var AmsService = /** @class */ (function () {
         console.log(owner, 'id at service to edit');
         return this.http.get(this.url + '/contract/owner/' + owner);
     };
-    AmsService.prototype.getContractByType = function (type) {
-        console.log(type, 'id at service to edit');
-        return this.http.get(this.url + '/contract/type/' + type);
+    AmsService.prototype.getContractByCustomer = function (customer) {
+        console.log(customer, 'contract by customer');
+        return this.http.get(this.url + '/contract/customer/' + customer);
     };
     AmsService.prototype.addContract = function (contract) {
         console.log(contract, 'this is contract at service');
@@ -312,6 +619,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_customer_listcustomer_listcustomer_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/customer/listcustomer/listcustomer.component */ "./src/app/components/customer/listcustomer/listcustomer.component.ts");
 /* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./dashboard/dashboard.component */ "./src/app/dashboard/dashboard.component.ts");
 /* harmony import */ var _components_search_search_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/search/search.component */ "./src/app/components/search/search.component.ts");
+/* harmony import */ var _components_users_login_in_login_in_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/users/login-in/login-in.component */ "./src/app/components/users/login-in/login-in.component.ts");
+/* harmony import */ var _components_users_signup_signup_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/users/signup/signup.component */ "./src/app/components/users/signup/signup.component.ts");
+
+
 
 
 
@@ -321,10 +632,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var routes = [
+    { path: '', component: _components_users_login_in_login_in_component__WEBPACK_IMPORTED_MODULE_8__["LoginInComponent"] },
+    { path: 'user/new', component: _components_users_signup_signup_component__WEBPACK_IMPORTED_MODULE_9__["SignupComponent"] },
     { path: 'asset/list', component: _components_asset_listasset_listasset_component__WEBPACK_IMPORTED_MODULE_3__["ListassetComponent"] },
     { path: 'contract/list', component: _components_contract_listcontract_listcontract_component__WEBPACK_IMPORTED_MODULE_4__["ListcontractComponent"] },
     { path: 'customer/list', component: _components_customer_listcustomer_listcustomer_component__WEBPACK_IMPORTED_MODULE_5__["ListcustomerComponent"] },
-    { path: 'Dashboard', component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_6__["DashboardComponent"] },
+    { path: 'dashboard', component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_6__["DashboardComponent"] },
     { path: 'search', component: _components_search_search_component__WEBPACK_IMPORTED_MODULE_7__["SearchComponent"] }
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -350,7 +663,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n.row {\n  width: 100%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBO0VBQ0UsWUFBWTtDQUNiIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbi5yb3cge1xuICB3aWR0aDogMTAwJTtcbn1cbiJdfQ== */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"
 
 /***/ }),
 
@@ -361,7 +674,7 @@ module.exports = "\n.row {\n  width: 100%;\n}\n\n/*# sourceMappingURL=data:appli
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n    <app-header></app-header>\n\n  <div class=\"row\">\n    <div class=\"col-2\">\n        <app-sidebar></app-sidebar>\n    </div>\n<div class=\"col-10\">\n    <router-outlet></router-outlet>\n</div>\n  </div>\n\n"
+module.exports = "<app-header></app-header>\n<div class=\"row\">\n  <div class=\"col-2\">\n    <app-sidebar></app-sidebar>\n  </div>\n  <div class=\"col-10\">\n    <router-outlet></router-outlet>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -432,6 +745,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Dashboard_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./Dashboard/sidebar/sidebar.component */ "./src/app/Dashboard/sidebar/sidebar.component.ts");
 /* harmony import */ var _Dashboard_header_header_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./Dashboard/header/header.component */ "./src/app/Dashboard/header/header.component.ts");
 /* harmony import */ var _components_search_search_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/search/search.component */ "./src/app/components/search/search.component.ts");
+/* harmony import */ var _components_users_login_in_login_in_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/users/login-in/login-in.component */ "./src/app/components/users/login-in/login-in.component.ts");
+/* harmony import */ var _components_users_signup_signup_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/users/signup/signup.component */ "./src/app/components/users/signup/signup.component.ts");
+/* harmony import */ var _authguard_service__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./authguard.service */ "./src/app/authguard.service.ts");
+/* harmony import */ var _components_reports_main_main_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./components/reports/main/main.component */ "./src/app/components/reports/main/main.component.ts");
+
+
+
+
 
 
 
@@ -478,7 +799,10 @@ var AppModule = /** @class */ (function () {
                 _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_21__["DashboardComponent"],
                 _Dashboard_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_22__["SidebarComponent"],
                 _Dashboard_header_header_component__WEBPACK_IMPORTED_MODULE_23__["HeaderComponent"],
-                _components_search_search_component__WEBPACK_IMPORTED_MODULE_24__["SearchComponent"]
+                _components_search_search_component__WEBPACK_IMPORTED_MODULE_24__["SearchComponent"],
+                _components_users_login_in_login_in_component__WEBPACK_IMPORTED_MODULE_25__["LoginInComponent"],
+                _components_users_signup_signup_component__WEBPACK_IMPORTED_MODULE_26__["SignupComponent"],
+                _components_reports_main_main_component__WEBPACK_IMPORTED_MODULE_28__["MainComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -502,7 +826,7 @@ var AppModule = /** @class */ (function () {
                 _components_contract_listcontract_listcontract_component__WEBPACK_IMPORTED_MODULE_19__["ListcontractComponent"],
                 _components_contract_viewcontract_viewcontract_component__WEBPACK_IMPORTED_MODULE_20__["ViewcontractComponent"]
             ],
-            providers: [_ams_service__WEBPACK_IMPORTED_MODULE_6__["AmsService"]],
+            providers: [_ams_service__WEBPACK_IMPORTED_MODULE_6__["AmsService"], _authguard_service__WEBPACK_IMPORTED_MODULE_27__["AuthguardService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
         })
     ], AppModule);
@@ -590,6 +914,48 @@ var Asset = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/authguard.service.ts":
+/*!**************************************!*\
+  !*** ./src/app/authguard.service.ts ***!
+  \**************************************/
+/*! exports provided: AuthguardService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthguardService", function() { return AuthguardService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
+
+
+var AuthguardService = /** @class */ (function () {
+    function AuthguardService(route) {
+        this.route = route;
+    }
+    AuthguardService.prototype.canActivate = function (next, state) {
+        if (localStorage.getItem('user') !== null) {
+            return true;
+        }
+        else {
+            this.route.navigate(['/Dashboard']);
+            return false;
+        }
+    };
+    AuthguardService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+    ], AuthguardService);
+    return AuthguardService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/asset/listasset/listasset.component.css":
 /*!********************************************************************!*\
   !*** ./src/app/components/asset/listasset/listasset.component.css ***!
@@ -635,6 +1001,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// import { NewrecieptComponent } from '../../reciept/newreciept/newreciept.component';
+// import { ListrecieptComponent } from '../../reciept/listreciept/listreciept.component';
 
 var ListassetComponent = /** @class */ (function () {
     function ListassetComponent(amsService, router, modalService) {
@@ -642,6 +1010,7 @@ var ListassetComponent = /** @class */ (function () {
         this.router = router;
         this.modalService = modalService;
         this.page = 1;
+        this.pageSize = '5';
         this.assetlist = [];
         this.isCollapsed = true;
         // this.asset = assetData.asset;
@@ -937,7 +1306,7 @@ module.exports = ".btn-circle {\r\n  height: 40px;\r\n  width: 40px;\r\n  float:
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card shadow bg-white rounded\">\n  <div class=\"card-header shadow rounded\">\n    <h3>Contract List</h3>\n  </div>\n  <div class=\"row card-body\">\n    <div class=\"col\">\n      <input\n        [(ngModel)]=\"status\"\n        class=\"search\"\n        type=\"text\"\n        name=\"\"\n        placeholder=\"Search By Status\"\n      />\n      <button type=\"button\" class=\"btn-search\" (click)=\"searchByStatus(status)\">\n        <i class=\"fas fa-angle-down\"></i>\n      </button>\n    </div>\n    <div class=\"col\">\n      <input\n        [(ngModel)]=\"owner\"\n        class=\"search\"\n        type=\"text\"\n        name=\"\"\n        placeholder=\"Search By abc\"\n      />\n      <button type=\"button\" class=\"btn-search\" (click)=\"searchByOwner(owner)\">\n        <i class=\"fas fa-angle-down\"></i>\n      </button>\n    </div>\n    <div class=\"col\">\n      <input\n        [(ngModel)]=\"type\"\n        class=\"search\"\n        type=\"text\"\n        name=\"\"\n        placeholder=\"Search By xyz\"\n      />\n      <button type=\"button\" class=\"btn-search\" (click)=\"searchByType(type)\">\n        <i class=\"fas fa-angle-down\"></i>\n      </button>\n    </div>\n\n    <div class=\"col float-right newbox\">\n      <button class=\"btn btn-primary btn-circle\" (click)=\"open()\">\n        <i class=\"fa fa-plus\"></i>\n      </button>\n    </div>\n  </div>\n</div>\n\n<div class=\"card shadow bg-white rounded\">\n  <div class=\"card-body\">\n    <table>\n      <thead>\n        <th>Status &nbsp; <i class=\"fas fa-sort\"></i></th>\n        <th>Duration&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Increament&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Contract Date&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Price Quoted&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Customer Id&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Actions</th>\n        <!-- <th>Owner Address</th> -->\n      </thead>\n      <tbody\n        *ngFor=\"\n          let contract of (contractlist\n            | slice: (page - 1) * pageSize:(page - 1) * pageSize + pageSize)\n        \"\n      >\n        <td>{{ contract?.status }}</td>\n        <td>{{ contract?.duration }}</td>\n        <td>{{ contract?.contractDate }}</td>\n        <td>{{ contract?.expiryDate }}</td>\n        <td>{{ contract?.priceQuoted }}</td>\n        <td>{{ contract?.customer }}</td>\n        <td>\n          <button\n            class=\"btn btn-sm btn-outline-warning\"\n            (click)=\"edit(contract._id)\"\n          >\n            <i class=\"far fa-edit\"></i></button\n          >&nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-danger\"\n            (click)=\"deleteContract(contract._id)\"\n          >\n            <i class=\"far fa-trash-alt\"></i></button\n          >&nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-primary\"\n            (click)=\"viewContract(contract._id)\"\n          >\n            <i class=\"fa fa-eye\"></i></button\n          >&nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-success\"\n            (click)=\"addReciept(contract._id)\"\n          >\n            <i class=\"fas fa-file-invoice-dollar\"></i></button\n          >&nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-success\"\n            (click)=\"listReciept(contract._id)\"\n          >\n            <i class=\"fas fa-list\"></i>\n          </button>\n        </td>\n      </tbody>\n    </table>\n  </div>\n</div>\n<div class=\"card-footer\">\n    <div class=\"row\">\n       <div class=\"col-2\">\n           <label for=\"pageSize\">Show Rows</label>\n           <select\n             [(ngModel)]=\"pageSize\"\n             type=\"text\"\n             name=\"pageSize\"\n             id=\"pageSize\"\n           >\n             <option value=\"5\">5</option>\n             <option value=\"10\">10</option>\n             <option value=\"20\">20</option>\n           </select>\n         </div>\n\n      <div class=\"col-10\">\n       <ngb-pagination\n         class=\"d-flex justify-content-end\"\n         [(page)]=\"page\"\n         [pageSize]=\"pageSize\"\n         [collectionSize]=\"contractlist.length\"\n         [maxSize]=\"5\"\n       >\n       </ngb-pagination>\n      </div>\n    </div>\n"
+module.exports = "<div class=\"card shadow bg-white rounded\">\n  <div class=\"card-header shadow rounded\">\n    <h3>Contract List</h3>\n  </div>\n  <div class=\"row card-body\">\n    <div class=\"col\">\n      <input\n        [(ngModel)]=\"status\"\n        class=\"search\"\n        type=\"text\"\n        name=\"\"\n        placeholder=\"Search By Status\"\n      />\n      <button type=\"button\" class=\"btn-search\" (click)=\"searchByStatus(status)\">\n        <i class=\"fas fa-angle-down\"></i>\n      </button>\n    </div>\n    <div class=\"col\">\n      <input\n        [(ngModel)]=\"owner\"\n        class=\"search\"\n        type=\"text\"\n        name=\"\"\n        placeholder=\"Search By abc\"\n      />\n      <button type=\"button\" class=\"btn-search\" (click)=\"searchByOwner(owner)\">\n        <i class=\"fas fa-angle-down\"></i>\n      </button>\n    </div>\n    <div class=\"col\">\n      <input\n        [(ngModel)]=\"type\"\n        class=\"search\"\n        type=\"text\"\n        name=\"\"\n        placeholder=\"Search By xyz\"\n      />\n      <button type=\"button\" class=\"btn-search\" (click)=\"searchByType(type)\">\n        <i class=\"fas fa-angle-down\"></i>\n      </button>\n    </div>\n\n    <div class=\"col float-right newbox\">\n      <button class=\"btn btn-primary btn-circle\" (click)=\"open()\">\n        <i class=\"fa fa-plus\"></i>\n      </button>\n    </div>\n  </div>\n</div>\n\n<div class=\"card shadow bg-white rounded\">\n  <div class=\"card-body\">\n    <table>\n      <thead>\n        <th>Status &nbsp; <i class=\"fas fa-sort\"></i></th>\n        <th>Customer&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Asset&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Asset Owner&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Contract Date&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Balance&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Next Due&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Actions</th>\n        <!-- <th>Owner Address</th> -->\n      </thead>\n      <tbody\n        *ngFor=\"\n          let contract of (contractlist\n            | slice: (page - 1) * pageSize:(page - 1) * pageSize + pageSize)\n        \"\n      >\n        <td>{{ contract?.status }}</td>\n        <td>{{ contract?.customer?.customer.name }}</td>\n        <td>{{ contract?.asset?.assetType }}</td>\n        <td>{{ contract?.asset?.owner.name }}</td>\n        <td>{{ contract?.duration }}</td>\n        <td>{{ contract?.balance }}</td>\n        <td>{{ contract?.priceQuoted }}</td>\n        <td>\n          <button\n            class=\"btn btn-sm btn-outline-warning\"\n            (click)=\"edit(contract._id)\"\n          >\n            <i class=\"far fa-edit\"></i></button\n          >&nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-danger\"\n            (click)=\"deleteContract(contract._id)\"\n          >\n            <i class=\"far fa-trash-alt\"></i></button\n          >&nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-primary\"\n            (click)=\"viewContract(contract._id)\"\n          >\n            <i class=\"fa fa-eye\"></i></button\n          >&nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-success\"\n            (click)=\"addReciept(contract._id)\"\n          >\n            <i class=\"fas fa-file-invoice-dollar\"></i></button\n          >&nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-success\"\n            (click)=\"listReciept(contract._id)\"\n          >\n            <i class=\"fas fa-list\"></i>\n          </button>\n        </td>\n      </tbody>\n    </table>\n  </div>\n</div>\n<div class=\"card-footer\">\n    <div class=\"row\">\n       <div class=\"col-2\">\n           <label for=\"pageSize\">Show Rows</label>\n           <select\n             [(ngModel)]=\"pageSize\"\n             type=\"text\"\n             name=\"pageSize\"\n             id=\"pageSize\"\n           >\n             <option value=\"5\">5</option>\n             <option value=\"10\">10</option>\n             <option value=\"20\">20</option>\n           </select>\n         </div>\n\n      <div class=\"col-10\">\n       <ngb-pagination\n         class=\"d-flex justify-content-end\"\n         [(page)]=\"page\"\n         [pageSize]=\"pageSize\"\n         [collectionSize]=\"contractlist.length\"\n         [maxSize]=\"5\"\n       >\n       </ngb-pagination>\n      </div>\n    </div>\n"
 
 /***/ }),
 
@@ -975,6 +1344,7 @@ var ListcontractComponent = /** @class */ (function () {
         this.router = router;
         this.modalService = modalService;
         this.page = 1;
+        this.pageSize = '5';
         this.contractlist = [];
         this.isCollapsed = true;
     }
@@ -985,17 +1355,7 @@ var ListcontractComponent = /** @class */ (function () {
         var _this = this;
         this.amsService.getContracts().subscribe(function (data) {
             _this.contractlist = data;
-            var total = _this.fetchCustomer(_this.contractlist);
             console.log('all contract found', data);
-        });
-    };
-    ListcontractComponent.prototype.fetchCustomer = function (data) {
-        var _this = this;
-        data.forEach(function (element) {
-            _this.amsService.find(element._id).subscribe(function (cus) {
-                _this.customer = cus;
-                console.log('all customer found', data);
-            });
         });
     };
     ListcontractComponent.prototype.open = function () {
@@ -1110,7 +1470,7 @@ module.exports = ".align{\nmargin-top: 20px;\npadding-left: 15px;\n}\n.aligncont
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form>\n  <div class=\"container\">\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"close()\">\n      <span aria-hidden=\"true\">&times;</span>\n    </button>\n    <h3 class=\"aligncontract\">Contract</h3>\n\n    <div class=\"row\">\n      <div class=\"col-6 col-md-4\">\n        <label for=\"status\">Sale Type</label>\n        <select\n          [(ngModel)]=\"contract.saleType\"\n          type=\"text\"\n          name=\"saleType\"\n          id=\"saleType\"\n          class=\"form-control\"\n          placeholder=\"1\"\n        >\n          <option value=\"1\">Counter</option>\n          <option value=\"2\">Rented</option>\n          <option value=\"3\">Installment</option>\n        </select>\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"Select Customer\">Select Customer</label>\n        <select\n          [(ngModel)]=\"contract.customer\"\n          type=\"text\"\n          name=\"customer\"\n          id=\"customer\"\n          (click)=\"fetchCustomers()\"\n          class=\"form-control\"\n          placeholder=\"\"\n        >\n          <option\n            value=\"{{ customer?._id }}\"\n            *ngFor=\"let customer of customerlist\"\n            >{{ customer?.customer?.name }}</option\n          >\n        </select>\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"Select Asset\">Select Asset</label>\n        <select\n          [(ngModel)]=\"contract.asset\"\n          type=\"text\"\n          name=\"asset\"\n          id=\"asset\"\n          (click)=\"fetchAssets()\"\n          class=\"form-control\"\n          placeholder=\"\"\n        >\n          <option value=\"{{ asset?._id }}\" *ngFor=\"let asset of assetlist\">{{\n            asset?.title\n          }}</option>\n        </select>\n      </div>\n    </div>\n    <div class=\"row\" *ngIf=\"this.contract.saleType !== '1'\">\n      <div class=\"col-6 col-md-4\">\n        <label for=\"contractDate\">Contract Date</label>\n        <input\n          [(ngModel)]=\"contract.contractDate\"\n          type=\"date\"\n          name=\"contractDate\"\n          id=\"contractDate\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"startDate\">Contract Start Date</label>\n        <input\n          [(ngModel)]=\"contract.startDate\"\n          type=\"date\"\n          name=\"startdate\"\n          id=\"startDate\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"duration\">Contract Duration</label>\n        <input\n          [(ngModel)]=\"contract.duration\"\n          type=\"text\"\n          name=\"duration\"\n          id=\"duration\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"increment\">Increment</label>\n        <input\n          [(ngModel)]=\"contract.increment\"\n          type=\"text\"\n          name=\"increament\"\n          id=\"increment\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"incrementSchedule\">Increment Schedule</label>\n        <select\n          [(ngModel)]=\"contract.incrementSchedule\"\n          type=\"text\"\n          name=\"incrementSchedule\"\n          id=\"incrementSchedule\"\n          class=\"form-control\"\n          placeholder=\"\"\n        >\n          <option value=\"daily\">Daily</option>\n          <option value=\"monthly\">Monthly</option>\n          <option value=\"annual\">Annual</option>\n        </select>\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"expiry\">Expiry Date</label>\n        <input\n          [(ngModel)]=\"contract.expiryDate\"\n          type=\"date\"\n          name=\"expiry\"\n          id=\"expiry\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"cancelation\">Cancelation Date</label>\n        <input\n          [(ngModel)]=\"contract.cancelation\"\n          type=\"date\"\n          name=\"cancelation\"\n          id=\"cancelation\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"mathod\">Payment Mathod</label>\n        <select\n          [(ngModel)]=\"contract.paymentMathod\"\n          type=\"text\"\n          name=\"mathod\"\n          id=\"mathod\"\n          class=\"form-control\"\n          placeholder=\"\"\n        >\n          <option value=\"daily\">Daily</option>\n          <option value=\"monthly\">Monthly</option>\n          <option value=\"annual\">Annual</option>\n        </select>\n      </div>\n      <div class=\"col-6 col-md-4\">\n        <label for=\"downPayment\">Down Payment</label>\n        <input\n          [(ngModel)]=\"contract.downPayment\"\n          type=\"text\"\n          name=\"downPayment\"\n          id=\"downPayment\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"avdancePayment\">Advance Payment</label>\n        <input\n          [(ngModel)]=\"contract.avdancePayment\"\n          type=\"text\"\n          name=\"advancePayment\"\n          id=\"advancePayment\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"status\">Contract Status</label>\n        <select\n          [(ngModel)]=\"contract.status\"\n          type=\"text\"\n          name=\"status\"\n          id=\"status\"\n          class=\"form-control\"\n          placeholder=\"\"\n        >\n          <option value=\"Open\">Open</option>\n          <option value=\"Canceled\">Canceled</option>\n          <option value=\"Expired\">Expired</option>\n        </select>\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"quoted\">Price Quoted</label>\n        <input\n          [(ngModel)]=\"contract.priceQuoted\"\n          type=\"text\"\n          name=\"qouted\"\n          id=\"qouted\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col-6 col-md-4\">\n        <label for=\"quoted\">Total Payable</label>\n        <input\n          [(ngModel)]=\"contract.totalPayable\"\n          type=\"text\"\n          name=\"qouted\"\n          id=\"qouted\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n    </div>\n\n    <div class=\"row float-right\">\n      <button\n        type=\"submit\"\n        (click)=\"addContract(contract)\"\n        class=\"btn btn-primary\"\n      >\n        Save\n      </button>\n      <button type=\"submit\" (click)=\"openCustomer()\" class=\"btn btn-primary\">\n        Create Customer\n      </button>\n      <button type=\"submit\" (click)=\"openAsset()\" class=\"btn btn-primary\">\n        Create Asset\n      </button>\n      <button\n        type=\"submit\"\n        [routerLink]=\"['/contract/list']\"\n        routerLinkActive=\"router-link-active\"\n        class=\"btn btn-danger\"\n      >\n        Cancel\n      </button>\n    </div>\n  </div>\n</form>\n"
+module.exports = "<form>\n  <div class=\"container\">\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"close()\">\n      <span aria-hidden=\"true\">&times;</span>\n    </button>\n    <h3 class=\"aligncontract\">Contract</h3>\n\n    <div class=\"row\">\n      <div class=\"col-6 col-md-4\">\n        <label for=\"status\">Sale Type</label>\n        <select\n          [(ngModel)]=\"contract.saleType\"\n          type=\"text\"\n          name=\"saleType\"\n          id=\"saleType\"\n          class=\"form-control\"\n        >\n          <option value=\"1\" selected=\"1\">Counter</option>\n          <option value=\"2\">Rented</option>\n          <option value=\"3\">Installment</option>\n        </select>\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"Select Customer\">Select Customer</label>\n        <select\n          [(ngModel)]=\"contract.customer\"\n          type=\"text\"\n          name=\"customer\"\n          id=\"customer\"\n          class=\"form-control\"\n          placeholder=\"\"\n        >\n          <option\n            value=\"{{ customer?._id }}\"\n            *ngFor=\"let customer of customerlist\"\n            >{{ customer?.customer?.name }}</option\n          >\n        </select>\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"Select Asset\">Select Asset</label>\n        <select\n          [(ngModel)]=\"contract.asset\"\n          type=\"text\"\n          name=\"asset\"\n          id=\"asset\"\n          class=\"form-control\"\n          placeholder=\"\"\n        >\n          <option value=\"{{ asset?._id }}\" *ngFor=\"let asset of assetlist\">{{\n            asset?.title\n          }}</option>\n        </select>\n      </div>\n    </div>\n    <div class=\"row\" *ngIf=\"this.contract.saleType !== '1'\">\n      <div class=\"col-6 col-md-4\">\n        <label for=\"contractDate\">Contract Date</label>\n        <input\n          [(ngModel)]=\"contract.contractDate\"\n          type=\"date\"\n          name=\"contractDate\"\n          id=\"contractDate\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"startDate\">Contract Start Date</label>\n        <input\n          [(ngModel)]=\"contract.startDate\"\n          type=\"date\"\n          name=\"startdate\"\n          id=\"startDate\"\n          class=\"form-control\"\n          placeholder=\"\"\n          (change)=\"calculateTotalPayable()\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"duration\">Contract Duration</label>\n            <select\n              [(ngModel)]=\"contract.duration\"\n              type=\"text\"\n              name=\"asset\"\n              id=\"asset\"\n              class=\"form-control\"\n              placeholder=\"\"\n              (change)=\"calculateTotalPayable()\"\n            >\n            <option value=\"12\">1 Year</option>\n            <option value=\"6\">6 Months</option>\n            <option value=\"1\">Month</option>\n            <option value=\"weekly\">Week</option>\n            <option value=\"daily\">Day</option>\n            </select>\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"increment\">Increment</label>\n        <input\n          [(ngModel)]=\"contract.increment\"\n          type=\"text\"\n          name=\"increament\"\n          id=\"increment\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"incrementSchedule\">Increment Schedule</label>\n        <select\n          [(ngModel)]=\"contract.incrementSchedule\"\n          type=\"text\"\n          name=\"incrementSchedule\"\n          id=\"incrementSchedule\"\n          class=\"form-control\"\n          placeholder=\"\"\n        >\n          <option value=\"1\">Annual</option>\n          <option value=\"2\">6 Months</option>\n          <option value=\"3\">Monthly</option>\n        </select>\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"expiry\">Expiry Date</label>\n        <input\n          [(ngModel)]=\"contract.expiryDate\"\n          type=\"date\"\n          name=\"expiry\"\n          id=\"expiry\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"cancelation\">Cancelation Date</label>\n        <input\n          [(ngModel)]=\"contract.cancelation\"\n          type=\"date\"\n          name=\"cancelation\"\n          id=\"cancelation\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"mathod\">Payment Schedule</label>\n        <select\n          [(ngModel)]=\"contract.paymentMathod\"\n          type=\"text\"\n          name=\"mathod\"\n          id=\"mathod\"\n          class=\"form-control\"\n          placeholder=\"\"\n          (change)=\"calculateTotalPayable()\"\n        >\n        <option value=\"annual\">Annual</option>\n        <option value=\"bi-annual\">6 Months</option>\n        <option value=\"monthly\">Monthly</option>\n        <option value=\"weekly\">Weekly</option>\n        <option value=\"daily\">Daily</option>\n        </select>\n      </div>\n      <div class=\"col-6 col-md-4\">\n        <label for=\"downPayment\">Down Payment</label>\n        <input\n          [(ngModel)]=\"contract.downPayment\"\n          type=\"text\"\n          name=\"downPayment\"\n          id=\"downPayment\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"avdancePayment\">Advance Payment</label>\n        <input\n          [(ngModel)]=\"contract.avdancePayment\"\n          type=\"text\"\n          name=\"advancePayment\"\n          id=\"advancePayment\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"status\">Contract Status</label>\n        <select\n          [(ngModel)]=\"contract.status\"\n          type=\"text\"\n          name=\"status\"\n          id=\"status\"\n          class=\"form-control\"\n          placeholder=\"\"\n        >\n          <option value=\"Open\">Open</option>\n          <option value=\"Canceled\">Canceled</option>\n          <option value=\"Expired\">Expired</option>\n        </select>\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"quoted\">Price Quoted</label>\n        <input\n          [(ngModel)]=\"contract.priceQuoted\"\n          type=\"text\"\n          name=\"qouted\"\n          id=\"qouted\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"quoted\">Total Payable</label>\n        <input\n          [(ngModel)]=\"contract.totalPayable\"\n          type=\"text\"\n          name=\"qouted\"\n          id=\"qouted\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n      <div class=\"col-6 col-md-4\">\n        <label for=\"quoted\">Installment / Rent</label>\n        <input\n          [(ngModel)]=\"contract.installment\"\n          type=\"text\"\n          name=\"qouted\"\n          id=\"qouted\"\n          class=\"form-control\"\n          placeholder=\"Installment / Rent\"\n        />\n      </div>\n      <div class=\"col-6 col-md-4\">\n        <label for=\"balance\">Balance</label>\n        <input\n          [(ngModel)]=\"contract.balance\"\n          type=\"text\"\n          name=\"balance\"\n          id=\"balance\"\n          class=\"form-control\"\n          value= \"this.balance\"\n        />\n      </div>\n    </div>\n    <div class=\"row float-right\">\n      <button\n        type=\"submit\"\n        (click)=\"addContract(contract)\"\n        class=\"btn btn-success\"\n      >\n        Save\n      </button>\n      <button type=\"submit\" (click)=\"openCustomer()\" class=\"btn btn-warning\">\n        Create Customer\n      </button>\n\n      <button type=\"submit\" (click)=\"openAsset()\" class=\"btn btn-warning\">\n        Create Asset\n      </button>\n      <button\n        type=\"submit\"\n        [routerLink]=\"['/contract/list']\"\n        routerLinkActive=\"router-link-active\"\n        class=\"btn btn-danger\"\n      >\n        Cancel\n      </button>\n    </div>\n  </div>\n</form>\n"
 
 /***/ }),
 
@@ -1134,7 +1494,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _asset_newasset_newasset_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../asset/newasset/newasset.component */ "./src/app/components/asset/newasset/newasset.component.ts");
 /* harmony import */ var _customer_newcustomer_newcustomer_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../customer/newcustomer/newcustomer.component */ "./src/app/components/customer/newcustomer/newcustomer.component.ts");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+
 
 
 
@@ -1146,6 +1509,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var NewcontractComponent = /** @class */ (function () {
+    // balance = this.contract.totalPayable - (this.contract.avdancePayment + this.contract.downPayment);
     function NewcontractComponent(amsService, fb, router, route, modalService, activeModal) {
         var _this = this;
         this.amsService = amsService;
@@ -1154,6 +1518,7 @@ var NewcontractComponent = /** @class */ (function () {
         this.route = route;
         this.modalService = modalService;
         this.activeModal = activeModal;
+        this.A = Date.now();
         this.contract = new src_app_contract_model__WEBPACK_IMPORTED_MODULE_2__["Contract"]();
         this.route.paramMap.subscribe(function (parameterMap) {
             var id = parameterMap.get('id');
@@ -1161,8 +1526,14 @@ var NewcontractComponent = /** @class */ (function () {
         });
     }
     NewcontractComponent.prototype.ngOnInit = function () {
+        console.log(this.contract.saleType, 'saleType');
         if (this.amsService.editMode) {
             this.fetchContractById();
+        }
+        else {
+            this.fetchAssets();
+            this.fetchCustomers();
+            // this.getBalance();
         }
     };
     NewcontractComponent.prototype.fetchContractById = function () {
@@ -1190,13 +1561,11 @@ var NewcontractComponent = /** @class */ (function () {
     };
     NewcontractComponent.prototype.addContract = function (contract) {
         var _this = this;
-        console.log(contract, 'this is new contract'),
-            this.amsService.addContract(contract).subscribe(function () {
-                sweetalert2__WEBPACK_IMPORTED_MODULE_6___default.a.fire('Contract Inserted Successfully');
-                _this.close();
-            });
-        //   this.router.navigate(['/']);
-        // });
+        this.amsService.addContract(contract).subscribe(function () {
+            sweetalert2__WEBPACK_IMPORTED_MODULE_6___default.a.fire('Contract Inserted Successfully');
+            _this.router.navigate(['/contract/list']);
+            _this.close();
+        });
     };
     NewcontractComponent.prototype.openCustomer = function () {
         var modalRef = this.modalService.open(_customer_newcustomer_newcustomer_component__WEBPACK_IMPORTED_MODULE_8__["NewcustomerComponent"], {
@@ -1207,6 +1576,55 @@ var NewcontractComponent = /** @class */ (function () {
     NewcontractComponent.prototype.openAsset = function () {
         var modalRef = this.modalService.open(_asset_newasset_newasset_component__WEBPACK_IMPORTED_MODULE_7__["NewassetComponent"], { size: 'lg' });
         modalRef.componentInstance.name = 'New Asset';
+    };
+    NewcontractComponent.prototype.calculateTotalPayable = function () {
+        if (this.contract.startDate && this.contract.duration && this.contract.installment) {
+            var numberOf = null;
+            var totalPayment = 0;
+            var startDate = moment__WEBPACK_IMPORTED_MODULE_9__(this.contract.startDate);
+            var expirayDate = this.getDuration(startDate, this.contract.duration);
+            if (expirayDate) {
+                this.contract.expiryDate = moment__WEBPACK_IMPORTED_MODULE_9__(expirayDate._d).format('YYYY-MM-DD');
+                if (this.contract.paymentMathod) {
+                    numberOf = this.getNoOfBaseOnSchedule(expirayDate, startDate, this.contract.paymentMathod);
+                    console.log(numberOf, 'no of ');
+                    totalPayment = numberOf * this.contract.installment;
+                    this.contract.totalPayable = totalPayment;
+                }
+            }
+            // console.log(expirayDate._d, 'expiray');
+            // console.log(this.contract.duration);
+            // console.log(this.contract.installment);
+        }
+    };
+    NewcontractComponent.prototype.getNoOfBaseOnSchedule = function (expirayDate, startDate, paymentSchedule) {
+        var diff = null;
+        switch (paymentSchedule) {
+            case 'weekly':
+                diff = expirayDate.diff(startDate, 'week');
+                break;
+            case 'daily':
+                diff = expirayDate.diff(startDate, 'days');
+                break;
+            default:
+                diff = expirayDate.diff(startDate, 'months');
+                break;
+        }
+        return diff;
+    };
+    NewcontractComponent.prototype.getDuration = function (currentDate, duration) {
+        var expirayDate = null;
+        if (duration === 'weekly') {
+            expirayDate = moment__WEBPACK_IMPORTED_MODULE_9__(currentDate).add(1, 'week');
+        }
+        else if (duration === 'daily') {
+            expirayDate = moment__WEBPACK_IMPORTED_MODULE_9__(currentDate).add(1, 'days');
+        }
+        else {
+            var parseDuration = parseInt(duration, 10);
+            expirayDate = moment__WEBPACK_IMPORTED_MODULE_9__(currentDate).add(parseDuration, 'months');
+        }
+        return expirayDate;
     };
     NewcontractComponent.prototype.close = function () {
         this.activeModal.close();
@@ -1221,8 +1639,8 @@ var NewcontractComponent = /** @class */ (function () {
             _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"],
             _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"],
             _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"],
-            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_9__["NgbModal"],
-            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_9__["NgbActiveModal"]])
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_10__["NgbModal"],
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_10__["NgbActiveModal"]])
     ], NewcontractComponent);
     return NewcontractComponent;
 }());
@@ -1249,7 +1667,7 @@ module.exports = ".col-xl-9 {\n  flex: 0 0 75%;\n  max-width: 100%;\n}\n.table-r
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<<<<<<< HEAD\n<div class=\"header\">\n  <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"close()\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>\n<div class=\"container\">\n  <div class=\"col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12\">\n    <div class=\"card\">\n      <h5 class=\"card-header\">Contracts</h5>\n      <div class=\"card-body p-0\">\n        <div class=\"table-responsive\">\n          <table class=\"table\">\n            <thead class=\"bg-light\">\n              <tr class=\"border-0\">\n                <th class=\"border-0\">Contract Date</th>\n                <th class=\"border-0\">Start Date</th>\n                <th class=\"border-0\">Duration</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td>{{ contract?.contractDate }}</td>\n                <td>{{ contract?.startDate }}</td>\n                <td>{{ contract?.duration }}</td>\n              </tr>\n              <th class=\"border-0\">Increment</th>\n              <th class=\"border-0\">Increment Schedule</th>\n              <th class=\"border-0\">Expiry Date</th>\n\n              <tr>\n                <td>{{ contract?.increment }}</td>\n                <td>{{ contract?.incrementSchedule }}</td>\n                <td>{{ contract?.expiryDate }}</td>\n              </tr>\n              <th class=\"border-0\">Cancelation</th>\n              <th class=\"border-0\">PaymentMathod</th>\n              <th class=\"border-0\">Price Quoted</th>\n              <tr>\n                <td>{{ contract?.cancelation }}</td>\n                <td>{{ contract?.paymentMathod }}</td>\n                <td>{{ contract?.priceQuoted }}</td>\n              </tr>\n              <th class=\"border-0\">Total Payable</th>\n              <th class=\"border-0\">Down Payment</th>\n              <th class=\"border-0\">Advance Payment</th>\n              <tr>\n                <td>{{ contract?.totalPayable }}</td>\n                <td>{{ contract?.downPayment }}</td>\n                <td>{{ contract?.avdancePayment }}</td>\n              </tr>\n              <th class=\"border-0\">Status</th>\n              <th class=\"border-0\">Customer</th>\n              <th class=\"border-0\">Asset</th>\n              <tr>\n                <td>{{ contract?.status }}</td>\n                <td>{{ contract?.customer.customer.name }}</td>\n                <td>{{ contract?.asset.assetType }}</td>\n              </tr>\n            </tbody>\n          </table>\n=======\n\n  <button type=\"button\" class=\"close\" aria-label=\"Close\"(click)=\"close()\">\n      <span aria-hidden=\"true\">&times;</span>\n   </button>\n\n<div class=\"container\">\n    <div class=\"col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12\">\n        <div class=\"card\">\n            <h1> {{contract?.customer.customer.name}}</h1>\n            <div class=\"card-body\">\n                <div class=\"table-responsive\">\n                    <table class=\"table\">\n                        <thead>\n                            <tr class=\"border-0\">\n                                <th class=\"border-0\">Contract Date</th>\n                                <th class=\"border-0\">Start Date</th>\n                                <th class=\"border-0\">Duration</th>\n                            </tr>\n                        </thead>\n                        <tbody>\n                            <tr>\n                                <td>{{contract?.contractDate}}</td>\n                                <td>{{contract?.startDate}}</td>\n                                <td>{{contract?.duration}}</td>\n                            </tr>\n                                    <th class=\"border-0\">Increment</th>\n                                    <th class=\"border-0\">Increment Schedule</th>\n                                    <th class=\"border-0\">Expiry Date</th>\n\n                            <tr>\n                                <td>{{contract?.increment}}</td>\n                                <td>{{contract?.incrementSchedule}}</td>\n                                <td>{{contract?.expiryDate}}</td>\n                            </tr>\n                                    <th class=\"border-0\">Cancelation</th>\n                                    <th class=\"border-0\">PaymentMathod</th>\n                                    <th class=\"border-0\">Price Quoted</th>\n                            <tr>\n                                <td>{{contract?.cancelation}}</td>\n                                <td>{{contract?. paymentMathod}} </td>\n                                <td> {{contract?. priceQuoted}} </td>\n                            </tr>\n                                    <th class=\"border-0\">Total Payable</th>\n                                    <th class=\"border-0\">Down Payment</th>\n                                    <th class=\"border-0\">Advance Payment</th>\n                            <tr>\n                                <td>{{contract?.totalPayable}}</td>\n                                <td> {{contract?.downPayment}} </td>\n                                <td> {{contract?. avdancePayment}}</td>\n                                </tr>\n                                <th class=\"border-0\">Status</th>\n                                    <th class=\"border-0\">Customer</th>\n                                    <th class=\"border-0\">Asset</th>\n                            <tr>\n                                <td>  {{contract?. status}}</td>\n                                    <td> {{contract?.customer.customer.name}}</td>\n                                        <td> {{contract?.asset.assetType}}</td>\n                            </tr>\n                        </tbody>\n                    </table>\n                </div>\n            </div>\n>>>>>>> 552d507ccd9b40c3dc4dea4a9ab4b55bd93049d0\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"close()\">\n  <span aria-hidden=\"true\">&times;</span>\n</button>\n\n<div class=\"container\">\n  <div class=\"col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12\">\n    <div class=\"card\">\n      <h1>{{ contract?.customer.customer.name }}</h1>\n      <div class=\"card-body\">\n        <div class=\"table-responsive\">\n          <table class=\"table\">\n            <thead>\n              <tr class=\"border-0\">\n                <th class=\"border-0\">Contract Date</th>\n                <th class=\"border-0\">Start Date</th>\n                <th class=\"border-0\">Duration</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td>{{ contract?.contractDate }}</td>\n                <td>{{ contract?.startDate }}</td>\n                <td>{{ contract?.duration }}</td>\n              </tr>\n              <th class=\"border-0\">Increment</th>\n              <th class=\"border-0\">Increment Schedule</th>\n              <th class=\"border-0\">Expiry Date</th>\n\n              <tr>\n                <td>{{ contract?.increment }}</td>\n                <td>{{ contract?.incrementSchedule }}</td>\n                <td>{{ contract?.expiryDate }}</td>\n              </tr>\n              <th class=\"border-0\">Cancelation</th>\n              <th class=\"border-0\">PaymentMathod</th>\n              <th class=\"border-0\">Price Quoted</th>\n              <tr>\n                <td>{{ contract?.cancelation }}</td>\n                <td>{{ contract?.paymentMathod }}</td>\n                <td>{{ contract?.priceQuoted }}</td>\n              </tr>\n              <th class=\"border-0\">Total Payable</th>\n              <th class=\"border-0\">Down Payment</th>\n              <th class=\"border-0\">Advance Payment</th>\n              <tr>\n                <td>{{ contract?.totalPayable }}</td>\n                <td>{{ contract?.downPayment }}</td>\n                <td>{{ contract?.avdancePayment }}</td>\n              </tr>\n              <th class=\"border-0\">Status</th>\n              <th class=\"border-0\">Customer</th>\n              <th class=\"border-0\">Asset</th>\n              <tr>\n                <td>{{ contract?.status }}</td>\n                <td>{{ contract?.customer.customer.name }}</td>\n                <td>{{ contract?.asset.assetType }}</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1359,6 +1777,7 @@ var ListcustomerComponent = /** @class */ (function () {
         this.router = router;
         this.modalService = modalService;
         this.page = 1;
+        this.pageSize = '5';
         this.customerlist = [];
         this.isCollapsed = true;
     }
@@ -1562,7 +1981,7 @@ var NewcustomerComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".col-xl-9 {\n  flex: 0 0 75%;\n  max-width: 100%;\n}\n    .table-responsive{\n      display: block;\n    width: 100%;\n    overflow-x: auto;\n    }\n    .card{\n  margin-bottom: 30px;\n    border: none;\n}\n    .table{\n  width: 100%;\n    max-width: 100%;\n    margin-bottom: 1rem;\n    background-color: transparent;\n}\n    th{\n  background-color: transparent;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9jdXN0b21lci92aWV3Y3VzdG9tZXIvdmlld2N1c3RvbWVyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFFRSxjQUFjO0VBQ2QsZ0JBQWdCO0NBQ2pCO0lBQ0c7TUFDRSxlQUFlO0lBQ2pCLFlBQVk7SUFDWixpQkFBaUI7S0FDaEI7SUFDTDtFQUNFLG9CQUFvQjtJQUNsQixhQUFhO0NBQ2hCO0lBRUQ7RUFDRSxZQUFZO0lBQ1YsZ0JBQWdCO0lBQ2hCLG9CQUFvQjtJQUNwQiw4QkFBOEI7Q0FDakM7SUFDRDtFQUNFLDhCQUE4QjtDQUMvQiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvY3VzdG9tZXIvdmlld2N1c3RvbWVyL3ZpZXdjdXN0b21lci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbC14bC05IHtcbiAgLW1zLWZsZXg6IDAgMCA3NSU7XG4gIGZsZXg6IDAgMCA3NSU7XG4gIG1heC13aWR0aDogMTAwJTtcbn1cbiAgICAudGFibGUtcmVzcG9uc2l2ZXtcbiAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIG92ZXJmbG93LXg6IGF1dG87XG4gICAgfVxuLmNhcmR7XG4gIG1hcmdpbi1ib3R0b206IDMwcHg7XG4gICAgYm9yZGVyOiBub25lO1xufVxuXG4udGFibGV7XG4gIHdpZHRoOiAxMDAlO1xuICAgIG1heC13aWR0aDogMTAwJTtcbiAgICBtYXJnaW4tYm90dG9tOiAxcmVtO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xufVxudGh7XG4gIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xufVxuIl19 */"
+module.exports = ".btn-circle {\n  height: 40px;\n  width: 40px;\n  float: right;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 50%;\n  color: rgb(255, 255, 255);\n  background-color: rgb(0, 157, 248);\n}\n\n.card {\n  background-color: rgb(255, 255, 255);\n  padding: 10px;\n  margin: 8px;\n  width: 100%;\n}\n\n.card-header {\n  background-color: rgb(0, 157, 248);\n  color: white;\n  text-align: left;\n  vertical-align: middle;\n  height: 60px;\n  width: 100%;\n}\n\n.card-footer {\n  background-color: rgb(255, 255, 255);\n  height: 60px;\n  width: 100%;\n}\n\ntable {\n  width: 100%;\n}\n\nth {\n  text-align: center;\n  vertical-align: middle;\n  color: white;\n  background-color: rgb(0, 157, 248);\n  border-bottom: 1px solid rgb(168, 168, 168);\n  padding: 10px;\n}\n\ntd {\n  text-align: center;\n  color: rgb(150, 150, 150);\n  /* border-bottom: 1px solid rgb(168, 168, 168); */\n}\n\n.btn-search {\n  background-color: white;\n  outline: 0;\n  border-width: 0 0 1px;\n  border-color: rgb(176, 176, 179);\n}\n\n.search {\n  outline: 0;\n  border-width: 0 0 1px;\n  border-color: rgb(176, 176, 179);\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9jdXN0b21lci92aWV3Y3VzdG9tZXIvdmlld2N1c3RvbWVyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFhO0VBQ2IsWUFBWTtFQUNaLGFBQWE7RUFDYixjQUFjO0VBQ2Qsd0JBQXdCO0VBQ3hCLG9CQUFvQjtFQUNwQixtQkFBbUI7RUFDbkIsMEJBQTBCO0VBQzFCLG1DQUFtQztDQUNwQzs7QUFFRDtFQUNFLHFDQUFxQztFQUNyQyxjQUFjO0VBQ2QsWUFBWTtFQUNaLFlBQVk7Q0FDYjs7QUFDRDtFQUNFLG1DQUFtQztFQUNuQyxhQUFhO0VBQ2IsaUJBQWlCO0VBQ2pCLHVCQUF1QjtFQUN2QixhQUFhO0VBQ2IsWUFBWTtDQUNiOztBQUNEO0VBQ0UscUNBQXFDO0VBQ3JDLGFBQWE7RUFDYixZQUFZO0NBQ2I7O0FBRUQ7RUFDRSxZQUFZO0NBQ2I7O0FBQ0Q7RUFDRSxtQkFBbUI7RUFDbkIsdUJBQXVCO0VBQ3ZCLGFBQWE7RUFDYixtQ0FBbUM7RUFDbkMsNENBQTRDO0VBQzVDLGNBQWM7Q0FDZjs7QUFFRDtFQUNFLG1CQUFtQjtFQUNuQiwwQkFBMEI7RUFDMUIsa0RBQWtEO0NBQ25EOztBQUVEO0VBQ0Usd0JBQXdCO0VBQ3hCLFdBQVc7RUFDWCxzQkFBc0I7RUFDdEIsaUNBQWlDO0NBQ2xDOztBQUVEO0VBQ0UsV0FBVztFQUNYLHNCQUFzQjtFQUN0QixpQ0FBaUM7Q0FDbEMiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2N1c3RvbWVyL3ZpZXdjdXN0b21lci92aWV3Y3VzdG9tZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5idG4tY2lyY2xlIHtcbiAgaGVpZ2h0OiA0MHB4O1xuICB3aWR0aDogNDBweDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgYm9yZGVyLXJhZGl1czogNTAlO1xuICBjb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUpO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMCwgMTU3LCAyNDgpO1xufVxuXG4uY2FyZCB7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYigyNTUsIDI1NSwgMjU1KTtcbiAgcGFkZGluZzogMTBweDtcbiAgbWFyZ2luOiA4cHg7XG4gIHdpZHRoOiAxMDAlO1xufVxuLmNhcmQtaGVhZGVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDAsIDE1NywgMjQ4KTtcbiAgY29sb3I6IHdoaXRlO1xuICB0ZXh0LWFsaWduOiBsZWZ0O1xuICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xuICBoZWlnaHQ6IDYwcHg7XG4gIHdpZHRoOiAxMDAlO1xufVxuLmNhcmQtZm9vdGVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUpO1xuICBoZWlnaHQ6IDYwcHg7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG50YWJsZSB7XG4gIHdpZHRoOiAxMDAlO1xufVxudGgge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDAsIDE1NywgMjQ4KTtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHJnYigxNjgsIDE2OCwgMTY4KTtcbiAgcGFkZGluZzogMTBweDtcbn1cblxudGQge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGNvbG9yOiByZ2IoMTUwLCAxNTAsIDE1MCk7XG4gIC8qIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCByZ2IoMTY4LCAxNjgsIDE2OCk7ICovXG59XG5cbi5idG4tc2VhcmNoIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gIG91dGxpbmU6IDA7XG4gIGJvcmRlci13aWR0aDogMCAwIDFweDtcbiAgYm9yZGVyLWNvbG9yOiByZ2IoMTc2LCAxNzYsIDE3OSk7XG59XG5cbi5zZWFyY2gge1xuICBvdXRsaW5lOiAwO1xuICBib3JkZXItd2lkdGg6IDAgMCAxcHg7XG4gIGJvcmRlci1jb2xvcjogcmdiKDE3NiwgMTc2LCAxNzkpO1xufVxuIl19 */"
 
 /***/ }),
 
@@ -1573,7 +1992,7 @@ module.exports = ".col-xl-9 {\n  flex: 0 0 75%;\n  max-width: 100%;\n}\n    .tab
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "  <button type=\"button\" class=\"close\" aria-label=\"Close\"(click)=\"close()\">\n      <span aria-hidden=\"true\">&times;</span>\n   </button>\n\n<div class=\"container\">\n    <div class=\"col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12\">\n        <div class=\"card\">\n            <h1>{{customer?.customer?.name}}</h1>\n            <div>\n                <div class=\"table-responsive\">\n                    <table class=\"table\">\n                        <thead>\n                            <tr class=\"border-0\">\n                                <th class=\"border-0\">Reference</th>\n                                <th class=\"border-0\">Father Name</th>\n                                <th class=\"border-0\">Cnic No</th>\n                                <th class=\"border-0\">License No</th>\n                                <th class=\"border-0\">Phone No</th>\n                            </tr>\n                        </thead>\n                        <tbody>\n                            <tr>\n                                <td>{{customer?.customer?.ref}}</td>\n                                <td>{{customer?.customer?.number}}</td>\n                                <td>{{customer?.customer?.fatherName}}</td>\n                                <td>{{customer?.customer?.cnic}}</td>\n                                <td>{{customer?.customer?.license}}</td>\n                            </tr>\n                                    <th class=\"border-0\">Mobile 1</th>\n                                    <th class=\"border-0\">Mobile 2</th>\n                                    <th class=\"border-0\">Zipcode</th>\n                                    <th class=\"border-0\">City</th>\n                                    <th class=\"border-0\">Province</th>\n                            <tr>\n                                <td>{{customer?.customer?.mobile1}}</td>\n                                <td>{{customer?.customer?.mobile2}}</td>\n                                <td>{{customer?.customer?.province}}</td>\n                                <td>{{customer?.customer?.zipcode}}</td>\n                                <td>{{customer?.customer?.city}}</td>\n                            </tr>\n                                    <th class=\"border-0\">Sector</th>\n                                    <th class=\"border-0\">Street</th>\n                                    <th class=\"border-0\">Floor</th>\n                                    <th class=\"border-0\">Address</th>\n                            <tr>\n                                <td>{{customer?.customer?.sector}}</td>\n                                <td>{{customer?.customer?.street}}</td>\n                                <td>{{customer?.customer?.floor}}</td>\n                                <td>{{customer?.customer?.address}}</td>\n\n                            </tr>\n                                <th class=\"border-0\">Guarantor Name</th>\n                                    <th class=\"border-0\">Father Name</th>\n                                    <th class=\"border-0\">Cnic No</th>\n                                    <th class=\"border-0\"> Mobile 1</th>\n                                    <th class=\"border-0\">Mobile 2</th>\n                            <tr>\n                                <td>{{customer?.guarantor.gname}}</td>\n                                <td>{{customer?.guarantor?.gfather}}</td>\n                                <td>{{customer?.guarantor?.gcnic}}</td>\n                                <td>{{customer?.guarantor?.gmobile1}}</td>\n                                <td>{{customer?.guarantor?.gmobile2}}</td>\n                                </tr>\n                                <th class=\"border-0\">Province</th>\n                                <th class=\"border-0\">City </th>\n                                <th class=\"border-0\">Floor </th>\n                                <th class=\"border-0\">Street </th>\n                                <th class=\"border-0\">Address </th>\n                            <tr>\n                                <td>{{customer?.guarantor?.province}}</td>\n                                <td>{{customer?.guarantor?.city}}</td>\n                                <td>{{customer?.guarantor?.floor}}</td>\n                                <td>{{customer?.guarantor?.street}}</td>\n                                <td>{{customer?.guarantor?.gaddress}}</td>\n                            </tr>\n                        </tbody>\n                    </table>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n"
+module.exports = "\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"close()\">\n      <span aria-hidden=\"true\">&times;</span>\n    </button>\n    <div class=\"container\">\n    <h5>{{ customer?.customer?.name }}</h5>\n\n\n    <div class=\"row\">\n      {{ customer?.customer?.fatherName }}\n      <br />{{ customer?.customer?.cnic }}\n      <br />{{ customer?.customer?.mobile1 }}\n      <br />{{ customer?.customer?.mobile2 }}\n    </div>\n    <div class=\"row\">\n      <label> <strong>Address</strong></label>\n      {{ customer?.customer?.address.floor }}\n      {{ customer?.customer?.address.number }}\n      {{ customer?.customer?.address.street }},\n      {{ customer?.customer?.address.sector }},\n      {{ customer?.customer?.address.city }},\n      {{ customer?.customer?.address.province }}\n      {{ customer?.customer?.address.zipcode }}\n    </div>\n\n    <div class=\"row float-right\">\n      <button\n        type=\"button\"\n        class=\"btn btn-sm btn-outline-primary\"\n        (click)=\"isCollapsed = !isCollapsed\"\n        [attr.aria-expanded]=\"!isCollapsed\"\n        aria-controls=\"collapseExample\"\n      >\n        Guarantor\n      </button>\n\n\n    <div id=\"collapseExample\" [ngbCollapse]=\"isCollapsed\">\n      {{ customer?.guarantor?.gname }}\n      {{ customer?.guarantor?.gfather }}\n      {{ customer?.guarantor?.gcnic }}\n      {{ customer?.guarantor?.gmobile1 }}\n      {{ customer?.guarantor?.gmobile2 }}\n      {{ customer?.guarantor?.gaddress.floor }}\n      {{ customer?.guarantor?.gaddress.street }}\n      {{ customer?.guarantor?.gaddress.gaddress }}\n      {{ customer?.guarantor?.gaddress.province }}\n      {{ customer?.guarantor?.gaddress.city }}\n    </div>\n  </div>\n<table>\n  <thead>\n    <th>Contract Date</th>\n    <th>Heading1</th>\n    <th>Heading2</th>\n  </thead>\n  <tr *ngFor=\"let contract of contractlist\">\n        <td>{{contract?.contractDate}}</td>\n        <td>{{contract?.saleType}}</td>\n        <td>{{contract?.asset?.title}}</td>\n\n</tr>\n</table>\n</div>\n"
 
 /***/ }),
 
@@ -1599,6 +2018,7 @@ var ViewcustomerComponent = /** @class */ (function () {
     function ViewcustomerComponent(activeModal, amsService) {
         this.activeModal = activeModal;
         this.amsService = amsService;
+        this.isCollapsed = true;
     }
     ViewcustomerComponent.prototype.ngOnInit = function () {
         this.getCustomerById();
@@ -1610,6 +2030,10 @@ var ViewcustomerComponent = /** @class */ (function () {
             .subscribe(function (res) {
             _this.customer = res.data;
             console.log(_this.amsService.Id, _this.customer, 'customer at view');
+            _this.amsService.getContractByCustomer(_this.amsService.Id).subscribe(function (responce) {
+                _this.contractlist = responce.data;
+                console.log(_this.contractlist, 'this is contract list');
+            });
         });
     };
     ViewcustomerComponent.prototype.close = function () {
@@ -1842,6 +2266,62 @@ var NewrecieptComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/reports/main/main.component.css":
+/*!************************************************************!*\
+  !*** ./src/app/components/reports/main/main.component.css ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvcmVwb3J0cy9tYWluL21haW4uY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/components/reports/main/main.component.html":
+/*!*************************************************************!*\
+  !*** ./src/app/components/reports/main/main.component.html ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n    <div class=\" col card shadow rounded\">\n  <div class=\"card-header\">\n    Report 1\n  </div>\n  <div class=\"card-body\">\n    <h6>Last Month Total</h6>\n    <h1>100,000,000</h1>\n  </div>\n  <div class=\"card-footer float-right\">\n    <button class=\"btn btn-sm btn-outline-primary\">Details...</button>\n  </div>\n      </div>\n    <div class=\" col card shadow rounded\">\n  <div class=\"card-header\">\n    Report 2\n  </div>\n  <div class=\"card-body\">\n    <h6>This Month Total</h6>\n    <h1>200,000,000</h1>\n  </div>\n  <div class=\"card-footer float-right\">\n    <button class=\"btn btn-sm btn-outline-primary\">Details...</button>\n  </div>\n      </div>\n    <div class=\" col card shadow rounded\">\n  <div class=\"card-header\">\n    Report 3\n  </div>\n  <div class=\"card-body\">\n    <h6>Next Month Total</h6>\n    <h1>400,000,000</h1>\n  </div>\n  <div class=\"card-footer float-right\">\n    <button class=\"btn btn-sm btn-outline-primary\">Details...</button>\n  </div>\n      </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/reports/main/main.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/components/reports/main/main.component.ts ***!
+  \***********************************************************/
+/*! exports provided: MainComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MainComponent", function() { return MainComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var MainComponent = /** @class */ (function () {
+    function MainComponent() {
+    }
+    MainComponent.prototype.ngOnInit = function () {
+    };
+    MainComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-main',
+            template: __webpack_require__(/*! ./main.component.html */ "./src/app/components/reports/main/main.component.html"),
+            styles: [__webpack_require__(/*! ./main.component.css */ "./src/app/components/reports/main/main.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], MainComponent);
+    return MainComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/search/search.component.css":
 /*!********************************************************!*\
   !*** ./src/app/components/search/search.component.css ***!
@@ -1892,6 +2372,186 @@ var SearchComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
     ], SearchComponent);
     return SearchComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/users/login-in/login-in.component.css":
+/*!******************************************************************!*\
+  !*** ./src/app/components/users/login-in/login-in.component.css ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n  body\n  {\n  background-color:#FAFAFA;\n\n\n  }\n  .wrapper\n  {\n    width: 100%;\n      height: 100%;\n  }\n  .box1{\n     text-align: center;\n  }\n  .header{\n    font-family: cursive;\n      font-size: 29px;\n        margin-top: -38px;\n  }\n  .box-initial{\n    border: 1px solid #eee;\n      width: 59%;\n      margin: 0 auto;\n      margin-top: 45px;\n    padding: 49px;\n        background: white;\n  }\n  .input{\n     border-radius: 5px;\n      margin-bottom: 0px;\n      margin-top: 13px;\n     padding:8px 12px;\n    box-sizing:box1;\n        width: 263px;\n          background-color: #FAFAFA;\n\n\n  }\n  .btn1{\n\n      width: 262px;\n    cursor:pointer;\n    background-color:#3897f0;\n    border:1px solid #3897f0;\n    padding:5px 12px;\n    color:#fff;\n    font-weight:bold;\n        margin-top: 20px;\n    border-radius: 5px;\n\n  }\n  .btn2{\n    width: 262px;\n    cursor:pointer;\n    background-color:#3897f0;\n    border:1px solid #3897f0;\n    padding:5px 12px;\n    color:#fff;\n    font-weight:bold;\n    border-radius: 5px;\n  }\n  .box-content{\n    width: 45%;\n      margin: 0 auto;\n    height:287px;\n    margin-top: 90px;\n  }\n  .box2-content{\n    border: 1px solid #eee;\n      width: 59%;\n      text-align: center;\n      margin: 0 auto;\n      margin-top: 20px;\n      height: 65px;\n      padding-top:15px;\n        background: white;\n    letter-spacing:0px;\n  }\n  .image{\n        margin-top: 14px;\n      width: 355px;\n  }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy91c2Vycy9sb2dpbi1pbi9sb2dpbi1pbi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7RUFDRTs7RUFFQSx5QkFBeUI7OztHQUd4QjtFQUNEOztJQUVFLFlBQVk7TUFDVixhQUFhO0dBQ2hCO0VBQ0Q7S0FDRyxtQkFBbUI7R0FDckI7RUFDRDtJQUNFLHFCQUFxQjtNQUNuQixnQkFBZ0I7UUFDZCxrQkFBa0I7R0FDdkI7RUFDRDtJQUNFLHVCQUF1QjtNQUNyQixXQUFXO01BQ1gsZUFBZTtNQUNmLGlCQUFpQjtJQUNuQixjQUFjO1FBQ1Ysa0JBQWtCO0dBQ3ZCO0VBQ0Q7S0FDRyxtQkFBbUI7TUFDbEIsbUJBQW1CO01BQ25CLGlCQUFpQjtLQUNsQixpQkFBaUI7SUFDbEIsZ0JBQWdCO1FBQ1osYUFBYTtVQUNYLDBCQUEwQjs7O0dBR2pDO0VBQ0Q7O01BRUksYUFBYTtJQUNmLGVBQWU7SUFDZix5QkFBeUI7SUFDekIseUJBQXlCO0lBQ3pCLGlCQUFpQjtJQUNqQixXQUFXO0lBQ1gsaUJBQWlCO1FBQ2IsaUJBQWlCO0lBQ3JCLG1CQUFtQjs7R0FFcEI7RUFDRDtJQUNFLGFBQWE7SUFDYixlQUFlO0lBQ2YseUJBQXlCO0lBQ3pCLHlCQUF5QjtJQUN6QixpQkFBaUI7SUFDakIsV0FBVztJQUNYLGlCQUFpQjtJQUNqQixtQkFBbUI7R0FDcEI7RUFDRDtJQUNFLFdBQVc7TUFDVCxlQUFlO0lBQ2pCLGFBQWE7SUFDYixpQkFBaUI7R0FDbEI7RUFDRDtJQUNFLHVCQUF1QjtNQUNyQixXQUFXO01BQ1gsbUJBQW1CO01BQ25CLGVBQWU7TUFDZixpQkFBaUI7TUFDakIsYUFBYTtNQUNiLGlCQUFpQjtRQUNmLGtCQUFrQjtJQUN0QixtQkFBbUI7R0FDcEI7RUFDRDtRQUNNLGlCQUFpQjtNQUNuQixhQUFhO0dBQ2hCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy91c2Vycy9sb2dpbi1pbi9sb2dpbi1pbi5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4gIGJvZHlcbiAge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiNGQUZBRkE7XG5cblxuICB9XG4gIC53cmFwcGVyXG4gIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICAgIGhlaWdodDogMTAwJTtcbiAgfVxuICAuYm94MXtcbiAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICB9XG4gIC5oZWFkZXJ7XG4gICAgZm9udC1mYW1pbHk6IGN1cnNpdmU7XG4gICAgICBmb250LXNpemU6IDI5cHg7XG4gICAgICAgIG1hcmdpbi10b3A6IC0zOHB4O1xuICB9XG4gIC5ib3gtaW5pdGlhbHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjZWVlO1xuICAgICAgd2lkdGg6IDU5JTtcbiAgICAgIG1hcmdpbjogMCBhdXRvO1xuICAgICAgbWFyZ2luLXRvcDogNDVweDtcbiAgICBwYWRkaW5nOiA0OXB4O1xuICAgICAgICBiYWNrZ3JvdW5kOiB3aGl0ZTtcbiAgfVxuICAuaW5wdXR7XG4gICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICAgIG1hcmdpbi1ib3R0b206IDBweDtcbiAgICAgIG1hcmdpbi10b3A6IDEzcHg7XG4gICAgIHBhZGRpbmc6OHB4IDEycHg7XG4gICAgYm94LXNpemluZzpib3gxO1xuICAgICAgICB3aWR0aDogMjYzcHg7XG4gICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI0ZBRkFGQTtcblxuXG4gIH1cbiAgLmJ0bjF7XG5cbiAgICAgIHdpZHRoOiAyNjJweDtcbiAgICBjdXJzb3I6cG9pbnRlcjtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiMzODk3ZjA7XG4gICAgYm9yZGVyOjFweCBzb2xpZCAjMzg5N2YwO1xuICAgIHBhZGRpbmc6NXB4IDEycHg7XG4gICAgY29sb3I6I2ZmZjtcbiAgICBmb250LXdlaWdodDpib2xkO1xuICAgICAgICBtYXJnaW4tdG9wOiAyMHB4O1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcblxuICB9XG4gIC5idG4ye1xuICAgIHdpZHRoOiAyNjJweDtcbiAgICBjdXJzb3I6cG9pbnRlcjtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiMzODk3ZjA7XG4gICAgYm9yZGVyOjFweCBzb2xpZCAjMzg5N2YwO1xuICAgIHBhZGRpbmc6NXB4IDEycHg7XG4gICAgY29sb3I6I2ZmZjtcbiAgICBmb250LXdlaWdodDpib2xkO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgfVxuICAuYm94LWNvbnRlbnR7XG4gICAgd2lkdGg6IDQ1JTtcbiAgICAgIG1hcmdpbjogMCBhdXRvO1xuICAgIGhlaWdodDoyODdweDtcbiAgICBtYXJnaW4tdG9wOiA5MHB4O1xuICB9XG4gIC5ib3gyLWNvbnRlbnR7XG4gICAgYm9yZGVyOiAxcHggc29saWQgI2VlZTtcbiAgICAgIHdpZHRoOiA1OSU7XG4gICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgICBtYXJnaW46IDAgYXV0bztcbiAgICAgIG1hcmdpbi10b3A6IDIwcHg7XG4gICAgICBoZWlnaHQ6IDY1cHg7XG4gICAgICBwYWRkaW5nLXRvcDoxNXB4O1xuICAgICAgICBiYWNrZ3JvdW5kOiB3aGl0ZTtcbiAgICBsZXR0ZXItc3BhY2luZzowcHg7XG4gIH1cbiAgLmltYWdle1xuICAgICAgICBtYXJnaW4tdG9wOiAxNHB4O1xuICAgICAgd2lkdGg6IDM1NXB4O1xuICB9XG4iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/components/users/login-in/login-in.component.html":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/users/login-in/login-in.component.html ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"conatiner\">\n  <div class=\"wrapper\">\n    <div class=\"box-content\">\n      <div class=\"box1\">\n        <div class=\"box-initial\">\n          <div class=\"header\">\n            <!-- <img src=\"Images\\insta.png\" style=\"width: 100%; margin-bottom: -17px;\"> -->\n            <h1>AMS System</h1>\n          </div>\n          <div class=\"input-group\">\n            <input type=\"text\" [(ngModel)]=\"user.userName\" placeholder=\"UserName\" class=\"input\" />\n          </div>\n          <div class=\"input-group\">\n            <input type=\"password\"  [(ngModel)]=\"user.password\" placeholder=\"Password\" class=\"input\" />\n          </div>\n          <input\n            type=\"button\"\n            value=\"Log in\"\n            class=\"btn1\"\n            (click)=\"getuser(user)\"\n          />\n        </div>\n        <div class=\"box2-content\">\n          <!-- Do not have Account?  <a href=\"#\">Sign up</a> -->\n          <input type=\"button\" value=\"forget password\" class=\"btn2\" />\n          <div class=\"labelGetApp\" style=\"margin-top: 42px\">\n            <label for=\"GetApp\">Get the app</label>\n          </div>\n\n          <div class=\"image\">\n            <img\n              src=\"./../../../../assets/appstore.png\"\n              style=\"width: 114px;height:40px;\"\n            />\n            <img\n              src=\"./../../../../assets/googleplay.png\"\n              style=\"width: 114px;height:40px;\"\n            />\n            <img\n              src=\"../../../../assets/microsoft.png\"\n              style=\"width: 114px;height:40px;border-radius: 6px;\"\n            />\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/users/login-in/login-in.component.ts":
+/*!*****************************************************************!*\
+  !*** ./src/app/components/users/login-in/login-in.component.ts ***!
+  \*****************************************************************/
+/*! exports provided: LoginInComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginInComponent", function() { return LoginInComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_ams_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/ams.service */ "./src/app/ams.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var src_app_user_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/user.model */ "./src/app/user.model.ts");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
+var LoginInComponent = /** @class */ (function () {
+    function LoginInComponent(amsService, route, router) {
+        var _this = this;
+        this.amsService = amsService;
+        this.route = route;
+        this.router = router;
+        this.user = new src_app_user_model__WEBPACK_IMPORTED_MODULE_4__["User"]();
+        this.route.paramMap.subscribe(function (parameterMap) {
+            var id = parameterMap.get('id');
+            _this.amsService.getUserById(id);
+        });
+    }
+    LoginInComponent.prototype.ngOnInit = function () {
+    };
+    LoginInComponent.prototype.getuser = function (user) {
+        var _this = this;
+        console.log(user, 'this user login'),
+            this.amsService.getUser(user).subscribe(function () {
+                if (!user) {
+                    console.log('err');
+                    sweetalert2__WEBPACK_IMPORTED_MODULE_5___default.a.fire('Invalid User or Password');
+                }
+                else {
+                    sweetalert2__WEBPACK_IMPORTED_MODULE_5___default.a.fire('User Log In Successfully');
+                    _this.router.navigate(['/dashboard']);
+                }
+            });
+    };
+    LoginInComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-login-in',
+            template: __webpack_require__(/*! ./login-in.component.html */ "./src/app/components/users/login-in/login-in.component.html"),
+            providers: [src_app_ams_service__WEBPACK_IMPORTED_MODULE_2__["AmsService"]],
+            styles: [__webpack_require__(/*! ./login-in.component.css */ "./src/app/components/users/login-in/login-in.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_ams_service__WEBPACK_IMPORTED_MODULE_2__["AmsService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+    ], LoginInComponent);
+    return LoginInComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/users/signup/signup.component.css":
+/*!**************************************************************!*\
+  !*** ./src/app/components/users/signup/signup.component.css ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvdXNlcnMvc2lnbnVwL3NpZ251cC5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/components/users/signup/signup.component.html":
+/*!***************************************************************!*\
+  !*** ./src/app/components/users/signup/signup.component.html ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<form>\n    <div class=\"container\">\n      <!-- <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"close()\">\n        <span aria-hidden=\"true\">&times;</span>\n      </button> -->\n      <div class=\"row\">\n        <div class=\"col-6 col-md-4\">\n          <label for=\"name\">Name</label>\n          <input [(ngModel)]=\"user.name\" type=\"text\" name=\"name\" id=\"name\" />\n        </div>\n        <div class=\"col-6 col-md-4\">\n          <label for=\"mobile\">Mobile</label>\n          <input [(ngModel)]=\"user.mobile\" type=\"text\" name=\"mobile\" id=\"mobile\" />\n        </div>\n        <div class=\"col-6 col-md-4\">\n          <label for=\"userName\">User Name</label>\n          <input [(ngModel)]=\"user.userName\" type=\"text\" name=\"userName\" id=\"userName\" />\n        </div>\n        <div class=\"col-6 col-md-4\">\n          <label for=\"password\">Password</label>\n          <input [(ngModel)]=\"user.password\" type=\"password\" name=\"password\" id=\"password\" />\n        </div>\n           <button type=\"button\" class=\"btn btn-outline-success\" (click)=\"save(user)\">Save\n      </button>\n        </div>\n        </div>\n        </form>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/users/signup/signup.component.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/components/users/signup/signup.component.ts ***!
+  \*************************************************************/
+/*! exports provided: SignupComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignupComponent", function() { return SignupComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_user_model__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/user.model */ "./src/app/user.model.ts");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var src_app_ams_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/ams.service */ "./src/app/ams.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
+
+
+
+
+
+
+// import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+var SignupComponent = /** @class */ (function () {
+    function SignupComponent(amsService, fb, route) {
+        var _this = this;
+        this.amsService = amsService;
+        this.fb = fb;
+        this.route = route;
+        this.user = new src_app_user_model__WEBPACK_IMPORTED_MODULE_2__["User"]();
+        this.route.paramMap.subscribe(function (parameterMap) {
+            var id = parameterMap.get('id');
+            _this.amsService.getUserById(id);
+        });
+    }
+    SignupComponent.prototype.ngOnInit = function () {
+    };
+    // close() {
+    //   this.activeModal.close();
+    // }
+    SignupComponent.prototype.save = function (user) {
+        console.log(user, 'this is new asset'),
+            this.amsService.addUser(user).subscribe(function () {
+                sweetalert2__WEBPACK_IMPORTED_MODULE_3___default.a.fire('Assest Inserted Successfully');
+                // this.close();
+            });
+    };
+    SignupComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-signup',
+            template: __webpack_require__(/*! ./signup.component.html */ "./src/app/components/users/signup/signup.component.html"),
+            styles: [__webpack_require__(/*! ./signup.component.css */ "./src/app/components/users/signup/signup.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_ams_service__WEBPACK_IMPORTED_MODULE_4__["AmsService"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"]])
+    ], SignupComponent);
+    return SignupComponent;
 }());
 
 
@@ -1979,7 +2639,7 @@ var Customer = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".btn-circle {\n  height: 40px;\n  width: 40px;\n  float: right;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 50%;\n  color: rgb(255, 255, 255);\n  background-color: rgb(0, 157, 248);\n}\n\n.card {\n  background-color: rgb(255, 255, 255);\n  padding: 5px;\n  margin: 10px;\n}\n\n.card-header {\n  background-color: rgb(0, 157, 248);\n  color: white;\n  text-align: left;\n  vertical-align: middle;\n  height: 60px;\n  width: 100%;\n}\n\n.card-footer {\n  background-color: rgb(255, 255, 255);\n  height: 60px;\n  width: 100%;\n}\n\ntable {\n  width: 100%;\n}\n\nth {\n  text-align: center;\n  vertical-align: middle;\n  color: white;\n  background-color: rgb(0, 157, 248);\n  border-bottom: 1px solid rgb(168, 168, 168);\n  padding: 10px;\n}\n\ntd {\n  text-align: center;\n  color: rgb(150, 150, 150);\n  /* border-bottom: 1px solid rgb(168, 168, 168); */\n}\n\n.btn-search {\n  background-color: white;\n  outline: 0;\n  border-width: 0 0 1px;\n  border-color: rgb(176, 176, 179);\n}\n\n.search {\n  outline: 0;\n  border-width: 0 0 1px;\n  border-color: rgb(176, 176, 179);\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBYTtFQUNiLFlBQVk7RUFDWixhQUFhO0VBQ2IsY0FBYztFQUNkLHdCQUF3QjtFQUN4QixvQkFBb0I7RUFDcEIsbUJBQW1CO0VBQ25CLDBCQUEwQjtFQUMxQixtQ0FBbUM7Q0FDcEM7O0FBRUQ7RUFDRSxxQ0FBcUM7RUFDckMsYUFBYTtFQUNiLGFBQWE7Q0FDZDs7QUFDRDtFQUNFLG1DQUFtQztFQUNuQyxhQUFhO0VBQ2IsaUJBQWlCO0VBQ2pCLHVCQUF1QjtFQUN2QixhQUFhO0VBQ2IsWUFBWTtDQUNiOztBQUNEO0VBQ0UscUNBQXFDO0VBQ3JDLGFBQWE7RUFDYixZQUFZO0NBQ2I7O0FBRUQ7RUFDRSxZQUFZO0NBQ2I7O0FBQ0Q7RUFDRSxtQkFBbUI7RUFDbkIsdUJBQXVCO0VBQ3ZCLGFBQWE7RUFDYixtQ0FBbUM7RUFDbkMsNENBQTRDO0VBQzVDLGNBQWM7Q0FDZjs7QUFFRDtFQUNFLG1CQUFtQjtFQUNuQiwwQkFBMEI7RUFDMUIsa0RBQWtEO0NBQ25EOztBQUVEO0VBQ0Usd0JBQXdCO0VBQ3hCLFdBQVc7RUFDWCxzQkFBc0I7RUFDdEIsaUNBQWlDO0NBQ2xDOztBQUVEO0VBQ0UsV0FBVztFQUNYLHNCQUFzQjtFQUN0QixpQ0FBaUM7Q0FDbEMiLCJmaWxlIjoic3JjL2FwcC9kYXNoYm9hcmQvZGFzaGJvYXJkLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYnRuLWNpcmNsZSB7XG4gIGhlaWdodDogNDBweDtcbiAgd2lkdGg6IDQwcHg7XG4gIGZsb2F0OiByaWdodDtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGJvcmRlci1yYWRpdXM6IDUwJTtcbiAgY29sb3I6IHJnYigyNTUsIDI1NSwgMjU1KTtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDAsIDE1NywgMjQ4KTtcbn1cblxuLmNhcmQge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjU1LCAyNTUsIDI1NSk7XG4gIHBhZGRpbmc6IDVweDtcbiAgbWFyZ2luOiAxMHB4O1xufVxuLmNhcmQtaGVhZGVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDAsIDE1NywgMjQ4KTtcbiAgY29sb3I6IHdoaXRlO1xuICB0ZXh0LWFsaWduOiBsZWZ0O1xuICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xuICBoZWlnaHQ6IDYwcHg7XG4gIHdpZHRoOiAxMDAlO1xufVxuLmNhcmQtZm9vdGVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUpO1xuICBoZWlnaHQ6IDYwcHg7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG50YWJsZSB7XG4gIHdpZHRoOiAxMDAlO1xufVxudGgge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDAsIDE1NywgMjQ4KTtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHJnYigxNjgsIDE2OCwgMTY4KTtcbiAgcGFkZGluZzogMTBweDtcbn1cblxudGQge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGNvbG9yOiByZ2IoMTUwLCAxNTAsIDE1MCk7XG4gIC8qIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCByZ2IoMTY4LCAxNjgsIDE2OCk7ICovXG59XG5cbi5idG4tc2VhcmNoIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gIG91dGxpbmU6IDA7XG4gIGJvcmRlci13aWR0aDogMCAwIDFweDtcbiAgYm9yZGVyLWNvbG9yOiByZ2IoMTc2LCAxNzYsIDE3OSk7XG59XG5cbi5zZWFyY2gge1xuICBvdXRsaW5lOiAwO1xuICBib3JkZXItd2lkdGg6IDAgMCAxcHg7XG4gIGJvcmRlci1jb2xvcjogcmdiKDE3NiwgMTc2LCAxNzkpO1xufVxuIl19 */"
+module.exports = ".btn-circle {\n  height: 40px;\n  width: 40px;\n  float: right;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 50%;\n  color: rgb(255, 255, 255);\n  background-color: rgb(0, 157, 248);\n}\n\n.card {\n  background-color: rgb(255, 255, 255);\n  padding: 5px;\n  margin: 10px;\n}\n\n.card-header {\n  background-color: rgb(0, 157, 248);\n  color: white;\n  text-align: left;\n  vertical-align: middle;\n  height: 60px;\n  width: 100%;\n}\n\n.card-footer {\n  background-color: rgb(255, 255, 255);\n  height: 60px;\n  width: 100%;\n}\n\ntable {\n  width: 100%;\n}\n\nth {\n  text-align: center;\n  vertical-align: middle;\n  color: white;\n  background-color: rgb(0, 157, 248);\n  border-bottom: 1px solid rgb(168, 168, 168);\n  padding: 10px;\n}\n\ntd {\n  text-align: center;\n  color: rgb(150, 150, 150);\n  /* border-bottom: 1px solid rgb(168, 168, 168); */\n}\n\n.btn-search {\n  background-color: white;\n  outline: 0;\n  border-width: 0 0 1px;\n  border-color: rgb(176, 176, 179);\n}\n\n.search {\n  outline: 0;\n  border-width: 0 0 1px;\n  border-color: rgb(176, 176, 179);\n}\n\n.row {\n  width: 100%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBYTtFQUNiLFlBQVk7RUFDWixhQUFhO0VBQ2IsY0FBYztFQUNkLHdCQUF3QjtFQUN4QixvQkFBb0I7RUFDcEIsbUJBQW1CO0VBQ25CLDBCQUEwQjtFQUMxQixtQ0FBbUM7Q0FDcEM7O0FBRUQ7RUFDRSxxQ0FBcUM7RUFDckMsYUFBYTtFQUNiLGFBQWE7Q0FDZDs7QUFDRDtFQUNFLG1DQUFtQztFQUNuQyxhQUFhO0VBQ2IsaUJBQWlCO0VBQ2pCLHVCQUF1QjtFQUN2QixhQUFhO0VBQ2IsWUFBWTtDQUNiOztBQUNEO0VBQ0UscUNBQXFDO0VBQ3JDLGFBQWE7RUFDYixZQUFZO0NBQ2I7O0FBRUQ7RUFDRSxZQUFZO0NBQ2I7O0FBQ0Q7RUFDRSxtQkFBbUI7RUFDbkIsdUJBQXVCO0VBQ3ZCLGFBQWE7RUFDYixtQ0FBbUM7RUFDbkMsNENBQTRDO0VBQzVDLGNBQWM7Q0FDZjs7QUFFRDtFQUNFLG1CQUFtQjtFQUNuQiwwQkFBMEI7RUFDMUIsa0RBQWtEO0NBQ25EOztBQUVEO0VBQ0Usd0JBQXdCO0VBQ3hCLFdBQVc7RUFDWCxzQkFBc0I7RUFDdEIsaUNBQWlDO0NBQ2xDOztBQUVEO0VBQ0UsV0FBVztFQUNYLHNCQUFzQjtFQUN0QixpQ0FBaUM7Q0FDbEM7O0FBR0Q7RUFDRSxZQUFZO0NBQ2IiLCJmaWxlIjoic3JjL2FwcC9kYXNoYm9hcmQvZGFzaGJvYXJkLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYnRuLWNpcmNsZSB7XG4gIGhlaWdodDogNDBweDtcbiAgd2lkdGg6IDQwcHg7XG4gIGZsb2F0OiByaWdodDtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGJvcmRlci1yYWRpdXM6IDUwJTtcbiAgY29sb3I6IHJnYigyNTUsIDI1NSwgMjU1KTtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDAsIDE1NywgMjQ4KTtcbn1cblxuLmNhcmQge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjU1LCAyNTUsIDI1NSk7XG4gIHBhZGRpbmc6IDVweDtcbiAgbWFyZ2luOiAxMHB4O1xufVxuLmNhcmQtaGVhZGVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDAsIDE1NywgMjQ4KTtcbiAgY29sb3I6IHdoaXRlO1xuICB0ZXh0LWFsaWduOiBsZWZ0O1xuICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xuICBoZWlnaHQ6IDYwcHg7XG4gIHdpZHRoOiAxMDAlO1xufVxuLmNhcmQtZm9vdGVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUpO1xuICBoZWlnaHQ6IDYwcHg7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG50YWJsZSB7XG4gIHdpZHRoOiAxMDAlO1xufVxudGgge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDAsIDE1NywgMjQ4KTtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHJnYigxNjgsIDE2OCwgMTY4KTtcbiAgcGFkZGluZzogMTBweDtcbn1cblxudGQge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGNvbG9yOiByZ2IoMTUwLCAxNTAsIDE1MCk7XG4gIC8qIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCByZ2IoMTY4LCAxNjgsIDE2OCk7ICovXG59XG5cbi5idG4tc2VhcmNoIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gIG91dGxpbmU6IDA7XG4gIGJvcmRlci13aWR0aDogMCAwIDFweDtcbiAgYm9yZGVyLWNvbG9yOiByZ2IoMTc2LCAxNzYsIDE3OSk7XG59XG5cbi5zZWFyY2gge1xuICBvdXRsaW5lOiAwO1xuICBib3JkZXItd2lkdGg6IDAgMCAxcHg7XG4gIGJvcmRlci1jb2xvcjogcmdiKDE3NiwgMTc2LCAxNzkpO1xufVxuXG5cbi5yb3cge1xuICB3aWR0aDogMTAwJTtcbn1cbiJdfQ== */"
 
 /***/ }),
 
@@ -1990,7 +2650,7 @@ module.exports = ".btn-circle {\n  height: 40px;\n  width: 40px;\n  float: right
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n    <div class=\" col card shadow rounded\">\n  <div class=\"card-header\">\n    Report 1\n  </div>\n  <div class=\"card-body\">\n    <h6>Last Month Total</h6>\n    <h1>100,000,000</h1>\n  </div>\n  <div class=\"card-footer float-right\">\n    <button class=\"btn btn-sm btn-outline-primary\">Details...</button>\n  </div>\n      </div>\n    <div class=\" col card shadow rounded\">\n  <div class=\"card-header\">\n    Report 2\n  </div>\n  <div class=\"card-body\">\n    <h6>This Month Total</h6>\n    <h1>200,000,000</h1>\n  </div>\n  <div class=\"card-footer float-right\">\n    <button class=\"btn btn-sm btn-outline-primary\">Details...</button>\n  </div>\n      </div>\n    <div class=\" col card shadow rounded\">\n  <div class=\"card-header\">\n    Report 3\n  </div>\n  <div class=\"card-body\">\n    <h6>Next Month Total</h6>\n    <h1>400,000,000</h1>\n  </div>\n  <div class=\"card-footer float-right\">\n    <button class=\"btn btn-sm btn-outline-primary\">Details...</button>\n  </div>\n      </div>\n</div>\n"
+module.exports = "<p>this is dashboard</p>\n"
 
 /***/ }),
 
@@ -2042,6 +2702,26 @@ var Reciept = /** @class */ (function () {
     function Reciept() {
     }
     return Reciept;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/user.model.ts":
+/*!*******************************!*\
+  !*** ./src/app/user.model.ts ***!
+  \*******************************/
+/*! exports provided: User */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "User", function() { return User; });
+var User = /** @class */ (function () {
+    function User() {
+    }
+    return User;
 }());
 
 
