@@ -9,7 +9,7 @@ import { AmsService } from './ams.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { NgxSpinnerModule } from 'ngx-spinner';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { NewassetComponent } from './components/asset/newasset/newasset.component';
@@ -54,6 +54,7 @@ import { MainComponent } from './components/reports/main/main.component';
     MainComponent
   ],
   imports: [
+    NgxSpinnerModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,

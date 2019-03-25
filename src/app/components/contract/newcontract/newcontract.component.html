@@ -77,7 +77,7 @@
           id="startDate"
           class="form-control"
           placeholder=""
-          (change)="calculateTotalPayable()"
+          (change)="getExpiry()"
         />
       </div>
 
@@ -90,7 +90,7 @@
               id="asset"
               class="form-control"
               placeholder=""
-              (change)="calculateTotalPayable()"
+              (change)="getExpiry()"
             >
             <option value="12">1 Year</option>
             <option value="6">6 Months</option>
@@ -101,7 +101,43 @@
       </div>
 
       <div class="col-6 col-md-4">
-        <label for="increment">Increment</label>
+        <label for="expiry">Expiry Date</label>
+        <input
+          [(ngModel)]="contract.expiryDate"
+          type="date"
+          name="expiry"
+          id="expiry"
+          class="form-control"
+          placeholder=""
+        />
+      </div>
+
+      <div class="col-6 col-md-4" *ngIf="this.editMode === true">
+        <label for="cancelation">Cancelation Date</label>
+        <input
+          [(ngModel)]="contract.cancelation"
+          type="date"
+          name="cancelation"
+          id="cancelation"
+          class="form-control"
+          placeholder=""
+        />
+      </div>
+
+      <div class="col-6 col-md-4">
+        <label for="quoted">Price Quoted</label>
+        <input
+          [(ngModel)]="contract.priceQuoted"
+          type="text"
+          name="qouted"
+          id="qouted"
+          class="form-control"
+          placeholder=""
+        />
+      </div>
+
+      <div class="col-6 col-md-4">
+        <label for="increment">Increment %</label>
         <input
           [(ngModel)]="contract.increment"
           type="text"
@@ -120,36 +156,12 @@
           name="incrementSchedule"
           id="incrementSchedule"
           class="form-control"
-          placeholder=""
+          placeholder="Increment Schedule"
         >
           <option value="1">Annual</option>
           <option value="2">6 Months</option>
           <option value="3">Monthly</option>
         </select>
-      </div>
-
-      <div class="col-6 col-md-4">
-        <label for="expiry">Expiry Date</label>
-        <input
-          [(ngModel)]="contract.expiryDate"
-          type="date"
-          name="expiry"
-          id="expiry"
-          class="form-control"
-          placeholder=""
-        />
-      </div>
-
-      <div class="col-6 col-md-4">
-        <label for="cancelation">Cancelation Date</label>
-        <input
-          [(ngModel)]="contract.cancelation"
-          type="date"
-          name="cancelation"
-          id="cancelation"
-          class="form-control"
-          placeholder=""
-        />
       </div>
 
       <div class="col-6 col-md-4">
@@ -160,11 +172,10 @@
           name="mathod"
           id="mathod"
           class="form-control"
-          placeholder=""
-          (change)="calculateTotalPayable()"
+          placeholder="Payment Schedule"
         >
-        <option value="annual">Annual</option>
-        <option value="bi-annual">6 Months</option>
+        <option value="annual" *ngIf="contract.duration > 6">Annual</option>
+        <option value="bi-annual" *ngIf="contract.duration > 1">6 Months</option>
         <option value="monthly">Monthly</option>
         <option value="weekly">Weekly</option>
         <option value="daily">Daily</option>
@@ -210,17 +221,7 @@
         </select>
       </div>
 
-      <div class="col-6 col-md-4">
-        <label for="quoted">Price Quoted</label>
-        <input
-          [(ngModel)]="contract.priceQuoted"
-          type="text"
-          name="qouted"
-          id="qouted"
-          class="form-control"
-          placeholder=""
-        />
-      </div>
+
 
       <div class="col-6 col-md-4">
         <label for="quoted">Total Payable</label>
@@ -231,6 +232,7 @@
           id="qouted"
           class="form-control"
           placeholder=""
+          (change)="getTotalPay()"
         />
       </div>
       <div class="col-6 col-md-4">

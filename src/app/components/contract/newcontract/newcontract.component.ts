@@ -20,10 +20,10 @@ import {
 })
 export class NewcontractComponent implements OnInit {
   contract: any;
+  editMode = this.amsService.editMode;
   customerlist: any;
   assetlist: any;
   A = Date.now();
-  // balance = this.contract.totalPayable - (this.contract.avdancePayment + this.contract.downPayment);
 
   constructor(
     private amsService: AmsService,
@@ -76,9 +76,7 @@ export class NewcontractComponent implements OnInit {
 
   addContract(contract) {
     this.amsService.addContract(contract).subscribe(() => {
-      Swal.fire(
-        'Contract Inserted Successfully'
-      );
+      Swal.fire('Contract Inserted Successfully');
       this.router.navigate(['/contract/list']);
       this.close();
     });
@@ -96,54 +94,82 @@ export class NewcontractComponent implements OnInit {
     modalRef.componentInstance.name = 'New Asset';
   }
 
-  calculateTotalPayable() {
-    if (this.contract.startDate && this.contract.duration && this.contract.installment) {
-      let numberOf = null;
-      let totalPayment = 0;
+  getExpiry() {
+    if (this.contract.startDate && this.contract.duration) {
       const startDate = moment(this.contract.startDate);
       const expirayDate = this.getDuration(startDate, this.contract.duration);
       if (expirayDate) {
         this.contract.expiryDate = moment(expirayDate._d).format('YYYY-MM-DD');
-        if (this.contract.paymentMathod) {
-          numberOf = this.getNoOfBaseOnSchedule(expirayDate, startDate, this.contract.paymentMathod);
-          console.log(numberOf, 'no of ');
-          totalPayment = numberOf * this.contract.installment;
-          this.contract.totalPayable = totalPayment;
-        }
       }
-      // console.log(expirayDate._d, 'expiray');
-      // console.log(this.contract.duration);
-      // console.log(this.contract.installment);
     }
   }
 
-  getNoOfBaseOnSchedule(expirayDate, startDate, paymentSchedule) {
+  // calculateTotalPayable() {
+  //   if (this.contract.startDate && this.contract.duration) {
+  //     let numberOf = null;
+  //     let totalPayment = 0;
+  //     const startDate = moment(this.contract.startDate);
+  //     const expirayDate = this.getDuration(startDate, this.contract.duration);
+  //     if (expirayDate) {
+  //       this.contract.expiryDate = moment(expirayDate._d).format('YYYY-MM-DD');
+
+  //       if (this.contract.paymentMathod) {
+  //         numberOf = this.getNoOfBaseOnSchedule(expirayDate, startDate, this.contract.paymentMathod);
+  //         console.log(numberOf, 'no of ');
+  //         totalPayment = numberOf * this.contract.installment;
+  //         this.contract.totalPayable = totalPayment;
+  //       }
+  //     }
+  //   }
+  // }
+
+  getDuration(startDate, duration) {
+    let expirayDate = null;
+    if (duration === 'weekly') {
+      expirayDate = moment(startDate).add(1, 'week');
+    } else if (duration === 'daily') {
+      expirayDate = moment(startDate).add(1, 'days');
+    } else {
+      const parseDuration = parseInt(duration, 10);
+      expirayDate = moment(startDate).add(parseDuration, 'months');
+    }
+    return expirayDate;
+  }
+
+  getTotalPay() {
+    let numberOf = null;
+    let totalPayment = 0;
+    const startDate = moment(this.contract.startDate);
+    const expirayDate = this.getDuration(startDate, this.contract.duration);
+    if (this.contract.paymentMathod && this.contract.startDate && this.contract.duration) {
+      numberOf = this.getNoOfInst(
+        expirayDate,
+        startDate,
+        this.contract.paymentMathod
+      );
+      console.log(numberOf, 'no of ');
+      totalPayment = numberOf * this.contract.installment;
+      this.contract.totalPayable = totalPayment;
+    }
+  }
+
+  getNoOfInst(expirayDate, startDate, paymentSchedule) {
     let diff = null;
     switch (paymentSchedule) {
       case 'weekly':
         diff = expirayDate.diff(startDate, 'week');
+        console.log(diff, 'diff');
         break;
       case 'daily':
         diff = expirayDate.diff(startDate, 'days');
+        console.log(diff, 'diff');
         break;
       default:
         diff = expirayDate.diff(startDate, 'months');
+        console.log(diff, 'diff');
         break;
     }
     return diff;
-  }
-
-  getDuration(currentDate, duration) {
-    let expirayDate = null;
-    if (duration === 'weekly') {
-      expirayDate =  moment(currentDate).add(1, 'week');
-    } else if (duration === 'daily') {
-      expirayDate =  moment(currentDate).add(1, 'days');
-    } else {
-      const parseDuration = parseInt(duration, 10);
-      expirayDate = moment(currentDate).add(parseDuration, 'months');
-    }
-    return expirayDate;
   }
 
   close() {

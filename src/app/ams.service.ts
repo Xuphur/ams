@@ -12,7 +12,7 @@ export class AmsService {
 
 
   // url = 'http://localhost:4000';
-   url = 'https://ams-backend.herokuapp.com';
+    url = 'https://ams-backend.herokuapp.com';
 
   constructor(private http: HttpClient, private modalService: NgbModal) {}
 
