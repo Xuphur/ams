@@ -136,21 +136,30 @@ export class NewcontractComponent implements OnInit {
     return expirayDate;
   }
 
-  getTotalPay() {
+  getInst() {
     let numberOf = null;
-    let totalPayment = 0;
-    const startDate = moment(this.contract.startDate);
+    let total = null;
+    let inst = 0;
+    const startDate = this.contract.startDate;
+    console.log(startDate, 'Start date');
     const expirayDate = this.getDuration(startDate, this.contract.duration);
+    console.log(expirayDate, 'Exp date');
     if (this.contract.paymentMathod && this.contract.startDate && this.contract.duration) {
-      numberOf = this.getNoOfInst(
-        expirayDate,
-        startDate,
-        this.contract.paymentMathod
-      );
-      console.log(numberOf, 'no of ');
-      totalPayment = numberOf * this.contract.installment;
-      this.contract.totalPayable = totalPayment;
+      numberOf = this.getNoOfInst(expirayDate, startDate, this.contract.paymentMathod);
+      console.log(numberOf, 'no of inst');
+      total = this.getTotalPay();
+      inst = total / numberOf;
+      this.contract.installment = inst;
     }
+  }
+
+  getTotalPay() {
+    let totalPay = this.contract.totalPayable;
+    if (this.contract.priceQuoted && this.contract.downPayment && this.contract.advancePayment) {
+      totalPay = this.contract.priceQuoted - (this.contract.downPayment + this.contract.advancePayment);
+    }
+    console.log(totalPay, 'total pay');
+    this.contract.totalPayable = totalPay;
   }
 
   getNoOfInst(expirayDate, startDate, paymentSchedule) {

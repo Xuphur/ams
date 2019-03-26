@@ -1,38 +1,22 @@
-<div class="nav-left-sidebar sidebar-dark"*ngIf="hide">
+<div class="nav-left-sidebar sidebar-dark" *ngIf="hide">
   <div class="menu-list">
     <nav class="navbar navbar-expand-sm navbar-light">
-      <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
-      <button
-        class="nav-link"
-        type="button"
-        [routerLink]="['/dashboard']"
-        routerLinkActive="router-link-active"
-      >
-        <i class="fa fa-fw fa-user-circle"></i>Dashboard
-      </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav flex-column">
-          <!-- <li class="nav-divider">
-                      Menu
-                  </li> -->
           <li class="nav-item ">
-            <span
-              ><a
-                class="nav-link"
-                [routerLink]="['/dashboard']"
-                routerLinkActive="router-link-active"
-                ><i class="fa fa-fw fa-user-circle"></i>Dashboard
-                <span class="badge badge-success"></span></a
-            ></span>
+            <a
+              class="nav-link"
+              [routerLink]="['/dashboard']"
+              routerLinkActive="router-link-active"
+              ><i class="fa fa-fw fa-user-circle"></i>Dashboard
+            </a>
           </li>
           <li class="nav-item">
-            <span
-              ><a
-                class="nav-link"
-                [routerLink]="['/asset/list']"
-                routerLinkActive="router-link-active"
-                ><i class="fa fa-fw fa-rocket"></i>Assest</a
-              ></span
+            <a
+              class="nav-link"
+              [routerLink]="['/asset/list']"
+              routerLinkActive="router-link-active"
+              ><i class="fa fa-fw fa-rocket"></i>Assest</a
             >
           </li>
           <li class="nav-item">

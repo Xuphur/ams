@@ -173,6 +173,7 @@
           id="mathod"
           class="form-control"
           placeholder="Payment Schedule"
+          (change)="getInst()"
         >
         <option value="annual" *ngIf="contract.duration > 6">Annual</option>
         <option value="bi-annual" *ngIf="contract.duration > 1">6 Months</option>
@@ -190,6 +191,7 @@
           id="downPayment"
           class="form-control"
           placeholder=""
+          (change)="getTotalPay()"
         />
       </div>
 
@@ -202,6 +204,7 @@
           id="advancePayment"
           class="form-control"
           placeholder=""
+          (change)="getTotalPay()"
         />
       </div>
 
@@ -220,8 +223,6 @@
           <option value="Expired">Expired</option>
         </select>
       </div>
-
-
 
       <div class="col-6 col-md-4">
         <label for="quoted">Total Payable</label>

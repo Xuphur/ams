@@ -10,6 +10,7 @@
         type="text"
         name=""
         placeholder="Search By Name"
+        (change)="searchByName(name)"
       />
       <button type="button" class="btn-search" (click)="searchByName(name)">
         <i class="fas fa-angle-down"></i>
@@ -22,6 +23,7 @@
         type="text"
         name=""
         placeholder="Search By CNIC"
+        onkeyup="searchByCnic(cnic)"
       />
       <button type="button" class="btn-search" (click)="searchByCnic(cnic)">
         <i class="fas fa-angle-down"></i>
@@ -34,6 +36,7 @@
         type="text"
         name=""
         placeholder="Search By Mobile"
+        (change)="searchByMobile(mobile)"
       />
       <button type="button" class="btn-search" (click)="searchByMobile(mobile)">
         <i class="fas fa-angle-down"></i>
