@@ -5,36 +5,30 @@
   crossorigin="anonymous"
 />
 
-<nav class="navbar navbar-expand-lg navbar-dark" *ngIf="isLoggedIn">
-  <a class="navbar-brand" href="#">AMS</a>
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarText"
-    aria-controls="navbarText"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarText">
+<nav class="navbar navbar-expand-lg navbar-dark">
+   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/user/new']" routerLinkActive="router-link-active"
-          >Home</a
-        >
+        <a class="nav-link" [routerLink]="['/dashboard']" routerLinkActive="router-link-active"
+          >AMS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link">Features</a>
+        <a class="nav-link"  [routerLink]="['/asset/list']"routerLinkActive="router-link-active">Asset</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link">Pricing</a>
+        <a class="nav-link" [routerLink]="['/customer/list']"routerLinkActive="router-link-active">Customer</a>
       </li>
+      <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/contract/list']"routerLinkActive="router-link-active">Contract</a>
+        </li>
     </ul>
-    <!-- <div class="searchbar">
-              <input class="search_input" type="text" name="" placeholder="Search...">
-              <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
-          </div> -->
-  </div>
+  </div> 
+      <div ngbDropdown [placement]="['bottom-right']" class="float-right" >
+        <button class="btn-lg btn-search" id="dropdownBasic1" ngbDropdownToggle></button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <ul>
+          <li ngbDropdownItem (click)="logout()">logout</li>
+        </ul>
+        </div>
+    </div>
 </nav>

@@ -4,6 +4,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { User } from 'src/app/user.model';
 import Swal from 'sweetalert2';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { AuthguardService } from 'src/app/authguard.service';
 @Component({
   selector: 'app-login-in',
   templateUrl: './login-in.component.html',
@@ -17,6 +18,7 @@ export class LoginInComponent implements OnInit {
 
   constructor(
     private amsService: AmsService,
+    private authService: AuthguardService,
     private route: ActivatedRoute,
     private router: Router,
     private spinner: NgxSpinnerService
@@ -33,31 +35,19 @@ export class LoginInComponent implements OnInit {
 
   getuser(user) {
     console.log(user, 'this user login'),
-<<<<<<< HEAD
-    this.amsService.getUser(user).subscribe(() => {
-        if (!user) {
-          console.log('err');
-          Swal.fire(
-            'Invalid User or Password'
-          );
-        } else {
-          Swal.fire(
-            'User Log In Successfully'
-          );
-          this.router.navigate(['/dashboard']);
-          }
-        });
-=======
     this.spinner.show();
     this.amsService.getUser(user).subscribe((loginData) => {
       localStorage.setItem('loginvalue', JSON.stringify(loginData));
-      this.router.navigate(['/dashboard']);
+      console.log('check storage data');
+      this.authService.isLoggIn = true;
+      this.router.navigate(['/asset/list']);
       console.log( this.loginvalue, 'user at service'),
       this.spinner.hide();
       // Swal.fire(
       //   'User Log In Successfully'
       // )
     });
->>>>>>> 055e98f580c5def275e4b85c35322393aa574446
   }
+
+
 }

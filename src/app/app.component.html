@@ -1,22 +1,10 @@
-<<<<<<< HEAD
-<app-header></app-header>
-<div class="row">
-  <div class="col-2">
-    <app-sidebar></app-sidebar>
-  </div>
-  <div class="col-10">
-    <router-outlet></router-outlet>
-=======
 
-     <app-header ></app-header>
-
+     <app-header *ngIf="this.authService.isLoggIn" ></app-header>
   <div class="row">
-    <div class="col-2">
+    <div class="col-2" *ngIf="this.authService.isLoggIn">
         <app-sidebar></app-sidebar>
     </div>
 <div class="col-10">
     <router-outlet></router-outlet>
  </div>
->>>>>>> 055e98f580c5def275e4b85c35322393aa574446
   </div>
-</div>
