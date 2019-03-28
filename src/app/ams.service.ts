@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-// import { NewcontractComponent } from './components/contract/newcontract/newcontract.component';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +11,7 @@ export class AmsService {
 
 
   // url = 'http://localhost:4000';
-    url = 'https://ams-backend.herokuapp.com';
+   url = 'https://ams-backend.herokuapp.com';
 
   constructor(private http: HttpClient, private modalService: NgbModal) {}
 

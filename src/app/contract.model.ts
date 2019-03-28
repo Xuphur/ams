@@ -11,12 +11,12 @@ export class Contract {
   increment: '';
   incrementSchedule: '';
   paymentSchedule: '';
-  priceQuoted: '';
-  totalPayable: '';
-  installment: '';
-  downPayment: '';
-  avdancePayment: '';
-  balance: '';
+  priceQuoted: Number;
+  totalPayable: Number;
+  installment: Number;
+  downPayment: Number;
+  avdancePayment: Number;
+  balance: Number;
   reaccurance: '';
   totalRecieved: '';
   expiryDate: '';

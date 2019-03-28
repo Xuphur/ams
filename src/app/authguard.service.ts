@@ -5,7 +5,7 @@ import { User } from './user.model';
   providedIn: 'root'
 })
 export class AuthguardService {
-
+  isLoggIn: Boolean;
   constructor(private route: Router) { }
   canActivate(
     next: ActivatedRouteSnapshot,

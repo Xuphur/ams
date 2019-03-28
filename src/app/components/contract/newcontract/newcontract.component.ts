@@ -23,7 +23,8 @@ export class NewcontractComponent implements OnInit {
   editMode = this.amsService.editMode;
   customerlist: any;
   assetlist: any;
-  A = Date.now();
+  total: any;
+  installment: any;
 
   constructor(
     private amsService: AmsService,
@@ -41,13 +42,11 @@ export class NewcontractComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.contract.saleType, 'saleType');
     if (this.amsService.editMode) {
       this.fetchContractById();
     } else {
       this.fetchAssets();
       this.fetchCustomers();
-      // this.getBalance();
     }
   }
 
@@ -94,15 +93,7 @@ export class NewcontractComponent implements OnInit {
     modalRef.componentInstance.name = 'New Asset';
   }
 
-  getExpiry() {
-    if (this.contract.startDate && this.contract.duration) {
-      const startDate = moment(this.contract.startDate);
-      const expirayDate = this.getDuration(startDate, this.contract.duration);
-      if (expirayDate) {
-        this.contract.expiryDate = moment(expirayDate._d).format('YYYY-MM-DD');
-      }
-    }
-  }
+
 
   // calculateTotalPayable() {
   //   if (this.contract.startDate && this.contract.duration) {
@@ -123,6 +114,51 @@ export class NewcontractComponent implements OnInit {
   //   }
   // }
 
+  getExpiry() {
+    if (this.contract.startDate && this.contract.duration) {
+      const startDate = moment(this.contract.startDate);
+      const expirayDate = this.getDuration(startDate, this.contract.duration);
+      if (expirayDate) {
+        this.contract.expiryDate = moment(expirayDate._d).format('YYYY-MM-DD');
+      }
+    }
+  }
+
+  calculate() {
+    if (
+      this.contract.priceQuoted !== undefined &&
+      this.contract.downPayment !== undefined &&
+      this.contract.advancePayment !== undefined &&
+      this.contract.paymentMathod !== undefined
+    ) {
+      this.getTotalPay();
+      this.getInst();
+      this.contract.totalPayable = this.total;
+      this.contract.balance = this.total;
+      this.contract.installment = this.installment;
+    }
+  }
+
+  getTotalPay() {
+    let totalPay = 0;
+      totalPay = this.contract.priceQuoted -
+        (this.contract.downPayment + this.contract.advancePayment);
+    console.log(totalPay, 'total pay');
+    this.total = totalPay;
+  }
+
+  getInst() {
+    let numberOf = 0;
+    const total = this.total;
+    let inst = 0;
+    const startDate = this.contract.startDate;
+    const expirayDate = this.getDuration(startDate, this.contract.duration);
+          numberOf = this.getNoOfInst(expirayDate, startDate, this.contract.paymentMathod);
+      inst = total / numberOf;
+      console.log(inst, 'installment');
+     this.installment = inst;
+  }
+
   getDuration(startDate, duration) {
     let expirayDate = null;
     if (duration === 'weekly') {
@@ -134,32 +170,6 @@ export class NewcontractComponent implements OnInit {
       expirayDate = moment(startDate).add(parseDuration, 'months');
     }
     return expirayDate;
-  }
-
-  getInst() {
-    let numberOf = null;
-    let total = null;
-    let inst = 0;
-    const startDate = this.contract.startDate;
-    console.log(startDate, 'Start date');
-    const expirayDate = this.getDuration(startDate, this.contract.duration);
-    console.log(expirayDate, 'Exp date');
-    if (this.contract.paymentMathod && this.contract.startDate && this.contract.duration) {
-      numberOf = this.getNoOfInst(expirayDate, startDate, this.contract.paymentMathod);
-      console.log(numberOf, 'no of inst');
-      total = this.getTotalPay();
-      inst = total / numberOf;
-      this.contract.installment = inst;
-    }
-  }
-
-  getTotalPay() {
-    let totalPay = this.contract.totalPayable;
-    if (this.contract.priceQuoted && this.contract.downPayment && this.contract.advancePayment) {
-      totalPay = this.contract.priceQuoted - (this.contract.downPayment + this.contract.advancePayment);
-    }
-    console.log(totalPay, 'total pay');
-    this.contract.totalPayable = totalPay;
   }
 
   getNoOfInst(expirayDate, startDate, paymentSchedule) {

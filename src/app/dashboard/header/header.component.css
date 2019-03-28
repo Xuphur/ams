@@ -7,3 +7,17 @@
   height: 60px;
   width: 100%;
 }
+
+.btn-search {
+  background-color: rgb(0, 157, 248);
+  outline: 0;
+  border-width: 0 0 0px;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  text-align: left;
+  left: 0;
+  right: auto;
+}

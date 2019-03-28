@@ -4,6 +4,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { User } from 'src/app/user.model';
 import Swal from 'sweetalert2';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { AuthguardService } from 'src/app/authguard.service';
 @Component({
   selector: 'app-login-in',
   templateUrl: './login-in.component.html',
@@ -17,6 +18,7 @@ export class LoginInComponent implements OnInit {
 
   constructor(
     private amsService: AmsService,
+    private authService: AuthguardService,
     private route: ActivatedRoute,
     private router: Router,
     private spinner: NgxSpinnerService
@@ -36,7 +38,9 @@ export class LoginInComponent implements OnInit {
     this.spinner.show();
     this.amsService.getUser(user).subscribe((loginData) => {
       localStorage.setItem('loginvalue', JSON.stringify(loginData));
-      this.router.navigate(['/dashboard']);
+      console.log('check storage data');
+      this.authService.isLoggIn = true;
+      this.router.navigate(['/asset/list']);
       console.log( this.loginvalue, 'user at service'),
       this.spinner.hide();
       // Swal.fire(
@@ -44,4 +48,6 @@ export class LoginInComponent implements OnInit {
       // )
     });
   }
+
+
 }

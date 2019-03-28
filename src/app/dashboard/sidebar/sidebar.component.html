@@ -1,23 +1,25 @@
-<div class="nav-left-sidebar sidebar-dark" *ngIf="hide">
+<div class="nav-left-sidebar sidebar-dark">
   <div class="menu-list">
     <nav class="navbar navbar-expand-sm navbar-light">
+
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav flex-column">
           <li class="nav-item ">
             <a
-              class="nav-link"
-              [routerLink]="['/dashboard']"
-              routerLinkActive="router-link-active"
-              ><i class="fa fa-fw fa-user-circle"></i>Dashboard
-            </a>
+                class="nav-link"
+                [routerLink]="['/dashboard']"
+                routerLinkActive="router-link-active"
+                ><i class="fa fa-fw fa-user-circle"></i>Dashboard
+               </a
+            >
           </li>
           <li class="nav-item">
             <a
-              class="nav-link"
-              [routerLink]="['/asset/list']"
-              routerLinkActive="router-link-active"
-              ><i class="fa fa-fw fa-rocket"></i>Assest</a
-            >
+                class="nav-link"
+                [routerLink]="['/asset/list']"
+                routerLinkActive="router-link-active"
+                ><i class="fa fa-fw fa-rocket"></i>Assest</a
+              >
           </li>
           <li class="nav-item">
             <a

@@ -6,6 +6,7 @@
     <h3 class="aligncontract">Contract</h3>
 
     <div class="row">
+
       <div class="col-6 col-md-4">
         <label for="status">Sale Type</label>
         <select
@@ -15,7 +16,7 @@
           id="saleType"
           class="form-control"
         >
-          <option value="1" selected="1">Counter</option>
+          <option value="1">Counter</option>
           <option value="2">Rented</option>
           <option value="3">Installment</option>
         </select>
@@ -54,8 +55,10 @@
           }}</option>
         </select>
       </div>
+
     </div>
-    <div class="row" *ngIf="this.contract.saleType !== '1'">
+
+    <div class="row" *ngIf="this.contract.saleType > 1">
       <div class="col-6 col-md-4">
         <label for="contractDate">Contract Date</label>
         <input
@@ -83,21 +86,21 @@
 
       <div class="col-6 col-md-4">
         <label for="duration">Contract Duration</label>
-            <select
-              [(ngModel)]="contract.duration"
-              type="text"
-              name="asset"
-              id="asset"
-              class="form-control"
-              placeholder=""
-              (change)="getExpiry()"
-            >
-            <option value="12">1 Year</option>
-            <option value="6">6 Months</option>
-            <option value="1">Month</option>
-            <option value="weekly">Week</option>
-            <option value="daily">Day</option>
-            </select>
+        <select
+          [(ngModel)]="contract.duration"
+          type="text"
+          name="asset"
+          id="asset"
+          class="form-control"
+          placeholder=""
+          (change)="getExpiry()"
+        >
+          <option value="12">1 Year</option>
+          <option value="6">6 Months</option>
+          <option value="1">Month</option>
+          <option value="weekly">Week</option>
+          <option value="daily">Day</option>
+        </select>
       </div>
 
       <div class="col-6 col-md-4">
@@ -125,14 +128,15 @@
       </div>
 
       <div class="col-6 col-md-4">
-        <label for="quoted">Price Quoted</label>
+        <label for="priceQuoted">Price Quoted</label>
         <input
           [(ngModel)]="contract.priceQuoted"
-          type="text"
-          name="qouted"
-          id="qouted"
+          type="number"
+          name="priceQuoted"
+          id="priceQuoted"
           class="form-control"
           placeholder=""
+          (change)="calculate()"
         />
       </div>
 
@@ -173,38 +177,41 @@
           id="mathod"
           class="form-control"
           placeholder="Payment Schedule"
-          (change)="getInst()"
+          (change)="calculate()"
         >
-        <option value="annual" *ngIf="contract.duration > 6">Annual</option>
-        <option value="bi-annual" *ngIf="contract.duration > 1">6 Months</option>
-        <option value="monthly">Monthly</option>
-        <option value="weekly">Weekly</option>
-        <option value="daily">Daily</option>
+          <option value="annual" *ngIf="contract.duration > 6">Annual</option>
+          <option value="bi-annual" *ngIf="contract.duration > 1"
+            >6 Months</option
+          >
+          <option value="monthly">Monthly</option>
+          <option value="weekly">Weekly</option>
+          <option value="daily">Daily</option>
         </select>
       </div>
-      <div class="col-6 col-md-4">
+
+      <div class="col-6 col-md-4" *ngIf="contract.saleType > 2">
         <label for="downPayment">Down Payment</label>
         <input
           [(ngModel)]="contract.downPayment"
-          type="text"
+          type="number"
           name="downPayment"
           id="downPayment"
           class="form-control"
           placeholder=""
-          (change)="getTotalPay()"
+          (change)="calculate()"
         />
       </div>
 
       <div class="col-6 col-md-4">
         <label for="avdancePayment">Advance Payment</label>
         <input
-          [(ngModel)]="contract.avdancePayment"
-          type="text"
+          [(ngModel)]="contract.advancePayment"
+          type="number"
           name="advancePayment"
           id="advancePayment"
           class="form-control"
           placeholder=""
-          (change)="getTotalPay()"
+          (change)="calculate()"
         />
       </div>
 
@@ -225,63 +232,50 @@
       </div>
 
       <div class="col-6 col-md-4">
-        <label for="quoted">Total Payable</label>
-        <input
-          [(ngModel)]="contract.totalPayable"
-          type="text"
-          name="qouted"
-          id="qouted"
-          class="form-control"
-          placeholder=""
-          (change)="getTotalPay()"
-        />
-      </div>
-      <div class="col-6 col-md-4">
-        <label for="quoted">Installment / Rent</label>
+        <label for="installment">Installment / Rent</label>
         <input
           [(ngModel)]="contract.installment"
-          type="text"
-          name="qouted"
-          id="qouted"
+          type="number"
+          name="installment"
+          id="installment"
           class="form-control"
           placeholder="Installment / Rent"
         />
       </div>
-      <div class="col-6 col-md-4">
-        <label for="balance">Balance</label>
+
+    </div>
+
+    <div class="col-6 col-md-4" *ngIf="contract.saleType > 0">
+        <label for="totalPayable">Total Payable</label>
         <input
-          [(ngModel)]="contract.balance"
-          type="text"
-          name="balance"
-          id="balance"
+          [(ngModel)]="contract.totalPayable"
+          type="number"
+          name="totalPayable"
+          id="totalPayable"
           class="form-control"
-          value= "this.balance"
+          placeholder=""
         />
       </div>
-    </div>
-    <div class="row float-right">
-      <button
-        type="submit"
-        (click)="addContract(contract)"
-        class="btn btn-success"
-      >
-        Save
-      </button>
-      <button type="submit" (click)="openCustomer()" class="btn btn-warning">
-        Create Customer
-      </button>
 
-      <button type="submit" (click)="openAsset()" class="btn btn-warning">
-        Create Asset
-      </button>
-      <button
-        type="submit"
-        [routerLink]="['/contract/list']"
-        routerLinkActive="router-link-active"
-        class="btn btn-danger"
-      >
-        Cancel
-      </button>
+<hr />
+      <div class="row float-right">
+        <button
+          type="submit"
+          (click)="addContract(contract)"
+          class="btn btn-success"
+        >
+          Save
+        </button>
+        <button type="submit" (click)="openCustomer()" class="btn btn-primary">
+          Create Customer
+        </button>
+
+        <button type="submit" (click)="openAsset()" class="btn btn-warning">
+          Create Asset
+        </button>
+        <button type="submit" (click)="close()" class="btn btn-danger">
+          Cancel
+        </button>
+      </div>
     </div>
-  </div>
 </form>

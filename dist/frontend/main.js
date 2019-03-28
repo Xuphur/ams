@@ -317,7 +317,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n.navbar {\n  background-color: rgb(0, 157, 248);\n  color: white;\n  text-align: left;\n  vertical-align: middle;\n  height: 60px;\n  width: 100%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvRGFzaGJvYXJkL2hlYWRlci9oZWFkZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0E7RUFDRSxrQ0FBa0M7RUFDbEMsWUFBWTtFQUNaLGdCQUFnQjtFQUNoQixzQkFBc0I7RUFDdEIsWUFBWTtFQUNaLFdBQVc7QUFDYiIsImZpbGUiOiJzcmMvYXBwL0Rhc2hib2FyZC9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbi5uYXZiYXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMCwgMTU3LCAyNDgpO1xuICBjb2xvcjogd2hpdGU7XG4gIHRleHQtYWxpZ246IGxlZnQ7XG4gIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG4gIGhlaWdodDogNjBweDtcbiAgd2lkdGg6IDEwMCU7XG59XG4iXX0= */"
+module.exports = "\n.navbar {\n  background-color: rgb(0, 157, 248);\n  color: white;\n  text-align: left;\n  vertical-align: middle;\n  height: 60px;\n  width: 100%;\n}\n\n.btn-search {\n  background-color: rgb(0, 157, 248);\n  outline: 0;\n  border-width: 0 0 0px;\n  color: white;\n}\n\nul {\n  list-style-type: none;\n  text-align: left;\n  left: 0;\n  right: auto;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvRGFzaGJvYXJkL2hlYWRlci9oZWFkZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0E7RUFDRSxrQ0FBa0M7RUFDbEMsWUFBWTtFQUNaLGdCQUFnQjtFQUNoQixzQkFBc0I7RUFDdEIsWUFBWTtFQUNaLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGtDQUFrQztFQUNsQyxVQUFVO0VBQ1YscUJBQXFCO0VBQ3JCLFlBQVk7QUFDZDs7QUFFQTtFQUNFLHFCQUFxQjtFQUNyQixnQkFBZ0I7RUFDaEIsT0FBTztFQUNQLFdBQVc7QUFDYiIsImZpbGUiOiJzcmMvYXBwL0Rhc2hib2FyZC9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbi5uYXZiYXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMCwgMTU3LCAyNDgpO1xuICBjb2xvcjogd2hpdGU7XG4gIHRleHQtYWxpZ246IGxlZnQ7XG4gIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG4gIGhlaWdodDogNjBweDtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi5idG4tc2VhcmNoIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDAsIDE1NywgMjQ4KTtcbiAgb3V0bGluZTogMDtcbiAgYm9yZGVyLXdpZHRoOiAwIDAgMHB4O1xuICBjb2xvcjogd2hpdGU7XG59XG5cbnVsIHtcbiAgbGlzdC1zdHlsZS10eXBlOiBub25lO1xuICB0ZXh0LWFsaWduOiBsZWZ0O1xuICBsZWZ0OiAwO1xuICByaWdodDogYXV0bztcbn0iXX0= */"
 
 /***/ }),
 
@@ -328,7 +328,7 @@ module.exports = "\n.navbar {\n  background-color: rgb(0, 157, 248);\n  color: w
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<link\n  rel=\"stylesheet\"\n  href=\"https://use.fontawesome.com/releases/v5.6.3/css/all.css\"\n  integrity=\"sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/\"\n  crossorigin=\"anonymous\"\n/>\n\n<nav class=\"navbar navbar-expand-lg navbar-dark\" *ngIf=\"isLoggedIn\">\n  <a class=\"navbar-brand\" href=\"#\">AMS</a>\n  <button\n    class=\"navbar-toggler\"\n    type=\"button\"\n    data-toggle=\"collapse\"\n    data-target=\"#navbarText\"\n    aria-controls=\"navbarText\"\n    aria-expanded=\"false\"\n    aria-label=\"Toggle navigation\"\n  >\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n  <div class=\"collapse navbar-collapse\" id=\"navbarText\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" [routerLink]=\"['/user/new']\" routerLinkActive=\"router-link-active\"\n          >Home</a\n        >\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\">Features</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\">Pricing</a>\n      </li>\n    </ul>\n    <!-- <div class=\"searchbar\">\n              <input class=\"search_input\" type=\"text\" name=\"\" placeholder=\"Search...\">\n              <a href=\"#\" class=\"search_icon\"><i class=\"fas fa-search\"></i></a>\n          </div> -->\n  </div>\n</nav>\n"
+module.exports = "<link\n  rel=\"stylesheet\"\n  href=\"https://use.fontawesome.com/releases/v5.6.3/css/all.css\"\n  integrity=\"sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/\"\n  crossorigin=\"anonymous\"\n/>\n\n<nav class=\"navbar navbar-expand-lg navbar-dark\">\n   <div class=\"collapse navbar-collapse\" id=\"navbarText\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" [routerLink]=\"['/dashboard']\" routerLinkActive=\"router-link-active\"\n          >AMS</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\"  [routerLink]=\"['/asset/list']\"routerLinkActive=\"router-link-active\">Asset</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" [routerLink]=\"['/customer/list']\"routerLinkActive=\"router-link-active\">Customer</a>\n      </li>\n      <li class=\"nav-item\">\n          <a class=\"nav-link\" [routerLink]=\"['/contract/list']\"routerLinkActive=\"router-link-active\">Contract</a>\n        </li>\n    </ul>\n  </div>\n      <div ngbDropdown [placement]=\"['bottom-right']\" class=\"float-right\" >\n        <button class=\"btn-lg btn-search\" id=\"dropdownBasic1\" ngbDropdownToggle></button>\n        <div ngbDropdownMenu aria-labelledby=\"dropdownBasic1\">\n          <ul>\n          <li ngbDropdownItem (click)=\"logout()\"><i class=\"fas fa-sign-out-alt\"></i>Logout</li>\n        </ul>\n        </div>\n    </div>\n</nav>\n"
 
 /***/ }),
 
@@ -345,16 +345,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _authguard_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../authguard.service */ "./src/app/authguard.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
 
 
 
 var HeaderComponent = /** @class */ (function () {
-    function HeaderComponent(authService) {
+    function HeaderComponent(authService, router) {
         this.authService = authService;
+        this.router = router;
     }
     HeaderComponent.prototype.ngOnInit = function () {
         console.log(this.authService.isLoggedIn(), 'is login');
         this.isLoggedIn = this.authService.isLoggedIn();
+    };
+    HeaderComponent.prototype.logout = function () {
+        localStorage.removeItem('loginvalue');
+        this.authService.isLoggIn = false;
+        this.router.navigate(['/']);
     };
     HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -362,7 +370,8 @@ var HeaderComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./header.component.html */ "./src/app/Dashboard/header/header.component.html"),
             styles: [__webpack_require__(/*! ./header.component.css */ "./src/app/Dashboard/header/header.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_authguard_service__WEBPACK_IMPORTED_MODULE_2__["AuthguardService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_authguard_service__WEBPACK_IMPORTED_MODULE_2__["AuthguardService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
     ], HeaderComponent);
     return HeaderComponent;
 }());
@@ -389,7 +398,7 @@ module.exports = ".nav-left-sidebar {\n  background-color: #ffffff;\n  color: #3
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"nav-left-sidebar sidebar-dark\"*ngIf=\"hide\">\n  <div class=\"menu-list\">\n    <nav class=\"navbar navbar-expand-sm navbar-light\">\n      <a class=\"d-xl-none d-lg-none\" href=\"#\">Dashboard</a>\n      <button\n        class=\"nav-link\"\n        type=\"button\"\n        [routerLink]=\"['/dashboard']\"\n        routerLinkActive=\"router-link-active\"\n      >\n        <i class=\"fa fa-fw fa-user-circle\"></i>Dashboard\n      </button>\n      <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n        <ul class=\"navbar-nav flex-column\">\n          <!-- <li class=\"nav-divider\">\n                      Menu\n                  </li> -->\n          <li class=\"nav-item \">\n            <span\n              ><a\n                class=\"nav-link\"\n                [routerLink]=\"['/dashboard']\"\n                routerLinkActive=\"router-link-active\"\n                ><i class=\"fa fa-fw fa-user-circle\"></i>Dashboard\n                <span class=\"badge badge-success\"></span></a\n            ></span>\n          </li>\n          <li class=\"nav-item\">\n            <span\n              ><a\n                class=\"nav-link\"\n                [routerLink]=\"['/asset/list']\"\n                routerLinkActive=\"router-link-active\"\n                ><i class=\"fa fa-fw fa-rocket\"></i>Assest</a\n              ></span\n            >\n          </li>\n          <li class=\"nav-item\">\n            <a\n              class=\"nav-link\"\n              [routerLink]=\"['/customer/list']\"\n              routerLinkActive=\"router-link-active\"\n              ><i class=\"fas fa-fw fa-chart-pie\"></i>Customer</a\n            >\n          </li>\n          <li class=\"nav-item \">\n            <a\n              class=\"nav-link\"\n              [routerLink]=\"['//contract/list']\"\n              routerLinkActive=\"router-link-active\"\n              ><i class=\"fab fa-fw fa-wpforms\"></i>Contract</a\n            >\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"#\"\n              ><i class=\"fas fa-fw fa-table\"></i>Reports</a\n            >\n          </li>\n        </ul>\n      </div>\n    </nav>\n  </div>\n</div>\n"
+module.exports = "<div class=\"nav-left-sidebar sidebar-dark\">\n  <div class=\"menu-list\">\n    <nav class=\"navbar navbar-expand-sm navbar-light\">\n\n      <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n        <ul class=\"navbar-nav flex-column\">\n          <li class=\"nav-item \">\n            <a\n                class=\"nav-link\"\n                [routerLink]=\"['/dashboard']\"\n                routerLinkActive=\"router-link-active\"\n                ><i class=\"fa fa-fw fa-user-circle\"></i>Dashboard\n               </a\n            >\n          </li>\n          <li class=\"nav-item\">\n            <a\n                class=\"nav-link\"\n                [routerLink]=\"['/asset/list']\"\n                routerLinkActive=\"router-link-active\"\n                ><i class=\"fa fa-fw fa-rocket\"></i>Assest</a\n              >\n          </li>\n          <li class=\"nav-item\">\n            <a\n              class=\"nav-link\"\n              [routerLink]=\"['/customer/list']\"\n              routerLinkActive=\"router-link-active\"\n              ><i class=\"fas fa-fw fa-chart-pie\"></i>Customer</a\n            >\n          </li>\n          <li class=\"nav-item \">\n            <a\n              class=\"nav-link\"\n              [routerLink]=\"['//contract/list']\"\n              routerLinkActive=\"router-link-active\"\n              ><i class=\"fab fa-fw fa-wpforms\"></i>Contract</a\n            >\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"#\"\n              ><i class=\"fas fa-fw fa-table\"></i>Reports</a\n            >\n          </li>\n        </ul>\n      </div>\n    </nav>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -414,8 +423,6 @@ var SidebarComponent = /** @class */ (function () {
         this.authService = authService;
     }
     SidebarComponent.prototype.ngOnInit = function () {
-        console.log(this.authService.isLoggedIn(), 'is login');
-        this.hide = this.authService.isLoggedIn();
     };
     SidebarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -450,7 +457,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-// import { NewcontractComponent } from './components/contract/newcontract/newcontract.component';
 var AmsService = /** @class */ (function () {
     function AmsService(http, modalService) {
         this.http = http;
@@ -645,7 +651,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var routes = [
     // { path: '', component: LoginInComponent },
-    { path: '', redirectTo: '/login', pathMatch: 'full' },
+    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
     { path: 'login', component: _components_users_login_in_login_in_component__WEBPACK_IMPORTED_MODULE_8__["LoginInComponent"] },
     { path: 'user/new', component: _components_users_signup_signup_component__WEBPACK_IMPORTED_MODULE_9__["SignupComponent"] },
     { path: 'asset/list', component: _components_asset_listasset_listasset_component__WEBPACK_IMPORTED_MODULE_3__["ListassetComponent"] },
@@ -688,7 +694,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n     <app-header ></app-header>\n\n<div class=\"row\">\n    <div class=\"col-2\">\n        <app-sidebar></app-sidebar>\n    </div>\n<div class=\"col-10\">\n    <router-outlet></router-outlet>\n </div>\n  </div>\n\n"
+module.exports = "\n     <app-header *ngIf=\"this.authService.isLoggIn\" ></app-header>\n  <div class=\"row\">\n    <div class=\"col-2\" *ngIf=\"this.authService.isLoggIn\">\n        <app-sidebar></app-sidebar>\n    </div>\n<div class=\"col-10\">\n    <router-outlet></router-outlet>\n </div>\n  </div>\n"
 
 /***/ }),
 
@@ -713,6 +719,7 @@ var AppComponent = /** @class */ (function () {
         this.authService = authService;
         this.title = 'Asset Management System';
         this.logincheck = '';
+        this.authService.isLoggIn = this.authService.isLoggedIn();
     }
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1496,7 +1503,7 @@ module.exports = ".align{\nmargin-top: 20px;\npadding-left: 15px;\n}\n.aligncont
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form>\n  <div class=\"container\">\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"close()\">\n      <span aria-hidden=\"true\">&times;</span>\n    </button>\n    <h3 class=\"aligncontract\">Contract</h3>\n\n    <div class=\"row\">\n      <div class=\"col-6 col-md-4\">\n        <label for=\"status\">Sale Type</label>\n        <select\n          [(ngModel)]=\"contract.saleType\"\n          type=\"text\"\n          name=\"saleType\"\n          id=\"saleType\"\n          class=\"form-control\"\n        >\n          <option value=\"1\" selected=\"1\">Counter</option>\n          <option value=\"2\">Rented</option>\n          <option value=\"3\">Installment</option>\n        </select>\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"Select Customer\">Select Customer</label>\n        <select\n          [(ngModel)]=\"contract.customer\"\n          type=\"text\"\n          name=\"customer\"\n          id=\"customer\"\n          class=\"form-control\"\n          placeholder=\"\"\n        >\n          <option\n            value=\"{{ customer?._id }}\"\n            *ngFor=\"let customer of customerlist\"\n            >{{ customer?.customer?.name }}</option\n          >\n        </select>\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"Select Asset\">Select Asset</label>\n        <select\n          [(ngModel)]=\"contract.asset\"\n          type=\"text\"\n          name=\"asset\"\n          id=\"asset\"\n          class=\"form-control\"\n          placeholder=\"\"\n        >\n          <option value=\"{{ asset?._id }}\" *ngFor=\"let asset of assetlist\">{{\n            asset?.title\n          }}</option>\n        </select>\n      </div>\n    </div>\n    <div class=\"row\" *ngIf=\"this.contract.saleType !== '1'\">\n      <div class=\"col-6 col-md-4\">\n        <label for=\"contractDate\">Contract Date</label>\n        <input\n          [(ngModel)]=\"contract.contractDate\"\n          type=\"date\"\n          name=\"contractDate\"\n          id=\"contractDate\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"startDate\">Contract Start Date</label>\n        <input\n          [(ngModel)]=\"contract.startDate\"\n          type=\"date\"\n          name=\"startdate\"\n          id=\"startDate\"\n          class=\"form-control\"\n          placeholder=\"\"\n          (change)=\"calculateTotalPayable()\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"duration\">Contract Duration</label>\n            <select\n              [(ngModel)]=\"contract.duration\"\n              type=\"text\"\n              name=\"asset\"\n              id=\"asset\"\n              class=\"form-control\"\n              placeholder=\"\"\n              (change)=\"calculateTotalPayable()\"\n            >\n            <option value=\"12\">1 Year</option>\n            <option value=\"6\">6 Months</option>\n            <option value=\"1\">Month</option>\n            <option value=\"weekly\">Week</option>\n            <option value=\"daily\">Day</option>\n            </select>\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"increment\">Increment</label>\n        <input\n          [(ngModel)]=\"contract.increment\"\n          type=\"text\"\n          name=\"increament\"\n          id=\"increment\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"incrementSchedule\">Increment Schedule</label>\n        <select\n          [(ngModel)]=\"contract.incrementSchedule\"\n          type=\"text\"\n          name=\"incrementSchedule\"\n          id=\"incrementSchedule\"\n          class=\"form-control\"\n          placeholder=\"\"\n        >\n          <option value=\"1\">Annual</option>\n          <option value=\"2\">6 Months</option>\n          <option value=\"3\">Monthly</option>\n        </select>\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"expiry\">Expiry Date</label>\n        <input\n          [(ngModel)]=\"contract.expiryDate\"\n          type=\"date\"\n          name=\"expiry\"\n          id=\"expiry\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"cancelation\">Cancelation Date</label>\n        <input\n          [(ngModel)]=\"contract.cancelation\"\n          type=\"date\"\n          name=\"cancelation\"\n          id=\"cancelation\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"mathod\">Payment Schedule</label>\n        <select\n          [(ngModel)]=\"contract.paymentMathod\"\n          type=\"text\"\n          name=\"mathod\"\n          id=\"mathod\"\n          class=\"form-control\"\n          placeholder=\"\"\n          (change)=\"calculateTotalPayable()\"\n        >\n        <option value=\"annual\">Annual</option>\n        <option value=\"bi-annual\">6 Months</option>\n        <option value=\"monthly\">Monthly</option>\n        <option value=\"weekly\">Weekly</option>\n        <option value=\"daily\">Daily</option>\n        </select>\n      </div>\n      <div class=\"col-6 col-md-4\">\n        <label for=\"downPayment\">Down Payment</label>\n        <input\n          [(ngModel)]=\"contract.downPayment\"\n          type=\"text\"\n          name=\"downPayment\"\n          id=\"downPayment\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"avdancePayment\">Advance Payment</label>\n        <input\n          [(ngModel)]=\"contract.avdancePayment\"\n          type=\"text\"\n          name=\"advancePayment\"\n          id=\"advancePayment\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"status\">Contract Status</label>\n        <select\n          [(ngModel)]=\"contract.status\"\n          type=\"text\"\n          name=\"status\"\n          id=\"status\"\n          class=\"form-control\"\n          placeholder=\"\"\n        >\n          <option value=\"Open\">Open</option>\n          <option value=\"Canceled\">Canceled</option>\n          <option value=\"Expired\">Expired</option>\n        </select>\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"quoted\">Price Quoted</label>\n        <input\n          [(ngModel)]=\"contract.priceQuoted\"\n          type=\"text\"\n          name=\"qouted\"\n          id=\"qouted\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"quoted\">Total Payable</label>\n        <input\n          [(ngModel)]=\"contract.totalPayable\"\n          type=\"text\"\n          name=\"qouted\"\n          id=\"qouted\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n      <div class=\"col-6 col-md-4\">\n        <label for=\"quoted\">Installment / Rent</label>\n        <input\n          [(ngModel)]=\"contract.installment\"\n          type=\"text\"\n          name=\"qouted\"\n          id=\"qouted\"\n          class=\"form-control\"\n          placeholder=\"Installment / Rent\"\n        />\n      </div>\n      <div class=\"col-6 col-md-4\">\n        <label for=\"balance\">Balance</label>\n        <input\n          [(ngModel)]=\"contract.balance\"\n          type=\"text\"\n          name=\"balance\"\n          id=\"balance\"\n          class=\"form-control\"\n          value= \"this.balance\"\n        />\n      </div>\n    </div>\n    <div class=\"row float-right\">\n      <button\n        type=\"submit\"\n        (click)=\"addContract(contract)\"\n        class=\"btn btn-success\"\n      >\n        Save\n      </button>\n      <button type=\"submit\" (click)=\"openCustomer()\" class=\"btn btn-warning\">\n        Create Customer\n      </button>\n\n      <button type=\"submit\" (click)=\"openAsset()\" class=\"btn btn-warning\">\n        Create Asset\n      </button>\n      <button\n        type=\"submit\"\n        [routerLink]=\"['/contract/list']\"\n        routerLinkActive=\"router-link-active\"\n        class=\"btn btn-danger\"\n      >\n        Cancel\n      </button>\n    </div>\n  </div>\n</form>\n"
+module.exports = "<form>\n  <div class=\"container\">\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"close()\">\n      <span aria-hidden=\"true\">&times;</span>\n    </button>\n    <h3 class=\"aligncontract\">Contract</h3>\n\n    <div class=\"row\">\n      <div class=\"col-6 col-md-4\">\n        <label for=\"status\">Sale Type</label>\n        <select\n          [(ngModel)]=\"contract.saleType\"\n          type=\"text\"\n          name=\"saleType\"\n          id=\"saleType\"\n          class=\"form-control\"\n        >\n          <option value=\"1\" selected=\"1\">Counter</option>\n          <option value=\"2\">Rented</option>\n          <option value=\"3\">Installment</option>\n        </select>\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"Select Customer\">Select Customer</label>\n        <select\n          [(ngModel)]=\"contract.customer\"\n          type=\"text\"\n          name=\"customer\"\n          id=\"customer\"\n          class=\"form-control\"\n          placeholder=\"\"\n        >\n          <option\n            value=\"{{ customer?._id }}\"\n            *ngFor=\"let customer of customerlist\"\n            >{{ customer?.customer?.name }}</option\n          >\n        </select>\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"Select Asset\">Select Asset</label>\n        <select\n          [(ngModel)]=\"contract.asset\"\n          type=\"text\"\n          name=\"asset\"\n          id=\"asset\"\n          class=\"form-control\"\n          placeholder=\"\"\n        >\n          <option value=\"{{ asset?._id }}\" *ngFor=\"let asset of assetlist\">{{\n            asset?.title\n          }}</option>\n        </select>\n      </div>\n    </div>\n    <div class=\"row\" *ngIf=\"this.contract.saleType !== '1'\">\n      <div class=\"col-6 col-md-4\">\n        <label for=\"contractDate\">Contract Date</label>\n        <input\n          [(ngModel)]=\"contract.contractDate\"\n          type=\"date\"\n          name=\"contractDate\"\n          id=\"contractDate\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"startDate\">Contract Start Date</label>\n        <input\n          [(ngModel)]=\"contract.startDate\"\n          type=\"date\"\n          name=\"startdate\"\n          id=\"startDate\"\n          class=\"form-control\"\n          placeholder=\"\"\n          (change)=\"getExpiry()\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"duration\">Contract Duration</label>\n            <select\n              [(ngModel)]=\"contract.duration\"\n              type=\"text\"\n              name=\"asset\"\n              id=\"asset\"\n              class=\"form-control\"\n              placeholder=\"\"\n              (change)=\"getExpiry()\"\n            >\n            <option value=\"12\">1 Year</option>\n            <option value=\"6\">6 Months</option>\n            <option value=\"1\">Month</option>\n            <option value=\"weekly\">Week</option>\n            <option value=\"daily\">Day</option>\n            </select>\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"expiry\">Expiry Date</label>\n        <input\n          [(ngModel)]=\"contract.expiryDate\"\n          type=\"date\"\n          name=\"expiry\"\n          id=\"expiry\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\" *ngIf=\"this.editMode === true\">\n        <label for=\"cancelation\">Cancelation Date</label>\n        <input\n          [(ngModel)]=\"contract.cancelation\"\n          type=\"date\"\n          name=\"cancelation\"\n          id=\"cancelation\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"quoted\">Price Quoted</label>\n        <input\n          [(ngModel)]=\"contract.priceQuoted\"\n          type=\"text\"\n          name=\"qouted\"\n          id=\"qouted\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"increment\">Increment %</label>\n        <input\n          [(ngModel)]=\"contract.increment\"\n          type=\"text\"\n          name=\"increament\"\n          id=\"increment\"\n          class=\"form-control\"\n          placeholder=\"\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"incrementSchedule\">Increment Schedule</label>\n        <select\n          [(ngModel)]=\"contract.incrementSchedule\"\n          type=\"text\"\n          name=\"incrementSchedule\"\n          id=\"incrementSchedule\"\n          class=\"form-control\"\n          placeholder=\"Increment Schedule\"\n        >\n          <option value=\"1\">Annual</option>\n          <option value=\"2\">6 Months</option>\n          <option value=\"3\">Monthly</option>\n        </select>\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"mathod\">Payment Schedule</label>\n        <select\n          [(ngModel)]=\"contract.paymentMathod\"\n          type=\"text\"\n          name=\"mathod\"\n          id=\"mathod\"\n          class=\"form-control\"\n          placeholder=\"Payment Schedule\"\n          (change)=\"getInst()\"\n        >\n        <option value=\"annual\" *ngIf=\"contract.duration > 6\">Annual</option>\n        <option value=\"bi-annual\" *ngIf=\"contract.duration > 1\">6 Months</option>\n        <option value=\"monthly\">Monthly</option>\n        <option value=\"weekly\">Weekly</option>\n        <option value=\"daily\">Daily</option>\n        </select>\n      </div>\n      <div class=\"col-6 col-md-4\">\n        <label for=\"downPayment\">Down Payment</label>\n        <input\n          [(ngModel)]=\"contract.downPayment\"\n          type=\"text\"\n          name=\"downPayment\"\n          id=\"downPayment\"\n          class=\"form-control\"\n          placeholder=\"\"\n          (change)=\"getTotalPay()\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"avdancePayment\">Advance Payment</label>\n        <input\n          [(ngModel)]=\"contract.avdancePayment\"\n          type=\"text\"\n          name=\"advancePayment\"\n          id=\"advancePayment\"\n          class=\"form-control\"\n          placeholder=\"\"\n          (change)=\"getTotalPay()\"\n        />\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"status\">Contract Status</label>\n        <select\n          [(ngModel)]=\"contract.status\"\n          type=\"text\"\n          name=\"status\"\n          id=\"status\"\n          class=\"form-control\"\n          placeholder=\"\"\n        >\n          <option value=\"Open\">Open</option>\n          <option value=\"Canceled\">Canceled</option>\n          <option value=\"Expired\">Expired</option>\n        </select>\n      </div>\n\n      <div class=\"col-6 col-md-4\">\n        <label for=\"quoted\">Total Payable</label>\n        <input\n          [(ngModel)]=\"contract.totalPayable\"\n          type=\"text\"\n          name=\"qouted\"\n          id=\"qouted\"\n          class=\"form-control\"\n          placeholder=\"\"\n          (change)=\"getTotalPay()\"\n        />\n      </div>\n      <div class=\"col-6 col-md-4\">\n        <label for=\"quoted\">Installment / Rent</label>\n        <input\n          [(ngModel)]=\"contract.installment\"\n          type=\"text\"\n          name=\"qouted\"\n          id=\"qouted\"\n          class=\"form-control\"\n          placeholder=\"Installment / Rent\"\n        />\n      </div>\n      <div class=\"col-6 col-md-4\">\n        <label for=\"balance\">Balance</label>\n        <input\n          [(ngModel)]=\"contract.balance\"\n          type=\"text\"\n          name=\"balance\"\n          id=\"balance\"\n          class=\"form-control\"\n          value= \"this.balance\"\n        />\n      </div>\n    </div>\n    <div class=\"row float-right\">\n      <button\n        type=\"submit\"\n        (click)=\"addContract(contract)\"\n        class=\"btn btn-success\"\n      >\n        Save\n      </button>\n      <button type=\"submit\" (click)=\"openCustomer()\" class=\"btn btn-warning\">\n        Create Customer\n      </button>\n\n      <button type=\"submit\" (click)=\"openAsset()\" class=\"btn btn-warning\">\n        Create Asset\n      </button>\n      <button\n        type=\"submit\"\n        [routerLink]=\"['/contract/list']\"\n        routerLinkActive=\"router-link-active\"\n        class=\"btn btn-danger\"\n      >\n        Cancel\n      </button>\n    </div>\n  </div>\n</form>\n"
 
 /***/ }),
 
@@ -1535,7 +1542,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var NewcontractComponent = /** @class */ (function () {
-    // balance = this.contract.totalPayable - (this.contract.avdancePayment + this.contract.downPayment);
     function NewcontractComponent(amsService, fb, router, route, modalService, activeModal) {
         var _this = this;
         this.amsService = amsService;
@@ -1544,6 +1550,7 @@ var NewcontractComponent = /** @class */ (function () {
         this.route = route;
         this.modalService = modalService;
         this.activeModal = activeModal;
+        this.editMode = this.amsService.editMode;
         this.A = Date.now();
         this.contract = new src_app_contract_model__WEBPACK_IMPORTED_MODULE_2__["Contract"]();
         this.route.paramMap.subscribe(function (parameterMap) {
@@ -1603,54 +1610,87 @@ var NewcontractComponent = /** @class */ (function () {
         var modalRef = this.modalService.open(_asset_newasset_newasset_component__WEBPACK_IMPORTED_MODULE_7__["NewassetComponent"], { size: 'lg' });
         modalRef.componentInstance.name = 'New Asset';
     };
-    NewcontractComponent.prototype.calculateTotalPayable = function () {
-        if (this.contract.startDate && this.contract.duration && this.contract.installment) {
-            var numberOf = null;
-            var totalPayment = 0;
+    NewcontractComponent.prototype.getExpiry = function () {
+        if (this.contract.startDate && this.contract.duration) {
             var startDate = moment__WEBPACK_IMPORTED_MODULE_9__(this.contract.startDate);
             var expirayDate = this.getDuration(startDate, this.contract.duration);
             if (expirayDate) {
                 this.contract.expiryDate = moment__WEBPACK_IMPORTED_MODULE_9__(expirayDate._d).format('YYYY-MM-DD');
-                if (this.contract.paymentMathod) {
-                    numberOf = this.getNoOfBaseOnSchedule(expirayDate, startDate, this.contract.paymentMathod);
-                    console.log(numberOf, 'no of ');
-                    totalPayment = numberOf * this.contract.installment;
-                    this.contract.totalPayable = totalPayment;
-                }
             }
-            // console.log(expirayDate._d, 'expiray');
-            // console.log(this.contract.duration);
-            // console.log(this.contract.installment);
         }
     };
-    NewcontractComponent.prototype.getNoOfBaseOnSchedule = function (expirayDate, startDate, paymentSchedule) {
+    // calculateTotalPayable() {
+    //   if (this.contract.startDate && this.contract.duration) {
+    //     let numberOf = null;
+    //     let totalPayment = 0;
+    //     const startDate = moment(this.contract.startDate);
+    //     const expirayDate = this.getDuration(startDate, this.contract.duration);
+    //     if (expirayDate) {
+    //       this.contract.expiryDate = moment(expirayDate._d).format('YYYY-MM-DD');
+    //       if (this.contract.paymentMathod) {
+    //         numberOf = this.getNoOfBaseOnSchedule(expirayDate, startDate, this.contract.paymentMathod);
+    //         console.log(numberOf, 'no of ');
+    //         totalPayment = numberOf * this.contract.installment;
+    //         this.contract.totalPayable = totalPayment;
+    //       }
+    //     }
+    //   }
+    // }
+    NewcontractComponent.prototype.getDuration = function (startDate, duration) {
+        var expirayDate = null;
+        if (duration === 'weekly') {
+            expirayDate = moment__WEBPACK_IMPORTED_MODULE_9__(startDate).add(1, 'week');
+        }
+        else if (duration === 'daily') {
+            expirayDate = moment__WEBPACK_IMPORTED_MODULE_9__(startDate).add(1, 'days');
+        }
+        else {
+            var parseDuration = parseInt(duration, 10);
+            expirayDate = moment__WEBPACK_IMPORTED_MODULE_9__(startDate).add(parseDuration, 'months');
+        }
+        return expirayDate;
+    };
+    NewcontractComponent.prototype.getInst = function () {
+        var numberOf = null;
+        var total = null;
+        var inst = 0;
+        var startDate = this.contract.startDate;
+        console.log(startDate, 'Start date');
+        var expirayDate = this.getDuration(startDate, this.contract.duration);
+        console.log(expirayDate, 'Exp date');
+        if (this.contract.paymentMathod && this.contract.startDate && this.contract.duration) {
+            numberOf = this.getNoOfInst(expirayDate, startDate, this.contract.paymentMathod);
+            console.log(numberOf, 'no of inst');
+            total = this.getTotalPay();
+            inst = total / numberOf;
+            this.contract.installment = inst;
+        }
+    };
+    NewcontractComponent.prototype.getTotalPay = function () {
+        var totalPay = this.contract.totalPayable;
+        if (this.contract.priceQuoted && this.contract.downPayment && this.contract.advancePayment) {
+            totalPay = this.contract.priceQuoted - (this.contract.downPayment + this.contract.advancePayment);
+        }
+        console.log(totalPay, 'total pay');
+        this.contract.totalPayable = totalPay;
+    };
+    NewcontractComponent.prototype.getNoOfInst = function (expirayDate, startDate, paymentSchedule) {
         var diff = null;
         switch (paymentSchedule) {
             case 'weekly':
                 diff = expirayDate.diff(startDate, 'week');
+                console.log(diff, 'diff');
                 break;
             case 'daily':
                 diff = expirayDate.diff(startDate, 'days');
+                console.log(diff, 'diff');
                 break;
             default:
                 diff = expirayDate.diff(startDate, 'months');
+                console.log(diff, 'diff');
                 break;
         }
         return diff;
-    };
-    NewcontractComponent.prototype.getDuration = function (currentDate, duration) {
-        var expirayDate = null;
-        if (duration === 'weekly') {
-            expirayDate = moment__WEBPACK_IMPORTED_MODULE_9__(currentDate).add(1, 'week');
-        }
-        else if (duration === 'daily') {
-            expirayDate = moment__WEBPACK_IMPORTED_MODULE_9__(currentDate).add(1, 'days');
-        }
-        else {
-            var parseDuration = parseInt(duration, 10);
-            expirayDate = moment__WEBPACK_IMPORTED_MODULE_9__(currentDate).add(parseDuration, 'months');
-        }
-        return expirayDate;
     };
     NewcontractComponent.prototype.close = function () {
         this.activeModal.close();
@@ -1769,7 +1809,7 @@ module.exports = ".btn-circle {\r\n  height: 40px;\r\n  width: 40px;\r\n  float:
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card shadow bg-white rounded\">\n  <div class=\"card-header shadow rounded\">\n    <h3>Customer List</h3>\n  </div>\n  <div class=\"row card-body\">\n    <div class=\"col\">\n      <input\n        [(ngModel)]=\"name\"\n        class=\"search\"\n        type=\"text\"\n        name=\"\"\n        placeholder=\"Search By Name\"\n      />\n      <button type=\"button\" class=\"btn-search\" (click)=\"searchByName(name)\">\n        <i class=\"fas fa-angle-down\"></i>\n      </button>\n    </div>\n    <div class=\"col\">\n      <input\n        [(ngModel)]=\"cnic\"\n        class=\"search\"\n        type=\"text\"\n        name=\"\"\n        placeholder=\"Search By CNIC\"\n      />\n      <button type=\"button\" class=\"btn-search\" (click)=\"searchByCnic(cnic)\">\n        <i class=\"fas fa-angle-down\"></i>\n      </button>\n    </div>\n    <div class=\"col\">\n      <input\n        [(ngModel)]=\"mobile\"\n        class=\"search\"\n        type=\"text\"\n        name=\"\"\n        placeholder=\"Search By Mobile\"\n      />\n      <button type=\"button\" class=\"btn-search\" (click)=\"searchByMobile(mobile)\">\n        <i class=\"fas fa-angle-down\"></i>\n      </button>\n    </div>\n\n    <div class=\"col float-right\">\n      <button class=\"btn btn-primary btn-circle\" (click)=\"open()\">\n        <i class=\"fa fa-plus\"></i>\n      </button>\n    </div>\n  </div>\n</div>\n<div class=\"card shadow bg-white rounded\">\n  <div class=\"card-body\">\n    <table>\n      <thead>\n        <th>Name &nbsp; <i class=\"fas fa-sort\"></i></th>\n        <th>Contact&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>CNIC&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Guarantor&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Contact&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Actions</th>\n      </thead>\n      <tbody\n        *ngFor=\"\n          let customer of (customerlist\n            | slice: (page - 1) * pageSize:(page - 1) * pageSize + pageSize)\n        \"\n      >\n        <td>{{ customer?.customer?.name }}</td>\n        <td>{{ customer?.customer?.mobile1 }}</td>\n        <td>{{ customer?.customer?.cnic }}</td>\n        <td>{{ customer?.guarantor?.gname }}</td>\n        <td>{{ customer?.guarantor?.gmobile }}</td>\n        <td>\n          <button\n            class=\"btn btn-sm btn-outline-warning\"\n            (click)=\"edit(customer._id)\"\n          >\n            <i class=\"far fa-edit\"></i></button\n          >&nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-danger\"\n            (click)=\"deleteCustomer(customer._id)\"\n          >\n            <i class=\"far fa-trash-alt\"></i></button\n          >&nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-success\"\n            (click)=\"viewCustomer(customer._id)\"\n          >\n            <i class=\"far fa-eye\"></i>\n          </button>\n        </td>\n      </tbody>\n    </table>\n  </div>\n</div>\n<div class=\"card-footer\">\n    <div class=\"row\">\n       <div class=\"col-2\">\n           <label for=\"pageSize\">Show Rows</label>\n           <select\n             [(ngModel)]=\"pageSize\"\n             type=\"text\"\n             name=\"pageSize\"\n             id=\"pageSize\"\n           >\n             <option value=\"5\">5</option>\n             <option value=\"10\">10</option>\n             <option value=\"20\">20</option>\n           </select>\n         </div>\n\n      <div class=\"col-10\">\n       <ngb-pagination\n         class=\"d-flex justify-content-end\"\n         [(page)]=\"page\"\n         [pageSize]=\"pageSize\"\n         [collectionSize]=\"customerlist.length\"\n         [maxSize]=\"5\"\n       >\n       </ngb-pagination>\n      </div>\n    </div>\n"
+module.exports = "<div class=\"card shadow bg-white rounded\">\n  <div class=\"card-header shadow rounded\">\n    <h3>Customer List</h3>\n  </div>\n  <div class=\"row card-body\">\n    <div class=\"col\">\n      <input\n        [(ngModel)]=\"name\"\n        class=\"search\"\n        type=\"text\"\n        name=\"\"\n        placeholder=\"Search By Name\"\n        (change)=\"searchByName(name)\"\n      />\n      <button type=\"button\" class=\"btn-search\" (click)=\"searchByName(name)\">\n        <i class=\"fas fa-angle-down\"></i>\n      </button>\n    </div>\n    <div class=\"col\">\n      <input\n        [(ngModel)]=\"cnic\"\n        class=\"search\"\n        type=\"text\"\n        name=\"\"\n        placeholder=\"Search By CNIC\"\n        onkeyup=\"searchByCnic(cnic)\"\n      />\n      <button type=\"button\" class=\"btn-search\" (click)=\"searchByCnic(cnic)\">\n        <i class=\"fas fa-angle-down\"></i>\n      </button>\n    </div>\n    <div class=\"col\">\n      <input\n        [(ngModel)]=\"mobile\"\n        class=\"search\"\n        type=\"text\"\n        name=\"\"\n        placeholder=\"Search By Mobile\"\n        (change)=\"searchByMobile(mobile)\"\n      />\n      <button type=\"button\" class=\"btn-search\" (click)=\"searchByMobile(mobile)\">\n        <i class=\"fas fa-angle-down\"></i>\n      </button>\n    </div>\n\n    <div class=\"col float-right\">\n      <button class=\"btn btn-primary btn-circle\" (click)=\"open()\">\n        <i class=\"fa fa-plus\"></i>\n      </button>\n    </div>\n  </div>\n</div>\n<div class=\"card shadow bg-white rounded\">\n  <div class=\"card-body\">\n    <table>\n      <thead>\n        <th>Name &nbsp; <i class=\"fas fa-sort\"></i></th>\n        <th>Contact&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>CNIC&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Guarantor&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Contact&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Actions</th>\n      </thead>\n      <tbody\n        *ngFor=\"\n          let customer of (customerlist\n            | slice: (page - 1) * pageSize:(page - 1) * pageSize + pageSize)\n        \"\n      >\n        <td>{{ customer?.customer?.name }}</td>\n        <td>{{ customer?.customer?.mobile1 }}</td>\n        <td>{{ customer?.customer?.cnic }}</td>\n        <td>{{ customer?.guarantor?.gname }}</td>\n        <td>{{ customer?.guarantor?.gmobile }}</td>\n        <td>\n          <button\n            class=\"btn btn-sm btn-outline-warning\"\n            (click)=\"edit(customer._id)\"\n          >\n            <i class=\"far fa-edit\"></i></button\n          >&nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-danger\"\n            (click)=\"deleteCustomer(customer._id)\"\n          >\n            <i class=\"far fa-trash-alt\"></i></button\n          >&nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-success\"\n            (click)=\"viewCustomer(customer._id)\"\n          >\n            <i class=\"far fa-eye\"></i>\n          </button>\n        </td>\n      </tbody>\n    </table>\n  </div>\n</div>\n<div class=\"card-footer\">\n    <div class=\"row\">\n       <div class=\"col-2\">\n           <label for=\"pageSize\">Show Rows</label>\n           <select\n             [(ngModel)]=\"pageSize\"\n             type=\"text\"\n             name=\"pageSize\"\n             id=\"pageSize\"\n           >\n             <option value=\"5\">5</option>\n             <option value=\"10\">10</option>\n             <option value=\"20\">20</option>\n           </select>\n         </div>\n\n      <div class=\"col-10\">\n       <ngb-pagination\n         class=\"d-flex justify-content-end\"\n         [(page)]=\"page\"\n         [pageSize]=\"pageSize\"\n         [collectionSize]=\"customerlist.length\"\n         [maxSize]=\"5\"\n       >\n       </ngb-pagination>\n      </div>\n    </div>\n"
 
 /***/ }),
 
@@ -2411,7 +2451,7 @@ var SearchComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n  body\n  {\n  background-color:#FAFAFA;\n\n\n  }\n  .wrapper\n  {\n    width: 100%;\n      height: 100%;\n  }\n  .box1{\n     text-align: center;\n  }\n  .header{\n    font-family: cursive;\n      font-size: 29px;\n        margin-top: -38px;\n  }\n  .box-initial{\n    border: 1px solid #eee;\n      width: 59%;\n      margin: 0 auto;\n      margin-top: 45px;\n    padding: 49px;\n        background: white;\n  }\n  .input{\n     border-radius: 5px;\n      margin-bottom: 0px;\n      margin-top: 13px;\n     padding:8px 12px;\n    box-sizing:box1;\n        width: 263px;\n          background-color: #FAFAFA;\n\n\n  }\n  .btn1{\n\n      width: 262px;\n    cursor:pointer;\n    background-color:#3897f0;\n    border:1px solid #3897f0;\n    padding:5px 12px;\n    color:#fff;\n    font-weight:bold;\n        margin-top: 20px;\n    border-radius: 5px;\n\n  }\n  .btn2{\n    width: 262px;\n    cursor:pointer;\n    background-color:#3897f0;\n    border:1px solid #3897f0;\n    padding:5px 12px;\n    color:#fff;\n    font-weight:bold;\n    border-radius: 5px;\n  }\n  .box-content{\n    width: 45%;\n      margin: 0 auto;\n    height:287px;\n    margin-top: 90px;\n  }\n  .box2-content{\n    border: 1px solid #eee;\n      width: 59%;\n      text-align: center;\n      margin: 0 auto;\n      margin-top: 20px;\n      height: 65px;\n      padding-top:15px;\n        background: white;\n    letter-spacing:0px;\n  }\n  .image{\n        margin-top: 14px;\n      width: 355px;\n  }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy91c2Vycy9sb2dpbi1pbi9sb2dpbi1pbi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7RUFDRTs7RUFFQSx3QkFBd0I7OztFQUd4QjtFQUNBOztJQUVFLFdBQVc7TUFDVCxZQUFZO0VBQ2hCO0VBQ0E7S0FDRyxrQkFBa0I7RUFDckI7RUFDQTtJQUNFLG9CQUFvQjtNQUNsQixlQUFlO1FBQ2IsaUJBQWlCO0VBQ3ZCO0VBQ0E7SUFDRSxzQkFBc0I7TUFDcEIsVUFBVTtNQUNWLGNBQWM7TUFDZCxnQkFBZ0I7SUFDbEIsYUFBYTtRQUNULGlCQUFpQjtFQUN2QjtFQUNBO0tBQ0csa0JBQWtCO01BQ2pCLGtCQUFrQjtNQUNsQixnQkFBZ0I7S0FDakIsZ0JBQWdCO0lBQ2pCLGVBQWU7UUFDWCxZQUFZO1VBQ1YseUJBQXlCOzs7RUFHakM7RUFDQTs7TUFFSSxZQUFZO0lBQ2QsY0FBYztJQUNkLHdCQUF3QjtJQUN4Qix3QkFBd0I7SUFDeEIsZ0JBQWdCO0lBQ2hCLFVBQVU7SUFDVixnQkFBZ0I7UUFDWixnQkFBZ0I7SUFDcEIsa0JBQWtCOztFQUVwQjtFQUNBO0lBQ0UsWUFBWTtJQUNaLGNBQWM7SUFDZCx3QkFBd0I7SUFDeEIsd0JBQXdCO0lBQ3hCLGdCQUFnQjtJQUNoQixVQUFVO0lBQ1YsZ0JBQWdCO0lBQ2hCLGtCQUFrQjtFQUNwQjtFQUNBO0lBQ0UsVUFBVTtNQUNSLGNBQWM7SUFDaEIsWUFBWTtJQUNaLGdCQUFnQjtFQUNsQjtFQUNBO0lBQ0Usc0JBQXNCO01BQ3BCLFVBQVU7TUFDVixrQkFBa0I7TUFDbEIsY0FBYztNQUNkLGdCQUFnQjtNQUNoQixZQUFZO01BQ1osZ0JBQWdCO1FBQ2QsaUJBQWlCO0lBQ3JCLGtCQUFrQjtFQUNwQjtFQUNBO1FBQ00sZ0JBQWdCO01BQ2xCLFlBQVk7RUFDaEIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3VzZXJzL2xvZ2luLWluL2xvZ2luLWluLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbiAgYm9keVxuICB7XG4gIGJhY2tncm91bmQtY29sb3I6I0ZBRkFGQTtcblxuXG4gIH1cbiAgLndyYXBwZXJcbiAge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgICAgaGVpZ2h0OiAxMDAlO1xuICB9XG4gIC5ib3gxe1xuICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIH1cbiAgLmhlYWRlcntcbiAgICBmb250LWZhbWlseTogY3Vyc2l2ZTtcbiAgICAgIGZvbnQtc2l6ZTogMjlweDtcbiAgICAgICAgbWFyZ2luLXRvcDogLTM4cHg7XG4gIH1cbiAgLmJveC1pbml0aWFse1xuICAgIGJvcmRlcjogMXB4IHNvbGlkICNlZWU7XG4gICAgICB3aWR0aDogNTklO1xuICAgICAgbWFyZ2luOiAwIGF1dG87XG4gICAgICBtYXJnaW4tdG9wOiA0NXB4O1xuICAgIHBhZGRpbmc6IDQ5cHg7XG4gICAgICAgIGJhY2tncm91bmQ6IHdoaXRlO1xuICB9XG4gIC5pbnB1dHtcbiAgICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgICAgbWFyZ2luLWJvdHRvbTogMHB4O1xuICAgICAgbWFyZ2luLXRvcDogMTNweDtcbiAgICAgcGFkZGluZzo4cHggMTJweDtcbiAgICBib3gtc2l6aW5nOmJveDE7XG4gICAgICAgIHdpZHRoOiAyNjNweDtcbiAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjRkFGQUZBO1xuXG5cbiAgfVxuICAuYnRuMXtcblxuICAgICAgd2lkdGg6IDI2MnB4O1xuICAgIGN1cnNvcjpwb2ludGVyO1xuICAgIGJhY2tncm91bmQtY29sb3I6IzM4OTdmMDtcbiAgICBib3JkZXI6MXB4IHNvbGlkICMzODk3ZjA7XG4gICAgcGFkZGluZzo1cHggMTJweDtcbiAgICBjb2xvcjojZmZmO1xuICAgIGZvbnQtd2VpZ2h0OmJvbGQ7XG4gICAgICAgIG1hcmdpbi10b3A6IDIwcHg7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuXG4gIH1cbiAgLmJ0bjJ7XG4gICAgd2lkdGg6IDI2MnB4O1xuICAgIGN1cnNvcjpwb2ludGVyO1xuICAgIGJhY2tncm91bmQtY29sb3I6IzM4OTdmMDtcbiAgICBib3JkZXI6MXB4IHNvbGlkICMzODk3ZjA7XG4gICAgcGFkZGluZzo1cHggMTJweDtcbiAgICBjb2xvcjojZmZmO1xuICAgIGZvbnQtd2VpZ2h0OmJvbGQ7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICB9XG4gIC5ib3gtY29udGVudHtcbiAgICB3aWR0aDogNDUlO1xuICAgICAgbWFyZ2luOiAwIGF1dG87XG4gICAgaGVpZ2h0OjI4N3B4O1xuICAgIG1hcmdpbi10b3A6IDkwcHg7XG4gIH1cbiAgLmJveDItY29udGVudHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjZWVlO1xuICAgICAgd2lkdGg6IDU5JTtcbiAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICAgIG1hcmdpbjogMCBhdXRvO1xuICAgICAgbWFyZ2luLXRvcDogMjBweDtcbiAgICAgIGhlaWdodDogNjVweDtcbiAgICAgIHBhZGRpbmctdG9wOjE1cHg7XG4gICAgICAgIGJhY2tncm91bmQ6IHdoaXRlO1xuICAgIGxldHRlci1zcGFjaW5nOjBweDtcbiAgfVxuICAuaW1hZ2V7XG4gICAgICAgIG1hcmdpbi10b3A6IDE0cHg7XG4gICAgICB3aWR0aDogMzU1cHg7XG4gIH1cbiJdfQ== */"
+module.exports = "\n  body\n  {\n  background-color:#FAFAFA;\n\n\n  }\n  .wrapper\n  {\n    width: 100%;\n      height: 100%;\n  }\n  .box1{\n     text-align: center;\n  }\n  .header{\n    font-family: cursive;\n      font-size: 29px;\n        margin-top: -38px;\n  }\n  .box-initial{\n    border: 1px solid #eee;\n      width: 59%;\n      margin: 0 auto;\n      margin-top: 45px;\n    padding: 49px;\n        background: white;\n  }\n  .input{\n     border-radius: 5px;\n      margin-bottom: 0px;\n      margin-top: 13px;\n     padding:8px 12px;\n    box-sizing:box1;\n        width: 263px;\n          background-color: #FAFAFA;\n\n\n  }\n  .btn1{\n\n      width: 204px;\n    cursor:pointer;\n    background-color:#3897f0;\n    border:1px solid #3897f0;\n    padding:5px 12px;\n    color:#fff;\n    font-weight:bold;\n        margin-top: 20px;\n    border-radius: 5px;\n\n  }\n  .btn2{\n    width: 216px;\n    cursor:pointer;\n    background-color:#3897f0;\n    border:1px solid #3897f0;\n    padding:5px 12px;\n    color:#fff;\n    font-weight:bold;\n    border-radius: 5px;\n  }\n  .box-content{\n    width: 45%;\n      margin: 0 auto;\n    height:287px;\n    margin-top: 90px;\n  }\n  .box2-content{\n    border: 1px solid #eee;\n      width: 59%;\n      text-align: center;\n      margin: 0 auto;\n      margin-top: 20px;\n      height: 65px;\n      padding-top:15px;\n        background: white;\n    letter-spacing:0px;\n  }\n  .image{\n        margin-top: 14px;\n      width: 355px;\n  }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy91c2Vycy9sb2dpbi1pbi9sb2dpbi1pbi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7RUFDRTs7RUFFQSx3QkFBd0I7OztFQUd4QjtFQUNBOztJQUVFLFdBQVc7TUFDVCxZQUFZO0VBQ2hCO0VBQ0E7S0FDRyxrQkFBa0I7RUFDckI7RUFDQTtJQUNFLG9CQUFvQjtNQUNsQixlQUFlO1FBQ2IsaUJBQWlCO0VBQ3ZCO0VBQ0E7SUFDRSxzQkFBc0I7TUFDcEIsVUFBVTtNQUNWLGNBQWM7TUFDZCxnQkFBZ0I7SUFDbEIsYUFBYTtRQUNULGlCQUFpQjtFQUN2QjtFQUNBO0tBQ0csa0JBQWtCO01BQ2pCLGtCQUFrQjtNQUNsQixnQkFBZ0I7S0FDakIsZ0JBQWdCO0lBQ2pCLGVBQWU7UUFDWCxZQUFZO1VBQ1YseUJBQXlCOzs7RUFHakM7RUFDQTs7TUFFSSxZQUFZO0lBQ2QsY0FBYztJQUNkLHdCQUF3QjtJQUN4Qix3QkFBd0I7SUFDeEIsZ0JBQWdCO0lBQ2hCLFVBQVU7SUFDVixnQkFBZ0I7UUFDWixnQkFBZ0I7SUFDcEIsa0JBQWtCOztFQUVwQjtFQUNBO0lBQ0UsWUFBWTtJQUNaLGNBQWM7SUFDZCx3QkFBd0I7SUFDeEIsd0JBQXdCO0lBQ3hCLGdCQUFnQjtJQUNoQixVQUFVO0lBQ1YsZ0JBQWdCO0lBQ2hCLGtCQUFrQjtFQUNwQjtFQUNBO0lBQ0UsVUFBVTtNQUNSLGNBQWM7SUFDaEIsWUFBWTtJQUNaLGdCQUFnQjtFQUNsQjtFQUNBO0lBQ0Usc0JBQXNCO01BQ3BCLFVBQVU7TUFDVixrQkFBa0I7TUFDbEIsY0FBYztNQUNkLGdCQUFnQjtNQUNoQixZQUFZO01BQ1osZ0JBQWdCO1FBQ2QsaUJBQWlCO0lBQ3JCLGtCQUFrQjtFQUNwQjtFQUNBO1FBQ00sZ0JBQWdCO01BQ2xCLFlBQVk7RUFDaEIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3VzZXJzL2xvZ2luLWluL2xvZ2luLWluLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbiAgYm9keVxuICB7XG4gIGJhY2tncm91bmQtY29sb3I6I0ZBRkFGQTtcblxuXG4gIH1cbiAgLndyYXBwZXJcbiAge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgICAgaGVpZ2h0OiAxMDAlO1xuICB9XG4gIC5ib3gxe1xuICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIH1cbiAgLmhlYWRlcntcbiAgICBmb250LWZhbWlseTogY3Vyc2l2ZTtcbiAgICAgIGZvbnQtc2l6ZTogMjlweDtcbiAgICAgICAgbWFyZ2luLXRvcDogLTM4cHg7XG4gIH1cbiAgLmJveC1pbml0aWFse1xuICAgIGJvcmRlcjogMXB4IHNvbGlkICNlZWU7XG4gICAgICB3aWR0aDogNTklO1xuICAgICAgbWFyZ2luOiAwIGF1dG87XG4gICAgICBtYXJnaW4tdG9wOiA0NXB4O1xuICAgIHBhZGRpbmc6IDQ5cHg7XG4gICAgICAgIGJhY2tncm91bmQ6IHdoaXRlO1xuICB9XG4gIC5pbnB1dHtcbiAgICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgICAgbWFyZ2luLWJvdHRvbTogMHB4O1xuICAgICAgbWFyZ2luLXRvcDogMTNweDtcbiAgICAgcGFkZGluZzo4cHggMTJweDtcbiAgICBib3gtc2l6aW5nOmJveDE7XG4gICAgICAgIHdpZHRoOiAyNjNweDtcbiAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjRkFGQUZBO1xuXG5cbiAgfVxuICAuYnRuMXtcblxuICAgICAgd2lkdGg6IDIwNHB4O1xuICAgIGN1cnNvcjpwb2ludGVyO1xuICAgIGJhY2tncm91bmQtY29sb3I6IzM4OTdmMDtcbiAgICBib3JkZXI6MXB4IHNvbGlkICMzODk3ZjA7XG4gICAgcGFkZGluZzo1cHggMTJweDtcbiAgICBjb2xvcjojZmZmO1xuICAgIGZvbnQtd2VpZ2h0OmJvbGQ7XG4gICAgICAgIG1hcmdpbi10b3A6IDIwcHg7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuXG4gIH1cbiAgLmJ0bjJ7XG4gICAgd2lkdGg6IDIxNnB4O1xuICAgIGN1cnNvcjpwb2ludGVyO1xuICAgIGJhY2tncm91bmQtY29sb3I6IzM4OTdmMDtcbiAgICBib3JkZXI6MXB4IHNvbGlkICMzODk3ZjA7XG4gICAgcGFkZGluZzo1cHggMTJweDtcbiAgICBjb2xvcjojZmZmO1xuICAgIGZvbnQtd2VpZ2h0OmJvbGQ7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICB9XG4gIC5ib3gtY29udGVudHtcbiAgICB3aWR0aDogNDUlO1xuICAgICAgbWFyZ2luOiAwIGF1dG87XG4gICAgaGVpZ2h0OjI4N3B4O1xuICAgIG1hcmdpbi10b3A6IDkwcHg7XG4gIH1cbiAgLmJveDItY29udGVudHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjZWVlO1xuICAgICAgd2lkdGg6IDU5JTtcbiAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICAgIG1hcmdpbjogMCBhdXRvO1xuICAgICAgbWFyZ2luLXRvcDogMjBweDtcbiAgICAgIGhlaWdodDogNjVweDtcbiAgICAgIHBhZGRpbmctdG9wOjE1cHg7XG4gICAgICAgIGJhY2tncm91bmQ6IHdoaXRlO1xuICAgIGxldHRlci1zcGFjaW5nOjBweDtcbiAgfVxuICAuaW1hZ2V7XG4gICAgICAgIG1hcmdpbi10b3A6IDE0cHg7XG4gICAgICB3aWR0aDogMzU1cHg7XG4gIH1cbiJdfQ== */"
 
 /***/ }),
 
@@ -2442,6 +2482,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var src_app_user_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/user.model */ "./src/app/user.model.ts");
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var src_app_authguard_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/authguard.service */ "./src/app/authguard.service.ts");
+
 
 
 
@@ -2449,9 +2491,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var LoginInComponent = /** @class */ (function () {
-    function LoginInComponent(amsService, route, router, spinner) {
+    function LoginInComponent(amsService, authService, route, router, spinner) {
         var _this = this;
         this.amsService = amsService;
+        this.authService = authService;
         this.route = route;
         this.router = router;
         this.spinner = spinner;
@@ -2469,7 +2512,9 @@ var LoginInComponent = /** @class */ (function () {
             this.spinner.show();
         this.amsService.getUser(user).subscribe(function (loginData) {
             localStorage.setItem('loginvalue', JSON.stringify(loginData));
-            _this.router.navigate(['/dashboard']);
+            console.log('check storage data');
+            _this.authService.isLoggIn = true;
+            _this.router.navigate(['/asset/list']);
             console.log(_this.loginvalue, 'user at service'),
                 _this.spinner.hide();
             // Swal.fire(
@@ -2485,6 +2530,7 @@ var LoginInComponent = /** @class */ (function () {
             styles: [__webpack_require__(/*! ./login-in.component.css */ "./src/app/components/users/login-in/login-in.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_ams_service__WEBPACK_IMPORTED_MODULE_2__["AmsService"],
+            src_app_authguard_service__WEBPACK_IMPORTED_MODULE_6__["AuthguardService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
             ngx_spinner__WEBPACK_IMPORTED_MODULE_5__["NgxSpinnerService"]])
@@ -2677,7 +2723,7 @@ module.exports = ".btn-circle {\n  height: 40px;\n  width: 40px;\n  float: right
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>this is dashboard</p>\n"
+module.exports = "<p>this is dashboard</p>\n<button class=\"btn btn-lg btn-outline-success\" [routerLink]=\"['/customer/list']\" routerLinkActive=\"router-link-active\" >Customers</button>\n"
 
 /***/ }),
 
@@ -2699,6 +2745,8 @@ var DashboardComponent = /** @class */ (function () {
     function DashboardComponent() {
     }
     DashboardComponent.prototype.ngOnInit = function () {
+    };
+    DashboardComponent.prototype.logout = function () {
     };
     DashboardComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
