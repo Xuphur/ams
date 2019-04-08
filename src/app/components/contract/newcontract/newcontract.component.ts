@@ -25,6 +25,9 @@ export class NewcontractComponent implements OnInit {
   assetlist: any;
   total: any;
   installment: any;
+  noOfInst: any;
+  obj: any;
+  instArray = [];
 
   constructor(
     private amsService: AmsService,
@@ -93,27 +96,6 @@ export class NewcontractComponent implements OnInit {
     modalRef.componentInstance.name = 'New Asset';
   }
 
-
-
-  // calculateTotalPayable() {
-  //   if (this.contract.startDate && this.contract.duration) {
-  //     let numberOf = null;
-  //     let totalPayment = 0;
-  //     const startDate = moment(this.contract.startDate);
-  //     const expirayDate = this.getDuration(startDate, this.contract.duration);
-  //     if (expirayDate) {
-  //       this.contract.expiryDate = moment(expirayDate._d).format('YYYY-MM-DD');
-
-  //       if (this.contract.paymentMathod) {
-  //         numberOf = this.getNoOfBaseOnSchedule(expirayDate, startDate, this.contract.paymentMathod);
-  //         console.log(numberOf, 'no of ');
-  //         totalPayment = numberOf * this.contract.installment;
-  //         this.contract.totalPayable = totalPayment;
-  //       }
-  //     }
-  //   }
-  // }
-
   getExpiry() {
     if (this.contract.startDate && this.contract.duration) {
       const startDate = moment(this.contract.startDate);
@@ -129,7 +111,7 @@ export class NewcontractComponent implements OnInit {
       this.contract.priceQuoted !== undefined &&
       this.contract.downPayment !== undefined &&
       this.contract.advancePayment !== undefined &&
-      this.contract.paymentMathod !== undefined
+      this.contract.paymentMethod !== undefined
     ) {
       this.getTotalPay();
       this.getInst();
@@ -141,8 +123,9 @@ export class NewcontractComponent implements OnInit {
 
   getTotalPay() {
     let totalPay = 0;
-      totalPay = this.contract.priceQuoted -
-        (this.contract.downPayment + this.contract.advancePayment);
+    totalPay =
+      this.contract.priceQuoted -
+      (this.contract.downPayment + this.contract.advancePayment);
     console.log(totalPay, 'total pay');
     this.total = totalPay;
   }
@@ -153,23 +136,25 @@ export class NewcontractComponent implements OnInit {
     let inst = 0;
     const startDate = this.contract.startDate;
     const expirayDate = this.getDuration(startDate, this.contract.duration);
-          numberOf = this.getNoOfInst(expirayDate, startDate, this.contract.paymentMathod);
-      inst = total / numberOf;
-      console.log(inst, 'installment');
-     this.installment = inst;
+    numberOf = this.getNoOfInst(
+      expirayDate,
+      startDate,
+      this.contract.paymentMethod
+    );
+    inst = total / numberOf;
+    console.log(inst, 'installment');
+    this.installment = inst;
   }
 
   getDuration(startDate, duration) {
-    let expirayDate = null;
+    let expiryDate = null;
     if (duration === 'weekly') {
-      expirayDate = moment(startDate).add(1, 'week');
-    } else if (duration === 'daily') {
-      expirayDate = moment(startDate).add(1, 'days');
+      expiryDate = moment(startDate).add(1, 'days');
     } else {
       const parseDuration = parseInt(duration, 10);
-      expirayDate = moment(startDate).add(parseDuration, 'months');
+      expiryDate = moment(startDate).add(parseDuration, 'months');
     }
-    return expirayDate;
+    return expiryDate;
   }
 
   getNoOfInst(expirayDate, startDate, paymentSchedule) {
@@ -188,7 +173,37 @@ export class NewcontractComponent implements OnInit {
         console.log(diff, 'diff');
         break;
     }
+    console.log(diff, 'this is diff');
+    this.noOfInst = diff;
     return diff;
+  }
+
+  getNxt(contract) {
+    this.instArray = [];
+    console.log(this.noOfInst, 'this is numberOf');
+    const paymentSchedule = this.contract.paymentMethod;
+    const nxt = new Date(this.contract.startDate);
+    console.log(nxt);
+    for (let i = 0; i < this.noOfInst; i++) {
+      console.log('running', i);
+      if (paymentSchedule === 'weekly') {
+        nxt.setDate(nxt.getDate() + 7);
+      } else if (paymentSchedule === 'daily') {
+        nxt.setDate(nxt.getDate() + 1);
+      } else {
+        console.log('running for monthly');
+        const parseDuration = parseInt(paymentSchedule, 10);
+        console.log('parsing duration', parseDuration);
+        nxt.setMonth(nxt.getMonth() + parseDuration);
+      }
+      this.obj = {};
+      this.obj.nxtDate = new Date(nxt);
+      this.obj.nxtStatus = false;
+      console.log(this.contract.reaccurance.nxtDate, 'this is nxtDate');
+      this.instArray.push(this.obj);
+      this.contract.reaccurance = this.instArray;
+    }
+    console.log('==================>>>', this.contract.reaccurance);
   }
 
   close() {

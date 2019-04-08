@@ -24,9 +24,7 @@ export class ListrecieptComponent implements OnInit {
 
   ngOnInit() {
     console.log('i m called in listrec');
-    // this.fetchAssetById();
     this.fetchReciept();
-    // this.fetchContractById();
   }
 
   fetchReciept() {

@@ -48,13 +48,22 @@ export class NewassetComponent implements OnInit {
   }
 
   addAsset(asset) {
-    console.log(asset, 'this is new asset'),
+    console.log(asset, 'this is new asset');
+    if (this.amsService.editMode === true) {
+      this.amsService.updateAsset(asset).subscribe(() => {
+        Swal.fire(
+          'Assest Updated Successfully'
+        );
+        this.close();
+      });
+    } else {
       this.amsService.addAsset(asset).subscribe(() => {
         Swal.fire(
           'Assest Inserted Successfully'
         );
         this.close();
       });
+    }
   }
 
   close() {

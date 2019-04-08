@@ -17,7 +17,7 @@ export class Contract {
   downPayment: Number;
   avdancePayment: Number;
   balance: Number;
-  reaccurance: '';
+  reaccurance = '';
   totalRecieved: '';
   expiryDate: '';
   cancelation: '';

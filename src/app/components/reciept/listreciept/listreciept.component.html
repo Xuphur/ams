@@ -23,19 +23,19 @@
     <tr>
       <th scope="col">Sr</th>
       <th scope="col">Date</th>
-      <th scope="col">Mathod</th>
+      <th scope="col">Reciept Number</th>
+      <th scope="col">Payment Method</th>
       <th scope="col">Amount</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let reciept of recieptlist; index as i">
       <td>{{ i + 1 }}</td>
-      <td>{{ reciept?._id }}</td>
       <td>{{ reciept?.recieptDate }}</td>
-      <td>{{ reciept?.paymentMathod }}</td>
+      <td>{{ reciept?.recieptNumber }}</td>
+      <td>{{ reciept?.paymentMethod }}</td>
       <td>{{ reciept?.recivedAmount }}</td>
-      <!-- <td>{{reciept?.contractId}}</td> -->
     </tr>
   </tbody>
 </table>
-<!-- <th scope="row">{{ i + 1 }}</th> -->
+

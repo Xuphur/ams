@@ -1,6 +1,7 @@
 export class Asset {
   assetType: '';
   title: '';
+  status: '';
   assetDetail = {
     vehicle: {
       contractId: '',
@@ -9,7 +10,6 @@ export class Asset {
       model: '',
       year: '',
       colour: '',
-      status: '',
       meterOut: '',
       meterIn: '',
       driveZone: '',
@@ -28,7 +28,6 @@ export class Asset {
         zipcode: ''
       },
       area: '',
-      status: '',
       actualPrice: ''
     },
     item: {

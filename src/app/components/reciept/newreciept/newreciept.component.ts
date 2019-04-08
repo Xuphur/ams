@@ -31,6 +31,7 @@ export class NewrecieptComponent implements OnInit {
     console.log(this.amsService.Id, 'receipt is');
     this.amsService.addReciept(reciept).subscribe(() => {
       this.router.navigate(['/']);
+      this.close();
     });
   }
   close() {

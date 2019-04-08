@@ -48,6 +48,10 @@ export class AmsService {
     console.log(asset._id, 'update at asset service');
     return this.http.put(this.url + '/asset/update/' + asset._id, asset);
   }
+  changeAsset(asset) {
+    console.log(asset._id, 'update at asset service');
+    return this.http.put(this.url + '/asset/update/' + asset._id, asset);
+  }
 
   deleteAsset(id) {
     console.log('Asset Delete');

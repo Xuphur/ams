@@ -72,3 +72,8 @@ select[type="text"] {
   border-width: 0 0 1px;
   border-color: rgb(176, 176, 179);
 }
+
+.btn {
+  outline: 0;
+  border-width: 0 0 0px;
+}

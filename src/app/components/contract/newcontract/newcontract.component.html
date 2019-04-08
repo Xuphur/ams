@@ -169,21 +169,19 @@
       </div>
 
       <div class="col-6 col-md-4">
-        <label for="mathod">Payment Schedule</label>
+        <label for="method">Payment Schedule</label>
         <select
-          [(ngModel)]="contract.paymentMathod"
+          [(ngModel)]="contract.paymentMethod"
           type="text"
-          name="mathod"
-          id="mathod"
+          name="method"
+          id="method"
           class="form-control"
           placeholder="Payment Schedule"
           (change)="calculate()"
         >
-          <option value="annual" *ngIf="contract.duration > 6">Annual</option>
-          <option value="bi-annual" *ngIf="contract.duration > 1"
-            >6 Months</option
-          >
-          <option value="monthly">Monthly</option>
+          <option value="12" *ngIf="contract.duration > 6">Annual</option>
+          <option value="6" *ngIf="contract.duration > 1">6 Months</option>
+          <option value="1">Monthly</option>
           <option value="weekly">Weekly</option>
           <option value="daily">Daily</option>
         </select>
@@ -259,6 +257,13 @@
 
 <hr />
       <div class="row float-right">
+        <button
+          type="submit"
+          (click)="getNxt(contract)"
+          class="btn btn-success"
+        >
+          Get Nxt
+        </button>
         <button
           type="submit"
           (click)="addContract(contract)"

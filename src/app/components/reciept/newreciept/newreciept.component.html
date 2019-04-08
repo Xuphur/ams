@@ -1,42 +1,58 @@
-<h2>New Reciept</h2>
-
 <div class="card">
+  <div class="card-header">
+    <h2>New Reciept</h2>
+  </div>
+
   <form>
-    <div class="row align-items-center">
-      <div class="col-6 col-md-4">
-        <label for="date">Date</label>
-        <input
-          [(ngModel)]="reciept.recieptDate"
-          type="date"
-          name="date"
-          id="date"
-        />
-      </div>
-
-      <div class="col-6 col-md-4">
-        <label for="amount">Recived Amount</label>
-        <input
-          [(ngModel)]="reciept.recivedAmount"
-          type="text"
-          name="amount"
-          id="amount"
-        />
-      </div>
-
-      <div class="col-6 col-md-4">
-        <label for="paymentMathod">Payment Mathod</label>&nbsp;
-        <select
-          [(ngModel)]="reciept.paymentMathod"
-          type="text"
-          name="paymentMathod"
-          id="paymentMathod"
-        >
-          <option value="cash">Cash</option>
-          <option value="cheque">Cheque</option>
-          <option value="onLine">On-Line</option>
-        </select>
-      </div>
+    <div class="col">
+      <label for="date">Date</label>
+      <input
+        [(ngModel)]="reciept.recieptDate"
+        type="date"
+        name="date"
+        id="date"
+      />
     </div>
+
+    <div class="col">
+      <label for="recieptNumber">Reciept Number</label>
+      <input
+        [(ngModel)]="reciept.recieptNumber"
+        type="number"
+        name="recieptNumber"
+        id="recieptNumber"
+      />
+    </div>
+
+    <div class="col">
+      <label for="amount">Recived Amount</label>
+      <input
+        [(ngModel)]="reciept.recivedAmount"
+        type="number"
+        name="amount"
+        id="amount"
+      />
+    </div>
+
+    <div class="col">
+      <label for="paymentMethod">Payment Method</label>&nbsp;
+      <select
+        [(ngModel)]="reciept.paymentMethod"
+        type="text"
+        name="paymentMethod"
+        id="paymentMethod"
+      >
+        <option value="1">Cash</option>
+        <option value="2">Cheque</option>
+        <option value="3">On-Line</option>
+      </select>
+    </div>
+
+    <div class="col" *ngIf="reciept.paymentMethod > 1">
+      <label for="amount">Transaction ID</label>
+      <input [(ngModel)]="reciept.trId" type="number" name="trId" id="trId" />
+    </div>
+
     <div class="card-footer float-right">
       <button
         type="submit"

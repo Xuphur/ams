@@ -1,34 +1,48 @@
-<link
-  rel="stylesheet"
-  href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-  integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-  crossorigin="anonymous"
-/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<nav class="navbar">
+  <a
+  class="navbar-brand mb-0 h1"
+      [routerLink]="['/dashboard']"
+      routerLinkActive="router-link-active"
+      >AMS</a
+    >
+  <div class="col">
+    <button
+    class="btn btn-sm btn-search"
+    [routerLink]="['/asset/list']"
+    routerLinkActive="router-link-active"
+  >Assets</button>
+    <button
+    class="btn btn-sm btn-search"
+    [routerLink]="['/customer/list']"
+    routerLinkActive="router-link-active"
+  >Customers</button>
+    <button
+    class="btn btn-sm btn-search"
+    [routerLink]="['/contract/list']"
+    routerLinkActive="router-link-active"
+  >Contracts</button>
 
-<nav class="navbar navbar-expand-lg navbar-dark">
-   <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/dashboard']" routerLinkActive="router-link-active"
-          >AMS</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link"  [routerLink]="['/asset/list']"routerLinkActive="router-link-active">Asset</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/customer/list']"routerLinkActive="router-link-active">Customer</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/contract/list']"routerLinkActive="router-link-active">Contract</a>
-        </li>
-    </ul>
   </div>
-      <div ngbDropdown [placement]="['bottom-right']" class="float-right" >
-        <button class="btn-lg btn-search" id="dropdownBasic1" ngbDropdownToggle></button>
-        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-          <ul>
-          <li ngbDropdownItem (click)="logout()"><i class="fas fa-sign-out-alt"></i>Logout</li>
-        </ul>
-        </div>
+  <div ngbDropdown [placement]="['bottom-right']" class="float-right">
+    <button
+      class="btn btn-sm btn-search"
+      id="dropdownBasic1"
+      ngbDropdownToggle
+    >User Management</button>
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+      <ul>
+        <li
+          ngbDropdownItem
+          [routerLink]="['/signup']"
+          routerLinkActive="router-link-active"
+        >
+          <i class="fas fa-user-plus"></i> &nbsp; Create New
+        </li>
+        <li ngbDropdownItem (click)="logout()">
+          <i class="fas fa-sign-out-alt"></i> &nbsp; Logout
+        </li>
+      </ul>
     </div>
+  </div>
 </nav>
