@@ -10,20 +10,22 @@
         type="text"
         name=""
         placeholder="Search By Status"
+        (change)="searchByStatus(status)"
       />
       <button type="button" class="btn-search" (click)="searchByStatus(status)">
         <i class="fas fa-angle-down"></i>
       </button>
     </div>
     <div class="col">
+      <label>Select Month</label>
       <input
-        [(ngModel)]="owner"
+        [(ngModel)]="month"
         class="search"
-        type="text"
-        name=""
-        placeholder="Search By abc"
+        type="date"
+        name="month"
+        placeholder="Search By month"
       />
-      <button type="button" class="btn-search" (click)="searchByOwner(owner)">
+      <button type="button" class="btn-search" (click)="searchByMonth(month)">
         <i class="fas fa-angle-down"></i>
       </button>
     </div>
@@ -58,6 +60,7 @@
         <th>Asset Owner&nbsp;<i class="fas fa-sort"></i></th>
         <th>Contract Date&nbsp;<i class="fas fa-sort"></i></th>
         <th>Balance&nbsp;<i class="fas fa-sort"></i></th>
+        <th>Next Due&nbsp;<i class="fas fa-sort"></i></th>
         <th>Installment&nbsp;<i class="fas fa-sort"></i></th>
         <th>Actions</th>
         <!-- <th>Owner Address</th> -->
@@ -69,11 +72,12 @@
         "
       >
         <td>{{ contract?.status }}</td>
-        <td>{{ contract?.customer?.customer.name }}</td>
+        <td>{{ contract?.customer?.customer?.name }}</td>
         <td>{{ contract?.asset?.assetType }}</td>
-        <td>{{ contract?.asset?.owner.name }}</td>
+        <td>{{ contract?.asset?.owner?.name }}</td>
         <td>{{ contract?.startDate }}</td>
         <td>{{ contract?.balance }}</td>
+        <td>{{ contract?.nxtDue | date: 'mediumDate'}} </td>
         <td>{{ contract?.installment }}</td>
         <td>
           <button

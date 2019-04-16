@@ -398,7 +398,7 @@ module.exports = ".nav-left-sidebar {\n  background-color: #ffffff;\n  color: #3
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"nav-left-sidebar sidebar-dark\">\n  <div class=\"menu-list\">\n    <nav class=\"navbar navbar-expand-sm navbar-light\">\n\n      <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n        <ul class=\"navbar-nav flex-column\">\n          <li class=\"nav-item \">\n            <a\n                class=\"nav-link\"\n                [routerLink]=\"['/dashboard']\"\n                routerLinkActive=\"router-link-active\"\n                ><i class=\"fa fa-fw fa-user-circle\"></i>Dashboard\n               </a\n            >\n          </li>\n          <li class=\"nav-item\">\n            <a\n                class=\"nav-link\"\n                [routerLink]=\"['/asset/list']\"\n                routerLinkActive=\"router-link-active\"\n                ><i class=\"fa fa-fw fa-rocket\"></i>Assest</a\n              >\n          </li>\n          <li class=\"nav-item\">\n            <a\n              class=\"nav-link\"\n              [routerLink]=\"['/customer/list']\"\n              routerLinkActive=\"router-link-active\"\n              ><i class=\"fas fa-fw fa-chart-pie\"></i>Customer</a\n            >\n          </li>\n          <li class=\"nav-item \">\n            <a\n              class=\"nav-link\"\n              [routerLink]=\"['//contract/list']\"\n              routerLinkActive=\"router-link-active\"\n              ><i class=\"fab fa-fw fa-wpforms\"></i>Contract</a\n            >\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"#\"\n              ><i class=\"fas fa-fw fa-table\"></i>Reports</a\n            >\n          </li>\n        </ul>\n      </div>\n    </nav>\n  </div>\n</div>\n"
+module.exports = "<div class=\"nav-left-sidebar sidebar-dark\">\n  <div class=\"menu-list\">\n    <nav class=\"navbar navbar-expand-sm navbar-light\">\n\n      <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n        <ul class=\"navbar-nav flex-column\">\n          <li class=\"nav-item \">\n            <a\n                class=\"nav-link\"\n                [routerLink]=\"['/dashboard']\"\n                routerLinkActive=\"router-link-active\"\n                ><i class=\"fa fa-fw fa-user-circle\"></i>Dashboard\n               </a\n            >\n          </li>\n          <li class=\"nav-item\">\n            <a\n                class=\"nav-link\"\n                [routerLink]=\"['/asset/list']\"\n                routerLinkActive=\"router-link-active\"\n                ><i class=\"fa fa-fw fa-rocket\"></i>Assest</a\n              >\n          </li>\n          <li class=\"nav-item\">\n            <a\n              class=\"nav-link\"\n              [routerLink]=\"['/customer/list']\"\n              routerLinkActive=\"router-link-active\"\n              ><i class=\"fas fa-fw fa-chart-pie\"></i>Customer</a\n            >\n          </li>\n          <li class=\"nav-item \">\n            <a\n              class=\"nav-link\"\n              [routerLink]=\"['//contract/list']\"\n              routerLinkActive=\"router-link-active\"\n              ><i class=\"fab fa-fw fa-wpforms\"></i>Contract</a\n            >\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"/reports/main\"\n              ><i class=\"fas fa-fw fa-table\"></i>Reports</a\n            >\n          </li>\n        </ul>\n      </div>\n    </nav>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -524,7 +524,7 @@ var AmsService = /** @class */ (function () {
         return this.http.get(this.url + '/user/delete/' + id);
     };
     // Reciept CRUDs
-    AmsService.prototype.getReciept = function (_id) {
+    AmsService.prototype.getReciept = function () {
         return this.http.get(this.url + '/reciept/all');
     };
     AmsService.prototype.getRecieptById = function (id) {
@@ -588,9 +588,9 @@ var AmsService = /** @class */ (function () {
         console.log(id, 'id at service to edit');
         return this.http.get(this.url + '/contract/' + id);
     };
-    AmsService.prototype.getContractByOwner = function (owner) {
-        console.log(owner, 'id at service to edit');
-        return this.http.get(this.url + '/contract/owner/' + owner);
+    AmsService.prototype.getContractByMonth = function (month) {
+        console.log(month, 'month at service to search');
+        return this.http.get(this.url + '/contract/month/' + month);
     };
     AmsService.prototype.getContractByCustomer = function (customer) {
         console.log(customer, 'contract by customer');
@@ -642,6 +642,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_users_login_in_login_in_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/users/login-in/login-in.component */ "./src/app/components/users/login-in/login-in.component.ts");
 /* harmony import */ var _components_users_signup_signup_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/users/signup/signup.component */ "./src/app/components/users/signup/signup.component.ts");
 /* harmony import */ var _authguard_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./authguard.service */ "./src/app/authguard.service.ts");
+/* harmony import */ var _components_reports_main_main_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/reports/main/main.component */ "./src/app/components/reports/main/main.component.ts");
+
 
 
 
@@ -662,6 +664,7 @@ var routes = [
     { path: 'contract/list', component: _components_contract_listcontract_listcontract_component__WEBPACK_IMPORTED_MODULE_4__["ListcontractComponent"] },
     { path: 'customer/list', component: _components_customer_listcustomer_listcustomer_component__WEBPACK_IMPORTED_MODULE_5__["ListcustomerComponent"] },
     { path: 'dashboard', canActivate: [_authguard_service__WEBPACK_IMPORTED_MODULE_10__["AuthguardService"]], component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_6__["DashboardComponent"] },
+    { path: 'reports/main', component: _components_reports_main_main_component__WEBPACK_IMPORTED_MODULE_11__["MainComponent"] },
     { path: 'search', component: _components_search_search_component__WEBPACK_IMPORTED_MODULE_7__["SearchComponent"] }
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -1009,7 +1012,7 @@ module.exports = ".btn-circle {\r\n  height: 40px;\r\n  width: 40px;\r\n  float:
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card shadow rounded\">\n  <div class=\"card-header shadow rounded\">\n    <h3>Asset List</h3>\n  </div>\n  <div class=\"card-body\">\n  <div class=\"row\">\n    <div class=\"col\">\n      <input\n        [(ngModel)]=\"title\"\n        class=\"search\"\n        type=\"text\"\n        name=\"\"\n        placeholder=\"Search By Title\"\n      />\n      <button type=\"button\" class=\"btn-search\" (click)=\"search(title)\">\n        <i class=\"fas fa-angle-down\"></i>\n      </button>\n    </div>\n    <div class=\"col\">\n      <input\n        [(ngModel)]=\"owner\"\n        class=\"search\"\n        type=\"text\"\n        name=\"\"\n        placeholder=\"Search By Owner\"\n      />\n      <button type=\"button\" class=\"btn-search\" (click)=\"searchByOwner(owner)\">\n        <i class=\"fas fa-angle-down\"></i>\n      </button>\n    </div>\n    <div class=\"col\">\n      <input\n        [(ngModel)]=\"type\"\n        class=\"search\"\n        type=\"text\"\n        name=\"\"\n        placeholder=\"Search By type\"\n      />\n      <button type=\"button\" class=\"btn-search\" (click)=\"searchByType(type)\">\n        <i class=\"fas fa-angle-down\"></i>\n      </button>\n    </div>\n    <div class=\"col float-right newbox\">\n      <button class=\"btn btn-primary btn-circle\" (click)=\"open()\">\n        <i class=\"fa fa-plus\"></i>\n      </button>\n    </div>\n    </div>\n  </div>\n</div>\n<div class=\"card shadow rounded\">\n  <div class=\"card-body\">\n    <table>\n      <thead>\n        <th>Title &nbsp; <i class=\"fas fa-sort\"></i></th>\n        <th>Type&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Owner Name&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Owner Contact&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Owner CNIC&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Actions</th>\n        <!-- <th>Owner Address</th> -->\n      </thead>\n\n      <tbody\n        *ngFor=\"\n          let asset of (assetlist\n            | slice: (page - 1) * pageSize:(page - 1) * pageSize + pageSize)\n        \"\n      >\n        <td>{{ asset?.title }}</td>\n        <td>{{ asset?.assetType }}</td>\n        <td>{{ asset?.owner?.name }}</td>\n        <td>{{ asset?.owner?.mobile1 }}</td>\n        <td>{{ asset?.owner?.cnic }}</td>\n        <td>\n          &nbsp;<button\n            class=\"btn btn-sm btn-outline-warning\"\n            (click)=\"edit(asset._id)\"\n          >\n          <i class=\"fas fa-edit\"></i> Edit</button\n          >&nbsp; &nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-danger\"\n            (click)=\"deleteAsset(asset._id)\"\n          >\n            <i class=\"far fa-trash-alt\"></i> Delete</button\n          >&nbsp; &nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-success\"\n            (click)=\"viewAsset(asset._id)\"\n          >\n            <i class=\"far fa-eye\"></i> View\n          </button>\n        </td>\n      </tbody>\n    </table>\n  </div>\n</div>\n<div class=\"card-footer\">\n <div class=\"row\">\n    <div class=\"col-2\">\n        <label for=\"pageSize\">Show Rows</label>\n        <select\n          [(ngModel)]=\"pageSize\"\n          type=\"text\"\n          name=\"pageSize\"\n          id=\"pageSize\"\n        >\n          <option value=\"5\">5</option>\n          <option value=\"10\">10</option>\n          <option value=\"20\">20</option>\n        </select>\n      </div>\n\n   <div class=\"col-10\">\n    <ngb-pagination\n      class=\"d-flex justify-content-end\"\n      [(page)]=\"page\"\n      [pageSize]=\"pageSize\"\n      [collectionSize]=\"assetlist.length\"\n      [maxSize]=\"5\"\n    >\n    </ngb-pagination>\n   </div>\n </div>\n\n\n</div>\n"
+module.exports = "<div class=\"card shadow rounded\">\n  <div class=\"card-header shadow rounded\">\n    <h3>Asset List</h3>\n  </div>\n  <div class=\"card-body\">\n  <div class=\"row\">\n    <div class=\"col\">\n      <input\n        [(ngModel)]=\"title\"\n        class=\"search\"\n        type=\"text\"\n        name=\"\"\n        placeholder=\"Search By Title\"\n        (change)=\"search(title)\"\n      />\n      <button type=\"button\" class=\"btn-search\" (click)=\"search(title)\">\n        <i class=\"fas fa-angle-down\"></i>\n      </button>\n    </div>\n    <div class=\"col\">\n      <input\n        [(ngModel)]=\"owner\"\n        class=\"search\"\n        type=\"text\"\n        name=\"\"\n        placeholder=\"Search By Owner\"\n        (change)=\"searchByOwner(owner)\"\n      />\n      <button type=\"button\" class=\"btn-search\" (click)=\"searchByOwner(owner)\">\n        <i class=\"fas fa-angle-down\"></i>\n      </button>\n    </div>\n    <div class=\"col\">\n      <input\n        [(ngModel)]=\"type\"\n        class=\"search\"\n        type=\"text\"\n        name=\"\"\n        placeholder=\"Search By type\"\n        (change)=\"searchByType(type)\"\n      />\n      <button type=\"button\" class=\"btn-search\" (click)=\"searchByType(type)\">\n        <i class=\"fas fa-angle-down\"></i>\n      </button>\n    </div>\n    <div class=\"col float-right newbox\">\n      <button class=\"btn btn-primary btn-circle\" (click)=\"open()\">\n        <i class=\"fa fa-plus\"></i>\n      </button>\n    </div>\n    </div>\n  </div>\n</div>\n<div class=\"card shadow rounded\">\n  <div class=\"card-body\">\n    <table>\n      <thead>\n        <th>Title &nbsp; <i class=\"fas fa-sort\"></i></th>\n        <th>Type&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Owner Name&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Owner Contact&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Owner CNIC&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Actions</th>\n        <!-- <th>Owner Address</th> -->\n      </thead>\n\n      <tbody\n        *ngFor=\"\n          let asset of (assetlist\n            | slice: (page - 1) * pageSize:(page - 1) * pageSize + pageSize)\n        \"\n      >\n        <td>{{ asset?.title }}</td>\n        <td>{{ asset?.assetType }}</td>\n        <td>{{ asset?.owner?.name }}</td>\n        <td>{{ asset?.owner?.mobile1 }}</td>\n        <td>{{ asset?.owner?.cnic }}</td>\n        <td>\n          &nbsp;<button\n            class=\"btn btn-sm btn-outline-warning\"\n            (click)=\"edit(asset._id)\"\n          >\n          <i class=\"fas fa-edit\"></i> Edit</button\n          >&nbsp; &nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-danger\"\n            (click)=\"deleteAsset(asset._id)\"\n          >\n            <i class=\"far fa-trash-alt\"></i> Delete</button\n          >&nbsp; &nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-success\"\n            (click)=\"viewAsset(asset._id)\"\n          >\n            <i class=\"far fa-eye\"></i> View\n          </button>\n        </td>\n      </tbody>\n    </table>\n  </div>\n</div>\n<div class=\"card-footer\">\n <div class=\"row\">\n    <div class=\"col-2\">\n        <label for=\"pageSize\">Show Rows</label>\n        <select\n          [(ngModel)]=\"pageSize\"\n          type=\"text\"\n          name=\"pageSize\"\n          id=\"pageSize\"\n        >\n          <option value=\"5\">5</option>\n          <option value=\"10\">10</option>\n          <option value=\"20\">20</option>\n        </select>\n      </div>\n\n   <div class=\"col-10\">\n    <ngb-pagination\n      class=\"d-flex justify-content-end\"\n      [(page)]=\"page\"\n      [pageSize]=\"pageSize\"\n      [collectionSize]=\"assetlist.length\"\n      [maxSize]=\"5\"\n    >\n    </ngb-pagination>\n   </div>\n </div>\n\n\n</div>\n"
 
 /***/ }),
 
@@ -1046,6 +1049,9 @@ var ListassetComponent = /** @class */ (function () {
         this.modalService = modalService;
         this.page = 1;
         this.pageSize = '5';
+        this.title = '';
+        this.owner = '';
+        this.type = '';
         this.assetlist = [];
         this.isCollapsed = true;
         // this.asset = assetData.asset;
@@ -1071,33 +1077,48 @@ var ListassetComponent = /** @class */ (function () {
     };
     ListassetComponent.prototype.search = function (title) {
         var _this = this;
-        console.log(title, 'this is title at search');
-        this.amsService
-            .getAsset(title)
-            .subscribe(function (res) {
-            _this.assetlist = res.data;
-            console.log('all asset found bt Title', _this.assetlist);
-        });
+        if (title === '') {
+            this.fetchAssets();
+        }
+        else {
+            console.log(title, 'this is title at search');
+            this.amsService
+                .getAsset(title)
+                .subscribe(function (res) {
+                _this.assetlist = res.data;
+                console.log('all asset found bt Title', _this.assetlist);
+            });
+        }
     };
     ListassetComponent.prototype.searchByOwner = function (owner) {
         var _this = this;
-        console.log(owner, 'this is owner at search');
-        this.amsService
-            .getAssetByOwner(owner)
-            .subscribe(function (res) {
-            _this.assetlist = res.data;
-            console.log('all asset found by Owner', _this.assetlist);
-        });
+        if (owner === '') {
+            this.fetchAssets();
+        }
+        else {
+            console.log(owner, 'this is owner at search');
+            this.amsService
+                .getAssetByOwner(owner)
+                .subscribe(function (res) {
+                _this.assetlist = res.data;
+                console.log('all asset found by Owner', _this.assetlist);
+            });
+        }
     };
     ListassetComponent.prototype.searchByType = function (type) {
         var _this = this;
-        console.log(type, 'this is owner at search');
-        this.amsService
-            .getAssetByType(type)
-            .subscribe(function (res) {
-            _this.assetlist = res.data;
-            console.log('all asset found by Owner', _this.assetlist);
-        });
+        if (type === '') {
+            this.fetchAssets();
+        }
+        else {
+            console.log(type, 'this is owner at search');
+            this.amsService
+                .getAssetByType(type)
+                .subscribe(function (res) {
+                _this.assetlist = res.data;
+                console.log('all asset found by Owner', _this.assetlist);
+            });
+        }
     };
     ListassetComponent.prototype.deleteAsset = function (_id) {
         var _this = this;
@@ -1349,7 +1370,7 @@ module.exports = ".btn-circle {\r\n  height: 40px;\r\n  width: 40px;\r\n  float:
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card shadow bg-white rounded\">\n  <div class=\"card-header shadow rounded\">\n    <h3>Contract List</h3>\n  </div>\n  <div class=\"row card-body\">\n    <div class=\"col\">\n      <input\n        [(ngModel)]=\"status\"\n        class=\"search\"\n        type=\"text\"\n        name=\"\"\n        placeholder=\"Search By Status\"\n      />\n      <button type=\"button\" class=\"btn-search\" (click)=\"searchByStatus(status)\">\n        <i class=\"fas fa-angle-down\"></i>\n      </button>\n    </div>\n    <div class=\"col\">\n      <input\n        [(ngModel)]=\"owner\"\n        class=\"search\"\n        type=\"text\"\n        name=\"\"\n        placeholder=\"Search By abc\"\n      />\n      <button type=\"button\" class=\"btn-search\" (click)=\"searchByOwner(owner)\">\n        <i class=\"fas fa-angle-down\"></i>\n      </button>\n    </div>\n    <div class=\"col\">\n      <input\n        [(ngModel)]=\"type\"\n        class=\"search\"\n        type=\"text\"\n        name=\"\"\n        placeholder=\"Search By xyz\"\n      />\n      <button type=\"button\" class=\"btn-search\" (click)=\"searchByType(type)\">\n        <i class=\"fas fa-angle-down\"></i>\n      </button>\n    </div>\n\n    <div class=\"col float-right newbox\">\n      <button class=\"btn btn-primary btn-circle\" (click)=\"open()\">\n        <i class=\"fa fa-plus\"></i>\n      </button>\n    </div>\n  </div>\n</div>\n\n<div class=\"card shadow bg-white rounded\">\n  <div class=\"card-body\">\n    <table>\n      <thead>\n        <th>Status &nbsp; <i class=\"fas fa-sort\"></i></th>\n        <th>Customer&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Asset&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Asset Owner&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Contract Date&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Balance&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Installment&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Actions</th>\n        <!-- <th>Owner Address</th> -->\n      </thead>\n      <tbody\n        *ngFor=\"\n          let contract of (contractlist\n            | slice: (page - 1) * pageSize:(page - 1) * pageSize + pageSize)\n        \"\n      >\n        <td>{{ contract?.status }}</td>\n        <td>{{ contract?.customer?.customer.name }}</td>\n        <td>{{ contract?.asset?.assetType }}</td>\n        <td>{{ contract?.asset?.owner.name }}</td>\n        <td>{{ contract?.startDate }}</td>\n        <td>{{ contract?.balance }}</td>\n        <td>{{ contract?.installment }}</td>\n        <td>\n          <button\n            class=\"btn btn-sm btn-outline-warning\"\n            (click)=\"edit(contract._id)\"\n          >\n          <i class=\"fas fa-edit\"></i> Edit</button\n          >&nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-danger\"\n            (click)=\"deleteContract(contract._id)\"\n          >\n            <i class=\"far fa-trash-alt\"></i> Delete</button\n          >&nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-primary\"\n            (click)=\"viewContract(contract._id)\"\n          >\n            <i class=\"fa fa-eye\"></i> View</button\n          >&nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-success\"\n            (click)=\"addReciept(contract._id)\"\n          >\n          <i class=\"fas fa-dollar-sign\"></i> Reciept</button\n          >&nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-success\"\n            (click)=\"listReciept(contract._id)\"\n          >\n          <i class=\"fas fa-file-invoice-dollar\"></i> Ledger\n          </button>\n        </td>\n      </tbody>\n    </table>\n  </div>\n</div>\n<div class=\"card-footer\">\n    <div class=\"row\">\n       <div class=\"col-2\">\n           <label for=\"pageSize\">Show Rows</label>\n           <select\n             [(ngModel)]=\"pageSize\"\n             type=\"text\"\n             name=\"pageSize\"\n             id=\"pageSize\"\n           >\n             <option value=\"5\">5</option>\n             <option value=\"10\">10</option>\n             <option value=\"20\">20</option>\n           </select>\n         </div>\n\n      <div class=\"col-10\">\n       <ngb-pagination\n         class=\"d-flex justify-content-end\"\n         [(page)]=\"page\"\n         [pageSize]=\"pageSize\"\n         [collectionSize]=\"contractlist.length\"\n         [maxSize]=\"5\"\n       >\n       </ngb-pagination>\n      </div>\n    </div>\n"
+module.exports = "<div class=\"card shadow bg-white rounded\">\n  <div class=\"card-header shadow rounded\">\n    <h3>Contract List</h3>\n  </div>\n  <div class=\"row card-body\">\n    <div class=\"col\">\n      <input\n        [(ngModel)]=\"status\"\n        class=\"search\"\n        type=\"text\"\n        name=\"\"\n        placeholder=\"Search By Status\"\n        (change)=\"searchByStatus(status)\"\n      />\n      <button type=\"button\" class=\"btn-search\" (click)=\"searchByStatus(status)\">\n        <i class=\"fas fa-angle-down\"></i>\n      </button>\n    </div>\n    <div class=\"col\">\n      <label>Select Month</label>\n      <input\n        [(ngModel)]=\"month\"\n        class=\"search\"\n        type=\"date\"\n        name=\"month\"\n        placeholder=\"Search By month\"\n      />\n      <button type=\"button\" class=\"btn-search\" (click)=\"searchByMonth(month)\">\n        <i class=\"fas fa-angle-down\"></i>\n      </button>\n    </div>\n    <div class=\"col\">\n      <input\n        [(ngModel)]=\"type\"\n        class=\"search\"\n        type=\"text\"\n        name=\"\"\n        placeholder=\"Search By xyz\"\n      />\n      <button type=\"button\" class=\"btn-search\" (click)=\"searchByType(type)\">\n        <i class=\"fas fa-angle-down\"></i>\n      </button>\n    </div>\n\n    <div class=\"col float-right newbox\">\n      <button class=\"btn btn-primary btn-circle\" (click)=\"open()\">\n        <i class=\"fa fa-plus\"></i>\n      </button>\n    </div>\n  </div>\n</div>\n\n<div class=\"card shadow bg-white rounded\">\n  <div class=\"card-body\">\n    <table>\n      <thead>\n        <th>Status &nbsp; <i class=\"fas fa-sort\"></i></th>\n        <th>Customer&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Asset&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Asset Owner&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Contract Date&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Balance&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Next Due&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Installment&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Actions</th>\n        <!-- <th>Owner Address</th> -->\n      </thead>\n      <tbody\n        *ngFor=\"\n          let contract of (contractlist\n            | slice: (page - 1) * pageSize:(page - 1) * pageSize + pageSize)\n        \"\n      >\n        <td>{{ contract?.status }}</td>\n        <td>{{ contract?.customer?.customer?.name }}</td>\n        <td>{{ contract?.asset?.assetType }}</td>\n        <td>{{ contract?.asset?.owner?.name }}</td>\n        <td>{{ contract?.startDate }}</td>\n        <td>{{ contract?.balance }}</td>\n        <td>{{ contract?.nxtDue | date: 'mediumDate'}} </td>\n        <td>{{ contract?.installment }}</td>\n        <td>\n          <button\n            class=\"btn btn-sm btn-outline-warning\"\n            (click)=\"edit(contract._id)\"\n          >\n          <i class=\"fas fa-edit\"></i> Edit</button\n          >&nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-danger\"\n            (click)=\"deleteContract(contract._id)\"\n          >\n            <i class=\"far fa-trash-alt\"></i> Delete</button\n          >&nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-primary\"\n            (click)=\"viewContract(contract._id)\"\n          >\n            <i class=\"fa fa-eye\"></i> View</button\n          >&nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-success\"\n            (click)=\"addReciept(contract._id)\"\n          >\n          <i class=\"fas fa-dollar-sign\"></i> Reciept</button\n          >&nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-success\"\n            (click)=\"listReciept(contract._id)\"\n          >\n          <i class=\"fas fa-file-invoice-dollar\"></i> Ledger\n          </button>\n        </td>\n      </tbody>\n    </table>\n  </div>\n</div>\n<div class=\"card-footer\">\n    <div class=\"row\">\n       <div class=\"col-2\">\n           <label for=\"pageSize\">Show Rows</label>\n           <select\n             [(ngModel)]=\"pageSize\"\n             type=\"text\"\n             name=\"pageSize\"\n             id=\"pageSize\"\n           >\n             <option value=\"5\">5</option>\n             <option value=\"10\">10</option>\n             <option value=\"20\">20</option>\n           </select>\n         </div>\n\n      <div class=\"col-10\">\n       <ngb-pagination\n         class=\"d-flex justify-content-end\"\n         [(page)]=\"page\"\n         [pageSize]=\"pageSize\"\n         [collectionSize]=\"contractlist.length\"\n         [maxSize]=\"5\"\n       >\n       </ngb-pagination>\n      </div>\n    </div>\n"
 
 /***/ }),
 
@@ -1390,6 +1411,8 @@ var ListcontractComponent = /** @class */ (function () {
         this.pageSize = '5';
         this.contractlist = [];
         this.isCollapsed = true;
+        this.month = new Date().toISOString().substring(0, 10);
+        console.log(this.month, 'sadas');
     }
     ListcontractComponent.prototype.ngOnInit = function () {
         this.fetchContracts();
@@ -1431,19 +1454,33 @@ var ListcontractComponent = /** @class */ (function () {
     };
     ListcontractComponent.prototype.searchByStatus = function (status) {
         var _this = this;
-        console.log(status, 'this is title at search');
-        this.amsService.getContractByStatus(status).subscribe(function (res) {
-            _this.contractlist = res.data;
-            console.log('all contract found by status', _this.contractlist);
-        });
+        console.log(status, 'this is status at contract search');
+        if (status === '') {
+            this.fetchContracts();
+        }
+        else {
+            this.amsService.getContractByStatus(status).subscribe(function (res) {
+                _this.contractlist = res.data;
+                console.log('all contract found by status', _this.contractlist);
+            });
+        }
     };
-    ListcontractComponent.prototype.searchByOwner = function (owner) {
-        var _this = this;
-        console.log(owner, 'this is owner at search');
-        this.amsService.getAssetByOwner(owner).subscribe(function (res) {
-            _this.contractlist = res.data;
-            console.log('all asset found by Owner', _this.contractlist);
-        });
+    ListcontractComponent.prototype.searchByMonth = function (month) {
+        var m = new Date(month);
+        var findMonth = m.getMonth() + 1;
+        for (var i = 0; i < this.contractlist.length; i++) {
+            var contract = this.contractlist[i];
+            var reaccurance = contract.reaccurance;
+            for (var j = 0; j < reaccurance.length; j++) {
+                var nxt = reaccurance[j];
+                var nxtDate = new Date(nxt.nxtDate);
+                var nxtMonth = nxtDate.getMonth() + 1;
+                if (findMonth === nxtMonth) {
+                    contract.nxtDue = nxtDate;
+                }
+            }
+        }
+        console.log('all done');
     };
     ListcontractComponent.prototype.searchByType = function (type) {
         var _this = this;
@@ -1602,6 +1639,7 @@ var NewcontractComponent = /** @class */ (function () {
     };
     NewcontractComponent.prototype.addContract = function (contract) {
         var _this = this;
+        this.getNxt(contract);
         this.amsService.addContract(contract).subscribe(function () {
             sweetalert2__WEBPACK_IMPORTED_MODULE_6___default.a.fire('Contract Inserted Successfully');
             _this.router.navigate(['/contract/list']);
@@ -2364,7 +2402,7 @@ var NewrecieptComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvcmVwb3J0cy9tYWluL21haW4uY29tcG9uZW50LmNzcyJ9 */"
+module.exports = ".align {\r\n  margin-top: 20px;\r\n  padding-left: 15px;\r\n}\r\n.aligncontract {\r\n  padding: 10px;\r\n  margin-left: -9px;\r\n}\r\n.btn {\r\n  float: right;\r\n  padding-right: 12px;\r\n  padding-left: 12px;\r\n  margin: 1px;\r\n  margin: right;\r\n  padding-bottom: 5px;\r\n  padding-left: 6px;\r\n  padding-right: 6px;\r\n  margin-bottom: 10px;\r\n  margin-right: 7px;\r\n}\r\ninput {\r\n  outline: 0;\r\n  color: rgb(150, 150, 150);\r\n  border-width: 0 0 1px;\r\n  border-color: rgb(176, 176, 179);\r\n}\r\ninput:hover {\r\n  background-color: #e2e2eb;\r\n  color: #3d405c;\r\n}\r\nselect:hover {\r\n  background-color: #e2e2eb;\r\n  color: #3d405c;\r\n}\r\nselect {\r\n  outline: 0;\r\n  color: rgb(150, 150, 150);\r\n  border-width: 0 0 1px;\r\n  border-color: rgb(176, 176, 179);\r\n}\r\n.btn-circle {\r\n  height: 40px;\r\n  width: 40px;\r\n  float: right;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  border-radius: 50%;\r\n  color: rgb(255, 255, 255);\r\n  background-color: rgb(0, 157, 248);\r\n}\r\n.card {\r\n  background-color: rgb(255, 255, 255);\r\n  padding: 10px;\r\n  margin: 10px 10px 10px 0px;\r\n  width: 100%;\r\n}\r\n.card-header {\r\n  background-color: rgb(0, 157, 248);\r\n  color: white;\r\n  text-align: left;\r\n  vertical-align: middle;\r\n  height: 60px;\r\n  width: 100%;\r\n}\r\n.card-footer {\r\n  background-color: rgb(255, 255, 255);\r\n  height: 60px;\r\n  width: 100%;\r\n}\r\ntable {\r\n  width: 100%;\r\n}\r\nth {\r\n  text-align: center;\r\n  vertical-align: middle;\r\n  color: white;\r\n  background-color: rgb(0, 157, 248);\r\n  border-bottom: 1px solid rgb(168, 168, 168);\r\n  padding: 10px;\r\n}\r\ntd {\r\n  text-align: center;\r\n  color: rgb(150, 150, 150);\r\n  /* border-bottom: 1px solid rgb(168, 168, 168); */\r\n}\r\n.btn-search {\r\n  background-color: white;\r\n  outline: 0;\r\n  border-width: 0 0 1px;\r\n  border-color: rgb(176, 176, 179);\r\n}\r\n.search {\r\n  outline: 0;\r\n  border-width: 0 0 1px;\r\n  border-color: rgb(176, 176, 179);\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9yZXBvcnRzL21haW4vbWFpbi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQjtBQUNBO0VBQ0UsYUFBYTtFQUNiLGlCQUFpQjtBQUNuQjtBQUNBO0VBQ0UsWUFBWTtFQUNaLG1CQUFtQjtFQUNuQixrQkFBa0I7RUFDbEIsV0FBVztFQUNYLGFBQWE7RUFDYixtQkFBbUI7RUFDbkIsaUJBQWlCO0VBQ2pCLGtCQUFrQjtFQUNsQixtQkFBbUI7RUFDbkIsaUJBQWlCO0FBQ25CO0FBRUE7RUFDRSxVQUFVO0VBQ1YseUJBQXlCO0VBQ3pCLHFCQUFxQjtFQUNyQixnQ0FBZ0M7QUFDbEM7QUFDQTtFQUNFLHlCQUF5QjtFQUN6QixjQUFjO0FBQ2hCO0FBRUE7RUFDRSx5QkFBeUI7RUFDekIsY0FBYztBQUNoQjtBQUVBO0VBQ0UsVUFBVTtFQUNWLHlCQUF5QjtFQUN6QixxQkFBcUI7RUFDckIsZ0NBQWdDO0FBQ2xDO0FBRUE7RUFDRSxZQUFZO0VBQ1osV0FBVztFQUNYLFlBQVk7RUFDWixhQUFhO0VBQ2IsdUJBQXVCO0VBQ3ZCLG1CQUFtQjtFQUNuQixrQkFBa0I7RUFDbEIseUJBQXlCO0VBQ3pCLGtDQUFrQztBQUNwQztBQUVBO0VBQ0Usb0NBQW9DO0VBQ3BDLGFBQWE7RUFDYiwwQkFBMEI7RUFDMUIsV0FBVztBQUNiO0FBRUE7RUFDRSxrQ0FBa0M7RUFDbEMsWUFBWTtFQUNaLGdCQUFnQjtFQUNoQixzQkFBc0I7RUFDdEIsWUFBWTtFQUNaLFdBQVc7QUFDYjtBQUVBO0VBQ0Usb0NBQW9DO0VBQ3BDLFlBQVk7RUFDWixXQUFXO0FBQ2I7QUFFQTtFQUNFLFdBQVc7QUFDYjtBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLHNCQUFzQjtFQUN0QixZQUFZO0VBQ1osa0NBQWtDO0VBQ2xDLDJDQUEyQztFQUMzQyxhQUFhO0FBQ2Y7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQix5QkFBeUI7RUFDekIsaURBQWlEO0FBQ25EO0FBRUE7RUFDRSx1QkFBdUI7RUFDdkIsVUFBVTtFQUNWLHFCQUFxQjtFQUNyQixnQ0FBZ0M7QUFDbEM7QUFFQTtFQUNFLFVBQVU7RUFDVixxQkFBcUI7RUFDckIsZ0NBQWdDO0FBQ2xDIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9yZXBvcnRzL21haW4vbWFpbi5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmFsaWduIHtcclxuICBtYXJnaW4tdG9wOiAyMHB4O1xyXG4gIHBhZGRpbmctbGVmdDogMTVweDtcclxufVxyXG4uYWxpZ25jb250cmFjdCB7XHJcbiAgcGFkZGluZzogMTBweDtcclxuICBtYXJnaW4tbGVmdDogLTlweDtcclxufVxyXG4uYnRuIHtcclxuICBmbG9hdDogcmlnaHQ7XHJcbiAgcGFkZGluZy1yaWdodDogMTJweDtcclxuICBwYWRkaW5nLWxlZnQ6IDEycHg7XHJcbiAgbWFyZ2luOiAxcHg7XHJcbiAgbWFyZ2luOiByaWdodDtcclxuICBwYWRkaW5nLWJvdHRvbTogNXB4O1xyXG4gIHBhZGRpbmctbGVmdDogNnB4O1xyXG4gIHBhZGRpbmctcmlnaHQ6IDZweDtcclxuICBtYXJnaW4tYm90dG9tOiAxMHB4O1xyXG4gIG1hcmdpbi1yaWdodDogN3B4O1xyXG59XHJcblxyXG5pbnB1dCB7XHJcbiAgb3V0bGluZTogMDtcclxuICBjb2xvcjogcmdiKDE1MCwgMTUwLCAxNTApO1xyXG4gIGJvcmRlci13aWR0aDogMCAwIDFweDtcclxuICBib3JkZXItY29sb3I6IHJnYigxNzYsIDE3NiwgMTc5KTtcclxufVxyXG5pbnB1dDpob3ZlciB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogI2UyZTJlYjtcclxuICBjb2xvcjogIzNkNDA1YztcclxufVxyXG5cclxuc2VsZWN0OmhvdmVyIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZTJlMmViO1xyXG4gIGNvbG9yOiAjM2Q0MDVjO1xyXG59XHJcblxyXG5zZWxlY3Qge1xyXG4gIG91dGxpbmU6IDA7XHJcbiAgY29sb3I6IHJnYigxNTAsIDE1MCwgMTUwKTtcclxuICBib3JkZXItd2lkdGg6IDAgMCAxcHg7XHJcbiAgYm9yZGVyLWNvbG9yOiByZ2IoMTc2LCAxNzYsIDE3OSk7XHJcbn1cclxuXHJcbi5idG4tY2lyY2xlIHtcclxuICBoZWlnaHQ6IDQwcHg7XHJcbiAgd2lkdGg6IDQwcHg7XHJcbiAgZmxvYXQ6IHJpZ2h0O1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICBib3JkZXItcmFkaXVzOiA1MCU7XHJcbiAgY29sb3I6IHJnYigyNTUsIDI1NSwgMjU1KTtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMCwgMTU3LCAyNDgpO1xyXG59XHJcblxyXG4uY2FyZCB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUpO1xyXG4gIHBhZGRpbmc6IDEwcHg7XHJcbiAgbWFyZ2luOiAxMHB4IDEwcHggMTBweCAwcHg7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbi5jYXJkLWhlYWRlciB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDAsIDE1NywgMjQ4KTtcclxuICBjb2xvcjogd2hpdGU7XHJcbiAgdGV4dC1hbGlnbjogbGVmdDtcclxuICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xyXG4gIGhlaWdodDogNjBweDtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG5cclxuLmNhcmQtZm9vdGVyIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjU1LCAyNTUsIDI1NSk7XHJcbiAgaGVpZ2h0OiA2MHB4O1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG50YWJsZSB7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbnRoIHtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgdmVydGljYWwtYWxpZ246IG1pZGRsZTtcclxuICBjb2xvcjogd2hpdGU7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDAsIDE1NywgMjQ4KTtcclxuICBib3JkZXItYm90dG9tOiAxcHggc29saWQgcmdiKDE2OCwgMTY4LCAxNjgpO1xyXG4gIHBhZGRpbmc6IDEwcHg7XHJcbn1cclxuXHJcbnRkIHtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgY29sb3I6IHJnYigxNTAsIDE1MCwgMTUwKTtcclxuICAvKiBib3JkZXItYm90dG9tOiAxcHggc29saWQgcmdiKDE2OCwgMTY4LCAxNjgpOyAqL1xyXG59XHJcblxyXG4uYnRuLXNlYXJjaCB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XHJcbiAgb3V0bGluZTogMDtcclxuICBib3JkZXItd2lkdGg6IDAgMCAxcHg7XHJcbiAgYm9yZGVyLWNvbG9yOiByZ2IoMTc2LCAxNzYsIDE3OSk7XHJcbn1cclxuXHJcbi5zZWFyY2gge1xyXG4gIG91dGxpbmU6IDA7XHJcbiAgYm9yZGVyLXdpZHRoOiAwIDAgMXB4O1xyXG4gIGJvcmRlci1jb2xvcjogcmdiKDE3NiwgMTc2LCAxNzkpO1xyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -2375,7 +2413,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n    <div class=\" col card shadow rounded\">\n  <div class=\"card-header\">\n    Report 1\n  </div>\n  <div class=\"card-body\">\n    <h6>Last Month Total</h6>\n    <h1>100,000,000</h1>\n  </div>\n  <div class=\"card-footer float-right\">\n    <button class=\"btn btn-sm btn-outline-primary\">Details...</button>\n  </div>\n      </div>\n    <div class=\" col card shadow rounded\">\n  <div class=\"card-header\">\n    Report 2\n  </div>\n  <div class=\"card-body\">\n    <h6>This Month Total</h6>\n    <h1>200,000,000</h1>\n  </div>\n  <div class=\"card-footer float-right\">\n    <button class=\"btn btn-sm btn-outline-primary\">Details...</button>\n  </div>\n      </div>\n    <div class=\" col card shadow rounded\">\n  <div class=\"card-header\">\n    Report 3\n  </div>\n  <div class=\"card-body\">\n    <h6>Next Month Total</h6>\n    <h1>400,000,000</h1>\n  </div>\n  <div class=\"card-footer float-right\">\n    <button class=\"btn btn-sm btn-outline-primary\">Details...</button>\n  </div>\n      </div>\n</div>\n"
+module.exports = "\n  <div class=\" col card shadow rounded\">\n    <div class=\"card-header\">\n     <h3> Main Reports</h3>\n    </div>\n    <div class=\"card-body\">\n\n      <div class=\"row\">\n\n      <div class=\"col\">\n          <label for=\"file\">Select File</label>\n          <br>\n          <input\n            type=\"file\"\n            name=\"file\"\n            placeholder=\"Browse\"\n            (change)=\"onFileChange($event)\"\n          />\n        <button\n        type=\"submit\"\n        class=\"btn btn-sm btn-outline-success\"\n        (click)=\"save()\"\n      >\n        Save\n      </button>\n      </div>\n\n      <div class=\"col\">\n        <label for=\"month\">Select Month</label>\n        <select\n          [(ngModel)]=\"month\"\n          type=\"text\"\n          name=\"month\"\n          id=\"month\"\n          class=\"form-control\"\n          placeholder=\"Search By month\"\n          (change)=\"searchByMonth(month)\"\n        >\n          <option value=\"1\">January</option>\n          <option value=\"2\">February</option>\n          <option value=\"3\">March</option>\n          <option value=\"4\">April</option>\n          <option value=\"5\">May</option>\n          <option value=\"6\">June</option>\n          <option value=\"7\">July</option>\n          <option value=\"8\">August</option>\n          <option value=\"9\">September</option>\n          <option value=\"10\">October</option>\n          <option value=\"11\">November</option>\n          <option value=\"12\">December</option>\n        </select>\n      </div>\n\n      <div class=\"col\">\n        <label for=\"month\">Select Month</label>\n        <select\n          [(ngModel)]=\"month\"\n          type=\"text\"\n          name=\"month\"\n          id=\"month\"\n          class=\"form-control\"\n          placeholder=\"Search By month\"\n          (change)=\"searchByMonth(month)\"\n        >\n          <option value=\"1\">January</option>\n          <option value=\"2\">February</option>\n          <option value=\"3\">March</option>\n          <option value=\"4\">April</option>\n          <option value=\"5\">May</option>\n          <option value=\"6\">June</option>\n          <option value=\"7\">July</option>\n          <option value=\"8\">August</option>\n          <option value=\"9\">September</option>\n          <option value=\"10\">October</option>\n          <option value=\"11\">November</option>\n          <option value=\"12\">December</option>\n        </select>\n      </div>\n\n      </div>\n\n    </div>\n  </div>\n\n<div class=\"card shadow bg-white rounded\">\n  <div class=\"card-body\">\n    <table>\n      <thead>\n        <th>Status &nbsp; <i class=\"fas fa-sort\"></i></th>\n        <th>Customer&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Asset&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Asset Owner&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Contract Date&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Balance&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Next Due&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Installment&nbsp;<i class=\"fas fa-sort\"></i></th>\n        <th>Actions</th>\n        <!-- <th>Owner Address</th> -->\n      </thead>\n      <tbody\n        *ngFor=\"\n          let contract of (contractlist\n            | slice: (page - 1) * pageSize:(page - 1) * pageSize + pageSize)\n        \"\n      >\n        <td>{{ contract?.status }}</td>\n        <td>{{ contract?.customer?.customer?.name }}</td>\n        <td>{{ contract?.asset?.assetType }}</td>\n        <td>{{ contract?.asset?.owner?.name }}</td>\n        <td>{{ contract?.startDate }}</td>\n        <td>{{ contract?.balance }}</td>\n        <td>{{ contract?.nxtDue | date: \"mediumDate\" }}</td>\n        <td>{{ contract?.installment }}</td>\n        <td>\n          <!-- <button\n            class=\"btn btn-sm btn-outline-warning\"\n            (click)=\"edit(contract._id)\"\n          >\n            <i class=\"fas fa-edit\"></i> Edit</button\n          >&nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-danger\"\n            (click)=\"deleteContract(contract._id)\"\n          >\n            <i class=\"far fa-trash-alt\"></i> Delete</button\n          >&nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-primary\"\n            (click)=\"viewContract(contract._id)\"\n          >\n            <i class=\"fa fa-eye\"></i> View</button\n          >&nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-success\"\n            (click)=\"addReciept(contract._id)\"\n          >\n            <i class=\"fas fa-dollar-sign\"></i> Reciept</button\n          >&nbsp;\n          <button\n            class=\"btn btn-sm btn-outline-success\"\n            (click)=\"listReciept(contract._id)\"\n          >\n            <i class=\"fas fa-file-invoice-dollar\"></i> Ledger\n          </button> -->\n        </td>\n      </tbody>\n    </table>\n  </div>\n</div>\n<div class=\"card-footer\">\n  <div class=\"row\">\n    <div class=\"col-2\">\n      <label for=\"pageSize\">Show Rows</label>\n      <select [(ngModel)]=\"pageSize\" type=\"text\" name=\"pageSize\" id=\"pageSize\">\n        <option value=\"5\">5</option>\n        <option value=\"10\">10</option>\n        <option value=\"20\">20</option>\n      </select>\n    </div>\n\n    <div class=\"col-10\">\n      <ngb-pagination\n        class=\"d-flex justify-content-end\"\n        [(page)]=\"page\"\n        [pageSize]=\"pageSize\"\n        [collectionSize]=\"contractlist.length\"\n        [maxSize]=\"5\"\n      >\n      </ngb-pagination>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -2391,20 +2429,112 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MainComponent", function() { return MainComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ams_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../ams.service */ "./src/app/ams.service.ts");
+/* harmony import */ var xlsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! xlsx */ "./node_modules/xlsx/xlsx.js");
+/* harmony import */ var xlsx__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(xlsx__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 
 
+
+
+
+
+var vm;
 var MainComponent = /** @class */ (function () {
-    function MainComponent() {
+    function MainComponent(amsService, spinner, router) {
+        this.amsService = amsService;
+        this.spinner = spinner;
+        this.router = router;
+        this.data = [[1, 2], [3, 4]];
+        this.wopts = { bookType: 'xlsx', type: 'array' };
+        this.contractlist = [];
+        this.page = 1;
+        this.pageSize = '5';
+        vm = this;
+        this.month = new Date().toISOString().substring(0, 10);
+        console.log(this.month, 'this is month');
+        this.fetchContracts();
     }
-    MainComponent.prototype.ngOnInit = function () {
+    MainComponent.prototype.onFileChange = function (evt) {
+        /* wire up file reader */
+        var target = evt.target;
+        if (target.files.length !== 1) {
+            throw new Error('Cannot use multiple files');
+        }
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            /* read workbook */
+            var bstr = e.target.result;
+            var wb = xlsx__WEBPACK_IMPORTED_MODULE_3__["read"](bstr, { type: 'binary' });
+            /* grab first sheet */
+            var wsname = wb.SheetNames[0];
+            var ws = wb.Sheets[wsname];
+            /* save data */
+            vm.data = xlsx__WEBPACK_IMPORTED_MODULE_3__["utils"].sheet_to_json(ws, { header: 1 });
+            vm.headers = vm.data[0];
+            // Array of arrays To JSON
+            var values = vm.data.slice(1);
+            vm.objects = values.map(function (array, index) {
+                var object = {};
+                vm.headers.forEach(function (header, i) {
+                    object[header] = array[i] || '';
+                });
+                return object;
+            });
+            console.log('Console Log Objects ', vm.objects);
+        };
+        reader.readAsBinaryString(target.files[0]);
     };
+    MainComponent.prototype.searchByMonth = function (month) {
+        var m = new Date(month);
+        console.log(m, 'this is m');
+        var findMonth = m.getMonth() + 1;
+        for (var i = 0; i < this.contractlist.length; i++) {
+            var contract = this.contractlist[i];
+            var reaccurance = contract.reaccurance;
+            for (var j = 0; j < reaccurance.length; j++) {
+                var nxt = reaccurance[j];
+                var nxtDate = new Date(nxt.nxtDate);
+                var nxtMonth = nxtDate.getMonth() + 1;
+                if (findMonth === nxtMonth) {
+                    contract.nxtDue = nxtDate;
+                }
+            }
+        }
+        console.log('all done');
+    };
+    MainComponent.prototype.fetchContracts = function () {
+        var _this = this;
+        this.amsService.getContracts().subscribe(function (data) {
+            _this.contractlist = data;
+            console.log('all contract found', data);
+            _this.searchByMonth(_this.month);
+        });
+    };
+    MainComponent.prototype.save = function () {
+        var _loop_1 = function (i) {
+            // console.log(this.objects[i], 'this is one object');
+            var reciept = this_1.objects[i];
+            this_1.amsService.addReciept(reciept).subscribe(function () {
+                console.log(reciept, 'this is saved reciept');
+            });
+        };
+        var this_1 = this;
+        for (var i = 0; i < this.objects.length; i++) {
+            _loop_1(i);
+        }
+    };
+    MainComponent.prototype.ngOnInit = function () { };
     MainComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-main',
             template: __webpack_require__(/*! ./main.component.html */ "./src/app/components/reports/main/main.component.html"),
             styles: [__webpack_require__(/*! ./main.component.css */ "./src/app/components/reports/main/main.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ams_service__WEBPACK_IMPORTED_MODULE_2__["AmsService"],
+            ngx_spinner__WEBPACK_IMPORTED_MODULE_4__["NgxSpinnerService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
     ], MainComponent);
     return MainComponent;
 }());
@@ -2669,6 +2799,7 @@ __webpack_require__.r(__webpack_exports__);
 var Contract = /** @class */ (function () {
     function Contract() {
         this.reaccurance = '';
+        this.nxtDue = '';
     }
     return Contract;
 }());
@@ -2738,7 +2869,7 @@ var Customer = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".btn-circle {\n  height: 40px;\n  width: 40px;\n  float: right;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 50%;\n  color: rgb(255, 255, 255);\n  background-color: rgb(0, 157, 248);\n}\n\n.card {\n  background-color: rgb(255, 255, 255);\n  padding: 5px;\n  margin: 10px;\n}\n\n.card-header {\n  background-color: rgb(0, 157, 248);\n  color: white;\n  text-align: left;\n  vertical-align: middle;\n  height: 60px;\n  width: 100%;\n}\n\n.card-footer {\n  background-color: rgb(255, 255, 255);\n  height: 60px;\n  width: 100%;\n}\n\ntable {\n  width: 100%;\n}\n\nth {\n  text-align: center;\n  vertical-align: middle;\n  color: white;\n  background-color: rgb(0, 157, 248);\n  border-bottom: 1px solid rgb(168, 168, 168);\n  padding: 10px;\n}\n\ntd {\n  text-align: center;\n  color: rgb(150, 150, 150);\n  /* border-bottom: 1px solid rgb(168, 168, 168); */\n}\n\n.btn-search {\n  background-color: white;\n  outline: 0;\n  border-width: 0 0 1px;\n  border-color: rgb(176, 176, 179);\n}\n\n.search {\n  outline: 0;\n  border-width: 0 0 1px;\n  border-color: rgb(176, 176, 179);\n}\n\n.row {\n  width: 100%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBWTtFQUNaLFdBQVc7RUFDWCxZQUFZO0VBQ1osYUFBYTtFQUNiLHVCQUF1QjtFQUN2QixtQkFBbUI7RUFDbkIsa0JBQWtCO0VBQ2xCLHlCQUF5QjtFQUN6QixrQ0FBa0M7QUFDcEM7O0FBRUE7RUFDRSxvQ0FBb0M7RUFDcEMsWUFBWTtFQUNaLFlBQVk7QUFDZDs7QUFDQTtFQUNFLGtDQUFrQztFQUNsQyxZQUFZO0VBQ1osZ0JBQWdCO0VBQ2hCLHNCQUFzQjtFQUN0QixZQUFZO0VBQ1osV0FBVztBQUNiOztBQUNBO0VBQ0Usb0NBQW9DO0VBQ3BDLFlBQVk7RUFDWixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxXQUFXO0FBQ2I7O0FBQ0E7RUFDRSxrQkFBa0I7RUFDbEIsc0JBQXNCO0VBQ3RCLFlBQVk7RUFDWixrQ0FBa0M7RUFDbEMsMkNBQTJDO0VBQzNDLGFBQWE7QUFDZjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQix5QkFBeUI7RUFDekIsaURBQWlEO0FBQ25EOztBQUVBO0VBQ0UsdUJBQXVCO0VBQ3ZCLFVBQVU7RUFDVixxQkFBcUI7RUFDckIsZ0NBQWdDO0FBQ2xDOztBQUVBO0VBQ0UsVUFBVTtFQUNWLHFCQUFxQjtFQUNyQixnQ0FBZ0M7QUFDbEM7O0FBR0E7RUFDRSxXQUFXO0FBQ2IiLCJmaWxlIjoic3JjL2FwcC9kYXNoYm9hcmQvZGFzaGJvYXJkLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYnRuLWNpcmNsZSB7XG4gIGhlaWdodDogNDBweDtcbiAgd2lkdGg6IDQwcHg7XG4gIGZsb2F0OiByaWdodDtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGJvcmRlci1yYWRpdXM6IDUwJTtcbiAgY29sb3I6IHJnYigyNTUsIDI1NSwgMjU1KTtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDAsIDE1NywgMjQ4KTtcbn1cblxuLmNhcmQge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjU1LCAyNTUsIDI1NSk7XG4gIHBhZGRpbmc6IDVweDtcbiAgbWFyZ2luOiAxMHB4O1xufVxuLmNhcmQtaGVhZGVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDAsIDE1NywgMjQ4KTtcbiAgY29sb3I6IHdoaXRlO1xuICB0ZXh0LWFsaWduOiBsZWZ0O1xuICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xuICBoZWlnaHQ6IDYwcHg7XG4gIHdpZHRoOiAxMDAlO1xufVxuLmNhcmQtZm9vdGVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUpO1xuICBoZWlnaHQ6IDYwcHg7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG50YWJsZSB7XG4gIHdpZHRoOiAxMDAlO1xufVxudGgge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDAsIDE1NywgMjQ4KTtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHJnYigxNjgsIDE2OCwgMTY4KTtcbiAgcGFkZGluZzogMTBweDtcbn1cblxudGQge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGNvbG9yOiByZ2IoMTUwLCAxNTAsIDE1MCk7XG4gIC8qIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCByZ2IoMTY4LCAxNjgsIDE2OCk7ICovXG59XG5cbi5idG4tc2VhcmNoIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gIG91dGxpbmU6IDA7XG4gIGJvcmRlci13aWR0aDogMCAwIDFweDtcbiAgYm9yZGVyLWNvbG9yOiByZ2IoMTc2LCAxNzYsIDE3OSk7XG59XG5cbi5zZWFyY2gge1xuICBvdXRsaW5lOiAwO1xuICBib3JkZXItd2lkdGg6IDAgMCAxcHg7XG4gIGJvcmRlci1jb2xvcjogcmdiKDE3NiwgMTc2LCAxNzkpO1xufVxuXG5cbi5yb3cge1xuICB3aWR0aDogMTAwJTtcbn1cbiJdfQ== */"
+module.exports = ".align {\n  margin-top: 20px;\n  padding-left: 15px;\n}\n.aligncontract {\n  padding: 10px;\n  margin-left: -9px;\n}\n.btn {\n  float: right;\n  padding-right: 12px;\n  padding-left: 12px;\n  margin: 1px;\n  margin: right;\n  padding-bottom: 5px;\n  padding-left: 6px;\n  padding-right: 6px;\n  margin-bottom: 10px;\n  margin-right: 7px;\n}\ninput {\n  outline: 0;\n  color: rgb(150, 150, 150);\n  border-width: 0 0 1px;\n  border-color: rgb(176, 176, 179);\n}\ninput:hover {\n  background-color: #e2e2eb;\n  color: #3d405c;\n}\nselect:hover {\n  background-color: #e2e2eb;\n  color: #3d405c;\n}\nselect {\n  outline: 0;\n  color: rgb(150, 150, 150);\n  border-width: 0 0 1px;\n  border-color: rgb(176, 176, 179);\n}\n.btn-circle {\n  height: 40px;\n  width: 40px;\n  float: right;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 50%;\n  color: rgb(255, 255, 255);\n  background-color: rgb(0, 157, 248);\n}\n.card {\n  background-color: rgb(255, 255, 255);\n  padding: 10px;\n  margin: 10px 10px 10px 0px;\n  width: 100%;\n}\n.card-header {\n  background-color: rgb(0, 157, 248);\n  color: white;\n  text-align: left;\n  vertical-align: middle;\n  height: 60px;\n  width: 100%;\n}\n.card-footer {\n  background-color: rgb(255, 255, 255);\n  height: 60px;\n  width: 100%;\n}\ntable {\n  width: 100%;\n}\nth {\n  text-align: center;\n  vertical-align: middle;\n  color: white;\n  background-color: rgb(0, 157, 248);\n  border-bottom: 1px solid rgb(168, 168, 168);\n  padding: 10px;\n}\ntd {\n  text-align: center;\n  color: rgb(150, 150, 150);\n  /* border-bottom: 1px solid rgb(168, 168, 168); */\n}\n.btn-search {\n  background-color: white;\n  outline: 0;\n  border-width: 0 0 1px;\n  border-color: rgb(176, 176, 179);\n}\n.search {\n  outline: 0;\n  border-width: 0 0 1px;\n  border-color: rgb(176, 176, 179);\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQjtBQUNBO0VBQ0UsYUFBYTtFQUNiLGlCQUFpQjtBQUNuQjtBQUNBO0VBQ0UsWUFBWTtFQUNaLG1CQUFtQjtFQUNuQixrQkFBa0I7RUFDbEIsV0FBVztFQUNYLGFBQWE7RUFDYixtQkFBbUI7RUFDbkIsaUJBQWlCO0VBQ2pCLGtCQUFrQjtFQUNsQixtQkFBbUI7RUFDbkIsaUJBQWlCO0FBQ25CO0FBRUE7RUFDRSxVQUFVO0VBQ1YseUJBQXlCO0VBQ3pCLHFCQUFxQjtFQUNyQixnQ0FBZ0M7QUFDbEM7QUFDQTtFQUNFLHlCQUF5QjtFQUN6QixjQUFjO0FBQ2hCO0FBRUE7RUFDRSx5QkFBeUI7RUFDekIsY0FBYztBQUNoQjtBQUVBO0VBQ0UsVUFBVTtFQUNWLHlCQUF5QjtFQUN6QixxQkFBcUI7RUFDckIsZ0NBQWdDO0FBQ2xDO0FBRUE7RUFDRSxZQUFZO0VBQ1osV0FBVztFQUNYLFlBQVk7RUFDWixhQUFhO0VBQ2IsdUJBQXVCO0VBQ3ZCLG1CQUFtQjtFQUNuQixrQkFBa0I7RUFDbEIseUJBQXlCO0VBQ3pCLGtDQUFrQztBQUNwQztBQUVBO0VBQ0Usb0NBQW9DO0VBQ3BDLGFBQWE7RUFDYiwwQkFBMEI7RUFDMUIsV0FBVztBQUNiO0FBRUE7RUFDRSxrQ0FBa0M7RUFDbEMsWUFBWTtFQUNaLGdCQUFnQjtFQUNoQixzQkFBc0I7RUFDdEIsWUFBWTtFQUNaLFdBQVc7QUFDYjtBQUVBO0VBQ0Usb0NBQW9DO0VBQ3BDLFlBQVk7RUFDWixXQUFXO0FBQ2I7QUFFQTtFQUNFLFdBQVc7QUFDYjtBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLHNCQUFzQjtFQUN0QixZQUFZO0VBQ1osa0NBQWtDO0VBQ2xDLDJDQUEyQztFQUMzQyxhQUFhO0FBQ2Y7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQix5QkFBeUI7RUFDekIsaURBQWlEO0FBQ25EO0FBRUE7RUFDRSx1QkFBdUI7RUFDdkIsVUFBVTtFQUNWLHFCQUFxQjtFQUNyQixnQ0FBZ0M7QUFDbEM7QUFFQTtFQUNFLFVBQVU7RUFDVixxQkFBcUI7RUFDckIsZ0NBQWdDO0FBQ2xDIiwiZmlsZSI6InNyYy9hcHAvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmFsaWduIHtcbiAgbWFyZ2luLXRvcDogMjBweDtcbiAgcGFkZGluZy1sZWZ0OiAxNXB4O1xufVxuLmFsaWduY29udHJhY3Qge1xuICBwYWRkaW5nOiAxMHB4O1xuICBtYXJnaW4tbGVmdDogLTlweDtcbn1cbi5idG4ge1xuICBmbG9hdDogcmlnaHQ7XG4gIHBhZGRpbmctcmlnaHQ6IDEycHg7XG4gIHBhZGRpbmctbGVmdDogMTJweDtcbiAgbWFyZ2luOiAxcHg7XG4gIG1hcmdpbjogcmlnaHQ7XG4gIHBhZGRpbmctYm90dG9tOiA1cHg7XG4gIHBhZGRpbmctbGVmdDogNnB4O1xuICBwYWRkaW5nLXJpZ2h0OiA2cHg7XG4gIG1hcmdpbi1ib3R0b206IDEwcHg7XG4gIG1hcmdpbi1yaWdodDogN3B4O1xufVxuXG5pbnB1dCB7XG4gIG91dGxpbmU6IDA7XG4gIGNvbG9yOiByZ2IoMTUwLCAxNTAsIDE1MCk7XG4gIGJvcmRlci13aWR0aDogMCAwIDFweDtcbiAgYm9yZGVyLWNvbG9yOiByZ2IoMTc2LCAxNzYsIDE3OSk7XG59XG5pbnB1dDpob3ZlciB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNlMmUyZWI7XG4gIGNvbG9yOiAjM2Q0MDVjO1xufVxuXG5zZWxlY3Q6aG92ZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZTJlMmViO1xuICBjb2xvcjogIzNkNDA1Yztcbn1cblxuc2VsZWN0IHtcbiAgb3V0bGluZTogMDtcbiAgY29sb3I6IHJnYigxNTAsIDE1MCwgMTUwKTtcbiAgYm9yZGVyLXdpZHRoOiAwIDAgMXB4O1xuICBib3JkZXItY29sb3I6IHJnYigxNzYsIDE3NiwgMTc5KTtcbn1cblxuLmJ0bi1jaXJjbGUge1xuICBoZWlnaHQ6IDQwcHg7XG4gIHdpZHRoOiA0MHB4O1xuICBmbG9hdDogcmlnaHQ7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBib3JkZXItcmFkaXVzOiA1MCU7XG4gIGNvbG9yOiByZ2IoMjU1LCAyNTUsIDI1NSk7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYigwLCAxNTcsIDI0OCk7XG59XG5cbi5jYXJkIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUpO1xuICBwYWRkaW5nOiAxMHB4O1xuICBtYXJnaW46IDEwcHggMTBweCAxMHB4IDBweDtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi5jYXJkLWhlYWRlciB7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYigwLCAxNTcsIDI0OCk7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgdGV4dC1hbGlnbjogbGVmdDtcbiAgdmVydGljYWwtYWxpZ246IG1pZGRsZTtcbiAgaGVpZ2h0OiA2MHB4O1xuICB3aWR0aDogMTAwJTtcbn1cblxuLmNhcmQtZm9vdGVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUpO1xuICBoZWlnaHQ6IDYwcHg7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG50YWJsZSB7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG50aCB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgdmVydGljYWwtYWxpZ246IG1pZGRsZTtcbiAgY29sb3I6IHdoaXRlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMCwgMTU3LCAyNDgpO1xuICBib3JkZXItYm90dG9tOiAxcHggc29saWQgcmdiKDE2OCwgMTY4LCAxNjgpO1xuICBwYWRkaW5nOiAxMHB4O1xufVxuXG50ZCB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgY29sb3I6IHJnYigxNTAsIDE1MCwgMTUwKTtcbiAgLyogYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHJnYigxNjgsIDE2OCwgMTY4KTsgKi9cbn1cblxuLmJ0bi1zZWFyY2gge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgb3V0bGluZTogMDtcbiAgYm9yZGVyLXdpZHRoOiAwIDAgMXB4O1xuICBib3JkZXItY29sb3I6IHJnYigxNzYsIDE3NiwgMTc5KTtcbn1cblxuLnNlYXJjaCB7XG4gIG91dGxpbmU6IDA7XG4gIGJvcmRlci13aWR0aDogMCAwIDFweDtcbiAgYm9yZGVyLWNvbG9yOiByZ2IoMTc2LCAxNzYsIDE3OSk7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -2749,7 +2880,7 @@ module.exports = ".btn-circle {\n  height: 40px;\n  width: 40px;\n  float: right
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>this is dashboard</p>\n<button class=\"btn btn-lg btn-outline-success\" [routerLink]=\"['/customer/list']\" routerLinkActive=\"router-link-active\" >Customers</button>\n"
+module.exports = "<div class=\"row\">\n  <div class=\" col card shadow rounded\">\n      <div class=\"card-header\">\n       <h3> Last Month Total</h3>\n      </div>\n      <div class=\"card-body\">\n        <h2>{{lastMonthTotal}}</h2>\n</div>\n</div>\n  <div class=\" col card shadow rounded\">\n      <div class=\"card-header\">\n       <h3> This Month Total</h3>\n      </div>\n      <div class=\"card-body\">\n        <h2>{{thisMonthTotal}}</h2>\n</div>\n</div>\n  <div class=\" col card shadow rounded\">\n      <div class=\"card-header\">\n       <h3>Grand Total</h3>\n      </div>\n      <div class=\"card-body\">\n        <h2>{{grandTotal}}</h2>\n</div>\n</div>\n\n</div>\n"
 
 /***/ }),
 
@@ -2765,14 +2896,106 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DashboardComponent", function() { return DashboardComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ams_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ams.service */ "./src/app/ams.service.ts");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
+
+
 
 
 var DashboardComponent = /** @class */ (function () {
-    function DashboardComponent() {
+    function DashboardComponent(amsService, spinner, router) {
+        this.amsService = amsService;
+        this.spinner = spinner;
+        this.router = router;
+        this.recieptArray = [];
+        this.lastArray = [];
+        this.thisArray = [];
+        this.month = new Date().toISOString().substring(0, 10);
+        console.log(this.month, 'this is month');
+        // this.fetchContracts();
+        this.fetchReciept();
     }
     DashboardComponent.prototype.ngOnInit = function () {
     };
-    DashboardComponent.prototype.logout = function () {
+    DashboardComponent.prototype.fetchContracts = function () {
+        var _this = this;
+        this.amsService.getContracts().subscribe(function (data) {
+            _this.contractlist = data;
+            console.log('all contract found', data);
+            _this.searchByMonth(_this.month);
+        });
+    };
+    DashboardComponent.prototype.searchByMonth = function (month) {
+        var m = new Date(month);
+        console.log(m, 'this is m');
+        var findMonth = m.getMonth() + 1;
+        for (var i = 0; i < this.contractlist.length; i++) {
+            var contract = this.contractlist[i];
+            var reaccurance = contract.reaccurance;
+            for (var j = 0; j < reaccurance.length; j++) {
+                var nxt = reaccurance[j];
+                var nxtDate = new Date(nxt.nxtDate);
+                var nxtMonth = nxtDate.getMonth() + 1;
+                if (findMonth === nxtMonth) {
+                    contract.nxtDue = nxtDate;
+                }
+            }
+        }
+        console.log('all done');
+    };
+    DashboardComponent.prototype.fetchReciept = function () {
+        var _this = this;
+        this.amsService
+            .getReciept()
+            .subscribe(function (data) {
+            _this.recieptlist = data.data;
+            //
+            _this.getLastMonth();
+            _this.getThisMonth();
+            _this.grandTotal = _this.getTotal(_this.recieptlist);
+        });
+    };
+    DashboardComponent.prototype.getLastMonth = function () {
+        var m = new Date(this.month);
+        console.log(m, 'this is m');
+        var findMonth = m.getMonth();
+        //
+        for (var i = 0; i < this.recieptlist.length; i++) {
+            var reciept = this.recieptlist[i];
+            var rMonth = new Date(reciept.recieptDate).getMonth() + 1;
+            if (findMonth === rMonth) {
+                this.lastArray.push(reciept);
+            }
+        }
+        var total = this.getTotal(this.lastArray);
+        this.lastMonthTotal = total;
+    };
+    DashboardComponent.prototype.getThisMonth = function () {
+        var m = new Date(this.month);
+        console.log(m, 'this is m');
+        var findMonth = m.getMonth() + 1;
+        //
+        for (var i = 0; i < this.recieptlist.length; i++) {
+            var reciept = this.recieptlist[i];
+            var rMonth = new Date(reciept.recieptDate).getMonth() + 1;
+            if (findMonth === rMonth) {
+                this.thisArray.push(reciept);
+            }
+        }
+        var total = this.getTotal(this.thisArray);
+        this.thisMonthTotal = total;
+    };
+    DashboardComponent.prototype.getTotal = function (data) {
+        var amount = 0;
+        var total = 0;
+        data.forEach(function (element) {
+            amount = parseInt(element.recivedAmount, 10);
+            console.log(amount, 'this is amount');
+            total += amount;
+        });
+        return total;
     };
     DashboardComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -2780,7 +3003,9 @@ var DashboardComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./dashboard.component.html */ "./src/app/dashboard/dashboard.component.html"),
             styles: [__webpack_require__(/*! ./dashboard.component.css */ "./src/app/dashboard/dashboard.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ams_service__WEBPACK_IMPORTED_MODULE_2__["AmsService"],
+            ngx_spinner__WEBPACK_IMPORTED_MODULE_3__["NgxSpinnerService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
     ], DashboardComponent);
     return DashboardComponent;
 }());
@@ -2892,6 +3117,39 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 
 module.exports = __webpack_require__(/*! D:\ZAFAR Data\AMS\frontend\src\main.ts */"./src/main.ts");
 
+
+/***/ }),
+
+/***/ 1:
+/*!********************!*\
+  !*** fs (ignored) ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 2:
+/*!************************!*\
+  !*** crypto (ignored) ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 3:
+/*!************************!*\
+  !*** stream (ignored) ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
 
 /***/ })
 

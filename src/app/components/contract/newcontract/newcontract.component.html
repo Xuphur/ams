@@ -6,7 +6,6 @@
     <h3 class="aligncontract">Contract</h3>
 
     <div class="row">
-
       <div class="col-6 col-md-4">
         <label for="status">Sale Type</label>
         <select
@@ -31,6 +30,7 @@
           id="customer"
           class="form-control"
           placeholder=""
+          (click)="fetchCustomers()"
         >
           <option
             value="{{ customer?._id }}"
@@ -49,13 +49,13 @@
           id="asset"
           class="form-control"
           placeholder=""
+          (click)="fetchAssets()"
         >
           <option value="{{ asset?._id }}" *ngFor="let asset of assetlist">{{
             asset?.title
           }}</option>
         </select>
       </div>
-
     </div>
 
     <div class="row" *ngIf="this.contract.saleType > 1">
@@ -240,47 +240,42 @@
           placeholder="Installment / Rent"
         />
       </div>
-
     </div>
 
     <div class="col-6 col-md-4" *ngIf="contract.saleType > 0">
-        <label for="totalPayable">Total Payable</label>
-        <input
-          [(ngModel)]="contract.totalPayable"
-          type="number"
-          name="totalPayable"
-          id="totalPayable"
-          class="form-control"
-          placeholder=""
-        />
-      </div>
-
-<hr />
-      <div class="row float-right">
-        <button
-          type="submit"
-          (click)="getNxt(contract)"
-          class="btn btn-success"
-        >
-          Get Nxt
-        </button>
-        <button
-          type="submit"
-          (click)="addContract(contract)"
-          class="btn btn-success"
-        >
-          Save
-        </button>
-        <button type="submit" (click)="openCustomer()" class="btn btn-primary">
-          Create Customer
-        </button>
-
-        <button type="submit" (click)="openAsset()" class="btn btn-warning">
-          Create Asset
-        </button>
-        <button type="submit" (click)="close()" class="btn btn-danger">
-          Cancel
-        </button>
-      </div>
+      <label for="totalPayable">Total Payable</label>
+      <input
+        [(ngModel)]="contract.totalPayable"
+        type="number"
+        name="totalPayable"
+        id="totalPayable"
+        class="form-control"
+        placeholder=""
+      />
     </div>
+
+    <hr />
+    <div class="row float-right">
+      <button type="submit" (click)="getNxt(contract)" class="btn btn-success">
+        Get Nxt
+      </button>
+      <button
+        type="submit"
+        (click)="addContract(contract)"
+        class="btn btn-success"
+      >
+        Save
+      </button>
+      <button type="submit" (click)="openCustomer()" class="btn btn-primary">
+        Create Customer
+      </button>
+
+      <button type="submit" (click)="openAsset()" class="btn btn-warning">
+        Create Asset
+      </button>
+      <button type="submit" (click)="close()" class="btn btn-danger">
+        Cancel
+      </button>
+    </div>
+  </div>
 </form>

@@ -1,18 +1,17 @@
 import { Component } from '@angular/core';
-import {AuthguardService} from './authguard.service';
+import { AuthguardService } from './authguard.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+  isLoggIn: any;
 
   constructor(private authService: AuthguardService) {
-
-    this.authService.isLoggIn = this.authService.isLoggedIn();
-   }
+    this.isLoggIn = this.authService.isLoggedIn();
+  }
 
   title = 'Asset Management System';
- logincheck = '';
+  logincheck = '';
 }

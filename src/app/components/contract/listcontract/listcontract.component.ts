@@ -18,7 +18,7 @@ export class ListcontractComponent implements OnInit {
   status: any;
   customer: any;
   type: any;
-  owner: any;
+  month: any;
   contractlist: any = [];
   public isCollapsed = true;
 
@@ -26,7 +26,10 @@ export class ListcontractComponent implements OnInit {
     private amsService: AmsService,
     private router: Router,
     private modalService: NgbModal
-  ) {}
+  ) {
+    this.month = new Date().toISOString().substring(0, 10);
+    console.log(this.month, 'sadas');
+  }
 
   ngOnInit() {
     this.fetchContracts();
@@ -71,19 +74,33 @@ export class ListcontractComponent implements OnInit {
   }
 
   searchByStatus(status) {
-    console.log(status, 'this is title at search');
-    this.amsService.getContractByStatus(status).subscribe((res: any) => {
-      this.contractlist = res.data;
-      console.log('all contract found by status', this.contractlist);
-    });
+    console.log(status, 'this is status at contract search');
+    if (status === '') {
+      this.fetchContracts();
+    } else {
+      this.amsService.getContractByStatus(status).subscribe((res: any) => {
+        this.contractlist = res.data;
+        console.log('all contract found by status', this.contractlist);
+      });
+    }
   }
 
-  searchByOwner(owner) {
-    console.log(owner, 'this is owner at search');
-    this.amsService.getAssetByOwner(owner).subscribe((res: any) => {
-      this.contractlist = res.data;
-      console.log('all asset found by Owner', this.contractlist);
-    });
+  searchByMonth(month) {
+    const m = new Date(month);
+    const findMonth = m.getMonth() + 1;
+    for (let i = 0; i < this.contractlist.length; i++) {
+      const contract = this.contractlist[i];
+      const reaccurance = contract.reaccurance;
+      for (let j = 0; j < reaccurance.length; j++) {
+        const nxt = reaccurance[j];
+        const nxtDate = new Date(nxt.nxtDate);
+        const nxtMonth = nxtDate.getMonth() + 1;
+        if (findMonth === nxtMonth) {
+          contract.nxtDue = nxtDate;
+        }
+      }
+    }
+    console.log('all done');
   }
 
   searchByType(type) {

@@ -77,6 +77,7 @@ export class NewcontractComponent implements OnInit {
   }
 
   addContract(contract) {
+    this.getNxt(contract);
     this.amsService.addContract(contract).subscribe(() => {
       Swal.fire('Contract Inserted Successfully');
       this.router.navigate(['/contract/list']);

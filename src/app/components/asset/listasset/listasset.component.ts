@@ -16,9 +16,9 @@ import { ViewassetComponent } from '../viewasset/viewasset.component';
 export class ListassetComponent implements OnInit {
   page = 1 ;
   pageSize: any = '5';
-  title: any;
-  owner: any;
-  type: any;
+  title: any = '';
+  owner: any = '';
+  type: any = '';
   assetlist: any = [];
   foundAsset: any;
   closeResult: string;
@@ -54,16 +54,23 @@ export class ListassetComponent implements OnInit {
     }
 
   search(title) {
-    console.log(title, 'this is title at search');
-    this.amsService
-    .getAsset(title)
-    .subscribe((res: any) => {
-      this.assetlist = res.data;
-      console.log('all asset found bt Title', this.assetlist);
-    });
+    if (title === '') {
+      this.fetchAssets();
+    } else {
+      console.log(title, 'this is title at search');
+      this.amsService
+      .getAsset(title)
+      .subscribe((res: any) => {
+        this.assetlist = res.data;
+        console.log('all asset found bt Title', this.assetlist);
+      });
+    }
     }
 
   searchByOwner(owner) {
+    if (owner === '') {
+      this.fetchAssets();
+    } else {
     console.log(owner, 'this is owner at search');
     this.amsService
     .getAssetByOwner(owner)
@@ -72,8 +79,12 @@ export class ListassetComponent implements OnInit {
       console.log('all asset found by Owner', this.assetlist);
     });
     }
+  }
 
   searchByType(type) {
+    if (type === '') {
+      this.fetchAssets();
+    } else {
     console.log(type, 'this is owner at search');
     this.amsService
     .getAssetByType(type)
@@ -82,6 +93,7 @@ export class ListassetComponent implements OnInit {
       console.log('all asset found by Owner', this.assetlist);
     });
     }
+  }
 
   deleteAsset(_id) {
     this.amsService.deleteAsset(_id).subscribe(() => {

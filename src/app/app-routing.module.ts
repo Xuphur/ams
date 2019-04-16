@@ -8,6 +8,7 @@ import { SearchComponent } from './components/search/search.component';
 import { LoginInComponent } from './components/users/login-in/login-in.component';
 import { SignupComponent } from './components/users/signup/signup.component';
 import { AuthguardService } from './authguard.service';
+import { MainComponent } from './components/reports/main/main.component';
 
 const routes: Routes = [
   // { path: '', component: LoginInComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'contract/list', component: ListcontractComponent },
   { path: 'customer/list', component: ListcustomerComponent },
   { path: 'dashboard', canActivate: [AuthguardService], component: DashboardComponent },
+  { path: 'reports/main', component: MainComponent },
   { path: 'search', component: SearchComponent }
 ];
 

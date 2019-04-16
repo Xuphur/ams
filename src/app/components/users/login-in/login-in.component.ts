@@ -34,18 +34,15 @@ export class LoginInComponent implements OnInit {
   }
 
   getuser(user) {
-    console.log(user, 'this user login'),
     this.spinner.show();
     this.amsService.getUser(user).subscribe((loginData) => {
       localStorage.setItem('loginvalue', JSON.stringify(loginData));
-      console.log('check storage data');
       this.authService.isLoggIn = true;
-      this.router.navigate(['/asset/list']);
-      console.log( this.loginvalue, 'user at service'),
+      this.router.navigate(['/dashboard']);
       this.spinner.hide();
-      // Swal.fire(
-      //   'User Log In Successfully'
-      // )
+      Swal.fire(
+        'User Log In Successfully'
+      );
     });
   }
 

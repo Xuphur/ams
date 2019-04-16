@@ -18,6 +18,7 @@ export class Contract {
   avdancePayment: Number;
   balance: Number;
   reaccurance = '';
+  nxtDue = '';
   totalRecieved: '';
   expiryDate: '';
   cancelation: '';

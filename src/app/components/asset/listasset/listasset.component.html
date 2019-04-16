@@ -11,6 +11,7 @@
         type="text"
         name=""
         placeholder="Search By Title"
+        (change)="search(title)"
       />
       <button type="button" class="btn-search" (click)="search(title)">
         <i class="fas fa-angle-down"></i>
@@ -23,6 +24,7 @@
         type="text"
         name=""
         placeholder="Search By Owner"
+        (change)="searchByOwner(owner)"
       />
       <button type="button" class="btn-search" (click)="searchByOwner(owner)">
         <i class="fas fa-angle-down"></i>
@@ -35,6 +37,7 @@
         type="text"
         name=""
         placeholder="Search By type"
+        (change)="searchByType(type)"
       />
       <button type="button" class="btn-search" (click)="searchByType(type)">
         <i class="fas fa-angle-down"></i>

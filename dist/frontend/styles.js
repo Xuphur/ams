@@ -632,7 +632,7 @@ if(false) {}
 
 /***/ }),
 
-/***/ 2:
+/***/ 5:
 /*!********************************************************************************************************************************************!*\
   !*** multi ./node_modules/bootstrap/dist/css/bootstrap.min.css ./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css ./src/styles.css ***!
   \********************************************************************************************************************************************/
@@ -646,5 +646,5 @@ module.exports = __webpack_require__(/*! D:\ZAFAR Data\AMS\frontend\src\styles.c
 
 /***/ })
 
-},[[2,"runtime"]]]);
+},[[5,"runtime"]]]);
 //# sourceMappingURL=styles.js.map

@@ -88,7 +88,7 @@ export class AmsService {
 
   // Reciept CRUDs
 
-  getReciept(_id) {
+  getReciept() {
     return this.http.get(this.url + '/reciept/all');
   }
 
@@ -172,9 +172,9 @@ export class AmsService {
     return this.http.get(this.url + '/contract/' + id);
   }
 
-  getContractByOwner(owner) {
-    console.log(owner, 'id at service to edit');
-    return this.http.get(this.url + '/contract/owner/' + owner);
+  getContractByMonth(month) {
+    console.log(month, 'month at service to search');
+    return this.http.get(this.url + '/contract/month/' + month);
   }
 
   getContractByCustomer(customer) {
