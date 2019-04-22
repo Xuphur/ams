@@ -12,14 +12,42 @@ import { MainComponent } from './components/reports/main/main.component';
 
 const routes: Routes = [
   // { path: '', component: LoginInComponent },
-  {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
-  { path: 'login', component: LoginInComponent },
-  { path: 'signup', component: SignupComponent },
-  { path: 'asset/list', component: ListassetComponent },
-  { path: 'contract/list', component: ListcontractComponent },
-  { path: 'customer/list', component: ListcustomerComponent },
-  { path: 'dashboard', canActivate: [AuthguardService], component: DashboardComponent },
-  { path: 'reports/main', component: MainComponent },
+  { path: '', canActivate: [AuthguardService], redirectTo: '/dashboard', pathMatch: 'full' },
+  {
+    path: 'login',
+    // canActivate: [AuthguardService],
+    component: LoginInComponent
+  },
+  {
+    path: 'signup',
+    canActivate: [AuthguardService],
+    component: SignupComponent
+  },
+  {
+    path: 'asset/list',
+    canActivate: [AuthguardService],
+    component: ListassetComponent
+  },
+  {
+    path: 'contract/list',
+    canActivate: [AuthguardService],
+    component: ListcontractComponent
+  },
+  {
+    path: 'customer/list',
+    canActivate: [AuthguardService],
+    component: ListcustomerComponent
+  },
+  {
+    path: 'dashboard',
+    canActivate: [AuthguardService],
+    component: DashboardComponent
+  },
+  {
+    path: 'reports/main',
+    canActivate: [AuthguardService],
+    component: MainComponent
+  },
   { path: 'search', component: SearchComponent }
 ];
 

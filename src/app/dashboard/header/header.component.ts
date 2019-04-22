@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthguardService } from '../../authguard.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -9,20 +9,17 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
   isLoggedIn: any;
   loginvalue: any;
+
   constructor(
     private authService: AuthguardService,
+    private route: ActivatedRoute,
     private router: Router
+    ) {}
 
-    ) { }
-
-  ngOnInit() {
-    console.log(this.authService.isLoggedIn(),  'is login');
-    this.isLoggedIn = this.authService.isLoggedIn();
-  }
+  ngOnInit() {}
 
   logout() {
-      localStorage.removeItem('loginvalue');
-      this.authService.isLoggIn = false;
-      this.router.navigate(['/']);
-    }
+    localStorage.removeItem('loginvalue');
+    this.router.navigateByUrl('/login');
+  }
 }

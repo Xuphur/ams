@@ -8,12 +8,16 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class AmsService {
   Id: String;
   editMode: Boolean = false;
+  isLoggIn: Boolean = true;
 
 
-  // url = 'http://localhost:4000';
-   url = 'https://ams-backend.herokuapp.com';
+  url = 'http://localhost:4000';
+  //  url = 'https://ams-backend.herokuapp.com';
 
-  constructor(private http: HttpClient, private modalService: NgbModal) {}
+  constructor(
+    private http: HttpClient,
+    private modalService: NgbModal
+    ) {}
 
   // Asset CRUDs
   getAssets() {

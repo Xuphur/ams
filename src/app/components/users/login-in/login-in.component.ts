@@ -17,10 +17,10 @@ export class LoginInComponent implements OnInit {
   loginvalue: any;
 
   constructor(
-    private amsService: AmsService,
     private authService: AuthguardService,
     private route: ActivatedRoute,
     private router: Router,
+    private amsService: AmsService,
     private spinner: NgxSpinnerService
     ) {
       this.user = new User();
@@ -37,8 +37,8 @@ export class LoginInComponent implements OnInit {
     this.spinner.show();
     this.amsService.getUser(user).subscribe((loginData) => {
       localStorage.setItem('loginvalue', JSON.stringify(loginData));
-      this.authService.isLoggIn = true;
-      this.router.navigate(['/dashboard']);
+      // this.authService.isLoggIn = true;
+      this.router.navigate(['/asset/list']);
       this.spinner.hide();
       Swal.fire(
         'User Log In Successfully'

@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <nav class="navbar">
   <a
   class="navbar-brand mb-0 h1"
@@ -31,18 +30,18 @@
       ngbDropdownToggle
     >User Management</button>
     <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-      <ul>
-        <li
-          ngbDropdownItem
-          [routerLink]="['/signup']"
-          routerLinkActive="router-link-active"
-        >
+      <button class="btn"
+      ngbDropdownItem
+      [routerLink]="['/signup']"
+      routerLinkActive="router-link-active"
+    >
+
           <i class="fas fa-user-plus"></i> &nbsp; Create New
-        </li>
-        <li ngbDropdownItem (click)="logout()">
+      </button
+      >
+      <button class="btn" ngbDropdownItem (click)="logout()">
           <i class="fas fa-sign-out-alt"></i> &nbsp; Logout
-        </li>
-      </ul>
+      </button>
     </div>
   </div>
 </nav>

@@ -30,6 +30,7 @@ import { LoginInComponent } from './components/users/login-in/login-in.component
 import { SignupComponent } from './components/users/signup/signup.component';
 import { AuthguardService } from './authguard.service';
 import { MainComponent } from './components/reports/main/main.component';
+import { BaseComponent } from './components/base/base.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { MainComponent } from './components/reports/main/main.component';
     SearchComponent,
     LoginInComponent,
     SignupComponent,
-    MainComponent
+    MainComponent,
+    BaseComponent
   ],
   imports: [
     NgxSpinnerModule,
