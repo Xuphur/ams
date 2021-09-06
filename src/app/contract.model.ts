@@ -1,23 +1,25 @@
 export class Contract {
-
   ref: '';
   title: '';
-  issuetime: '';
-  duration: '';
-  increment: '';
-  incrementSchedule: '';
-  status: '';
-  assetValue: '';
-    contractDate: '';
-    startDate: '';
-    expiryDate: '';
-    cancelation: '';
-    reaccurance: '';
-    paymentMathod: '';
-    priceQuoted: '';
-    totalPayable: '';
-    downPayment: '';
-    avdancePayment: '';
   customer: '';
   asset: '';
+  saleType: '';
+  contractDate: '';
+  duration: '';
+  status: '';
+  startDate: '';
+  increment: '';
+  incrementSchedule: '';
+  paymentSchedule: '';
+  priceQuoted: Number;
+  totalPayable: Number;
+  installment: Number;
+  downPayment: Number;
+  avdancePayment: Number;
+  balance: Number;
+  reaccurance = '';
+  nxtDue = '';
+  totalRecieved: '';
+  expiryDate: '';
+  cancelation: '';
 }

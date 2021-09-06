@@ -1,10 +1,21 @@
-   h2{
-    margin-top: 11px;
-    text-align: center;
-   }
-.heading{
+h2 {
+  margin-top: 11px;
+  text-align: center;
+}
+.heading {
   border: 1px solid red;
 }
-h5{
-  background-color: #FAFAFA;
+h5 {
+  background-color: #fafafa;
+}
+.header {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  list-style: none;
+
+  font-size: 14px;
+}
+i {
+  background-color: white;
 }
