@@ -3,7 +3,7 @@ import { Contract } from 'src/app/contract.model';
 import { AmsService } from 'src/app/ams.service';
 import { FormBuilder } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import Swal from 'sweetalert2';
+import Swal from 'sweetalert';
 import { NewassetComponent } from '../../asset/newasset/newasset.component';
 import { NewcustomerComponent } from '../../customer/newcustomer/newcustomer.component';
 import * as moment from 'moment';
@@ -79,7 +79,7 @@ export class NewcontractComponent implements OnInit {
   addContract(contract) {
     this.getNxt(contract);
     this.amsService.addContract(contract).subscribe(() => {
-      Swal.fire('Contract Inserted Successfully');
+      Swal('Contract Inserted Successfully');
       this.router.navigate(['/contract/list']);
       this.close();
     });
