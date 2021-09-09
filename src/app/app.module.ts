@@ -30,6 +30,7 @@ import { SignupComponent } from './components/users/signup/signup.component';
 import { AuthguardService } from './authguard.service';
 import { MainComponent } from './components/reports/main/main.component';
 import { BaseComponent } from './components/base/base.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { BaseComponent } from './components/base/base.component';
     AppRoutingModule,
     // tslint:disable-next-line: deprecation
     // NgbModule.forRoot(),
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   entryComponents: [
     NewassetComponent,

@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/user.model';
-import Swal from 'sweetalert2';
+import Swal from 'sweetalert';
 import { AmsService } from 'src/app/ams.service';
 import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-// import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-signup',
@@ -20,7 +19,6 @@ export class SignupComponent implements OnInit {
     private amsService: AmsService,
     private fb: FormBuilder,
     private route: ActivatedRoute,
-    // public activeModal: NgbActiveModal
   ) {
     this.user = new User();
     this.route.paramMap.subscribe(parameterMap => {
@@ -32,18 +30,12 @@ export class SignupComponent implements OnInit {
   ngOnInit() {
   }
 
-  // close() {
-  //   this.activeModal.close();
-  // }
-
-
   save(user) {
     console.log(user, 'this is new asset'),
       this.amsService.addUser(user).subscribe(() => {
-        Swal.fire(
+        Swal(
           'Assest Inserted Successfully'
         );
-        // this.close();
       });
   }
 }

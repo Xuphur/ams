@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AmsService } from 'src/app/ams.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { User } from 'src/app/user.model';
-import Swal from 'sweetalert2';
-import { NgxSpinnerService } from 'ngx-spinner';
+import swal from 'sweetalert';
 import { AuthguardService } from 'src/app/authguard.service';
 @Component({
   selector: 'app-login-in',
@@ -21,7 +20,6 @@ export class LoginInComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private amsService: AmsService,
-    private spinner: NgxSpinnerService
     ) {
       this.user = new User();
       this.route.paramMap.subscribe(parameterMap => {
@@ -34,17 +32,13 @@ export class LoginInComponent implements OnInit {
   }
 
   getuser(user) {
-    this.spinner.show();
     this.amsService.getUser(user).subscribe((loginData) => {
       localStorage.setItem('loginvalue', JSON.stringify(loginData));
       // this.authService.isLoggIn = true;
       this.router.navigate(['/asset/list']);
-      this.spinner.hide();
-      Swal.fire(
+      swal(
         'User Log In Successfully'
       );
     });
   }
-
-
 }
