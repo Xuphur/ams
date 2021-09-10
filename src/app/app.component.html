@@ -1,5 +1,6 @@
-<app-header *ngIf="isLoggIn"></app-header>
+{% comment %} <app-header *ngIf="isLoggIn"></app-header> {% endcomment %}
 <div class="row">
+<h1> This is App</h1>
   <div class="col-2" *ngIf="isLoggIn">
     <app-sidebar></app-sidebar>
   </div>

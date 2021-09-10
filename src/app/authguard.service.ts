@@ -22,7 +22,7 @@ export class AuthguardService {
 
   isLoggedIn() {
     if (localStorage.getItem('loginvalue') !== null) {
-      // this.route.navigate(['/dashboard']);
+      this.route.navigate(['/dashboard']);
       return true;
     } else {
       this.route.navigate(['/login']);

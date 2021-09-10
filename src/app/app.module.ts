@@ -9,7 +9,6 @@ import { AmsService } from './ams.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { NewassetComponent } from './components/asset/newasset/newasset.component';
 import { NewrecieptComponent } from './components/reciept/newreciept/newreciept.component';
@@ -21,9 +20,9 @@ import { ViewcustomerComponent } from './components/customer/viewcustomer/viewcu
 import { NewcontractComponent } from './components/contract/newcontract/newcontract.component';
 import { ListcontractComponent } from './components/contract/listcontract/listcontract.component';
 import { ViewcontractComponent } from './components/contract/viewcontract/viewcontract.component';
-// import { DashboardComponent } from './dashboard/dashboard.component';
-// import { SidebarComponent } from './Dashboard/sidebar/sidebar.component';
-// import { HeaderComponent } from './Dashboard/header/header.component';
+import { DashboardComponent } from './components//dashboard/dashboard.component';
+import { SidebarComponent } from './components//Dashboard/sidebar/sidebar.component';
+import { HeaderComponent } from './components//Dashboard/header/header.component';
 import { SearchComponent } from './components/search/search.component';
 import { LoginInComponent } from './components/users/login-in/login-in.component';
 import { SignupComponent } from './components/users/signup/signup.component';
@@ -46,9 +45,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NewcontractComponent,
     ListcontractComponent,
     ViewcontractComponent,
-    // DashboardComponent,
-    // SidebarComponent,
-    // HeaderComponent,
+    DashboardComponent,
+    SidebarComponent,
+    HeaderComponent,
     SearchComponent,
     LoginInComponent,
     SignupComponent,
@@ -56,14 +55,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BaseComponent
   ],
   imports: [
-    // NgxSpinnerModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,
     // tslint:disable-next-line: deprecation
-    // NgbModule.forRoot(),
     FormsModule,
     NgbModule
   ],
