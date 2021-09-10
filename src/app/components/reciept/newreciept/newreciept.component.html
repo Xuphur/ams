@@ -48,7 +48,7 @@
       </select>
     </div>
 
-    <div class="col" *ngIf="reciept.paymentMethod > 1">
+    <div class="col" *ngIf="reciept.paymentMethod > '1'">
       <label for="amount">Transaction ID</label>
       <input [(ngModel)]="reciept.trId" type="number" name="trId" id="trId" />
     </div>
