@@ -9,7 +9,7 @@ export class AppComponent {
   isLoggIn: any;
 
   constructor(private authService: AuthguardService) {
-    this.isLoggIn = this.authService.isLoggedIn();
+    // this.isLoggIn = this.authService.isLoggedIn();
   }
 
   title = 'Asset Management System';

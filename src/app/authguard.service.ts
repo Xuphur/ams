@@ -5,13 +5,14 @@ import {
   RouterStateSnapshot,
   Router
 } from '@angular/router';
-import { User } from './user.model';
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthguardService {
 
-  constructor(private route: Router) {}
+  constructor(public route: Router,
+    ) {}
 
   canActivate(
     next: ActivatedRouteSnapshot,
