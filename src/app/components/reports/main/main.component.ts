@@ -21,6 +21,7 @@ export class MainComponent implements OnInit {
   month: any;
   page = 1;
   pageSize: any = '5';
+  isCollapsed = true;
 
   constructor(
     private amsService: AmsService,

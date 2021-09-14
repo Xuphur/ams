@@ -19,6 +19,7 @@ import {
   styleUrls: ['./newcontract.component.css']
 })
 export class NewcontractComponent implements OnInit {
+
   contract: any;
   editMode = this.amsService.editMode;
   customerlist: any;
@@ -73,15 +74,6 @@ export class NewcontractComponent implements OnInit {
     this.amsService.getAssets().subscribe(data => {
       this.assetlist = data;
       console.log('all customer found', data);
-    });
-  }
-
-  addContract(contract) {
-    this.getNxt(contract);
-    this.amsService.addContract(contract).subscribe(() => {
-      Swal('Contract Inserted Successfully');
-      this.router.navigate(['/contract/list']);
-      this.close();
     });
   }
 
@@ -205,6 +197,14 @@ export class NewcontractComponent implements OnInit {
       this.contract.reaccurance = this.instArray;
     }
     console.log('==================>>>', this.contract.reaccurance);
+  }
+
+  addContract(contract) {
+    this.amsService.addContract(contract).subscribe(() => {
+      Swal('Contract Inserted Successfully');
+      this.router.navigate(['/contract/list']);
+      this.close();
+    });
   }
 
   close() {

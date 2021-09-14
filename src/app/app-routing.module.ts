@@ -16,16 +16,11 @@ const routes: Routes = [
     // canActivate: [AuthguardService],
     component: LoginInComponent
   },
-  // { path: '', 
+  {
+  path: 'dashboard',
   // canActivate: [AuthguardService],
-  //  component: DashboardComponent,
-  //  },
-
-  // {
-  // path: 'login',
-  // canActivate: [AuthguardService],
-  // component: LoginInComponent
-  // },
+  component: DashboardComponent
+  },
   {
     path: 'signup',
     // canActivate: [AuthguardService],
@@ -59,7 +54,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{ onSameUrlNavigation: 'reload' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

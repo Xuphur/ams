@@ -1,37 +1,109 @@
-/* .sidebar{
-  width: 17%;
-  background:white;
-  height: 100vh;
-  }
-  /* .main{
-    background-color: #CCCCFF;
+.align {
+  margin-top: 20px;
+  padding-left: 15px;
+}
+.aligncontract {
+  padding: 10px;
+  margin-left: -9px;
+}
+.btn {
+  float: right;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin: 1px;
+  margin: right;
+  padding-bottom: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-bottom: 10px;
+  margin-right: 7px;
+}
 
-  } */
-  /* .setbar{
-    height: 152px;
+input {
+  outline: 0;
+  color: rgb(150, 150, 150);
+  border-width: 0 0 1px;
+  border-color: rgb(176, 176, 179);
+}
+input:hover {
+  background-color: #e2e2eb;
+  color: #3d405c;
+}
 
-  }
-  ul{
-  list-style:none;
-  }
-  span + span {
-  margin-left: 10px;
-  margin-bottom: 10px; */
+select:hover {
+  background-color: #e2e2eb;
+  color: #3d405c;
+}
 
-  /* }
-  /* div + div {
-    margin-top: 10px;
-  } */
+select {
+  outline: 0;
+  color: rgb(150, 150, 150);
+  border-width: 0 0 1px;
+  border-color: rgb(176, 176, 179);
+}
 
-  /* .aligment{
-    height: 45px;
-      margin-left: 10px;
-  }
-  .round{
-    width: 60px;
-    border-radius: 50%;
-  } */
+.btn-circle {
+  height: 40px;
+  width: 40px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 157, 248);
+}
 
-  /* .active {
-    background-color: #4CAF50;
-  } */
+.card {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  margin: 10px 10px 10px 0px;
+  width: 100%;
+}
+
+.card-header {
+  background-color: rgb(0, 157, 248);
+  color: white;
+  text-align: left;
+  vertical-align: middle;
+  height: 60px;
+  width: 100%;
+}
+
+.card-footer {
+  background-color: rgb(255, 255, 255);
+  height: 60px;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  background-color: rgb(0, 157, 248);
+  border-bottom: 1px solid rgb(168, 168, 168);
+  padding: 10px;
+}
+
+td {
+  text-align: center;
+  color: rgb(150, 150, 150);
+  /* border-bottom: 1px solid rgb(168, 168, 168); */
+}
+
+.btn-search {
+  background-color: white;
+  outline: 0;
+  border-width: 0 0 1px;
+  border-color: rgb(176, 176, 179);
+}
+
+.search {
+  outline: 0;
+  border-width: 0 0 1px;
+  border-color: rgb(176, 176, 179);
+}

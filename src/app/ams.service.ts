@@ -11,8 +11,8 @@ export class AmsService {
   isLoggIn: Boolean = true;
 
 
-  // url = 'http://localhost:4000';
-   url = 'https://ams-backend.herokuapp.com';
+  url = 'http://localhost:4000';
+  //  url = 'https://ams-backend.herokuapp.com';
 
   constructor(
     private http: HttpClient,
@@ -204,10 +204,4 @@ export class AmsService {
     return this.http.get(this.url + '/contract/delete/' + id);
   }
 
-  // Open Modals
-
-  // openContract() {
-  //   const modalRef = this.modalService.open(NewcontractComponent, { size: 'lg' });
-  //   modalRef.componentInstance.name = 'New Contract';
-  // }
 }

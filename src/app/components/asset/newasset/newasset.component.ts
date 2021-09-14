@@ -24,8 +24,10 @@ export class NewassetComponent implements OnInit {
     private route: ActivatedRoute,
     private modalService: NgbModal,
     public activeModal: NgbActiveModal
-
   ) {
+    this.router.routeReuseStrategy.shouldReuseRoute = () => {
+      return false;
+    };
     this.asset = new Asset();
     this.route.paramMap.subscribe(parameterMap => {
       const id = parameterMap.get('id');
@@ -54,6 +56,7 @@ export class NewassetComponent implements OnInit {
         Swal(
           'Assest Updated Successfully'
         );
+        this.router.navigate([this.router.url])
         this.close();
       });
     } else {
@@ -61,7 +64,7 @@ export class NewassetComponent implements OnInit {
         Swal(
           'Assest Inserted Successfully'
         );
-        this.close();
+        this.router.navigateByUrl('/route');
       });
     }
   }
